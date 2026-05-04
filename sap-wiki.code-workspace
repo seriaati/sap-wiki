@@ -9,6 +9,10 @@
             "path": "./wiki"
         },
         {
+            "name": "mcp",
+            "path": "./mcp"
+        },
+        {
             "name": "root",
             "path": "."
         }
