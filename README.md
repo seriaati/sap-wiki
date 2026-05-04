@@ -56,7 +56,7 @@ uv run python main.py /path/to/AssetRipper/dump/root
 
 Requires the game to be installed (Linux Steam). Frida must be able to spawn the game binary.
 
-### Wiki (`wiki/`)
+### Wiki
 
 An [Astro](https://astro.build) static site that reads directly from `dumper/output/`. A `prebuild` script copies the assets into `public/assets/`. Pages are generated at build time from the JSON files.
 
@@ -83,8 +83,9 @@ npm run build    # static build to dist/
 ## Todo
 
 - Fix not showing "Works X times per turn" text for some abilities.
-- Fix pets without localized ability descriptions missing their ability text entirely.
+- Fix pets without localized ability descriptions missing their ability text entirely (like Peacock Spider).
 - Add more detail about ability triggers (e.g. Dragon's "When level 1 summoned.")
 - Add pet types (e.g. "Gold", "Cycle", etc.)
 - Add switching between skin packs.
 - Add MCP, so you can use AI to build decks.
+- Add different languages.
