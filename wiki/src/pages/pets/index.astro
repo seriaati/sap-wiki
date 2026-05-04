@@ -24,6 +24,7 @@ const sorted = [...pets].sort(
     <span class="sort-label">Sort:</span>
     <button class="sort-pill" data-sort="attack" type="button">Attack</button>
     <button class="sort-pill" data-sort="health" type="button">Health</button>
+    <button class="toggle-pill active" id="hide-internal-toggle" type="button">Hide internal</button>
   </div>
 
   <div class="gallery">
@@ -36,6 +37,7 @@ const sorted = [...pets].sort(
           data-entry-name={pet.name.toLowerCase()}
           data-entry-attack={pet.attack}
           data-entry-health={pet.health}
+          data-entry-internal={pet.name.toLowerCase().startsWith("test") ? "1" : undefined}
           data-entry-desc={[
             pet.trigger,
             pet.ability1,
@@ -181,6 +183,31 @@ const sorted = [...pets].sort(
     content: attr(data-dir);
     margin-left: 3px;
     opacity: 0.75;
+  }
+
+  .toggle-pill {
+    padding: 4px 10px;
+    border-radius: var(--r);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background: var(--surface-muted);
+    border: 1.5px solid transparent;
+    transition: background 120ms, border-color 120ms;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .toggle-pill:hover { background: var(--border); }
+
+  .toggle-pill.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .gallery.hide-internal [data-entry-internal] {
+    display: none;
   }
 
   .gallery {
@@ -477,5 +504,28 @@ const sorted = [...pets].sort(
       const qs = params.toString()
       history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
     }
+
+    // internal toggle — uses CSS class on gallery to avoid conflicting with tier/search hidden
+    const internalToggle = document.getElementById('hide-internal-toggle') as HTMLButtonElement | null
+    let hideInternal = true
+
+    const initHide = new URLSearchParams(location.search).get('internal')
+    if (initHide === 'show') {
+      hideInternal = false
+      internalToggle?.classList.remove('active')
+    } else {
+      gallery.classList.add('hide-internal')
+    }
+
+    internalToggle?.addEventListener('click', () => {
+      hideInternal = !hideInternal
+      internalToggle.classList.toggle('active', hideInternal)
+      gallery.classList.toggle('hide-internal', hideInternal)
+      const params = new URLSearchParams(location.search)
+      if (hideInternal) params.delete('internal')
+      else params.set('internal', 'show')
+      const qs = params.toString()
+      history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
+    })
   }
 </script>
