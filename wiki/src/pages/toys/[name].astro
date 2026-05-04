@@ -1,22 +1,29 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import { toys } from '../../lib/data'
-import Sprite from '../../components/Sprite.astro'
-import AbilityText from '../../components/AbilityText.astro'
-import StatIcon from '../../components/StatIcon.astro'
+import Layout from "../../layouts/Layout.astro";
+import { toys } from "../../lib/data";
+import Sprite from "../../components/Sprite.astro";
+import AbilityText from "../../components/AbilityText.astro";
+import StatIcon from "../../components/StatIcon.astro";
 
 export function getStaticPaths() {
-  return toys.map(toy => ({
+  return toys.map((toy) => ({
     params: { name: toy.slug },
     props: { toy },
-  }))
+  }));
 }
 
-const { toy } = Astro.props
-const hasAbilities = toy.ability1 || toy.ability2 || toy.ability3
-const isToken = !toy.rollable && toy.active
+const { toy } = Astro.props;
+const hasAbilities = toy.ability1 || toy.ability2 || toy.ability3;
+const isToken = !toy.rollable && toy.active;
+const ability1Clean = toy.ability1?.replace(/\[\[.*?\|.*?\]\]/g, (m) => m.split('|')[0].replace('[[', '')).replace(/\{[A-Za-z]+\}/g, '').replace(/\s+/g, ' ').trim();
+const ogDescription = ability1Clean ?? '';
 ---
-<Layout title={toy.name} description={`${toy.name} — Tier ${toy.tier} SAP toy. ${toy.trigger ? 'Trigger: ' + toy.trigger + '.' : ''}`} image={toy.image}>
+
+<Layout
+  title={toy.name}
+  description={ogDescription}
+  image={toy.image}
+>
   <nav class="breadcrumb">
     <a href="/toys">← Toys</a>
   </nav>
@@ -27,58 +34,78 @@ const isToken = !toy.rollable && toy.active
       <h1>{toy.name}</h1>
       <div class="badges">
         {!toy.active && <span class="badge badge--muted">Inactive</span>}
-        {isToken    && <span class="badge badge--accent">Token</span>}
-        {!toy.rollable && !isToken && <span class="badge badge--muted">Not in shop</span>}
+        {isToken && <span class="badge badge--accent">Token</span>}
+        {
+          !toy.rollable && !isToken && (
+            <span class="badge badge--muted">Not in shop</span>
+          )
+        }
       </div>
     </div>
   </div>
 
-  {toy.trigger && (
-    <div class="trigger-row">
-      <span class="trigger-label">Trigger</span>
-      <span class="trigger-val">{toy.trigger}</span>
-    </div>
-  )}
-
-  {hasAbilities ? (
-    <section class="abilities">
-      <h2>Abilities</h2>
-      <div class="table-wrap">
-        <table class="ability-table">
-          <thead>
-            <tr>
-              <th>Level</th>
-              <th>Effect</th>
-            </tr>
-          </thead>
-          <tbody>
-            {toy.ability1 && (
-              <tr>
-                <td class="lv-cell"><StatIcon name="Level1" size={36} /></td>
-                <td><AbilityText text={toy.ability1} iconSize={24} /></td>
-              </tr>
-            )}
-            {toy.ability2 && (
-              <tr>
-                <td class="lv-cell"><StatIcon name="Level2" size={36} /></td>
-                <td><AbilityText text={toy.ability2} iconSize={24} /></td>
-              </tr>
-            )}
-            {toy.ability3 && (
-              <tr>
-                <td class="lv-cell"><StatIcon name="Level3" size={36} /></td>
-                <td><AbilityText text={toy.ability3} iconSize={24} /></td>
-              </tr>
-            )}
-          </tbody>
-        </table>
+  {
+    toy.trigger && (
+      <div class="trigger-row">
+        <span class="trigger-label">Trigger</span>
+        <span class="trigger-val">{toy.trigger}</span>
       </div>
-    </section>
-  ) : (
-    <div class="empty-state">
-      <p>This toy has no active ability.</p>
-    </div>
-  )}
+    )
+  }
+
+  {
+    hasAbilities ? (
+      <section class="abilities">
+        <h2>Abilities</h2>
+        <div class="table-wrap">
+          <table class="ability-table">
+            <thead>
+              <tr>
+                <th>Level</th>
+                <th>Effect</th>
+              </tr>
+            </thead>
+            <tbody>
+              {toy.ability1 && (
+                <tr>
+                  <td class="lv-cell">
+                    <StatIcon name="Level1" size={36} />
+                  </td>
+                  <td>
+                    <AbilityText text={toy.ability1} iconSize={24} />
+                  </td>
+                </tr>
+              )}
+              {toy.ability2 && (
+                <tr>
+                  <td class="lv-cell">
+                    <StatIcon name="Level2" size={36} />
+                  </td>
+                  <td>
+                    <AbilityText text={toy.ability2} iconSize={24} />
+                  </td>
+                </tr>
+              )}
+              {toy.ability3 && (
+                <tr>
+                  <td class="lv-cell">
+                    <StatIcon name="Level3" size={36} />
+                  </td>
+                  <td>
+                    <AbilityText text={toy.ability3} iconSize={24} />
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ) : (
+      <div class="empty-state">
+        <p>This toy has no active ability.</p>
+      </div>
+    )
+  }
 </Layout>
 
 <style>
@@ -93,7 +120,9 @@ const isToken = !toy.rollable && toy.active
     transition: opacity 130ms;
   }
 
-  .breadcrumb a:hover { opacity: 0.72; }
+  .breadcrumb a:hover {
+    opacity: 0.72;
+  }
 
   .hero {
     display: flex;
@@ -147,7 +176,6 @@ const isToken = !toy.rollable && toy.active
     color: var(--accent);
   }
 
-
   .trigger-row {
     display: flex;
     align-items: center;
@@ -174,7 +202,9 @@ const isToken = !toy.rollable && toy.active
     color: var(--text);
   }
 
-  .abilities { margin-top: var(--sp-2); }
+  .abilities {
+    margin-top: var(--sp-2);
+  }
 
   h2 {
     font-size: 0.72rem;
@@ -210,7 +240,10 @@ const isToken = !toy.rollable && toy.active
     border-bottom: 1px solid var(--border);
   }
 
-  .ability-table thead th:first-child { width: 80px; text-align: center; }
+  .ability-table thead th:first-child {
+    width: 80px;
+    text-align: center;
+  }
 
   .ability-table tbody td {
     padding: var(--sp-4);
@@ -220,12 +253,20 @@ const isToken = !toy.rollable && toy.active
     vertical-align: middle;
   }
 
-  .ability-table tbody tr:last-child td { border-bottom: none; }
+  .ability-table tbody tr:last-child td {
+    border-bottom: none;
+  }
 
-  .ability-table tbody tr { transition: background 100ms; }
-  .ability-table tbody tr:hover { background: var(--surface-hover); }
+  .ability-table tbody tr {
+    transition: background 100ms;
+  }
+  .ability-table tbody tr:hover {
+    background: var(--surface-hover);
+  }
 
-  .lv-cell { text-align: center; }
+  .lv-cell {
+    text-align: center;
+  }
 
   .empty-state {
     padding: var(--sp-8) var(--sp-6);
@@ -238,9 +279,20 @@ const isToken = !toy.rollable && toy.active
   }
 
   @media (max-width: 600px) {
-    .hero { padding: var(--sp-4); gap: var(--sp-4); }
-    .stat-block { margin-left: 0; width: 100%; }
-    .stat-item { flex: 1; padding: var(--sp-3) var(--sp-3); }
-    h1 { font-size: 1.5rem; }
+    .hero {
+      padding: var(--sp-4);
+      gap: var(--sp-4);
+    }
+    .stat-block {
+      margin-left: 0;
+      width: 100%;
+    }
+    .stat-item {
+      flex: 1;
+      padding: var(--sp-3) var(--sp-3);
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 </style>

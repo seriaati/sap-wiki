@@ -1,15 +1,17 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import { toys } from '../../lib/data'
-import Sprite from '../../components/Sprite.astro'
-import TierFilter from '../../components/TierFilter.astro'
-import AbilityText from '../../components/AbilityText.astro'
-import StatIcon from '../../components/StatIcon.astro'
+import Layout from "../../layouts/Layout.astro";
+import { toys } from "../../lib/data";
+import Sprite from "../../components/Sprite.astro";
+import TierFilter from "../../components/TierFilter.astro";
+import AbilityText from "../../components/AbilityText.astro";
+import StatIcon from "../../components/StatIcon.astro";
 
-
-const sorted = [...toys].sort((a, b) => a.tier - b.tier || a.name.localeCompare(b.name))
+const sorted = [...toys].sort(
+  (a, b) => a.tier - b.tier || a.name.localeCompare(b.name),
+);
 ---
-<Layout title="Toys" description="Browse all Super Auto Pets toys — effects, tiers, and shop costs.">
+
+<Layout title="Toys" description="Browse all toys in Super Auto Pets.">
   <div class="page-header">
     <h1>Toys</h1>
     <span class="count">{toys.length} entries</span>
@@ -18,61 +20,87 @@ const sorted = [...toys].sort((a, b) => a.tier - b.tier || a.name.localeCompare(
   <TierFilter />
 
   <div class="gallery">
-    {sorted.map(toy => (
-      <a
-        href={`/toys/${toy.slug}`}
-        class:list={['card', !toy.active && 'card--inactive']}
-        data-entry-tier={toy.tier}
-        data-entry-name={toy.name.toLowerCase()}
-        data-entry-desc={[toy.trigger, toy.ability1, toy.ability2, toy.ability3].filter(Boolean).join(' ').toLowerCase()}
-      >
-        <div class="card-image">
-          <Sprite name={toy.name} image={toy.image} tier={toy.tier} size={120} />
-        </div>
+    {
+      sorted.map((toy) => (
+        <a
+          href={`/toys/${toy.slug}`}
+          class:list={["card", !toy.active && "card--inactive"]}
+          data-entry-tier={toy.tier}
+          data-entry-name={toy.name.toLowerCase()}
+          data-entry-desc={[
+            toy.trigger,
+            toy.ability1,
+            toy.ability2,
+            toy.ability3,
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase()}
+        >
+          <div class="card-image">
+            <Sprite
+              name={toy.name}
+              image={toy.image}
+              tier={toy.tier}
+              size={120}
+            />
+          </div>
 
-        <div class="card-body">
-          <div class="card-name">{toy.name}</div>
+          <div class="card-body">
+            <div class="card-name">{toy.name}</div>
 
-
-          {!toy.rollable && toy.active && (
-            <span class="card-flag">Token</span>
-          )}
-        </div>
-
-        {(toy.ability1 || toy.trigger) && (
-          <div class="skill-tooltip">
-            {toy.trigger && (
-              <div class="tt-trigger">{toy.trigger}</div>
-            )}
-            {toy.ability1 && (
-              <div class="tt-level" data-level="1">
-                <StatIcon name="Level1" size={22} />
-                <AbilityText text={toy.ability1} iconSize={22} links={false} />
-              </div>
-            )}
-            {toy.ability2 && (
-              <div class="tt-level" data-level="2" hidden>
-                <StatIcon name="Level2" size={22} />
-                <AbilityText text={toy.ability2} iconSize={22} links={false} />
-              </div>
-            )}
-            {toy.ability3 && (
-              <div class="tt-level" data-level="3" hidden>
-                <StatIcon name="Level3" size={22} />
-                <AbilityText text={toy.ability3} iconSize={22} links={false} />
-              </div>
-            )}
-            {(toy.ability2 || toy.ability3) && (
-              <div class="tt-dots">
-                {toy.ability1 && <span class="tt-dot tt-dot--active" data-dot="1" />}
-                {toy.ability2 && <span class="tt-dot" data-dot="2" />}
-                {toy.ability3 && <span class="tt-dot" data-dot="3" />}
-              </div>
+            {!toy.rollable && toy.active && (
+              <span class="card-flag">Token</span>
             )}
           </div>
-        )}
-      </a>
-    ))}
+
+          {(toy.ability1 || toy.trigger) && (
+            <div class="skill-tooltip">
+              {toy.trigger && <div class="tt-trigger">{toy.trigger}</div>}
+              {toy.ability1 && (
+                <div class="tt-level" data-level="1">
+                  <StatIcon name="Level1" size={22} />
+                  <AbilityText
+                    text={toy.ability1}
+                    iconSize={22}
+                    links={false}
+                  />
+                </div>
+              )}
+              {toy.ability2 && (
+                <div class="tt-level" data-level="2" hidden>
+                  <StatIcon name="Level2" size={22} />
+                  <AbilityText
+                    text={toy.ability2}
+                    iconSize={22}
+                    links={false}
+                  />
+                </div>
+              )}
+              {toy.ability3 && (
+                <div class="tt-level" data-level="3" hidden>
+                  <StatIcon name="Level3" size={22} />
+                  <AbilityText
+                    text={toy.ability3}
+                    iconSize={22}
+                    links={false}
+                  />
+                </div>
+              )}
+              {(toy.ability2 || toy.ability3) && (
+                <div class="tt-dots">
+                  {toy.ability1 && (
+                    <span class="tt-dot tt-dot--active" data-dot="1" />
+                  )}
+                  {toy.ability2 && <span class="tt-dot" data-dot="2" />}
+                  {toy.ability3 && <span class="tt-dot" data-dot="3" />}
+                </div>
+              )}
+            </div>
+          )}
+        </a>
+      ))
+    }
   </div>
 </Layout>
 
@@ -110,7 +138,10 @@ const sorted = [...toys].sort((a, b) => a.tier - b.tier || a.name.localeCompare(
     flex-direction: column;
     align-items: stretch;
     color: var(--text);
-    transition: box-shadow 150ms, transform 150ms, border-color 150ms;
+    transition:
+      box-shadow 150ms,
+      transform 150ms,
+      border-color 150ms;
     overflow: visible;
     text-decoration: none;
   }
@@ -192,7 +223,9 @@ const sorted = [...toys].sort((a, b) => a.tier - b.tier || a.name.localeCompare(
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 140ms, visibility 140ms;
+    transition:
+      opacity 140ms,
+      visibility 140ms;
     z-index: 50;
   }
 
@@ -247,39 +280,59 @@ const sorted = [...toys].sort((a, b) => a.tier - b.tier || a.name.localeCompare(
       gap: var(--sp-3);
     }
 
+    .card-image {
+      padding: var(--sp-3) var(--sp-3) var(--sp-2);
+    }
+
     .card-image :global(.sprite),
     .card-image :global(.sprite-ph) {
-      width: 90px !important;
-      height: 90px !important;
+      width: 80px !important;
+      height: 80px !important;
+    }
+
+    .card-body {
+      padding: var(--sp-2) var(--sp-3) var(--sp-3);
     }
   }
 </style>
 
 <script>
-  const gallery = document.querySelector('.gallery')
+  const gallery = document.querySelector(".gallery");
   if (gallery) {
-    const state = new WeakMap<Element, number>()
+    const state = new WeakMap<Element, number>();
 
-    gallery.addEventListener('wheel', (e) => {
-      const card = (e.target as Element).closest('.card')
-      if (!card) return
-      const tooltip = card.querySelector('.skill-tooltip')
-      if (!tooltip) return
+    gallery.addEventListener(
+      "wheel",
+      (e) => {
+        const card = (e.target as Element).closest(".card");
+        if (!card) return;
+        const tooltip = card.querySelector(".skill-tooltip");
+        if (!tooltip) return;
 
-      e.preventDefault()
+        e.preventDefault();
 
-      const levels = tooltip.querySelectorAll<HTMLElement>('[data-level]')
-      if (levels.length <= 1) return
+        const levels = tooltip.querySelectorAll<HTMLElement>("[data-level]");
+        if (levels.length <= 1) return;
 
-      const current = state.get(card) ?? 1
-      const next = Math.min(Math.max(current + (e.deltaY > 0 ? 1 : -1), 1), levels.length)
-      if (next === current) return
-      state.set(card, next)
+        const current = state.get(card) ?? 1;
+        const next = Math.min(
+          Math.max(current + (e.deltaY > 0 ? 1 : -1), 1),
+          levels.length,
+        );
+        if (next === current) return;
+        state.set(card, next);
 
-      levels.forEach(el => { el.hidden = Number(el.dataset.level) !== next })
-      tooltip.querySelectorAll<HTMLElement>('[data-dot]').forEach(dot => {
-        dot.classList.toggle('tt-dot--active', Number(dot.dataset.dot) === next)
-      })
-    }, { passive: false })
+        levels.forEach((el) => {
+          el.hidden = Number(el.dataset.level) !== next;
+        });
+        tooltip.querySelectorAll<HTMLElement>("[data-dot]").forEach((dot) => {
+          dot.classList.toggle(
+            "tt-dot--active",
+            Number(dot.dataset.dot) === next,
+          );
+        });
+      },
+      { passive: false },
+    );
   }
 </script>

@@ -1,15 +1,18 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import { foods } from '../../lib/data'
-import TierBadge from '../../components/TierBadge.astro'
-import Sprite from '../../components/Sprite.astro'
-import TierFilter from '../../components/TierFilter.astro'
-import AbilityText from '../../components/AbilityText.astro'
-import StatIcon from '../../components/StatIcon.astro'
+import Layout from "../../layouts/Layout.astro";
+import { foods } from "../../lib/data";
+import TierBadge from "../../components/TierBadge.astro";
+import Sprite from "../../components/Sprite.astro";
+import TierFilter from "../../components/TierFilter.astro";
+import AbilityText from "../../components/AbilityText.astro";
+import StatIcon from "../../components/StatIcon.astro";
 
-const sorted = [...foods].sort((a, b) => a.tier - b.tier || a.name.localeCompare(b.name))
+const sorted = [...foods].sort(
+  (a, b) => a.tier - b.tier || a.name.localeCompare(b.name),
+);
 ---
-<Layout title="Foods" description="Browse all Super Auto Pets foods — effects, tiers, and shop costs.">
+
+<Layout title="Foods" description="Browse all foods in Super Auto Pets.">
   <div class="page-header">
     <h1>Foods</h1>
     <span class="count">{foods.length} entries</span>
@@ -18,41 +21,56 @@ const sorted = [...foods].sort((a, b) => a.tier - b.tier || a.name.localeCompare
   <TierFilter />
 
   <div class="gallery">
-    {sorted.map(food => (
-      <a
-        href={`/foods/${food.slug}`}
-        class:list={['card', !food.active && 'card--inactive']}
-        data-entry-tier={food.tier}
-        data-entry-name={food.name.toLowerCase()}
-        data-entry-desc={[food.trigger, food.ability1, food.ability2, food.ability3].filter(Boolean).join(' ').toLowerCase()}
-      >
-        <div class="card-image">
-          <Sprite name={food.name} image={food.image} tier={food.tier} size={120} />
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">{food.name}</div>
-
-          <div class="card-row">
-            <TierBadge tier={food.tier} size="md" />
-            <StatIcon name="Gold" size={20} />
-            <span class="card-cost">{food.cost}</span>
+    {
+      sorted.map((food) => (
+        <a
+          href={`/foods/${food.slug}`}
+          class:list={["card", !food.active && "card--inactive"]}
+          data-entry-tier={food.tier}
+          data-entry-name={food.name.toLowerCase()}
+          data-entry-desc={[
+            food.trigger,
+            food.ability1,
+            food.ability2,
+            food.ability3,
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase()}
+        >
+          <div class="card-image">
+            <Sprite
+              name={food.name}
+              image={food.image}
+              tier={food.tier}
+              size={120}
+            />
           </div>
 
-          {!food.rollable && food.active && (
-            <span class="card-flag">Token</span>
-          )}
-        </div>
+          <div class="card-body">
+            <div class="card-name">{food.name}</div>
 
-        {food.ability && (
-          <div class="skill-tooltip">
-            <div class="tt-ability">
-              <AbilityText text={food.ability} iconSize={22} links={false} />
+            <div class="card-row">
+              <TierBadge tier={food.tier} size="md" />
+              <StatIcon name="Gold" size={20} />
+              <span class="card-cost">{food.cost}</span>
             </div>
+
+            {!food.rollable && food.active && (
+              <span class="card-flag">Token</span>
+            )}
           </div>
-        )}
-      </a>
-    ))}
+
+          {food.ability && (
+            <div class="skill-tooltip">
+              <div class="tt-ability">
+                <AbilityText text={food.ability} iconSize={22} links={false} />
+              </div>
+            </div>
+          )}
+        </a>
+      ))
+    }
   </div>
 </Layout>
 
@@ -90,7 +108,10 @@ const sorted = [...foods].sort((a, b) => a.tier - b.tier || a.name.localeCompare
     flex-direction: column;
     align-items: stretch;
     color: var(--text);
-    transition: box-shadow 150ms, transform 150ms, border-color 150ms;
+    transition:
+      box-shadow 150ms,
+      transform 150ms,
+      border-color 150ms;
     overflow: visible;
     text-decoration: none;
   }
@@ -172,7 +193,9 @@ const sorted = [...foods].sort((a, b) => a.tier - b.tier || a.name.localeCompare
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 140ms, visibility 140ms;
+    transition:
+      opacity 140ms,
+      visibility 140ms;
     z-index: 50;
   }
 
@@ -195,10 +218,18 @@ const sorted = [...foods].sort((a, b) => a.tier - b.tier || a.name.localeCompare
       gap: var(--sp-3);
     }
 
+    .card-image {
+      padding: var(--sp-3) var(--sp-3) var(--sp-2);
+    }
+
     .card-image :global(.sprite),
     .card-image :global(.sprite-ph) {
-      width: 90px !important;
-      height: 90px !important;
+      width: 80px !important;
+      height: 80px !important;
+    }
+
+    .card-body {
+      padding: var(--sp-2) var(--sp-3) var(--sp-3);
     }
   }
 </style>

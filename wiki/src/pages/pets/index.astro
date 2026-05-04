@@ -1,15 +1,18 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import { pets } from '../../lib/data'
-import TierBadge from '../../components/TierBadge.astro'
-import Sprite from '../../components/Sprite.astro'
-import TierFilter from '../../components/TierFilter.astro'
-import AbilityText from '../../components/AbilityText.astro'
-import StatIcon from '../../components/StatIcon.astro'
+import Layout from "../../layouts/Layout.astro";
+import { pets } from "../../lib/data";
+import TierBadge from "../../components/TierBadge.astro";
+import Sprite from "../../components/Sprite.astro";
+import TierFilter from "../../components/TierFilter.astro";
+import AbilityText from "../../components/AbilityText.astro";
+import StatIcon from "../../components/StatIcon.astro";
 
-const sorted = [...pets].sort((a, b) => a.tier - b.tier || a.name.localeCompare(b.name))
+const sorted = [...pets].sort(
+  (a, b) => a.tier - b.tier || a.name.localeCompare(b.name),
+);
 ---
-<Layout title="Pets" description="Browse all Super Auto Pets pets — stats, abilities, tiers, and triggers.">
+
+<Layout title="Pets" description="Browse all pets in Super Auto Pets.">
   <div class="page-header">
     <h1>Pets</h1>
     <span class="count">{pets.length} entries</span>
@@ -18,70 +21,97 @@ const sorted = [...pets].sort((a, b) => a.tier - b.tier || a.name.localeCompare(
   <TierFilter />
 
   <div class="gallery">
-    {sorted.map(pet => (
-      <a
-        href={`/pets/${pet.slug}`}
-        class:list={['card', !pet.active && 'card--inactive']}
-        data-entry-tier={pet.tier}
-        data-entry-name={pet.name.toLowerCase()}
-        data-entry-desc={[pet.trigger, pet.ability1, pet.ability2, pet.ability3].filter(Boolean).join(' ').toLowerCase()}
-      >
-        <div class="card-image">
-          <Sprite name={pet.name} image={pet.image} tier={pet.tier} size={120} />
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">{pet.name}</div>
-
-          <div class="card-row">
-            <TierBadge tier={pet.tier} size="md" />
-            <StatIcon name="Attack" size={20} />
-            <span class="stat">{pet.attack}</span>
-            <StatIcon name="Health" size={20} />
-            <span class="stat">{pet.health}</span>
-            <StatIcon name="Gold" size={20} />
-            <span class="stat">{pet.cost}</span>
+    {
+      sorted.map((pet) => (
+        <a
+          href={`/pets/${pet.slug}`}
+          class:list={["card", !pet.active && "card--inactive"]}
+          data-entry-tier={pet.tier}
+          data-entry-name={pet.name.toLowerCase()}
+          data-entry-desc={[
+            pet.trigger,
+            pet.ability1,
+            pet.ability2,
+            pet.ability3,
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase()}
+        >
+          <div class="card-image">
+            <Sprite
+              name={pet.name}
+              image={pet.image}
+              tier={pet.tier}
+              size={120}
+            />
           </div>
 
-          {!pet.rollable && pet.active && (
-            <span class="card-flag">Token</span>
+          <div class="card-body">
+            <div class="card-name">{pet.name}</div>
+
+            <div class="card-row">
+              <TierBadge tier={pet.tier} size="md" />
+              <StatIcon name="Attack" size={20} />
+              <span class="stat">{pet.attack}</span>
+              <StatIcon name="Health" size={20} />
+              <span class="stat">{pet.health}</span>
+              <StatIcon name="Gold" size={20} />
+              <span class="stat">{pet.cost}</span>
+            </div>
+
+            {!pet.rollable && pet.active && (
+              <span class="card-flag">Token</span>
+            )}
+          </div>
+
+          {(pet.ability1 || pet.trigger) && (
+            <div class="skill-tooltip">
+              {pet.trigger && <div class="tt-trigger">{pet.trigger}</div>}
+              {pet.ability1 && (
+                <div class="tt-level" data-level="1">
+                  <StatIcon name="Level1" size={22} />
+                  <AbilityText
+                    text={pet.ability1}
+                    iconSize={22}
+                    links={false}
+                  />
+                </div>
+              )}
+              {pet.ability2 && (
+                <div class="tt-level" data-level="2" hidden>
+                  <StatIcon name="Level2" size={22} />
+                  <AbilityText
+                    text={pet.ability2}
+                    iconSize={22}
+                    links={false}
+                  />
+                </div>
+              )}
+              {pet.ability3 && (
+                <div class="tt-level" data-level="3" hidden>
+                  <StatIcon name="Level3" size={22} />
+                  <AbilityText
+                    text={pet.ability3}
+                    iconSize={22}
+                    links={false}
+                  />
+                </div>
+              )}
+              {(pet.ability2 || pet.ability3) && (
+                <div class="tt-dots">
+                  {pet.ability1 && (
+                    <span class="tt-dot tt-dot--active" data-dot="1" />
+                  )}
+                  {pet.ability2 && <span class="tt-dot" data-dot="2" />}
+                  {pet.ability3 && <span class="tt-dot" data-dot="3" />}
+                </div>
+              )}
+            </div>
           )}
-        </div>
-
-        {(pet.ability1 || pet.trigger) && (
-          <div class="skill-tooltip">
-            {pet.trigger && (
-              <div class="tt-trigger">{pet.trigger}</div>
-            )}
-            {pet.ability1 && (
-              <div class="tt-level" data-level="1">
-                <StatIcon name="Level1" size={22} />
-                <AbilityText text={pet.ability1} iconSize={22} links={false} />
-              </div>
-            )}
-            {pet.ability2 && (
-              <div class="tt-level" data-level="2" hidden>
-                <StatIcon name="Level2" size={22} />
-                <AbilityText text={pet.ability2} iconSize={22} links={false} />
-              </div>
-            )}
-            {pet.ability3 && (
-              <div class="tt-level" data-level="3" hidden>
-                <StatIcon name="Level3" size={22} />
-                <AbilityText text={pet.ability3} iconSize={22} links={false} />
-              </div>
-            )}
-            {(pet.ability2 || pet.ability3) && (
-              <div class="tt-dots">
-                {pet.ability1 && <span class="tt-dot tt-dot--active" data-dot="1" />}
-                {pet.ability2 && <span class="tt-dot" data-dot="2" />}
-                {pet.ability3 && <span class="tt-dot" data-dot="3" />}
-              </div>
-            )}
-          </div>
-        )}
-      </a>
-    ))}
+        </a>
+      ))
+    }
   </div>
 </Layout>
 
@@ -119,7 +149,10 @@ const sorted = [...pets].sort((a, b) => a.tier - b.tier || a.name.localeCompare(
     flex-direction: column;
     align-items: stretch;
     color: var(--text);
-    transition: box-shadow 150ms, transform 150ms, border-color 150ms;
+    transition:
+      box-shadow 150ms,
+      transform 150ms,
+      border-color 150ms;
     overflow: visible;
     text-decoration: none;
   }
@@ -177,14 +210,13 @@ const sorted = [...pets].sort((a, b) => a.tier - b.tier || a.name.localeCompare(
     font-variant-numeric: tabular-nums;
   }
 
-
   .stat-sep {
     color: var(--border);
     font-weight: 400;
     font-size: 0.85rem;
   }
 
-.card-flag {
+  .card-flag {
     align-self: flex-start;
     font-size: 0.68rem;
     font-weight: 700;
@@ -208,7 +240,9 @@ const sorted = [...pets].sort((a, b) => a.tier - b.tier || a.name.localeCompare(
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 140ms, visibility 140ms;
+    transition:
+      opacity 140ms,
+      visibility 140ms;
     z-index: 50;
   }
 
@@ -263,39 +297,68 @@ const sorted = [...pets].sort((a, b) => a.tier - b.tier || a.name.localeCompare(
       gap: var(--sp-3);
     }
 
+    .card-image {
+      padding: var(--sp-3) var(--sp-3) var(--sp-2);
+    }
+
     .card-image :global(.sprite),
     .card-image :global(.sprite-ph) {
-      width: 90px !important;
-      height: 90px !important;
+      width: 80px !important;
+      height: 80px !important;
+    }
+
+    .card-body {
+      padding: var(--sp-2) var(--sp-3) var(--sp-3);
+    }
+
+    .card-row {
+      gap: var(--sp-1);
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      font-size: 0.8rem;
     }
   }
 </style>
 
 <script>
-  const gallery = document.querySelector('.gallery')
+  const gallery = document.querySelector(".gallery");
   if (gallery) {
-    const state = new WeakMap<Element, number>()
+    const state = new WeakMap<Element, number>();
 
-    gallery.addEventListener('wheel', (e) => {
-      const card = (e.target as Element).closest('.card')
-      if (!card) return
-      const tooltip = card.querySelector('.skill-tooltip')
-      if (!tooltip) return
+    gallery.addEventListener(
+      "wheel",
+      (e) => {
+        const card = (e.target as Element).closest(".card");
+        if (!card) return;
+        const tooltip = card.querySelector(".skill-tooltip");
+        if (!tooltip) return;
 
-      e.preventDefault()
+        e.preventDefault();
 
-      const levels = tooltip.querySelectorAll<HTMLElement>('[data-level]')
-      if (levels.length <= 1) return
+        const levels = tooltip.querySelectorAll<HTMLElement>("[data-level]");
+        if (levels.length <= 1) return;
 
-      const current = state.get(card) ?? 1
-      const next = Math.min(Math.max(current + (e.deltaY > 0 ? 1 : -1), 1), levels.length)
-      if (next === current) return
-      state.set(card, next)
+        const current = state.get(card) ?? 1;
+        const next = Math.min(
+          Math.max(current + (e.deltaY > 0 ? 1 : -1), 1),
+          levels.length,
+        );
+        if (next === current) return;
+        state.set(card, next);
 
-      levels.forEach(el => { el.hidden = Number(el.dataset.level) !== next })
-      tooltip.querySelectorAll<HTMLElement>('[data-dot]').forEach(dot => {
-        dot.classList.toggle('tt-dot--active', Number(dot.dataset.dot) === next)
-      })
-    }, { passive: false })
+        levels.forEach((el) => {
+          el.hidden = Number(el.dataset.level) !== next;
+        });
+        tooltip.querySelectorAll<HTMLElement>("[data-dot]").forEach((dot) => {
+          dot.classList.toggle(
+            "tt-dot--active",
+            Number(dot.dataset.dot) === next,
+          );
+        });
+      },
+      { passive: false },
+    );
   }
 </script>

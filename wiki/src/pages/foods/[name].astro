@@ -1,22 +1,32 @@
 ---
-import Layout from '../../layouts/Layout.astro'
-import { foods } from '../../lib/data'
-import TierBadge from '../../components/TierBadge.astro'
-import Sprite from '../../components/Sprite.astro'
-import AbilityText from '../../components/AbilityText.astro'
-import StatIcon from '../../components/StatIcon.astro'
+import Layout from "../../layouts/Layout.astro";
+import { foods } from "../../lib/data";
+import TierBadge from "../../components/TierBadge.astro";
+import Sprite from "../../components/Sprite.astro";
+import AbilityText from "../../components/AbilityText.astro";
+import StatIcon from "../../components/StatIcon.astro";
 
 export function getStaticPaths() {
-  return foods.map(food => ({
+  return foods.map((food) => ({
     params: { name: food.slug },
     props: { food },
-  }))
+  }));
 }
 
-const { food } = Astro.props
-const isToken = !food.rollable && food.active
+const { food } = Astro.props;
+const isToken = !food.rollable && food.active;
+const abilityClean = food.ability?.replace(/\[\[.*?\|.*?\]\]/g, (m) => m.split('|')[0].replace('[[', '')).replace(/\{[A-Za-z]+\}/g, '').replace(/\s+/g, ' ').trim();
+const ogDescription = [
+  `Tier ${food.tier} · ${food.cost} gold`,
+  abilityClean,
+].filter(Boolean).join('\n');
 ---
-<Layout title={food.name} description={`${food.name} — Tier ${food.tier} SAP food.`} image={food.image}>
+
+<Layout
+  title={food.name}
+  description={ogDescription}
+  image={food.image}
+>
   <nav class="breadcrumb">
     <a href="/foods">← Foods</a>
   </nav>
@@ -28,8 +38,12 @@ const isToken = !food.rollable && food.active
       <div class="badges">
         <TierBadge tier={food.tier} />
         {!food.active && <span class="badge badge--muted">Inactive</span>}
-        {isToken      && <span class="badge badge--accent">Token</span>}
-        {!food.rollable && !isToken && <span class="badge badge--muted">Not in shop</span>}
+        {isToken && <span class="badge badge--accent">Token</span>}
+        {
+          !food.rollable && !isToken && (
+            <span class="badge badge--muted">Not in shop</span>
+          )
+        }
       </div>
     </div>
     <div class="cost-block">
@@ -38,16 +52,20 @@ const isToken = !food.rollable && food.active
     </div>
   </div>
 
-  {food.ability ? (
-    <section class="effect-section">
-      <h2>Effect</h2>
-      <p class="effect-text"><AbilityText text={food.ability} iconSize={24} /></p>
-    </section>
-  ) : (
-    <div class="empty-state">
-      <p>No ability data available.</p>
-    </div>
-  )}
+  {
+    food.ability ? (
+      <section class="effect-section">
+        <h2>Effect</h2>
+        <p class="effect-text">
+          <AbilityText text={food.ability} iconSize={24} />
+        </p>
+      </section>
+    ) : (
+      <div class="empty-state">
+        <p>No ability data available.</p>
+      </div>
+    )
+  }
 </Layout>
 
 <style>
@@ -62,7 +80,9 @@ const isToken = !food.rollable && food.active
     transition: opacity 130ms;
   }
 
-  .breadcrumb a:hover { opacity: 0.72; }
+  .breadcrumb a:hover {
+    opacity: 0.72;
+  }
 
   .hero {
     display: flex;
@@ -177,8 +197,15 @@ const isToken = !food.rollable && food.active
   }
 
   @media (max-width: 600px) {
-    .hero { padding: var(--sp-4); gap: var(--sp-4); }
-    .cost-block { margin-left: 0; }
-    h1 { font-size: 1.5rem; }
+    .hero {
+      padding: var(--sp-4);
+      gap: var(--sp-4);
+    }
+    .cost-block {
+      margin-left: 0;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
   }
 </style>
