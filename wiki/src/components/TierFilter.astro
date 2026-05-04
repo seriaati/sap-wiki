@@ -1,6 +1,12 @@
 ---
 import diceMapData from '@data/dice_map.json'
 
+interface Props {
+  tiers?: number[]
+}
+
+const { tiers = [1, 2, 3, 4, 5, 6] } = Astro.props
+
 const sprites = (diceMapData as any).sprites as Record<string, { x: number; y: number; w: number; h: number }>
 const imgW = (diceMapData as any).imageWidth as number
 const imgH = (diceMapData as any).imageHeight as number
@@ -32,7 +38,7 @@ function diceStyle(tier: number, px: number): string {
 
   <div class="tier-pills" role="group" aria-label="Filter by tier">
     <button class="pill active" data-tier="0" type="button">All</button>
-    {[1, 2, 3, 4, 5, 6].map(t => (
+    {tiers.map(t => (
       <button class={`pill pill--${t}`} data-tier={t} type="button">
         <span class="pill-dice" role="img" aria-label={`Tier ${t}`} style={diceStyle(t, 26)} />
       </button>
@@ -175,4 +181,5 @@ function diceStyle(tier: number, px: number): string {
   .pill--4.active { background: oklch(62% 0.20  55 / 0.14); border-color: var(--tier-4); }
   .pill--5.active { background: oklch(56% 0.22  25 / 0.14); border-color: var(--tier-5); }
   .pill--6.active { background: oklch(56% 0.20 310 / 0.14); border-color: var(--tier-6); }
+  .pill--7.active { background: oklch(56% 0.18  45 / 0.14); border-color: var(--tier-7, #b8860b); }
 </style>
