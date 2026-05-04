@@ -13,6 +13,10 @@ const sprites = (iconMapData as any).sprites as Record<string, { x: number; y: n
 const imgW = (iconMapData as any).imageWidth as number
 const imgH = (iconMapData as any).imageHeight as number
 
+const tokenAliases: Record<string, string> = {
+  Trumpet: 'Backup',
+}
+
 const html = (text ?? '')
   .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, display, slug) => {
     if (!links) return display
@@ -22,7 +26,8 @@ const html = (text ?? '')
     return `<a href="${href}" class="pet-link">${display}</a>`
   })
   .replace(/\{(\w+)\}/g, (_, token) => {
-  const key = token.replace(/Icon$/, '')
+  const raw = token.replace(/Icon$/, '')
+  const key = tokenAliases[raw] ?? raw
   const sp = sprites[key]
   if (!sp) return `{${token}}`
   const scale = iconSize / sp.h
@@ -31,7 +36,7 @@ const html = (text ?? '')
   const bgX = Math.round(sp.x * scale)
   const bgY = Math.round(sp.y * scale)
   const w   = Math.round(sp.w * scale)
-  return `<span class="icon-sprite" role="img" aria-label="${key}" style="width:${w}px;height:${iconSize}px;background-image:url('/assets/TextMap.png');background-position:-${bgX}px -${bgY}px;background-size:${bgW}px ${bgH}px"></span>`
+  return `<span class="icon-sprite" role="img" aria-label="${raw}" style="width:${w}px;height:${iconSize}px;background-image:url('/assets/TextMap.png');background-position:-${bgX}px -${bgY}px;background-size:${bgW}px ${bgH}px"></span>`
 })
 ---
 <span class="ability-text" set:html={html} />
