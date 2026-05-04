@@ -11,7 +11,7 @@ const sorted = [...toys].sort(
 );
 ---
 
-<Layout title="Toys" description="Browse all toys in Super Auto Pets.">
+<Layout title="Toys" description="Browse all toys in Super Auto Pets." image={sorted[0]?.image}>
   <div class="page-header">
     <h1>Toys</h1>
     <span class="count">{toys.length} entries</span>
