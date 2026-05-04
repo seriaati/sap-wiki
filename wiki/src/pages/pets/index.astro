@@ -24,7 +24,6 @@ const sorted = [...pets].sort(
     <span class="sort-label">Sort:</span>
     <button class="sort-pill" data-sort="attack" type="button">Attack</button>
     <button class="sort-pill" data-sort="health" type="button">Health</button>
-    <button class="sort-pill" data-sort="cost"   type="button">Gold</button>
   </div>
 
   <div class="gallery">
@@ -37,7 +36,6 @@ const sorted = [...pets].sort(
           data-entry-name={pet.name.toLowerCase()}
           data-entry-attack={pet.attack}
           data-entry-health={pet.health}
-          data-entry-cost={pet.cost}
           data-entry-desc={[
             pet.trigger,
             pet.ability1,
@@ -66,8 +64,7 @@ const sorted = [...pets].sort(
               <span class="stat">{pet.attack}</span>
               <StatIcon name="Health" size={20} />
               <span class="stat">{pet.health}</span>
-              <StatIcon name="Gold" size={20} />
-              <span class="stat">{pet.cost}</span>
+
             </div>
 
             {!pet.rollable && pet.active && (
