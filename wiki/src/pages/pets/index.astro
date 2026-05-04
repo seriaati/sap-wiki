@@ -180,7 +180,7 @@ const sorted = [...pets].sort(
   }
 
   .sort-pill.active::after {
-    content: attr(data-dir);
+    content: attr(data-dir) attr(data-rank);
     margin-left: 3px;
     opacity: 0.75;
   }
@@ -444,63 +444,84 @@ const sorted = [...pets].sort(
   const gallery = document.querySelector<HTMLElement>('.gallery')
 
   if (sortBar && gallery) {
-    let activeStat: string | null = null
-    let activeDirAsc = true
+    type SortEntry = { stat: string; asc: boolean }
+    let sorts: SortEntry[] = []
 
     const pills = sortBar.querySelectorAll<HTMLButtonElement>('[data-sort]')
 
-    // restore from URL
+    // capture original DOM order for reset
+    const originalOrder = Array.from(gallery.querySelectorAll<HTMLElement>('[data-entry-tier]'))
+
+    function pillFor(stat: string) {
+      return sortBar!.querySelector<HTMLButtonElement>(`[data-sort="${stat}"]`)
+    }
+
+    function renderPills() {
+      pills.forEach(p => { p.classList.remove('active'); p.removeAttribute('data-dir'); p.removeAttribute('data-rank') })
+      sorts.forEach((s, i) => {
+        const p = pillFor(s.stat)
+        if (!p) return
+        p.classList.add('active')
+        p.dataset.dir = s.asc ? '↑' : '↓'
+        if (sorts.length > 1) p.dataset.rank = String(i + 1)
+      })
+    }
+
+    // restore from URL: sort=attack:asc,health:desc
     const urlParams = new URLSearchParams(location.search)
     const initSort = urlParams.get('sort')
-    const initDir  = urlParams.get('dir')
     if (initSort) {
-      activeStat   = initSort
-      activeDirAsc = initDir !== 'desc'
-      const pill = sortBar.querySelector<HTMLButtonElement>(`[data-sort="${initSort}"]`)
-      if (pill) {
-        pill.classList.add('active')
-        pill.dataset.dir = activeDirAsc ? '↑' : '↓'
-      }
+      sorts = initSort.split(',').flatMap(seg => {
+        const [stat, dir] = seg.split(':')
+        return stat ? [{ stat, asc: dir !== 'desc' }] : []
+      })
+      renderPills()
       applySort()
     }
 
     pills.forEach(pill => {
       pill.addEventListener('click', () => {
         const stat = pill.dataset.sort!
-        if (activeStat === stat) {
-          activeDirAsc = !activeDirAsc
+        const existing = sorts.find(s => s.stat === stat)
+        if (!existing) {
+          sorts = [...sorts, { stat, asc: true }]
+        } else if (existing.asc) {
+          sorts = sorts.map(s => s.stat === stat ? { stat, asc: false } : s)
         } else {
-          activeStat = stat
-          activeDirAsc = true
-          pills.forEach(p => { p.classList.remove('active'); delete p.dataset.dir })
+          sorts = sorts.filter(s => s.stat !== stat)
         }
-        pill.classList.add('active')
-        pill.dataset.dir = activeDirAsc ? '↑' : '↓'
+        renderPills()
         applySort()
         syncSortURL()
       })
     })
 
     function applySort() {
-      if (!activeStat) return
+      if (!sorts.length) {
+        originalOrder.forEach(c => gallery!.appendChild(c))
+        return
+      }
       const cards = Array.from(gallery!.querySelectorAll<HTMLElement>('[data-entry-tier]'))
       cards.sort((a, b) => {
-        const va = Number(a.dataset[`entry${activeStat![0].toUpperCase()}${activeStat!.slice(1)}`] ?? 0)
-        const vb = Number(b.dataset[`entry${activeStat![0].toUpperCase()}${activeStat!.slice(1)}`] ?? 0)
-        return activeDirAsc ? va - vb : vb - va
+        for (const { stat, asc } of sorts) {
+          const key = `entry${stat[0].toUpperCase()}${stat.slice(1)}`
+          const va = Number(a.dataset[key] ?? 0)
+          const vb = Number(b.dataset[key] ?? 0)
+          if (va !== vb) return asc ? va - vb : vb - va
+        }
+        return 0
       })
       cards.forEach(c => gallery!.appendChild(c))
     }
 
     function syncSortURL() {
       const params = new URLSearchParams(location.search)
-      if (activeStat) {
-        params.set('sort', activeStat)
-        params.set('dir', activeDirAsc ? 'asc' : 'desc')
+      if (sorts.length) {
+        params.set('sort', sorts.map(s => `${s.stat}:${s.asc ? 'asc' : 'desc'}`).join(','))
       } else {
         params.delete('sort')
-        params.delete('dir')
       }
+      params.delete('dir')
       const qs = params.toString()
       history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
     }
