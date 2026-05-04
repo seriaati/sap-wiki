@@ -57,7 +57,7 @@ const ogImage = image
         <nav>
           <a
             href="/pets"
-            class:list={["nav-link", { active: pathname.startsWith("/pets") }]}
+            class:list={["nav-link", { active: pathname === "/" || pathname.startsWith("/pets") }]}
             >Pets</a
           >
           <a

@@ -1,3 +1,531 @@
 ---
-return Astro.redirect('/pets', 301)
+import Layout from "../layouts/Layout.astro";
+import { pets } from "../lib/data";
+import TierBadge from "../components/TierBadge.astro";
+import Sprite from "../components/Sprite.astro";
+import TierFilter from "../components/TierFilter.astro";
+import AbilityText from "../components/AbilityText.astro";
+import StatIcon from "../components/StatIcon.astro";
+
+const sorted = [...pets].sort(
+  (a, b) => a.tier - b.tier || a.name.localeCompare(b.name),
+);
 ---
+
+<Layout title="Pets" description="Browse all pets in Super Auto Pets." image={sorted[0]?.image}>
+  <div class="page-header">
+    <h1>Pets</h1>
+    <span class="count">{pets.length} entries</span>
+  </div>
+
+  <TierFilter />
+
+  <div class="sort-bar" id="sort-bar">
+    <span class="sort-label">Sort:</span>
+    <button class="sort-pill" data-sort="attack" type="button">Attack</button>
+    <button class="sort-pill" data-sort="health" type="button">Health</button>
+    <button class="toggle-pill active" id="hide-internal-toggle" type="button">Hide internal</button>
+  </div>
+
+  <div class="gallery">
+    {
+      sorted.map((pet) => (
+        <a
+          href={`/pets/${pet.slug}`}
+          class:list={["card", !pet.active && "card--inactive"]}
+          data-entry-tier={pet.tier}
+          data-entry-name={pet.name.toLowerCase()}
+          data-entry-attack={pet.attack}
+          data-entry-health={pet.health}
+          data-entry-internal={pet.name.toLowerCase().startsWith("test") ? "1" : undefined}
+          data-entry-desc={[
+            pet.trigger,
+            pet.ability1,
+            pet.ability2,
+            pet.ability3,
+          ]
+            .filter(Boolean)
+            .join(" ")
+            .toLowerCase()}
+        >
+          <div class="card-image">
+            <Sprite
+              name={pet.name}
+              image={pet.image}
+              tier={pet.tier}
+              size={120}
+            />
+          </div>
+
+          <div class="card-body">
+            <div class="card-name">{pet.name}</div>
+
+            <div class="card-row">
+              <TierBadge tier={pet.tier} size="md" />
+              <StatIcon name="Attack" size={20} />
+              <span class="stat">{pet.attack}</span>
+              <StatIcon name="Health" size={20} />
+              <span class="stat">{pet.health}</span>
+
+            </div>
+
+            {!pet.rollable && pet.active && (
+              <span class="card-flag">Token</span>
+            )}
+          </div>
+
+          {(pet.ability1 || pet.trigger) && (
+            <div class="skill-tooltip">
+              {pet.trigger && <div class="tt-trigger">{pet.trigger}</div>}
+              {pet.ability1 && (
+                <div class="tt-level" data-level="1">
+                  <StatIcon name="Level1" size={22} />
+                  <AbilityText
+                    text={pet.ability1}
+                    iconSize={22}
+                    links={false}
+                  />
+                </div>
+              )}
+              {pet.ability2 && (
+                <div class="tt-level" data-level="2" hidden>
+                  <StatIcon name="Level2" size={22} />
+                  <AbilityText
+                    text={pet.ability2}
+                    iconSize={22}
+                    links={false}
+                  />
+                </div>
+              )}
+              {pet.ability3 && (
+                <div class="tt-level" data-level="3" hidden>
+                  <StatIcon name="Level3" size={22} />
+                  <AbilityText
+                    text={pet.ability3}
+                    iconSize={22}
+                    links={false}
+                  />
+                </div>
+              )}
+              {(pet.ability2 || pet.ability3) && (
+                <div class="tt-dots">
+                  {pet.ability1 && (
+                    <span class="tt-dot tt-dot--active" data-dot="1" />
+                  )}
+                  {pet.ability2 && <span class="tt-dot" data-dot="2" />}
+                  {pet.ability3 && <span class="tt-dot" data-dot="3" />}
+                </div>
+              )}
+            </div>
+          )}
+        </a>
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--sp-3);
+    margin-bottom: var(--sp-5);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .count {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+
+  .sort-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    margin-bottom: var(--sp-4);
+    flex-wrap: wrap;
+  }
+
+  .sort-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .sort-pill {
+    padding: 4px 10px;
+    border-radius: var(--r);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background: var(--surface-muted);
+    border: 1.5px solid transparent;
+    transition: background 120ms, border-color 120ms;
+    cursor: pointer;
+  }
+
+  .sort-pill:hover { background: var(--border); }
+
+  .sort-pill.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .sort-pill.active::after {
+    content: attr(data-dir);
+    margin-left: 3px;
+    opacity: 0.75;
+  }
+
+  .toggle-pill {
+    padding: 4px 10px;
+    border-radius: var(--r);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background: var(--surface-muted);
+    border: 1.5px solid transparent;
+    transition: background 120ms, border-color 120ms;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .toggle-pill:hover { background: var(--border); }
+
+  .toggle-pill.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .gallery.hide-internal [data-entry-internal] {
+    display: none;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: var(--sp-4);
+  }
+
+  .card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: var(--text);
+    transition:
+      box-shadow 150ms,
+      transform 150ms,
+      border-color 150ms;
+    overflow: visible;
+    text-decoration: none;
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+    border-color: var(--accent-border);
+    z-index: 20;
+  }
+
+  .card--inactive {
+    opacity: 0.5;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sp-5) var(--sp-4) var(--sp-3);
+    background: var(--surface-muted);
+    border-radius: var(--r-xl) var(--r-xl) 0 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .card-image :global(.sprite),
+  .card-image :global(.sprite-ph) {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    padding: var(--sp-3) var(--sp-4) var(--sp-4);
+  }
+
+  .card-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+  }
+
+  .stat {
+    font-size: 0.95rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-sep {
+    color: var(--border);
+    font-weight: 400;
+    font-size: 0.85rem;
+  }
+
+  .card-flag {
+    align-self: flex-start;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: var(--accent-dim);
+    color: var(--accent);
+    padding: 2px 7px;
+    border-radius: var(--r-sm);
+  }
+
+  /* tooltip */
+  .skill-tooltip {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: var(--sp-3) var(--sp-4);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 140ms,
+      visibility 140ms;
+    z-index: 50;
+  }
+
+  .tt-trigger {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: var(--sp-2);
+  }
+
+  .tt-level {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-2);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .tt-dots {
+    display: flex;
+    gap: 5px;
+    margin-top: var(--sp-2);
+    justify-content: center;
+  }
+
+  .tt-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: background 120ms;
+  }
+
+  .tt-dot--active {
+    background: var(--accent);
+  }
+
+  @media (hover: hover) {
+    .card:hover .skill-tooltip {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sp-3);
+    }
+
+    .card-image {
+      padding: var(--sp-3) var(--sp-3) var(--sp-2);
+    }
+
+    .card-image :global(.sprite),
+    .card-image :global(.sprite-ph) {
+      width: 80px !important;
+      height: 80px !important;
+    }
+
+    .card-body {
+      padding: var(--sp-2) var(--sp-3) var(--sp-3);
+    }
+
+    .card-row {
+      gap: var(--sp-1);
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      font-size: 0.8rem;
+    }
+  }
+</style>
+
+<script>
+  const gallery = document.querySelector<HTMLElement>(".gallery");
+  if (gallery) {
+    const state = new WeakMap<Element, number>();
+
+    gallery.addEventListener(
+      "wheel",
+      (e) => {
+        const card = (e.target as Element).closest(".card");
+        if (!card) return;
+        const tooltip = card.querySelector(".skill-tooltip");
+        if (!tooltip) return;
+
+        e.preventDefault();
+
+        const levels = tooltip.querySelectorAll<HTMLElement>("[data-level]");
+        if (levels.length <= 1) return;
+
+        const current = state.get(card) ?? 1;
+        const next = Math.min(
+          Math.max(current + (e.deltaY > 0 ? 1 : -1), 1),
+          levels.length,
+        );
+        if (next === current) return;
+        state.set(card, next);
+
+        levels.forEach((el) => {
+          el.hidden = Number(el.dataset.level) !== next;
+        });
+        tooltip.querySelectorAll<HTMLElement>("[data-dot]").forEach((dot) => {
+          dot.classList.toggle(
+            "tt-dot--active",
+            Number(dot.dataset.dot) === next,
+          );
+        });
+      },
+      { passive: false },
+    );
+  }
+</script>
+
+<script>
+  const sortBar = document.getElementById('sort-bar')
+  const gallery = document.querySelector<HTMLElement>('.gallery')
+
+  if (sortBar && gallery) {
+    let activeStat: string | null = null
+    let activeDirAsc = true
+
+    const pills = sortBar.querySelectorAll<HTMLButtonElement>('[data-sort]')
+
+    // restore from URL
+    const urlParams = new URLSearchParams(location.search)
+    const initSort = urlParams.get('sort')
+    const initDir  = urlParams.get('dir')
+    if (initSort) {
+      activeStat   = initSort
+      activeDirAsc = initDir !== 'desc'
+      const pill = sortBar.querySelector<HTMLButtonElement>(`[data-sort="${initSort}"]`)
+      if (pill) {
+        pill.classList.add('active')
+        pill.dataset.dir = activeDirAsc ? '↑' : '↓'
+      }
+      applySort()
+    }
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const stat = pill.dataset.sort!
+        if (activeStat === stat) {
+          activeDirAsc = !activeDirAsc
+        } else {
+          activeStat = stat
+          activeDirAsc = true
+          pills.forEach(p => { p.classList.remove('active'); delete p.dataset.dir })
+        }
+        pill.classList.add('active')
+        pill.dataset.dir = activeDirAsc ? '↑' : '↓'
+        applySort()
+        syncSortURL()
+      })
+    })
+
+    function applySort() {
+      if (!activeStat) return
+      const cards = Array.from(gallery!.querySelectorAll<HTMLElement>('[data-entry-tier]'))
+      cards.sort((a, b) => {
+        const va = Number(a.dataset[`entry${activeStat![0].toUpperCase()}${activeStat!.slice(1)}`] ?? 0)
+        const vb = Number(b.dataset[`entry${activeStat![0].toUpperCase()}${activeStat!.slice(1)}`] ?? 0)
+        return activeDirAsc ? va - vb : vb - va
+      })
+      cards.forEach(c => gallery!.appendChild(c))
+    }
+
+    function syncSortURL() {
+      const params = new URLSearchParams(location.search)
+      if (activeStat) {
+        params.set('sort', activeStat)
+        params.set('dir', activeDirAsc ? 'asc' : 'desc')
+      } else {
+        params.delete('sort')
+        params.delete('dir')
+      }
+      const qs = params.toString()
+      history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
+    }
+
+    // internal toggle — uses CSS class on gallery to avoid conflicting with tier/search hidden
+    const internalToggle = document.getElementById('hide-internal-toggle') as HTMLButtonElement | null
+    let hideInternal = true
+
+    const initHide = new URLSearchParams(location.search).get('internal')
+    if (initHide === 'show') {
+      hideInternal = false
+      internalToggle?.classList.remove('active')
+    } else {
+      gallery.classList.add('hide-internal')
+    }
+
+    internalToggle?.addEventListener('click', () => {
+      hideInternal = !hideInternal
+      internalToggle.classList.toggle('active', hideInternal)
+      gallery.classList.toggle('hide-internal', hideInternal)
+      const params = new URLSearchParams(location.search)
+      if (hideInternal) params.delete('internal')
+      else params.set('internal', 'show')
+      const qs = params.toString()
+      history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
+    })
+  }
+</script>
