@@ -1,0 +1,1757 @@
+{
+  "Apple": {
+    "name": "Apple",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "image": "Apple_2x.png"
+  },
+  "Apple2": {
+    "name": "Apple2",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "image": "Apple2_2x.png"
+  },
+  "Apple3": {
+    "name": "Apple3",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +3 {AttackIcon} attack and +3 {HealthIcon} health.",
+    "image": "Apple3_2x.png"
+  },
+  "Asparagus": {
+    "name": "Asparagus",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Increase sell value of one pet by 1 {GoldIcon} gold.",
+    "image": "Asparagus_2x.png"
+  },
+  "Bacon": {
+    "name": "Bacon",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +2 {AttackIcon} attack.",
+    "image": "Bacon_2x.png"
+  },
+  "BirthdayCakeSlice": {
+    "name": "Birthday Cake Slice",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +2 {AttackIcon} attack and +2 {HealthIcon} health until next turn.",
+    "image": "BirthdayCakeSlice_2x.png"
+  },
+  "BlueBerries": {
+    "name": "Blue Berries",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Prioritize this for enemy random abilities.",
+    "image": "BlueBerries_2x.png"
+  },
+  "BreadCrumbs": {
+    "name": "Bread Crumbs",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +1 {AttackIcon} attack.",
+    "image": "BreadCrumbs_2x.png"
+  },
+  "CannedAilment": {
+    "name": "Canned Ailment",
+    "tier": 1,
+    "cost": 1,
+    "active": true,
+    "rollable": true,
+    "ability": "Choose one tier 1-3 ailment to stock. Always on sale!",
+    "image": "CannedAilment_2x.png"
+  },
+  "CannedScared": {
+    "name": "Canned Scared",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Spooked {ScaredIcon} without triggering abilities.",
+    "image": "CannedScared_2x.png"
+  },
+  "CannedToasty": {
+    "name": "Canned Toasty",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Toasty {ToastyIcon} without triggering abilities.",
+    "image": "CannedToasty_2x.png"
+  },
+  "CashewNut": {
+    "name": "Cashew Nut",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Deal 2 {DamageIcon} damage to the second enemy, once.",
+    "image": "CashewNut_2x.png"
+  },
+  "ChocolateMilk": {
+    "name": "Chocolate Milk",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +1 {AttackIcon} attack.",
+    "image": "ChocolateMilk_2x.png"
+  },
+  "ChocolateMilk2": {
+    "name": "Chocolate Milk2",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +2 {AttackIcon} attack.",
+    "image": "ChocolateMilk2_2x.png"
+  },
+  "ChocolateMilk3": {
+    "name": "Chocolate Milk3",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +3 {AttackIcon} attack.",
+    "image": "ChocolateMilk3_2x.png"
+  },
+  "Cookie": {
+    "name": "Cookie",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +2 {AttackIcon} attack and +2 {HealthIcon} health until next turn.",
+    "image": "Cookie_2x.png"
+  },
+  "Corn": {
+    "name": "Corn",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +1 to lowest stat.",
+    "image": "Corn_2x.png"
+  },
+  "Egg": {
+    "name": "Egg",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Deal 2 {DamageIcon} damage to target, once.",
+    "image": "Egg_2x.png"
+  },
+  "FerretGift1": {
+    "name": "Ferret Gift1",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 1 Ferret toy.",
+    "image": "FerretGift1_2x.png"
+  },
+  "FerretGift2": {
+    "name": "Ferret Gift2",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 2 Ferret toy.",
+    "image": "FerretGift2_2x.png"
+  },
+  "FerretGift3": {
+    "name": "Ferret Gift3",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 3 Ferret toy.",
+    "image": "FerretGift3_2x.png"
+  },
+  "FreshWater": {
+    "name": "Fresh Water",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +2 to their lowest stat.",
+    "image": "FreshWater_2x.png"
+  },
+  "GoldenEgg": {
+    "name": "Golden Egg",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Deal 6 {DamageIcon} damage to target, once.",
+    "image": "GoldenEgg_2x.png"
+  },
+  "GrosMichelBanana": {
+    "name": "Gros Michel Banana",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Transform into an Ant.",
+    "image": "GrosMichelBanana_2x.png"
+  },
+  "HealthPotion": {
+    "name": "Health Potion",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give the front-most friendly pet +2 {HealthIcon} health.",
+    "image": "HealthPotion_2x.png"
+  },
+  "HolyWater": {
+    "name": "Holy Water",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Transform one Bad Dog into Good Dog, or give +4 {AttackIcon} attack and +4 {HealthIcon} health.",
+    "image": "HolyWater_2x.png"
+  },
+  "Honey": {
+    "name": "Honey",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Summon one 1/1 Bee.",
+    "image": "Honey_2x.png"
+  },
+  "Macaron": {
+    "name": "Macaron",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Activate ability after other pets with the same trigger.",
+    "image": "Macaron_2x.png"
+  },
+  "ManaPotion": {
+    "name": "Mana Potion",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +6 {ManaIcon} mana.",
+    "image": "ManaPotion_2x.png"
+  },
+  "Milk": {
+    "name": "Milk",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +1 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "image": "Milk_2x.png"
+  },
+  "Milk2": {
+    "name": "Milk2",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +2 {AttackIcon} attack and +4 {HealthIcon} health.",
+    "image": "Milk2_2x.png"
+  },
+  "Milk3": {
+    "name": "Milk3",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +3 {AttackIcon} attack and +6 {HealthIcon} health.",
+    "image": "Milk3_2x.png"
+  },
+  "Nachos": {
+    "name": "Nachos",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Convert up to 3 {HealthIcon} health into attack.",
+    "image": "Nachos_2x.png"
+  },
+  "PegLeg": {
+    "name": "Peg Leg",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Set trophy goal to 12 and summon the achievement hunter's bane!",
+    "image": "PegLeg_2x.png"
+  },
+  "Plumb": {
+    "name": "Plumb",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +2 {HealthIcon} health.",
+    "image": "Plumb_2x.png"
+  },
+  "Pumpkin": {
+    "name": "Pumpkin",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +2 {AttackIcon} attack on odd turns and +2 {HealthIcon} health on even turns.",
+    "image": "Pumpkin_2x.png"
+  },
+  "SeedPile": {
+    "name": "Seed Pile",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +1 {HealthIcon} health.",
+    "image": "SeedPile_2x.png"
+  },
+  "Strawberry": {
+    "name": "Strawberry",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give the back-most friend +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "image": "Strawberry_2x.png"
+  },
+  "Unagi": {
+    "name": "Unagi",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Deal 2 {DamageIcon} damage to a random enemy.",
+    "image": "Unagi_2x.png"
+  },
+  "Walnut": {
+    "name": "Walnut",
+    "tier": 1,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Block 2 {DamageIcon} damage, once.",
+    "image": "Walnut_2x.png"
+  },
+  "AntarcticKrill": {
+    "name": "Antarctic Krill",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Make a random enemy Toasty {ToastyIcon}, once.",
+    "image": "AntarcticKrill_2x.png"
+  },
+  "BokChoy": {
+    "name": "Bok Choy",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +3 {HealthIcon} health when this would faint, once.",
+    "image": "BokChoy_2x.png"
+  },
+  "Broccoli": {
+    "name": "Broccoli",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 {HealthIcon} health and remove 1 {AttackIcon} attack.",
+    "image": "Broccoli_2x.png"
+  },
+  "CannedFrozen": {
+    "name": "Canned Frozen",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Cold {FrozenIcon} without triggering abilities.",
+    "image": "CannedFrozen_2x.png"
+  },
+  "CannedInk": {
+    "name": "Canned Ink",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Inked {InkIcon} without triggering abilities.",
+    "image": "CannedInk_2x.png"
+  },
+  "CannedWeak": {
+    "name": "Canned Weak",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Weak {WeakIcon} without triggering abilities.",
+    "image": "CannedWeak_2x.png"
+  },
+  "Caramel": {
+    "name": "Caramel",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Combine friendly Caramels to deal 3 {DamageIcon} damage each to the most healthy enemy, once.",
+    "image": "Caramel_2x.png"
+  },
+  "Cherries": {
+    "name": "Cherries",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain 2 {TrumpetIcon} trumpets and remove perk.",
+    "image": "Cherries_2x.png"
+  },
+  "ChocolateCake": {
+    "name": "Chocolate Cake",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +3 {ExpIcon} experience and faint.",
+    "image": "ChocolateCake_2x.png"
+  },
+  "Churros": {
+    "name": "Churros",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Activate ability before other pets with the same trigger.",
+    "image": "Churros_2x.png"
+  },
+  "Cloudberries": {
+    "name": "Cloudberries",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +1 {AttackIcon} attack and +1 {HealthIcon} health. Triple on every third Cloudberry.",
+    "image": "Cloudberries_2x.png"
+  },
+  "CodRoe": {
+    "name": "Cod Roe",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Summon one 2/3 Fish.",
+    "image": "CodRoe_2x.png"
+  },
+  "DeadBread": {
+    "name": "Dead Bread",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Summon ANY one tier 1 <b>Faint</b> pet.",
+    "image": "DeadBread_2x.png"
+  },
+  "Eucalyptus": {
+    "name": "Eucalyptus",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Block 4 enemy {DamageIcon} damage, once.",
+    "image": "Eucalyptus_2x.png"
+  },
+  "FairyDust": {
+    "name": "Fairy Dust",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Jump to the front and gain +2 {ManaIcon} mana, once.",
+    "image": "FairyDust_2x.png"
+  },
+  "FriedShrimp": {
+    "name": "Fried Shrimp",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 {AttackIcon} attack and remove 1 {HealthIcon} health.",
+    "image": "FriedShrimp_2x.png"
+  },
+  "Kiwi": {
+    "name": "Kiwi",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give the back-most friendly Strawberry pet +1 {AttackIcon} attack.",
+    "image": "Kiwi_2x.png"
+  },
+  "LemurGift1": {
+    "name": "Lemur Gift1",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 1 Lemur toy.",
+    "image": "LemurGift1_2x.png"
+  },
+  "LemurGift2": {
+    "name": "Lemur Gift2",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 2 Lemur toy.",
+    "image": "LemurGift2_2x.png"
+  },
+  "LemurGift3": {
+    "name": "Lemur Gift3",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 3 Lemur toy.",
+    "image": "LemurGift3_2x.png"
+  },
+  "Lime": {
+    "name": "Lime",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Takes 1 less {DamageIcon} damage.",
+    "image": "Lime_2x.png"
+  },
+  "MeatBone": {
+    "name": "Meat Bone",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Attack with +3 {DamageIcon} damage.",
+    "image": "MeatBone_2x.png"
+  },
+  "Muffin": {
+    "name": "Muffin",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 {AttackIcon} attack and +3 {HealthIcon} health until next turn.",
+    "image": "Muffin_2x.png"
+  },
+  "Pill": {
+    "name": "Pill",
+    "tier": 2,
+    "cost": 1,
+    "active": true,
+    "rollable": true,
+    "ability": "Make one pet faint. Always on sale!",
+    "image": "Pill_2x.png"
+  },
+  "Radish": {
+    "name": "Radish",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain ANY useful perk from the pet's tier.",
+    "image": "Radish_2x.png"
+  },
+  "RiceBall": {
+    "name": "Rice Ball",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Sell for +2 {GoldIcon} gold.",
+    "image": "RiceBall_2x.png"
+  },
+  "SudduthTomato": {
+    "name": "Sudduth Tomato",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "If still standing, gain permanent +1 {HealthIcon} health, once.",
+    "image": "SudduthTomato_2x.png"
+  },
+  "WallChicken": {
+    "name": "Wall Chicken",
+    "tier": 2,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 {AttackIcon} attack and Weak {WeakIcon}.",
+    "image": "WallChicken_2x.png"
+  },
+  "Avocado": {
+    "name": "Avocado",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +3 {GoldIcon} gold on next turn.",
+    "image": "Avocado_2x.png"
+  },
+  "BirthdayCake": {
+    "name": "Birthday Cake",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Increase sell value by 1 {GoldIcon} gold.",
+    "image": "BirthdayCake_2x.png"
+  },
+  "Blackberry": {
+    "name": "Blackberry",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +1 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "image": "Blackberry_2x.png"
+  },
+  "BrusselsSprout": {
+    "name": "Brussels Sprout",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet the Brussels Sprout {PerkIcon} perk.",
+    "image": "BrusselsSprout_2x.png"
+  },
+  "BubbleTea": {
+    "name": "Bubble Tea",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "",
+    "image": "BubbleTea_2x.png"
+  },
+  "CannedConfused": {
+    "name": "Canned Confused",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Confused {ConfusedIcon} without triggering abilities.",
+    "image": "CannedConfused_2x.png"
+  },
+  "CannedSilly": {
+    "name": "Canned Silly",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Silly {SillyIcon} without triggering abilities.",
+    "image": "CannedSilly_2x.png"
+  },
+  "CannedWeb": {
+    "name": "Canned Web",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Webbed {WebIcon} without triggering abilities.",
+    "image": "CannedWeb_2x.png"
+  },
+  "CarrotParisier": {
+    "name": "Carrot Parisier",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Reduce damage taken by 3 during start of battle.",
+    "image": "CarrotParisier_2x.png"
+  },
+  "Croissant": {
+    "name": "Croissant",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +1 {AttackIcon} attack.",
+    "image": "Croissant_2x.png"
+  },
+  "Cucumber": {
+    "name": "Cucumber",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +1 {HealthIcon} health.",
+    "image": "Cucumber_2x.png"
+  },
+  "Fig": {
+    "name": "Fig",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Deal 4 {DamageIcon} damage to the lowest health enemy, once.",
+    "image": "Fig_2x.png"
+  },
+  "Garlic": {
+    "name": "Garlic",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Takes 2 less {DamageIcon} damage.",
+    "image": "Garlic_2x.png"
+  },
+  "GeecheeRedPea": {
+    "name": "Geechee Red Pea",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 {HealthIcon} health.",
+    "image": "GeecheeRedPea_2x.png"
+  },
+  "GharialGift1": {
+    "name": "Gharial Gift1",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 1 Gharial toy.",
+    "image": "GharialGift1_2x.png"
+  },
+  "GharialGift2": {
+    "name": "Gharial Gift2",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 2 Gharial toy.",
+    "image": "GharialGift2_2x.png"
+  },
+  "GharialGift3": {
+    "name": "Gharial Gift3",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 3 Gharial toy.",
+    "image": "GharialGIft3_2x.png"
+  },
+  "GingerbreadMan": {
+    "name": "Gingerbread Man",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +1 {ExpIcon} experience.",
+    "image": "GingerbreadMan_2x.png"
+  },
+  "Guava": {
+    "name": "Guava",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Block 3 {DamageIcon} damage, and attack for +3 {DamageIcon} damage, once.",
+    "image": "Guava_2x.png"
+  },
+  "JustRightPorridge": {
+    "name": "Just Right Porridge",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 to their lowest stat.",
+    "image": "JustRightPorridge_2x.png"
+  },
+  "Lollipop": {
+    "name": "Lollipop",
+    "tier": 3,
+    "cost": 2,
+    "active": true,
+    "rollable": true,
+    "ability": "Swap Attack and Health of a pet. Always on sale!",
+    "image": "Lollipop_2x.png"
+  },
+  "Pineapple": {
+    "name": "Pineapple",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Ability deals +2 {DamageIcon} damage, thrice.",
+    "image": "Pineapple_2x.png"
+  },
+  "Rambutan": {
+    "name": "Rambutan",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Gain +3 {ManaIcon} mana.",
+    "image": "Rambutan_2x.png"
+  },
+  "Ravioli": {
+    "name": "Ravioli",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Replace perk or ailment on one pet with +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "image": "Ravioli_2x.png"
+  },
+  "Salad": {
+    "name": "Salad",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "",
+    "image": "Salad_2x.png"
+  },
+  "SaladBowl": {
+    "name": "Salad Bowl",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give two random pets +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "image": "SaladBowl_2x.png"
+  },
+  "Sandwich": {
+    "name": "Sandwich",
+    "tier": 3,
+    "cost": 1,
+    "active": true,
+    "rollable": true,
+    "ability": "Balance out attack and health. Always on sale!",
+    "image": "Sandwich_2x.png"
+  },
+  "Sausage": {
+    "name": "Sausage",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain one free roll.",
+    "image": "Sausage_2x.png"
+  },
+  "Seaweed": {
+    "name": "Seaweed",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Transform into a Baby Urchin.",
+    "image": "Seaweed_2x.png"
+  },
+  "Squash": {
+    "name": "Squash",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Remove 6 {HealthIcon} health from target, once.",
+    "image": "Squash_2x.png"
+  },
+  "WhiteTruffle": {
+    "name": "White Truffle",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +4 {AttackIcon} attack and jump-attack the highest attack enemy, once.",
+    "image": "WhiteTruffle_2x.png"
+  },
+  "YouthWater": {
+    "name": "Youth Water",
+    "tier": 3,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Missing description",
+    "image": "YouthWater_2x.png"
+  },
+  "Ambrosia": {
+    "name": "Ambrosia",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Block ailment or 8 {DamageIcon} damage, once.",
+    "image": "Ambrosia_2x.png"
+  },
+  "Baguette": {
+    "name": "Baguette",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Remove the front-most enemy perk, once.",
+    "image": "Baguette_2x.png"
+  },
+  "Banana": {
+    "name": "Banana",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Summon one 4/4 Monkey.",
+    "image": "Banana_2x.png"
+  },
+  "Bread": {
+    "name": "Bread",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +7 {HealthIcon} health until next turn.",
+    "image": "Bread_2x.png"
+  },
+  "CannedAilment2": {
+    "name": "Canned Ailment2",
+    "tier": 4,
+    "cost": 1,
+    "active": true,
+    "rollable": true,
+    "ability": "Choose one tier 4-6 ailment to stock. Always on sale!",
+    "image": "CannedAilment2_2x.png"
+  },
+  "CannedBloated": {
+    "name": "Canned Bloated",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Bloated {BloatedIcon} without triggering abilities.",
+    "image": "CannedBloated_2x.png"
+  },
+  "CannedBurn": {
+    "name": "Canned Burn",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Crisp {BurnIcon} without triggering abilities.",
+    "image": "CannedBurn_2x.png"
+  },
+  "CannedFood": {
+    "name": "Canned Food",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give all current and future shop pets +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "image": "CannedFood_2x.png"
+  },
+  "CannedTasty": {
+    "name": "Canned Tasty",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Tasty {TastyIcon} without triggering abilities.",
+    "image": "CannedTasty_2x.png"
+  },
+  "Cauliflower": {
+    "name": "Cauliflower",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "If still standing, gain permanent +1 {AttackIcon} attack and +1 {HealthIcon} health, once.",
+    "image": "Cauliflower_2x.png"
+  },
+  "Cheese": {
+    "name": "Cheese",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Attack with at least 15 {AttackIcon} attack, once.",
+    "image": "Cheese_2x.png"
+  },
+  "Chickpea": {
+    "name": "Chickpea",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "",
+    "image": "Chickpea_2x.png"
+  },
+  "Doughnut": {
+    "name": "Doughnut",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Prioritize this for friendly random abilities.",
+    "image": "Doughnut_2x.png"
+  },
+  "DrinkMeLiquid": {
+    "name": "Drink Me Liquid",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 {HealthIcon} health. Also convert 2 {AttackIcon} attack into health.",
+    "image": "DrinkMeLiquid_2x.png"
+  },
+  "EatMeCake": {
+    "name": "Eat Me Cake",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 {AttackIcon} attack. Also convert 2 {HealthIcon} health into attack.",
+    "image": "EatMeCake_2x.png"
+  },
+  "FortuneCookie": {
+    "name": "Fortune Cookie",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Attack has 50% chance to deal double {DamageIcon} damage.",
+    "image": "FortuneCookie_2x.png"
+  },
+  "Grapes": {
+    "name": "Grapes",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +1 {GoldIcon} gold.",
+    "image": "Grapes_2x.png"
+  },
+  "MapleSyrup": {
+    "name": "Maple Syrup",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Attack for 50% damage and block 50% damage, thrice.",
+    "image": "MapleSyrup_2x.png"
+  },
+  "MildChili": {
+    "name": "Mild Chili",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Attack second enemy for 4 {DamageIcon} damage.",
+    "image": "MildChili_2x.png"
+  },
+  "Onion": {
+    "name": "Onion",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Move to the back, once.",
+    "image": "Onion_2x.png"
+  },
+  "OysterMushroom": {
+    "name": "Oyster Mushroom",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Set {AttackIcon} attack and {HealthIcon} health to at least 9, once.",
+    "image": "OysterMushroom_2x.png"
+  },
+  "Pear": {
+    "name": "Pear",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "image": "Pear_2x.png"
+  },
+  "Pie": {
+    "name": "Pie",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +4 {AttackIcon} attack and +3 {HealthIcon} health.",
+    "image": "Pie_2x.png"
+  },
+  "Potato": {
+    "name": "Potato",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Block 10 {DamageIcon} damage from abilities and perks, twice.",
+    "image": "Potato_2x.png"
+  },
+  "PuppyGift1": {
+    "name": "Puppy Gift1",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 1 Puppy toy.",
+    "image": "PuppyGift1_2x.png"
+  },
+  "PuppyGift2": {
+    "name": "Puppy Gift2",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 2 Puppy toy.",
+    "image": "PuppyGift2_2x.png"
+  },
+  "PuppyGift3": {
+    "name": "Puppy Gift3",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 3 Puppy toy.",
+    "image": "PuppyGift3_2x.png"
+  },
+  "Salt": {
+    "name": "Salt",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Attack for double {DamageIcon} damage, once.",
+    "image": "Salt_2x.png"
+  },
+  "Soup": {
+    "name": "Soup",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +1 {AttackIcon} attack and +1 {HealthIcon} health. Triple if you have 1 life left.",
+    "image": "Soup_2x.png"
+  },
+  "VanillaBean": {
+    "name": "Vanilla Bean",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Summon a 3/3 Ant",
+    "image": "VanillaBean_2x.png"
+  },
+  "Waffle": {
+    "name": "Waffle",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Activate buy ability or give +3 {HealthIcon} health.",
+    "image": "Waffle_2x.png"
+  },
+  "WaterMelon": {
+    "name": "Water Melon",
+    "tier": 4,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Block 10 {DamageIcon} damage, once.",
+    "image": "WaterMelon_2x.png"
+  },
+  "CannedDeaf": {
+    "name": "Canned Deaf",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Dazed {DeafIcon} without triggering abilities.",
+    "image": "CannedDeaf_2x.png"
+  },
+  "CannedDrowsy": {
+    "name": "Canned Drowsy",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Sleepy {DrowsyIcon} without triggering abilities.",
+    "image": "CannedDrowsy_2x.png"
+  },
+  "Carrot": {
+    "name": "Carrot",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "image": "Carrot_2x.png"
+  },
+  "Chili": {
+    "name": "Chili",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Attack second enemy for 5 {DamageIcon} damage.",
+    "image": "Chili_2x.png"
+  },
+  "Chocolate": {
+    "name": "Chocolate",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +1 {ExpIcon} experience.",
+    "image": "Chocolate_2x.png"
+  },
+  "Chocolate2": {
+    "name": "Chocolate2",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +2 {ExpIcon} experience.",
+    "image": "Chocolate2_2x.png"
+  },
+  "Chocolate3": {
+    "name": "Chocolate3",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Give one pet +3 {ExpIcon} experience.",
+    "image": "Chocolate3_2x.png"
+  },
+  "CocoaBean": {
+    "name": "Cocoa Bean",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Transform into a random summon pet.",
+    "image": "CocoaBean_2x.png"
+  },
+  "CottonCandy": {
+    "name": "Cotton Candy",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "image": "CottonCandy_2x.png"
+  },
+  "Durian": {
+    "name": "Durian",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Reduce the most healthy enemy by 33% {HealthIcon} health, once.",
+    "image": "Durian_2x.png"
+  },
+  "EasterEgg": {
+    "name": "Easter Egg",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Summon one 3/3 Bunny that attacks for double damage.",
+    "image": "EasterEgg_2x.png"
+  },
+  "EggPlant": {
+    "name": "Egg Plant",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Push opposite enemy 1 space forward.",
+    "image": "EggPlant_2x.png"
+  },
+  "Flodeboller": {
+    "name": "Flodeboller",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Replace each shop item with something from 1 tier higher than it.",
+    "image": "Flodeboller_2x.png"
+  },
+  "HoneydewMelon": {
+    "name": "Honeydew Melon",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Block 10 {DamageIcon} damage, and attack for +5 {DamageIcon} damage, once.",
+    "image": "HoneydewMelon_2x.png"
+  },
+  "Kiwano": {
+    "name": "Kiwano",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Ability deals +8 {DamageIcon} damage, once.",
+    "image": "Kiwano_2x.png"
+  },
+  "Lasagne": {
+    "name": "Lasagne",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +2 {AttackIcon} attack and +3 {HealthIcon} health.",
+    "image": "Lasagne_2x.png"
+  },
+  "Lemon": {
+    "name": "Lemon",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Block 7 {DamageIcon} damage, twice.",
+    "image": "Lemon_2x.png"
+  },
+  "LovePotion": {
+    "name": "Love Potion",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Summon one 5/5 pet like this.",
+    "image": "LovePotion_2x.png"
+  },
+  "MagicBeans": {
+    "name": "Magic Beans",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain the Golden Egg perk and increase sell value by 4 {GoldIcon} gold.",
+    "image": "MagicBeans_2x.png"
+  },
+  "ManaPotion2": {
+    "name": "Mana Potion2",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +7 {ManaIcon} mana.",
+    "image": "ManaPotion2_2x.png"
+  },
+  "Oblonot": {
+    "name": "Oblonot",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain 50% health. Once.",
+    "image": "Oblonot_2x.png"
+  },
+  "Pepper": {
+    "name": "Pepper",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Health does not go under 1. Removed after taking damage.",
+    "image": "Pepper_2x.png"
+  },
+  "Skewer": {
+    "name": "Skewer",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Attack second and third enemy for 3 {DamageIcon} damage.",
+    "image": "Skewer_2x.png"
+  },
+  "Stew": {
+    "name": "Stew",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give three random pets +2 {HealthIcon} health.",
+    "image": "Stew_2x.png"
+  },
+  "StingRayGift1": {
+    "name": "Sting Ray Gift1",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 1 Sting Ray toy.",
+    "image": "StingRayGift1_2x.png"
+  },
+  "StingRayGift2": {
+    "name": "Sting Ray Gift2",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 2 Sting Ray toy.",
+    "image": "StingRayGift2_2x.png"
+  },
+  "StingRayGift3": {
+    "name": "Sting Ray Gift3",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 3 Sting Ray toy.",
+    "image": "StingRayGift3_2x.png"
+  },
+  "StrawberryJar": {
+    "name": "Strawberry Jar",
+    "tier": 5,
+    "cost": 1,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet Strawberry {PerkIcon}. Always on sale!",
+    "image": "StrawberryJar_2x.png"
+  },
+  "Sushi": {
+    "name": "Sushi",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give three random pets +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "image": "Sushi_2x.png"
+  },
+  "Taco": {
+    "name": "Taco",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give three random pets +2 {AttackIcon} attack.",
+    "image": "Taco_2x.png"
+  },
+  "Tofu": {
+    "name": "Tofu",
+    "tier": 5,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Stock one 2-gold copy of the last non-Tofu food bought this turn.",
+    "image": "Tofu_2x.png"
+  },
+  "CannedAcid": {
+    "name": "Canned Acid",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Icky {AcidIcon} without triggering abilities.",
+    "image": "CannedAcid_2x.png"
+  },
+  "CannedCurse": {
+    "name": "Canned Curse",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Make one pet Cursed {CurseIcon} without triggering abilities.",
+    "image": "CannedCurse_2x.png"
+  },
+  "Celery": {
+    "name": "Celery",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +6 {HealthIcon} health.",
+    "image": "Celery_2x.png"
+  },
+  "ChickenLeg": {
+    "name": "Chicken Leg",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give one pet +3 {AttackIcon} attack and +3 {HealthIcon} health.",
+    "image": "ChickenLeg_2x.png"
+  },
+  "CoffeeBean": {
+    "name": "Coffee Bean",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Activate one pet's ability.",
+    "image": "CoffeeBean_2x.png"
+  },
+  "Cornucopia": {
+    "name": "Cornucopia",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Choose one free tier 6 food to stock from ALL packs.",
+    "image": "Cornucopia_2x.png"
+  },
+  "Date": {
+    "name": "Date",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Deal 1 {DamageIcon} damage to a random enemy",
+    "image": "Date_2x.png"
+  },
+  "HotDog": {
+    "name": "Hot Dog",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give two random pets +4 {AttackIcon} attack.",
+    "image": "HotDog_2x.png"
+  },
+  "ImmortalPeach": {
+    "name": "Immortal Peach",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "",
+    "image": "ImmortalPeach_2x.png"
+  },
+  "Kompeito": {
+    "name": "Kompeito",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Transform one pet into another from one higher tier.",
+    "image": "Kompeito_2x.png"
+  },
+  "Melon": {
+    "name": "Melon",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Block 20 {DamageIcon} damage, once.",
+    "image": "Melon_2x.png"
+  },
+  "MongooseGift1": {
+    "name": "Mongoose Gift1",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 1 Mongoose toy.",
+    "image": "MongooseGift1_2x.png"
+  },
+  "MongooseGift2": {
+    "name": "Mongoose Gift2",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 2 Mongoose toy.",
+    "image": "MongooseGift2_2x.png"
+  },
+  "MongooseGift3": {
+    "name": "Mongoose Gift3",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Choose one level 3 Mongoose toy.",
+    "image": "MongooseGift3_2x.png"
+  },
+  "Mushroom": {
+    "name": "Mushroom",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Come back as a 1/1.",
+    "image": "Mushroom_2x.png"
+  },
+  "Orange": {
+    "name": "Orange",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give two random pets +4 {HealthIcon} health.",
+    "image": "Orange_2x.png"
+  },
+  "Pancakes": {
+    "name": "Pancakes",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "image": "Pancakes_2x.png"
+  },
+  "PitaBread": {
+    "name": "Pita Bread",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +15 {HealthIcon} health, once.",
+    "image": "PitaBread_2x.png"
+  },
+  "Pizza": {
+    "name": "Pizza",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give two random pets +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "image": "Pizza_2x.png"
+  },
+  "Popcorn": {
+    "name": "Popcorn",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Summon one random pet from the same tier.",
+    "image": "Popcorn_2x.png"
+  },
+  "Pretzel": {
+    "name": "Pretzel",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "",
+    "image": "Pretzel_2x.png"
+  },
+  "RainbowJelly": {
+    "name": "Rainbow Jelly",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "",
+    "image": "RainbowJelly_2x.png"
+  },
+  "SardinianCurrant": {
+    "name": "Sardinian Currant",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Gain +2 {GoldIcon} gold.",
+    "image": "SardinianCurrant_2x.png"
+  },
+  "SoftIce": {
+    "name": "Soft Ice",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Give all pets +1 {AttackIcon} attack.",
+    "image": "SoftIce_2x.png"
+  },
+  "Starfruit": {
+    "name": "Starfruit",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Choose one tier 5-6 perk food to stock for free from ANY pack.",
+    "image": "Starfruit_2x.png"
+  },
+  "Steak": {
+    "name": "Steak",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Attack with +20 {DamageIcon} damage, once.",
+    "image": "Steak_2x.png"
+  },
+  "Tomato": {
+    "name": "Tomato",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Deal 10 {DamageIcon} damage to the last enemy, once.",
+    "image": "Tomato_2x.png"
+  },
+  "WhiteOkra": {
+    "name": "White Okra",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Block 10 damage twice or ailment once.",
+    "image": "WhiteOkra_2x.png"
+  },
+  "YggdrasilFruit": {
+    "name": "Yggdrasil Fruit",
+    "tier": 6,
+    "cost": 3,
+    "active": true,
+    "rollable": true,
+    "ability": "Summon two 5/5 Nordic Goats.",
+    "image": "YggdrasilFruit_2x.png"
+  },
+  "Coconut": {
+    "name": "Coconut",
+    "tier": 7,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Block damage, once.",
+    "image": "Coconut_2x.png"
+  },
+  "Peanut": {
+    "name": "Peanut",
+    "tier": 7,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Knock out any pet attacked and hurt by this.",
+    "image": "Peanut_2x.png"
+  },
+  "PeanutButter": {
+    "name": "Peanut Butter",
+    "tier": 7,
+    "cost": 3,
+    "active": true,
+    "rollable": false,
+    "ability": "Knock out any pet attacked and hurt by this, once.",
+    "image": "PeanutButter_2x.png"
+  }
+}
