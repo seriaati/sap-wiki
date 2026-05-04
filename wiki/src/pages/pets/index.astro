@@ -20,6 +20,13 @@ const sorted = [...pets].sort(
 
   <TierFilter />
 
+  <div class="sort-bar" id="sort-bar">
+    <span class="sort-label">Sort:</span>
+    <button class="sort-pill" data-sort="attack" type="button">Attack</button>
+    <button class="sort-pill" data-sort="health" type="button">Health</button>
+    <button class="sort-pill" data-sort="cost"   type="button">Gold</button>
+  </div>
+
   <div class="gallery">
     {
       sorted.map((pet) => (
@@ -28,6 +35,9 @@ const sorted = [...pets].sort(
           class:list={["card", !pet.active && "card--inactive"]}
           data-entry-tier={pet.tier}
           data-entry-name={pet.name.toLowerCase()}
+          data-entry-attack={pet.attack}
+          data-entry-health={pet.health}
+          data-entry-cost={pet.cost}
           data-entry-desc={[
             pet.trigger,
             pet.ability1,
@@ -132,6 +142,48 @@ const sorted = [...pets].sort(
   .count {
     color: var(--text-muted);
     font-size: 0.875rem;
+  }
+
+  .sort-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    margin-bottom: var(--sp-4);
+    flex-wrap: wrap;
+  }
+
+  .sort-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .sort-pill {
+    padding: 4px 10px;
+    border-radius: var(--r);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background: var(--surface-muted);
+    border: 1.5px solid transparent;
+    transition: background 120ms, border-color 120ms;
+    cursor: pointer;
+  }
+
+  .sort-pill:hover { background: var(--border); }
+
+  .sort-pill.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .sort-pill.active::after {
+    content: attr(data-dir);
+    margin-left: 3px;
+    opacity: 0.75;
   }
 
   .gallery {
@@ -360,5 +412,73 @@ const sorted = [...pets].sort(
       },
       { passive: false },
     );
+  }
+</script>
+
+<script>
+  const sortBar = document.getElementById('sort-bar')
+  const gallery = document.querySelector<HTMLElement>('.gallery')
+
+  if (sortBar && gallery) {
+    let activeStat: string | null = null
+    let activeDirAsc = true
+
+    const pills = sortBar.querySelectorAll<HTMLButtonElement>('[data-sort]')
+
+    // restore from URL
+    const urlParams = new URLSearchParams(location.search)
+    const initSort = urlParams.get('sort')
+    const initDir  = urlParams.get('dir')
+    if (initSort) {
+      activeStat   = initSort
+      activeDirAsc = initDir !== 'desc'
+      const pill = sortBar.querySelector<HTMLButtonElement>(`[data-sort="${initSort}"]`)
+      if (pill) {
+        pill.classList.add('active')
+        pill.dataset.dir = activeDirAsc ? '↑' : '↓'
+      }
+      applySort()
+    }
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const stat = pill.dataset.sort!
+        if (activeStat === stat) {
+          activeDirAsc = !activeDirAsc
+        } else {
+          activeStat = stat
+          activeDirAsc = true
+          pills.forEach(p => { p.classList.remove('active'); delete p.dataset.dir })
+        }
+        pill.classList.add('active')
+        pill.dataset.dir = activeDirAsc ? '↑' : '↓'
+        applySort()
+        syncSortURL()
+      })
+    })
+
+    function applySort() {
+      if (!activeStat) return
+      const cards = Array.from(gallery!.querySelectorAll<HTMLElement>('[data-entry-tier]'))
+      cards.sort((a, b) => {
+        const va = Number(a.dataset[`entry${activeStat![0].toUpperCase()}${activeStat!.slice(1)}`] ?? 0)
+        const vb = Number(b.dataset[`entry${activeStat![0].toUpperCase()}${activeStat!.slice(1)}`] ?? 0)
+        return activeDirAsc ? va - vb : vb - va
+      })
+      cards.forEach(c => gallery!.appendChild(c))
+    }
+
+    function syncSortURL() {
+      const params = new URLSearchParams(location.search)
+      if (activeStat) {
+        params.set('sort', activeStat)
+        params.set('dir', activeDirAsc ? 'asc' : 'desc')
+      } else {
+        params.delete('sort')
+        params.delete('dir')
+      }
+      const qs = params.toString()
+      history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
+    }
   }
 </script>
