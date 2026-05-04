@@ -28,7 +28,7 @@ const ogImage = image
     <title>{pageTitle}</title>
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SAP Wiki" />
-    <meta property="og:title" content={pageTitle} />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     {ogImage && <meta property="og:image" content={ogImage} />}
@@ -36,7 +36,7 @@ const ogImage = image
       name="twitter:card"
       content="summary"
     />
-    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     {ogImage && <meta name="twitter:image" content={ogImage} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
