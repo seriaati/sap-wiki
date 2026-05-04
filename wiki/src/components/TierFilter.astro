@@ -59,9 +59,11 @@ function diceStyle(tier: number, px: number): string {
   let query      = ''
 
   function syncURL() {
-    const params = new URLSearchParams()
+    const params = new URLSearchParams(location.search)
     if (query)       params.set('q', query)
+    else             params.delete('q')
     if (activeTier)  params.set('tier', String(activeTier))
+    else             params.delete('tier')
     const qs = params.toString()
     history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
   }
