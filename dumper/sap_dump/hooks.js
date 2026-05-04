@@ -341,22 +341,17 @@ function hookAbilityMethods(mod, abilityClass) {
     const HOOK_TARGETS = new Set([
         "SetTrigger", "SetAimAndTrigger", "SetAbout",
         "set_TriggerLimit", "set_TriggerLimitType", "SetTriggerLevel", "SetFinePrint",
-        "SetCustomNote", "SkipLocalizaiton",
-        "set_About", "GetAbout",
+        "SetCustomNote", "SkipLocalization",
     ]);
     const foundPtrs = {};
-    const allMethodNames = [];
     const it = Memory.alloc(Process.pointerSize); it.writePointer(ptr(0));
     let mth;
     while (!(mth = classGetMethods(abilityClass, it)).isNull()) {
         const mn = cstr(methodGetName(mth));
-        if (!mn) continue;
-        allMethodNames.push(mn);
-        if (HOOK_TARGETS.has(mn) && !foundPtrs[mn]) {
+        if (mn && HOOK_TARGETS.has(mn) && !foundPtrs[mn]) {
             try { foundPtrs[mn] = mth.readPointer(); } catch(e) {}
         }
     }
-    send({t:"log", m:`Ability methods (${allMethodNames.length}): ${allMethodNames.join(", ")}`});
     const toHook = foundPtrs;
 
     // SetAbout(string locoKey)
@@ -454,74 +449,6 @@ function hookAbilityMethods(mod, abilityClass) {
         } catch(e) { send({t:"log", m:"SetFinePrint hook failed: " + e}); }
     }
 
-    // set_About(self, string text) — property setter: stores raw text directly (no loco key)
-    // called for abilities that bypass the localization system
-    if (toHook["set_About"] && !toHook["set_About"].isNull()) {
-        try {
-            Interceptor.attach(toHook["set_About"], {
-                onEnter(args) {
-                    const key = args[0].toString();
-                    const existing = savedAbilities.get(key) || {self: args[0]};
-                    const text = readCsString(args[1]);
-                    if (text) existing.aboutText = text;
-                    savedAbilities.set(key, existing);
-                    let enumInt = -1;
-                    try { enumInt = args[0].add(16).readS32(); } catch(e) {}
-                    send({t:"log", m:`set_About fired: enumInt=${enumInt} text=${text}`});
-                }
-            });
-            send({t:"log", m:"Hooked set_About"});
-        } catch(e) { send({t:"log", m:"set_About hook failed: " + e}); }
-    } else {
-        send({t:"log", m:"set_About: not found"});
-    }
-
-    // SkipLocalizaiton() — note: typo in game source — marks ability as bypassing loco
-    if (toHook["SkipLocalizaiton"] && !toHook["SkipLocalizaiton"].isNull()) {
-        try {
-            Interceptor.attach(toHook["SkipLocalizaiton"], {
-                onEnter(args) {
-                    const key = args[0].toString();
-                    const existing = savedAbilities.get(key) || {self: args[0]};
-                    existing.skipLocalization = true;
-                    savedAbilities.set(key, existing);
-                    let enumInt = -1;
-                    try { enumInt = args[0].add(16).readS32(); } catch(e) {}
-                    send({t:"log", m:`SkipLocalizaiton fired: enumInt=${enumInt}`});
-                }
-            });
-            send({t:"log", m:"Hooked SkipLocalizaiton"});
-        } catch(e) { send({t:"log", m:"SkipLocalizaiton hook failed: " + e}); }
-    } else {
-        send({t:"log", m:"SkipLocalizaiton: not found"});
-    }
-
-    // GetAbout(self) → string — hook on leave to capture resolved text
-    // fires when game UI requests the ability description
-    const getAboutAbilityTexts = new Map();  // ptr_str → text
-    if (toHook["GetAbout"] && !toHook["GetAbout"].isNull()) {
-        try {
-            Interceptor.attach(toHook["GetAbout"], {
-                onEnter(args) { this.abilityPtr = args[0]; },
-                onLeave(retval) {
-                    const text = readCsString(retval);
-                    if (!text || !this.abilityPtr) return;
-                    const key = this.abilityPtr.toString();
-                    getAboutAbilityTexts.set(key, text);
-                    // store in savedAbilities too for emission
-                    const existing = savedAbilities.get(key) || {self: this.abilityPtr};
-                    if (!existing.aboutText) {
-                        existing.aboutText = text;
-                        savedAbilities.set(key, existing);
-                    }
-                }
-            });
-            send({t:"log", m:"Hooked GetAbout"});
-        } catch(e) { send({t:"log", m:"GetAbout hook failed: " + e}); }
-    } else {
-        send({t:"log", m:"GetAbout: not found"});
-    }
-
     // SetCustomNote(self, string text) — hardcoded English fallback text for abilities
     // without localization keys (e.g. newly added pets whose loco entries aren't shipped yet)
     if (toHook["SetCustomNote"] && !toHook["SetCustomNote"].isNull()) {
@@ -551,7 +478,6 @@ function hookAbilityMethods(mod, abilityClass) {
                     const existing = savedAbilities.get(key) || {self: args[0]};
                     existing.skipLocalization = true;
                     savedAbilities.set(key, existing);
-                    // read ability name from enum at offset 16 for logging
                     let nm = "(unknown)";
                     try {
                         const ei = args[0].add(16).readS32();

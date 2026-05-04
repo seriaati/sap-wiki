@@ -75,10 +75,11 @@ def run_frida_session() -> dict:
     script_ref_holder[0] = scr
     frida.resume(pid)
 
-    print("[2] Game launched — click 'Pets' in the main menu, then open the pack edit screen")
-    print("[2] Extraction fires 5s after templates stop loading (includes unowned pack pets)")
-    print("[2] Waiting up to 120s for 'done' signal...")
-    done_event.wait(timeout=120)
+    print("[2] Game launched — navigate: Pets → pack edit screen → scroll ALL tiers")
+    print("[2] Extraction fires 5s after templates load; trigger dump fires 20s later")
+    print("[2] Scroll through all tiers during that 20s window to capture ability texts")
+    print("[2] Waiting up to 180s for 'done' signal...")
+    done_event.wait(timeout=180)
     if not done_event.is_set():
         print("[2] WARNING: timed out waiting for done signal")
 
