@@ -297,7 +297,7 @@ const sorted = [...toys].sort(
 </style>
 
 <script>
-  const gallery = document.querySelector(".gallery");
+  const gallery = document.querySelector<HTMLElement>(".gallery");
   if (gallery) {
     const state = new WeakMap<Element, number>();
 
