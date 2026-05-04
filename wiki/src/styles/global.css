@@ -1,0 +1,113 @@
+:root {
+  /* surfaces */
+  --bg:             oklch(97%   0.008 88);
+  --surface:        oklch(99.5% 0.004 88);
+  --surface-muted:  oklch(95.5% 0.010 88);
+  --surface-hover:  oklch(96.5% 0.012 88);
+
+  /* borders */
+  --border:         oklch(87%   0.016 88);
+  --border-subtle:  oklch(92.5% 0.009 88);
+
+  /* text */
+  --text:           oklch(22%   0.012 88);
+  --text-secondary: oklch(46%   0.014 88);
+  --text-muted:     oklch(63%   0.009 88);
+
+  /* accent — SAP amber/gold */
+  --accent:         oklch(64%   0.19  78);
+  --accent-hover:   oklch(60%   0.21  78);
+  --accent-fg:      oklch(98%   0.006 78);
+  --accent-dim:     oklch(94%   0.055 78);
+  --accent-border:  oklch(80%   0.12  78);
+
+  /* tier badge colors */
+  --tier-1: oklch(60% 0.14 145);
+  --tier-2: oklch(58% 0.16 210);
+  --tier-3: oklch(58% 0.18 270);
+  --tier-4: oklch(62% 0.20  55);
+  --tier-5: oklch(56% 0.22  25);
+  --tier-6: oklch(56% 0.20 310);
+
+  /* spacing scale */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  16px;
+  --sp-5:  20px;
+  --sp-6:  24px;
+  --sp-8:  32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+
+  /* radius */
+  --r-sm: 4px;
+  --r:    8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+
+  /* elevation */
+  --shadow-sm: 0 1px 2px oklch(22% 0.012 88 / 0.05);
+  --shadow:    0 2px 8px oklch(22% 0.012 88 / 0.08), 0 1px 2px oklch(22% 0.012 88 / 0.04);
+}
+
+html[data-theme="dark"] {
+  --bg:             oklch(14%   0.008 88);
+  --surface:        oklch(18%   0.008 88);
+  --surface-muted:  oklch(21%   0.010 88);
+  --surface-hover:  oklch(20%   0.012 88);
+  --border:         oklch(30%   0.016 88);
+  --border-subtle:  oklch(24%   0.009 88);
+  --text:           oklch(94%   0.008 88);
+  --text-secondary: oklch(70%   0.010 88);
+  --text-muted:     oklch(52%   0.009 88);
+  --accent:         oklch(70%   0.19  78);
+  --accent-hover:   oklch(74%   0.21  78);
+  --accent-fg:      oklch(14%   0.010 78);
+  --accent-dim:     oklch(22%   0.055 78);
+  --accent-border:  oklch(38%   0.12  78);
+  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.30);
+  --shadow:    0 2px 8px oklch(0% 0 0 / 0.45), 0 1px 2px oklch(0% 0 0 / 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --bg:             oklch(14%   0.008 88);
+    --surface:        oklch(18%   0.008 88);
+    --surface-muted:  oklch(21%   0.010 88);
+    --surface-hover:  oklch(20%   0.012 88);
+    --border:         oklch(30%   0.016 88);
+    --border-subtle:  oklch(24%   0.009 88);
+    --text:           oklch(94%   0.008 88);
+    --text-secondary: oklch(70%   0.010 88);
+    --text-muted:     oklch(52%   0.009 88);
+    --accent:         oklch(70%   0.19  78);
+    --accent-hover:   oklch(74%   0.21  78);
+    --accent-fg:      oklch(14%   0.010 78);
+    --accent-dim:     oklch(22%   0.055 78);
+    --accent-border:  oklch(38%   0.12  78);
+    --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.30);
+    --shadow:    0 2px 8px oklch(0% 0 0 / 0.45), 0 1px 2px oklch(0% 0 0 / 0.25);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body { min-height: 100vh; display: flex; flex-direction: column; }
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ul, ol { list-style: none; }
+
+[hidden] { display: none !important; }

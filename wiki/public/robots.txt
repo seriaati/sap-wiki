@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sap.seria.moe/sitemap-index.xml

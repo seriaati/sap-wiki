@@ -1,0 +1,39 @@
+---
+import iconMapData from '@data/icon_map.json'
+
+interface Props {
+  name: string
+  size?: number
+}
+
+const { name, size = 18 } = Astro.props
+
+const sprites = (iconMapData as any).sprites as Record<string, { x: number; y: number; w: number; h: number }>
+const imgW = (iconMapData as any).imageWidth as number
+const imgH = (iconMapData as any).imageHeight as number
+
+const sp = sprites[name]
+const scale = sp ? size / sp.h : 1
+const bgW  = sp ? Math.round(imgW * scale) : 0
+const bgH  = sp ? Math.round(imgH * scale) : 0
+const bgX  = sp ? Math.round(sp.x * scale) : 0
+const bgY  = sp ? Math.round(sp.y * scale) : 0
+const w    = sp ? Math.round(sp.w * scale) : size
+---
+{sp && (
+  <span
+    class="stat-icon"
+    role="img"
+    aria-label={name}
+    style={`width:${w}px;height:${size}px;background-image:url('/assets/TextMap.png');background-position:-${bgX}px -${bgY}px;background-size:${bgW}px ${bgH}px`}
+  />
+)}
+
+<style>
+  .stat-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+</style>

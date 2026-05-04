@@ -1,0 +1,62 @@
+---
+import iconMapData from '@data/icon_map.json'
+
+interface Props {
+  text: string
+  iconSize?: number
+  links?: boolean
+}
+
+const { text, iconSize = 16, links = true } = Astro.props
+
+const sprites = (iconMapData as any).sprites as Record<string, { x: number; y: number; w: number; h: number }>
+const imgW = (iconMapData as any).imageWidth as number
+const imgH = (iconMapData as any).imageHeight as number
+
+const html = (text ?? '')
+  .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, display, slug) => {
+    if (!links) return display
+    const href = slug?.startsWith('food:') ? '/foods/' + slug.slice(5)
+      : slug?.startsWith('toy:') ? '/toys/' + slug.slice(4)
+      : '/pets/' + (slug ?? display.toLowerCase().replace(/\s+/g, ''))
+    return `<a href="${href}" class="pet-link">${display}</a>`
+  })
+  .replace(/\{(\w+)\}/g, (_, token) => {
+  const key = token.replace(/Icon$/, '')
+  const sp = sprites[key]
+  if (!sp) return `{${token}}`
+  const scale = iconSize / sp.h
+  const bgW = Math.round(imgW * scale)
+  const bgH = Math.round(imgH * scale)
+  const bgX = Math.round(sp.x * scale)
+  const bgY = Math.round(sp.y * scale)
+  const w   = Math.round(sp.w * scale)
+  return `<span class="icon-sprite" role="img" aria-label="${key}" style="width:${w}px;height:${iconSize}px;background-image:url('/assets/TextMap.png');background-position:-${bgX}px -${bgY}px;background-size:${bgW}px ${bgH}px"></span>`
+})
+---
+<span class="ability-text" set:html={html} />
+
+<style>
+  .ability-text {
+    line-height: 1.7;
+  }
+  .ability-text :global(.icon-sprite) {
+    display: inline-block;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    flex-shrink: 0;
+    margin: 0 1px;
+  }
+  .ability-text :global(.pet-link) {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .ability-text :global(.pet-link:hover) {
+    text-decoration: underline;
+  }
+  .ability-text :global(b) {
+    font-weight: 700;
+    color: var(--text);
+  }
+</style>

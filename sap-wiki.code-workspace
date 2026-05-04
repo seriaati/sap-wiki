@@ -1,0 +1,22 @@
+{
+    "folders": [
+        {
+            "name": "dumper",
+            "path": "./dumper"
+        },
+        {
+            "name": "wiki",
+            "path": "./wiki"
+        },
+        {
+            "name": "root",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder:dumper}/.venv/bin/python",
+        "python.analysis.extraPaths": [
+            "${workspaceFolder:dumper}"
+        ]
+    }
+}

@@ -1,0 +1,180 @@
+---
+import '../styles/global.css'
+
+interface Props {
+  title: string
+  description?: string
+  image?: string
+}
+
+const { title, description = 'Super Auto Pets reference wiki', image } = Astro.props
+const pathname = Astro.url.pathname
+const canonicalURL = new URL(pathname, Astro.site)
+const pageTitle = `${title} — SAP Wiki`
+const ogImage = image ? new URL(`/assets/${image}`, Astro.site).href : undefined
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+    <title>{pageTitle}</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SAP Wiki" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script is:inline>
+      const stored = localStorage.getItem('theme');
+      if (stored) document.documentElement.dataset.theme = stored;
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="/" class="wordmark">SAP Wiki</a>
+        <nav>
+          <a href="/pets"  class:list={['nav-link', { active: pathname.startsWith('/pets')  }]}>Pets</a>
+          <a href="/foods" class:list={['nav-link', { active: pathname.startsWith('/foods') }]}>Foods</a>
+          <a href="/toys"  class:list={['nav-link', { active: pathname.startsWith('/toys')  }]}>Toys</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <p>Super Auto Pets Wiki — unofficial fan resource. Not affiliated with Team Wood Games. · <a href="https://github.com/seriaati/sap-wiki" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--sp-6);
+    height: 54px;
+    display: flex;
+    align-items: center;
+    gap: var(--sp-8);
+  }
+
+  .wordmark {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+
+  header nav {
+    display: flex;
+    gap: var(--sp-1);
+  }
+
+  .nav-link {
+    padding: 6px 12px;
+    border-radius: var(--r);
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    transition: background 130ms, color 130ms;
+  }
+
+  .nav-link:hover {
+    background: var(--surface-muted);
+    color: var(--text);
+  }
+
+  .nav-link.active {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--sp-8) var(--sp-6);
+    flex: 1;
+    width: 100%;
+  }
+
+  footer {
+    border-top: 1px solid var(--border-subtle);
+    padding: var(--sp-6);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.825rem;
+    margin-top: auto;
+  }
+
+  .theme-toggle {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--r);
+    color: var(--text-secondary);
+    transition: background 130ms, color 130ms;
+  }
+
+  .theme-toggle:hover {
+    background: var(--surface-muted);
+    color: var(--text);
+  }
+
+  .icon-sun  { display: none; }
+  .icon-moon { display: block; }
+
+  html[data-theme="dark"] .icon-sun  { display: block; }
+  html[data-theme="dark"] .icon-moon { display: none; }
+
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme]) .icon-sun  { display: block; }
+    html:not([data-theme]) .icon-moon { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .header-inner { padding: 0 var(--sp-4); }
+    main { padding: var(--sp-6) var(--sp-4); }
+  }
+</style>
+
+<script>
+  const btn = document.getElementById('theme-toggle');
+  btn?.addEventListener('click', () => {
+    const html = document.documentElement;
+    const current = html.dataset.theme ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.dataset.theme = next;
+    localStorage.setItem('theme', next);
+  });
+</script>

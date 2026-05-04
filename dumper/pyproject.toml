@@ -1,0 +1,10 @@
+[project]
+name = "sap-dump"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "frida>=17.9.5",
+    "unitypy>=1.25.0",
+]

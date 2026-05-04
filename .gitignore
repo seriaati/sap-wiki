@@ -1,0 +1,16 @@
+# dependencies
+wiki/node_modules/
+__pycache__/
+
+# build output
+wiki/dist/
+wiki/.astro/
+
+# generated assets (copied from dumper/output on build)
+wiki/public/assets/
+
+# dumper runtime output
+dumper/output/
+
+# local tooling
+.serena/

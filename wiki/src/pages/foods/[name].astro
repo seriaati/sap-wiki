@@ -1,0 +1,184 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { foods } from '../../lib/data'
+import TierBadge from '../../components/TierBadge.astro'
+import Sprite from '../../components/Sprite.astro'
+import AbilityText from '../../components/AbilityText.astro'
+import StatIcon from '../../components/StatIcon.astro'
+
+export function getStaticPaths() {
+  return foods.map(food => ({
+    params: { name: food.slug },
+    props: { food },
+  }))
+}
+
+const { food } = Astro.props
+const isToken = !food.rollable && food.active
+---
+<Layout title={food.name} description={`${food.name} — Tier ${food.tier} SAP food.`} image={food.image}>
+  <nav class="breadcrumb">
+    <a href="/foods">← Foods</a>
+  </nav>
+
+  <div class="hero">
+    <Sprite name={food.name} image={food.image} tier={food.tier} size={88} />
+    <div class="hero-meta">
+      <h1>{food.name}</h1>
+      <div class="badges">
+        <TierBadge tier={food.tier} />
+        {!food.active && <span class="badge badge--muted">Inactive</span>}
+        {isToken      && <span class="badge badge--accent">Token</span>}
+        {!food.rollable && !isToken && <span class="badge badge--muted">Not in shop</span>}
+      </div>
+    </div>
+    <div class="cost-block">
+      <StatIcon name="Gold" size={34} />
+      <span class="cost-val">{food.cost}</span>
+    </div>
+  </div>
+
+  {food.ability ? (
+    <section class="effect-section">
+      <h2>Effect</h2>
+      <p class="effect-text"><AbilityText text={food.ability} iconSize={24} /></p>
+    </section>
+  ) : (
+    <div class="empty-state">
+      <p>No ability data available.</p>
+    </div>
+  )}
+</Layout>
+
+<style>
+  .breadcrumb {
+    margin-bottom: var(--sp-6);
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb a {
+    color: var(--accent);
+    font-weight: 600;
+    transition: opacity 130ms;
+  }
+
+  .breadcrumb a:hover { opacity: 0.72; }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-5);
+    padding: var(--sp-6);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--sp-6);
+    flex-wrap: wrap;
+  }
+
+  .hero-meta {
+    flex: 1;
+    min-width: 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--sp-2);
+  }
+
+  .badges {
+    display: flex;
+    gap: var(--sp-2);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: var(--r-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .badge--muted {
+    background: var(--surface-muted);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+
+  .badge--accent {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .cost-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--sp-4) var(--sp-6);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    border-radius: var(--r-lg);
+    gap: 3px;
+    margin-left: auto;
+  }
+
+  .cost-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+
+  .cost-val {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .effect-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-xl);
+    padding: var(--sp-6);
+    box-shadow: var(--shadow-sm);
+  }
+
+  h2 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin-bottom: var(--sp-3);
+  }
+
+  .effect-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text);
+    max-width: 65ch;
+  }
+
+  .empty-state {
+    padding: var(--sp-8) var(--sp-6);
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: var(--sp-4); gap: var(--sp-4); }
+    .cost-block { margin-left: 0; }
+    h1 { font-size: 1.5rem; }
+  }
+</style>

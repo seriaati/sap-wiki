@@ -1,0 +1,304 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { pets } from '../../lib/data'
+import TierBadge from '../../components/TierBadge.astro'
+import Sprite from '../../components/Sprite.astro'
+import AbilityText from '../../components/AbilityText.astro'
+import StatIcon from '../../components/StatIcon.astro'
+
+export function getStaticPaths() {
+  return pets.map(pet => ({
+    params: { name: pet.slug },
+    props: { pet },
+  }))
+}
+
+const { pet } = Astro.props
+const hasAbilities = pet.ability1 || pet.ability2 || pet.ability3
+const isToken = !pet.rollable && pet.active
+---
+<Layout title={pet.name} description={`${pet.name} — Tier ${pet.tier} SAP pet. ${pet.trigger ? 'Trigger: ' + pet.trigger + '.' : ''}`} image={pet.image}>
+  <nav class="breadcrumb">
+    <a href="/pets">← Pets</a>
+  </nav>
+
+  <div class="hero">
+    <Sprite name={pet.name} image={pet.image} tier={pet.tier} size={88} />
+    <div class="hero-meta">
+      <h1>{pet.name}</h1>
+      <div class="badges">
+        <TierBadge tier={pet.tier} />
+        {!pet.active && <span class="badge badge--muted">Inactive</span>}
+        {isToken    && <span class="badge badge--accent">Token</span>}
+        {!pet.rollable && !isToken && <span class="badge badge--muted">Not in shop</span>}
+      </div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-item">
+        <StatIcon name="Attack" size={28} />
+        <span class="stat-val">{pet.attack}</span>
+      </div>
+      <div class="stat-div" />
+      <div class="stat-item">
+        <StatIcon name="Health" size={28} />
+        <span class="stat-val">{pet.health}</span>
+      </div>
+      <div class="stat-div" />
+      <div class="stat-item">
+        <StatIcon name="Gold" size={28} />
+        <span class="stat-val">{pet.cost}</span>
+      </div>
+    </div>
+  </div>
+
+  {pet.trigger && (
+    <div class="trigger-row">
+      <span class="trigger-label">Trigger</span>
+      <span class="trigger-val">{pet.trigger}</span>
+    </div>
+  )}
+
+  {hasAbilities ? (
+    <section class="abilities">
+      <h2>Abilities</h2>
+      <div class="table-wrap">
+        <table class="ability-table">
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Effect</th>
+            </tr>
+          </thead>
+          <tbody>
+            {pet.ability1 && (
+              <tr>
+                <td class="lv-cell"><StatIcon name="Level1" size={36} /></td>
+                <td><AbilityText text={pet.ability1} iconSize={24} /></td>
+              </tr>
+            )}
+            {pet.ability2 && (
+              <tr>
+                <td class="lv-cell"><StatIcon name="Level2" size={36} /></td>
+                <td><AbilityText text={pet.ability2} iconSize={24} /></td>
+              </tr>
+            )}
+            {pet.ability3 && (
+              <tr>
+                <td class="lv-cell"><StatIcon name="Level3" size={36} /></td>
+                <td><AbilityText text={pet.ability3} iconSize={24} /></td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  ) : (
+    <div class="empty-state">
+      <p>This pet has no active ability.</p>
+    </div>
+  )}
+</Layout>
+
+<style>
+  .breadcrumb {
+    margin-bottom: var(--sp-6);
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb a {
+    color: var(--accent);
+    font-weight: 600;
+    transition: opacity 130ms;
+  }
+
+  .breadcrumb a:hover { opacity: 0.72; }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-5);
+    padding: var(--sp-6);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--sp-4);
+    flex-wrap: wrap;
+  }
+
+  .hero-meta {
+    flex: 1;
+    min-width: 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: var(--sp-2);
+  }
+
+  .badges {
+    display: flex;
+    gap: var(--sp-2);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: var(--r-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .badge--muted {
+    background: var(--surface-muted);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+
+  .badge--accent {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .stat-block {
+    display: flex;
+    align-items: stretch;
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    margin-left: auto;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--sp-3) var(--sp-5);
+    gap: 3px;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+
+  .stat-val {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+  }
+
+
+  .stat-div {
+    width: 1px;
+    background: var(--border);
+    align-self: stretch;
+  }
+
+  .trigger-row {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    padding: var(--sp-3) var(--sp-4);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    border-radius: var(--r-lg);
+    margin-bottom: var(--sp-6);
+  }
+
+  .trigger-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .trigger-val {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+  .abilities { margin-top: var(--sp-2); }
+
+  h2 {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin-bottom: var(--sp-3);
+  }
+
+  .table-wrap {
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .ability-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+  }
+
+  .ability-table thead th {
+    background: var(--surface-muted);
+    padding: var(--sp-2) var(--sp-4);
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .ability-table thead th:first-child { width: 80px; text-align: center; }
+
+  .ability-table tbody td {
+    padding: var(--sp-4);
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 1.05rem;
+    line-height: 1.65;
+    vertical-align: middle;
+  }
+
+  .ability-table tbody tr:last-child td { border-bottom: none; }
+
+  .ability-table tbody tr { transition: background 100ms; }
+  .ability-table tbody tr:hover { background: var(--surface-hover); }
+
+  .lv-cell { text-align: center; }
+
+.empty-state {
+    padding: var(--sp-8) var(--sp-6);
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: var(--sp-4); gap: var(--sp-4); }
+    .stat-block { margin-left: 0; width: 100%; }
+    .stat-item { flex: 1; padding: var(--sp-3) var(--sp-3); }
+    h1 { font-size: 1.5rem; }
+  }
+</style>

@@ -1,0 +1,204 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { foods } from '../../lib/data'
+import TierBadge from '../../components/TierBadge.astro'
+import Sprite from '../../components/Sprite.astro'
+import TierFilter from '../../components/TierFilter.astro'
+import AbilityText from '../../components/AbilityText.astro'
+import StatIcon from '../../components/StatIcon.astro'
+
+const sorted = [...foods].sort((a, b) => a.tier - b.tier || a.name.localeCompare(b.name))
+---
+<Layout title="Foods" description="Browse all Super Auto Pets foods — effects, tiers, and shop costs.">
+  <div class="page-header">
+    <h1>Foods</h1>
+    <span class="count">{foods.length} entries</span>
+  </div>
+
+  <TierFilter />
+
+  <div class="gallery">
+    {sorted.map(food => (
+      <a
+        href={`/foods/${food.slug}`}
+        class:list={['card', !food.active && 'card--inactive']}
+        data-entry-tier={food.tier}
+        data-entry-name={food.name.toLowerCase()}
+        data-entry-desc={[food.trigger, food.ability1, food.ability2, food.ability3].filter(Boolean).join(' ').toLowerCase()}
+      >
+        <div class="card-image">
+          <Sprite name={food.name} image={food.image} tier={food.tier} size={120} />
+        </div>
+
+        <div class="card-body">
+          <div class="card-name">{food.name}</div>
+
+          <div class="card-row">
+            <TierBadge tier={food.tier} size="md" />
+            <StatIcon name="Gold" size={20} />
+            <span class="card-cost">{food.cost}</span>
+          </div>
+
+          {!food.rollable && food.active && (
+            <span class="card-flag">Token</span>
+          )}
+        </div>
+
+        {food.ability && (
+          <div class="skill-tooltip">
+            <div class="tt-ability">
+              <AbilityText text={food.ability} iconSize={22} links={false} />
+            </div>
+          </div>
+        )}
+      </a>
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .page-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--sp-3);
+    margin-bottom: var(--sp-5);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .count {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    gap: var(--sp-4);
+  }
+
+  .card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: var(--text);
+    transition: box-shadow 150ms, transform 150ms, border-color 150ms;
+    overflow: visible;
+    text-decoration: none;
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+    border-color: var(--accent-border);
+    z-index: 20;
+  }
+
+  .card--inactive {
+    opacity: 0.5;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--sp-5) var(--sp-4) var(--sp-3);
+    background: var(--surface-muted);
+    border-radius: var(--r-xl) var(--r-xl) 0 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .card-image :global(.sprite),
+  .card-image :global(.sprite-ph) {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    padding: var(--sp-3) var(--sp-4) var(--sp-4);
+  }
+
+  .card-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  .card-row {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+  }
+
+  .card-cost {
+    font-size: 0.95rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .card-flag {
+    align-self: flex-start;
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: var(--accent-dim);
+    color: var(--accent);
+    padding: 2px 7px;
+    border-radius: var(--r-sm);
+  }
+
+  /* tooltip */
+  .skill-tooltip {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: var(--sp-3) var(--sp-4);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 140ms, visibility 140ms;
+    z-index: 50;
+  }
+
+  .tt-ability {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  @media (hover: hover) {
+    .card:hover .skill-tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--sp-3);
+    }
+
+    .card-image :global(.sprite),
+    .card-image :global(.sprite-ph) {
+      width: 90px !important;
+      height: 90px !important;
+    }
+  }
+</style>
