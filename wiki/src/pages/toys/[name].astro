@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { toys } from "../../lib/data";
 import Sprite from "../../components/Sprite.astro";
+import TierBadge from "../../components/TierBadge.astro";
 import AbilityText from "../../components/AbilityText.astro";
 import StatIcon from "../../components/StatIcon.astro";
 
@@ -33,6 +34,7 @@ const ogDescription = ability1Clean ?? '';
     <div class="hero-meta">
       <h1>{toy.name}</h1>
       <div class="badges">
+        <TierBadge tier={toy.tier} href={`/toys?tier=${toy.tier}`} />
         {!toy.active && <span class="badge badge--muted">Inactive</span>}
         {isToken && <span class="badge badge--accent">Token</span>}
         {

@@ -4,9 +4,10 @@ import diceMapData from '@data/dice_map.json'
 interface Props {
   tier: number
   size?: 'sm' | 'md'
+  href?: string
 }
 
-const { tier, size = 'md' } = Astro.props
+const { tier, size = 'md', href } = Astro.props
 const px = size === 'sm' ? 26 : 34
 
 const sprites = (diceMapData as any).sprites as Record<string, { x: number; y: number; w: number; h: number }>
@@ -22,19 +23,37 @@ const bgX = sp ? Math.round(sp.x * scale) : 0
 const bgY = sp ? Math.round(sp.y * scale) : 0
 const w   = sp ? Math.round(sp.w * scale) : px
 ---
-{sp && (
+{sp && (href ? (
+  <a
+    href={href}
+    class="tier-dice tier-dice--link"
+    role="img"
+    aria-label={`Tier ${tier}`}
+    style={`width:${w}px;height:${px}px;background-image:url('/assets/${image}');background-position:-${bgX}px -${bgY}px;background-size:${bgW}px ${bgH}px`}
+  />
+) : (
   <span
     class="tier-dice"
     role="img"
     aria-label={`Tier ${tier}`}
     style={`width:${w}px;height:${px}px;background-image:url('/assets/${image}');background-position:-${bgX}px -${bgY}px;background-size:${bgW}px ${bgH}px`}
   />
-)}
+))}
 
 <style>
   .tier-dice {
     display: inline-block;
     background-repeat: no-repeat;
     flex-shrink: 0;
+  }
+
+  .tier-dice--link {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 130ms;
+  }
+
+  .tier-dice--link:hover {
+    opacity: 0.72;
   }
 </style>

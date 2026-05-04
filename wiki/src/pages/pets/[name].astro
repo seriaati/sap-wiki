@@ -37,7 +37,7 @@ const ogDescription = [
     <div class="hero-meta">
       <h1>{pet.name}</h1>
       <div class="badges">
-        <TierBadge tier={pet.tier} />
+        <TierBadge tier={pet.tier} href={`/pets?tier=${pet.tier}`} />
         {!pet.active && <span class="badge badge--muted">Inactive</span>}
         {isToken && <span class="badge badge--accent">Token</span>}
         {
