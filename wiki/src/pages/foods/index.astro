@@ -28,15 +28,7 @@ const sorted = [...foods].sort(
           class:list={["card", !food.active && "card--inactive"]}
           data-entry-tier={food.tier}
           data-entry-name={food.name.toLowerCase()}
-          data-entry-desc={[
-            food.trigger,
-            food.ability1,
-            food.ability2,
-            food.ability3,
-          ]
-            .filter(Boolean)
-            .join(" ")
-            .toLowerCase()}
+          data-entry-desc={food.ability?.toLowerCase() ?? ""}
         >
           <div class="card-image">
             <Sprite
