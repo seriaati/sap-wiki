@@ -34,6 +34,9 @@ function extractStatsFoods() {
         spellEnumClass, spellConstClass,
         createSpellsMth, runtimeInvoke,
         spellsField,
+        objectGetClass, classGetName,
+        abilityEnumClass,
+        archetypeConstClass,
         minionDictFields,
     } = g;
 
@@ -54,6 +57,63 @@ function extractStatsFoods() {
         send({t:"log", m:`MinionEnum: ${Object.keys(minionEnumNames).length} values`});
     }
 
+    // Build archetype int→name map by walking ArchetypeConstants.Archetypes
+    // (Dictionary<int, ArchetypeTemplate>; ArchetypeTemplate has Name (Il2CppString) at +24,
+    //  and Il2CppString stores length at +16 and UTF-16 chars at +20.)
+    const archetypeNames = {};
+    if (archetypeConstClass) {
+        const it = Memory.alloc(Process.pointerSize); it.writePointer(ptr(0));
+        let fld;
+        while (!(fld = classGetFields(archetypeConstClass, it)).isNull()) {
+            if (cstr(fieldGetName(fld)) !== "Archetypes") continue;
+            try {
+                const buf = Memory.alloc(Process.pointerSize); buf.writePointer(ptr(0));
+                fieldStaticGetValue(fld, buf);
+                const dictPtr = buf.readPointer();
+                if (dictPtr.isNull()) break;
+                const count   = dictPtr.add(32).readS32();
+                const entries = dictPtr.add(24).readPointer();
+                // Each Entry is 24 bytes: hash(4) + next(4) + key(4) + pad(4) + value*(8). Data starts at +32.
+                for (let i = 0; i < count + 5 && i < 64; i++) {
+                    try {
+                        const eBase = entries.add(32 + i * 24);
+                        if (eBase.readS32() < 0) continue; // free slot
+                        const key   = eBase.add(8).readS32();
+                        const value = eBase.add(16).readPointer();
+                        if (value.isNull()) continue;
+                        const namePtr = value.add(24).readPointer();
+                        if (namePtr.isNull()) continue;
+                        const sLen = namePtr.add(16).readU32();
+                        if (sLen > 0 && sLen < 80) {
+                            archetypeNames[key] = namePtr.add(20).readUtf16String(sLen);
+                        }
+                    } catch(e) {}
+                }
+            } catch(e) {}
+            break;
+        }
+        send({t:"log", m:`Archetypes resolved: ${Object.keys(archetypeNames).length} names`});
+    }
+
+    // Read List<int> at MinionTemplate+160 = archetype keys for that pet.
+    // Returns array of names (e.g. ["Cycle"], ["Summon"], ["Perks","Summon"]).
+    function readArchetypes(p) {
+        try {
+            const listPtr = p.add(160).readPointer();
+            if (listPtr.isNull()) return [];
+            const items = listPtr.add(16).readPointer();
+            const size  = listPtr.add(24).readS32();
+            if (size <= 0 || size > 30 || items.isNull()) return [];
+            const out = [];
+            for (let i = 0; i < size; i++) {
+                const k = items.add(32 + i * 4).readS32();
+                const n = archetypeNames[k];
+                if (n) out.push(n);
+            }
+            return out;
+        } catch(e) { return []; }
+    }
+
     // Extract pet stats
     const pets = {};
     send({t:"log", m:`Hooked templates: ${hookedTemplates.size}`});
@@ -64,6 +124,7 @@ function extractStatsFoods() {
         const minionName = minionEnumNames[enumInt];
         if (!minionName) continue;
         try {
+            const types = readArchetypes(p);
             pets[minionName] = {
                 tier:      p.add(32).readS32(),
                 price:     p.add(36).readS32(),
@@ -75,6 +136,7 @@ function extractStatsFoods() {
                 healthMax: p.add(224).readS32(),
                 tierMax:   p.add(264).readS32(),
                 enumInt,
+                types,
             };
         } catch(e) {}
     }
@@ -115,6 +177,7 @@ function extractStatsFoods() {
             const minionName = minionEnumNames[eInt];
             if (!minionName || pets[minionName]) continue;
             try {
+                const types = readArchetypes(p);
                 pets[minionName] = {
                     tier:      p.add(32).readS32(),
                     price:     p.add(36).readS32(),
@@ -126,6 +189,7 @@ function extractStatsFoods() {
                     healthMax: p.add(224).readS32(),
                     tierMax:   p.add(264).readS32(),
                     enumInt: eInt,
+                    types,
                 };
                 added++;
             } catch(e) {}
@@ -525,18 +589,20 @@ function setupAfterInit(mod) {
     send({t:"log", m:`${asmCount} assemblies`});
 
     // Scan assemblies for needed classes
-    let minionConstClass  = null;
-    let minionTemplClass  = null;
-    let minionEnumClass   = null;
-    let spellConstClass   = null;
-    let spellEnumClass    = null;
-    let abilityClass      = null;
-    let abilityEnumClass  = null;
+    let minionConstClass    = null;
+    let minionTemplClass    = null;
+    let minionEnumClass     = null;
+    let spellConstClass     = null;
+    let spellEnumClass      = null;
+    let abilityClass        = null;
+    let abilityEnumClass    = null;
+    let archetypeConstClass = null;
 
     const WANT_CORE = new Set([
         "MinionConstants","MinionTemplate","MinionEnum",
         "SpellConstants","SpellEnum",
         "Ability","AbilityEnum",
+        "ArchetypeConstants",
     ]);
 
     for (let ai = 0; ai < asmCount; ai++) {
@@ -558,7 +624,8 @@ function setupAfterInit(mod) {
                 if      (cname === "MinionConstants") minionConstClass = klass;
                 else if (cname === "MinionTemplate")  minionTemplClass = klass;
                 else if (cname === "MinionEnum")       minionEnumClass  = klass;
-                else if (cname === "SpellConstants")   spellConstClass  = klass;
+                else if (cname === "ArchetypeConstants") archetypeConstClass  = klass;
+                else if (cname === "SpellConstants")     spellConstClass      = klass;
                 else if (cname === "SpellEnum")        spellEnumClass   = klass;
                 else if (cname === "Ability")          abilityClass     = klass;
                 else if (cname === "AbilityEnum")      abilityEnumClass = klass;
@@ -574,6 +641,7 @@ function setupAfterInit(mod) {
         `spellEnum=${!!spellEnumClass}`,
         `ability=${!!abilityClass}`,
         `abilityEnum=${!!abilityEnumClass}`,
+        `archetypeConst=${!!archetypeConstClass}`,
     ].join(" ")});
 
     // Find SpellConstants fields/methods
@@ -621,6 +689,7 @@ function setupAfterInit(mod) {
         spellsField,
         objectGetClass, classGetName,
         abilityEnumClass,
+        archetypeConstClass,
         minionDictFields,
     };
 

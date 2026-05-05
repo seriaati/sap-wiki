@@ -85,7 +85,5 @@ npm run build    # static build to dist/
 - Fix not showing "Works X times per turn" text for some abilities.
 - Fix pets without localized ability descriptions missing their ability text entirely (like Peacock Spider).
 - Add more detail about ability triggers (e.g. Dragon's "When level 1 summoned.")
-- Add pet types (e.g. "Gold", "Cycle", etc.)
 - Add switching between skin packs.
-- Add MCP, so you can use AI to build decks.
 - Add different languages.

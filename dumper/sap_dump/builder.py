@@ -102,6 +102,7 @@ def _build_minion_entry(
         "ability2": _ability_text("2.About"),
         "ability3": _ability_text("3.About"),
         "image": images.get(minion_name, "") if images else "",
+        "types": stats.get("types", []),
     }
     for lvl in ("1", "2", "3"):
         fp = make_fine_print(trig_info if isinstance(trig_info, dict) else {}, ab_loco, lvl)
