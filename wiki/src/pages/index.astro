@@ -89,13 +89,15 @@ const allTypes = [...new Set(sorted.flatMap(p => p.types ?? []))].sort();
             {(pet.types ?? []).length > 0 && (
               <div class="card-types">
                 {(pet.types ?? []).map(t => (
-                  <StatIcon name={({
-                    'Ailment':'Debuff','Buffs':'Buff','Cycle':'Cycle','Disruption':'Disruption',
-                    'Food':'Food','Gold':'Gold','Guard':'Guard','Hurt':'Hurt','Level-Up':'Exp',
-                    'Mana':'Mana','Perks':'Perk','Rolling':'Roll','Strawberry':'Strawberry',
-                    'Summon':'Summon','Super':'Sparkle','Toys':'Toys','Transform':'Transform',
-                    'Trumpets':'Backup',
-                  } as Record<string,string>)[t] ?? t} size={16} />
+                  <span class="type-icon" data-label={t}>
+                    <StatIcon name={({
+                      'Ailment':'Debuff','Buffs':'Buff','Cycle':'Cycle','Disruption':'Disruption',
+                      'Food':'Food','Gold':'Gold','Guard':'Guard','Hurt':'Hurt','Level-Up':'Exp',
+                      'Mana':'Mana','Perks':'Perk','Rolling':'Roll','Strawberry':'Strawberry',
+                      'Summon':'Summon','Super':'Sparkle','Toys':'Toys','Transform':'Transform',
+                      'Trumpets':'Backup',
+                    } as Record<string,string>)[t] ?? t} size={16} />
+                  </span>
                 ))}
               </div>
             )}
@@ -374,6 +376,37 @@ const allTypes = [...new Set(sorted.flatMap(p => p.types ?? []))].sort();
     gap: var(--sp-1);
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  .type-icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .type-icon::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    padding: 2px 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 120ms;
+    z-index: 60;
+  }
+
+  .type-icon:hover::after {
+    opacity: 1;
   }
 
   .card-flag {
