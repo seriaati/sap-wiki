@@ -61,7 +61,6 @@ def _clean_toy(key: str, raw: dict) -> Toy:
         "ability2": clean(raw.get("ability2", "")),
         "ability3": clean(raw.get("ability3", "")),
         "image": raw.get("image", ""),
-        "types": raw.get("types", []),
     }
 
 

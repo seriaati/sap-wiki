@@ -58,7 +58,6 @@ class ToySummary(TypedDict):
     tier: int
     trigger: str
     rollable: bool
-    types: list[str]
 
 
 class Toy(TypedDict):
@@ -76,7 +75,6 @@ class Toy(TypedDict):
     ability2: str
     ability3: str
     image: str
-    types: list[str]
 
 
 class SearchResult(TypedDict):

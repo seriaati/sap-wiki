@@ -118,7 +118,7 @@ def list_toys(
         results = [t for t in results if t["rollable"] == rollable]
     return [
         {"key": t["key"], "slug": t["slug"], "name": t["name"], "tier": t["tier"],
-         "trigger": t["trigger"], "rollable": t["rollable"], "types": t["types"]}
+         "trigger": t["trigger"], "rollable": t["rollable"]}
         for t in results
     ]
 
