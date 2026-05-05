@@ -1,0 +1,142 @@
+---
+import StatIcon from './StatIcon.astro'
+
+interface Props {
+  types: string[]
+}
+
+const { types } = Astro.props
+
+const TYPE_SPRITE: Record<string, string> = {
+  'Ailment':    'Debuff',
+  'Buffs':      'Buff',
+  'Cycle':      'Cycle',
+  'Disruption': 'Disruption',
+  'Food':       'Food',
+  'Gold':       'Gold',
+  'Guard':      'Guard',
+  'Hurt':       'Hurt',
+  'Level-Up':   'Exp',
+  'Mana':       'Mana',
+  'Perks':      'Perk',
+  'Rolling':    'Roll',
+  'Strawberry': 'Strawberry',
+  'Summon':     'Summon',
+  'Super':      'Sparkle',
+  'Toys':       'Toys',
+  'Transform':  'Transform',
+  'Trumpets':   'Backup',
+}
+---
+
+<div class="type-filter" id="type-filter">
+  <div class="type-pills" role="group" aria-label="Filter by type">
+    <button class="pill active" data-type="all" type="button">All</button>
+    {types.map(t => (
+      <button class="pill" data-type={t} type="button" title={t}>
+        <StatIcon name={TYPE_SPRITE[t] ?? t} size={16} />
+        <span>{t}</span>
+      </button>
+    ))}
+  </div>
+</div>
+
+<script>
+  const bar     = document.getElementById('type-filter')!
+  const pills   = bar.querySelectorAll<HTMLButtonElement>('[data-type]')
+  const allPill = bar.querySelector<HTMLButtonElement>('[data-type="all"]')!
+
+  let activeTypes = new Set<string>()
+
+  function apply() {
+    document.querySelectorAll<HTMLElement>('[data-entry-tier]').forEach(el => {
+      if (!activeTypes.size) {
+        el.style.display = ''
+        return
+      }
+      const entryTypes = (el.dataset.entryTypes ?? '').split(',').filter(Boolean)
+      el.style.display = entryTypes.some(t => activeTypes.has(t)) ? '' : 'none'
+    })
+  }
+
+  function renderPills() {
+    allPill.classList.toggle('active', activeTypes.size === 0)
+    pills.forEach(p => {
+      if (p.dataset.type === 'all') return
+      p.classList.toggle('active', activeTypes.has(p.dataset.type!))
+    })
+  }
+
+  function syncURL() {
+    const params = new URLSearchParams(location.search)
+    if (activeTypes.size) params.set('types', [...activeTypes].sort().join(','))
+    else params.delete('types')
+    const qs = params.toString()
+    history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
+  }
+
+  // restore from URL
+  const initTypes = new URLSearchParams(location.search).get('types')
+  if (initTypes) {
+    initTypes.split(',').filter(Boolean).forEach(t => activeTypes.add(t))
+    renderPills()
+    apply()
+  }
+
+  allPill.addEventListener('click', () => {
+    activeTypes.clear()
+    renderPills()
+    apply()
+    syncURL()
+  })
+
+  pills.forEach(pill => {
+    if (pill.dataset.type === 'all') return
+    pill.addEventListener('click', () => {
+      const t = pill.dataset.type!
+      if (activeTypes.has(t)) activeTypes.delete(t)
+      else activeTypes.add(t)
+      if (activeTypes.size === 0) allPill.classList.add('active')
+      renderPills()
+      apply()
+      syncURL()
+    })
+  })
+</script>
+
+<style>
+  .type-filter {
+    margin-bottom: var(--sp-4);
+  }
+
+  .type-pills {
+    display: flex;
+    gap: var(--sp-1);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: var(--r);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    background: var(--surface-muted);
+    border: 1.5px solid transparent;
+    transition: background 120ms, border-color 120ms, color 120ms;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .pill:hover { background: var(--border); }
+
+  .pill.active {
+    background: var(--accent-dim);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+</style>

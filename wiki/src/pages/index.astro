@@ -4,12 +4,15 @@ import { pets } from "../lib/data";
 import TierBadge from "../components/TierBadge.astro";
 import Sprite from "../components/Sprite.astro";
 import TierFilter from "../components/TierFilter.astro";
+import TypeFilter from "../components/TypeFilter.astro";
 import AbilityText from "../components/AbilityText.astro";
 import StatIcon from "../components/StatIcon.astro";
 
 const sorted = [...pets].sort(
   (a, b) => a.tier - b.tier || a.name.localeCompare(b.name),
 );
+
+const allTypes = [...new Set(sorted.flatMap(p => p.types ?? []))].sort();
 ---
 
 <Layout title="Pets" description="Browse all pets in Super Auto Pets." image={sorted[0]?.image}>
@@ -19,12 +22,24 @@ const sorted = [...pets].sort(
   </div>
 
   <TierFilter />
+  <TypeFilter types={allTypes} />
 
   <div class="sort-bar" id="sort-bar">
     <span class="sort-label">Sort:</span>
     <button class="sort-pill" data-sort="attack" type="button">Attack</button>
     <button class="sort-pill" data-sort="health" type="button">Health</button>
-    <button class="toggle-pill active" id="hide-internal-toggle" type="button">Hide internal</button>
+    <div class="switches">
+      <label class="sw" title="Hide internal/test pets">
+        <input id="hide-internal-toggle" type="checkbox" checked />
+        <span class="sw__track"><span class="sw__thumb" /></span>
+        <span class="sw__label">Hide internal</span>
+      </label>
+      <label class="sw" title="Show legacy pet skins">
+        <input id="legacy-skin-toggle" type="checkbox" />
+        <span class="sw__track"><span class="sw__thumb" /></span>
+        <span class="sw__label">Legacy skin</span>
+      </label>
+    </div>
   </div>
 
   <div class="gallery">
@@ -38,6 +53,7 @@ const sorted = [...pets].sort(
           data-entry-attack={pet.attack}
           data-entry-health={pet.health}
           data-entry-internal={pet.name.toLowerCase().startsWith("test") ? "1" : undefined}
+          data-entry-types={(pet.types ?? []).join(',')}
           data-entry-desc={[
             pet.trigger,
             pet.ability1,
@@ -52,6 +68,7 @@ const sorted = [...pets].sort(
             <Sprite
               name={pet.name}
               image={pet.image}
+              imageLegacy={pet.imageLegacy}
               tier={pet.tier}
               size={120}
             />
@@ -68,6 +85,20 @@ const sorted = [...pets].sort(
               <span class="stat">{pet.health}</span>
 
             </div>
+
+            {(pet.types ?? []).length > 0 && (
+              <div class="card-types">
+                {(pet.types ?? []).map(t => (
+                  <StatIcon name={({
+                    'Ailment':'Debuff','Buffs':'Buff','Cycle':'Cycle','Disruption':'Disruption',
+                    'Food':'Food','Gold':'Gold','Guard':'Guard','Hurt':'Hurt','Level-Up':'Exp',
+                    'Mana':'Mana','Perks':'Perk','Rolling':'Roll','Strawberry':'Strawberry',
+                    'Summon':'Summon','Super':'Sparkle','Toys':'Toys','Transform':'Transform',
+                    'Trumpets':'Backup',
+                  } as Record<string,string>)[t] ?? t} size={16} />
+                ))}
+              </div>
+            )}
 
             {!pet.rollable && pet.active && (
               <span class="card-flag">Token</span>
@@ -180,34 +211,80 @@ const sorted = [...pets].sort(
   }
 
   .sort-pill.active::after {
-    content: attr(data-dir);
+    content: attr(data-dir) attr(data-rank);
     margin-left: 3px;
     opacity: 0.75;
   }
 
-  .toggle-pill {
-    padding: 4px 10px;
-    border-radius: var(--r);
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--text-secondary);
-    background: var(--surface-muted);
-    border: 1.5px solid transparent;
-    transition: background 120ms, border-color 120ms;
-    cursor: pointer;
+  .switches {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
     margin-left: auto;
   }
 
-  .toggle-pill:hover { background: var(--border); }
+  .sw {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    user-select: none;
+  }
 
-  .toggle-pill.active {
-    background: var(--accent-dim);
-    border-color: var(--accent);
-    color: var(--accent);
+  .sw input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .sw__track {
+    position: relative;
+    width: 30px;
+    height: 17px;
+    border-radius: 999px;
+    background: var(--border);
+    transition: background 160ms;
+    flex-shrink: 0;
+  }
+
+  .sw__thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--surface);
+    transition: transform 160ms;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  }
+
+  .sw input:checked + .sw__track {
+    background: var(--accent);
+  }
+
+  .sw input:checked + .sw__track .sw__thumb {
+    transform: translateX(13px);
+  }
+
+  .sw__label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    white-space: nowrap;
   }
 
   .gallery.hide-internal [data-entry-internal] {
     display: none;
+  }
+
+  .gallery.show-legacy :global(.sprite--new) {
+    display: none;
+  }
+
+  .gallery.show-legacy :global(.sprite--legacy) {
+    display: block;
   }
 
   .gallery {
@@ -290,6 +367,13 @@ const sorted = [...pets].sort(
     color: var(--border);
     font-weight: 400;
     font-size: 0.85rem;
+  }
+
+  .card-types {
+    display: flex;
+    gap: var(--sp-1);
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   .card-flag {
@@ -444,88 +528,106 @@ const sorted = [...pets].sort(
   const gallery = document.querySelector<HTMLElement>('.gallery')
 
   if (sortBar && gallery) {
-    let activeStat: string | null = null
-    let activeDirAsc = true
+    type SortEntry = { stat: string; asc: boolean }
+    let sorts: SortEntry[] = []
 
     const pills = sortBar.querySelectorAll<HTMLButtonElement>('[data-sort]')
 
-    // restore from URL
+    const originalOrder = Array.from(gallery.querySelectorAll<HTMLElement>('[data-entry-tier]'))
+
+    function pillFor(stat: string) {
+      return sortBar!.querySelector<HTMLButtonElement>(`[data-sort="${stat}"]`)
+    }
+
+    function renderPills() {
+      pills.forEach(p => { p.classList.remove('active'); p.removeAttribute('data-dir'); p.removeAttribute('data-rank') })
+      sorts.forEach((s, i) => {
+        const p = pillFor(s.stat)
+        if (!p) return
+        p.classList.add('active')
+        p.dataset.dir = s.asc ? '↑' : '↓'
+        if (sorts.length > 1) p.dataset.rank = String(i + 1)
+      })
+    }
+
     const urlParams = new URLSearchParams(location.search)
     const initSort = urlParams.get('sort')
-    const initDir  = urlParams.get('dir')
     if (initSort) {
-      activeStat   = initSort
-      activeDirAsc = initDir !== 'desc'
-      const pill = sortBar.querySelector<HTMLButtonElement>(`[data-sort="${initSort}"]`)
-      if (pill) {
-        pill.classList.add('active')
-        pill.dataset.dir = activeDirAsc ? '↑' : '↓'
-      }
+      sorts = initSort.split(',').flatMap(seg => {
+        const [stat, dir] = seg.split(':')
+        return stat ? [{ stat, asc: dir !== 'desc' }] : []
+      })
+      renderPills()
       applySort()
     }
 
     pills.forEach(pill => {
       pill.addEventListener('click', () => {
         const stat = pill.dataset.sort!
-        if (activeStat === stat) {
-          activeDirAsc = !activeDirAsc
+        const existing = sorts.find(s => s.stat === stat)
+        if (!existing) {
+          sorts = [...sorts, { stat, asc: true }]
+        } else if (existing.asc) {
+          sorts = sorts.map(s => s.stat === stat ? { stat, asc: false } : s)
         } else {
-          activeStat = stat
-          activeDirAsc = true
-          pills.forEach(p => { p.classList.remove('active'); delete p.dataset.dir })
+          sorts = sorts.filter(s => s.stat !== stat)
         }
-        pill.classList.add('active')
-        pill.dataset.dir = activeDirAsc ? '↑' : '↓'
+        renderPills()
         applySort()
         syncSortURL()
       })
     })
 
     function applySort() {
-      if (!activeStat) return
+      if (!sorts.length) {
+        originalOrder.forEach(c => gallery!.appendChild(c))
+        return
+      }
       const cards = Array.from(gallery!.querySelectorAll<HTMLElement>('[data-entry-tier]'))
       cards.sort((a, b) => {
-        const va = Number(a.dataset[`entry${activeStat![0].toUpperCase()}${activeStat!.slice(1)}`] ?? 0)
-        const vb = Number(b.dataset[`entry${activeStat![0].toUpperCase()}${activeStat!.slice(1)}`] ?? 0)
-        return activeDirAsc ? va - vb : vb - va
+        for (const { stat, asc } of sorts) {
+          const key = `entry${stat[0].toUpperCase()}${stat.slice(1)}`
+          const va = Number(a.dataset[key] ?? 0)
+          const vb = Number(b.dataset[key] ?? 0)
+          if (va !== vb) return asc ? va - vb : vb - va
+        }
+        return 0
       })
       cards.forEach(c => gallery!.appendChild(c))
     }
 
     function syncSortURL() {
       const params = new URLSearchParams(location.search)
-      if (activeStat) {
-        params.set('sort', activeStat)
-        params.set('dir', activeDirAsc ? 'asc' : 'desc')
+      if (sorts.length) {
+        params.set('sort', sorts.map(s => `${s.stat}:${s.asc ? 'asc' : 'desc'}`).join(','))
       } else {
         params.delete('sort')
-        params.delete('dir')
       }
+      params.delete('dir')
       const qs = params.toString()
       history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
     }
 
-    // internal toggle — uses CSS class on gallery to avoid conflicting with tier/search hidden
-    const internalToggle = document.getElementById('hide-internal-toggle') as HTMLButtonElement | null
-    let hideInternal = true
-
+    const internalToggle = document.getElementById('hide-internal-toggle') as HTMLInputElement | null
     const initHide = new URLSearchParams(location.search).get('internal')
     if (initHide === 'show') {
-      hideInternal = false
-      internalToggle?.classList.remove('active')
+      if (internalToggle) internalToggle.checked = false
     } else {
       gallery.classList.add('hide-internal')
     }
 
-    internalToggle?.addEventListener('click', () => {
-      hideInternal = !hideInternal
-      internalToggle.classList.toggle('active', hideInternal)
-      gallery.classList.toggle('hide-internal', hideInternal)
+    internalToggle?.addEventListener('change', () => {
+      gallery.classList.toggle('hide-internal', internalToggle.checked)
       const params = new URLSearchParams(location.search)
-      if (hideInternal) params.delete('internal')
+      if (internalToggle.checked) params.delete('internal')
       else params.set('internal', 'show')
       const qs = params.toString()
       history.replaceState(null, '', qs ? `?${qs}` : location.pathname)
+    })
+
+    const legacyToggle = document.getElementById('legacy-skin-toggle') as HTMLInputElement | null
+    legacyToggle?.addEventListener('change', () => {
+      gallery.classList.toggle('show-legacy', legacyToggle.checked)
     })
   }
 </script>

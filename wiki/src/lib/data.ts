@@ -18,6 +18,7 @@ export interface Pet {
   ability3: string
   image: string
   imageLegacy: string
+  types: string[]
 }
 
 export interface Food {
