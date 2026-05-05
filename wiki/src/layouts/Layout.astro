@@ -54,7 +54,7 @@ const ogImage = image
     <header>
       <div class="header-inner">
         <a href="/" class="wordmark">SAP Wiki</a>
-        <nav>
+        <nav class="desktop-nav">
           <a
             href="/"
             class:list={["nav-link", { active: pathname === "/" || pathname.startsWith("/pets") }]}
@@ -70,7 +70,16 @@ const ogImage = image
             class:list={["nav-link", { active: pathname.startsWith("/toys") }]}
             >Toys</a
           >
+          <a
+            href="/mcp"
+            class:list={["nav-link", { active: pathname.startsWith("/mcp") }]}
+            >MCP</a
+          >
         </nav>
+        <button class="hamburger" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
         <div class="header-actions">
         <a
           href="https://github.com/seriaati/sap-wiki"
@@ -140,6 +149,31 @@ const ogImage = image
         </div>
       </div>
     </header>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav class="mobile-nav">
+        <a
+          href="/"
+          class:list={["mobile-nav-link", { active: pathname === "/" || pathname.startsWith("/pets") }]}
+          >Pets</a
+        >
+        <a
+          href="/foods"
+          class:list={["mobile-nav-link", { active: pathname.startsWith("/foods") }]}
+          >Foods</a
+        >
+        <a
+          href="/toys"
+          class:list={["mobile-nav-link", { active: pathname.startsWith("/toys") }]}
+          >Toys</a
+        >
+        <a
+          href="/mcp"
+          class:list={["mobile-nav-link", { active: pathname.startsWith("/mcp") }]}
+          >MCP</a
+        >
+      </nav>
+    </div>
 
     <main>
       <slot />
@@ -291,7 +325,72 @@ const ogImage = image
     }
   }
 
-  @media (max-width: 600px) {
+  .hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--r);
+    color: var(--text-secondary);
+    transition: background 130ms, color 130ms;
+    flex-shrink: 0;
+  }
+
+  .hamburger:hover {
+    background: var(--surface-muted);
+    color: var(--text);
+  }
+
+  .icon-close { display: none; }
+
+  .hamburger[aria-expanded="true"] .icon-menu { display: none; }
+  .hamburger[aria-expanded="true"] .icon-close { display: block; }
+
+  .mobile-menu {
+    display: none;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 220ms ease;
+  }
+
+  .mobile-menu.open {
+    max-height: 300px;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding: var(--sp-2) var(--sp-4) var(--sp-4);
+    gap: var(--sp-1);
+  }
+
+  .mobile-nav-link {
+    padding: 10px 14px;
+    border-radius: var(--r);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: background 130ms, color 130ms;
+  }
+
+  .mobile-nav-link:hover {
+    background: var(--surface-muted);
+    color: var(--text);
+  }
+
+  .mobile-nav-link.active {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  @media (max-width: 640px) {
+    .desktop-nav { display: none; }
+    .hamburger { display: flex; }
+    .mobile-menu { display: block; }
+
     .header-inner {
       padding: 0 var(--sp-4);
     }
@@ -302,6 +401,14 @@ const ogImage = image
 </style>
 
 <script>
+  const menuToggle = document.getElementById("menu-toggle") as HTMLButtonElement | null;
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuToggle?.addEventListener("click", () => {
+    const open = mobileMenu?.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+    mobileMenu?.setAttribute("aria-hidden", String(!open));
+  });
+
   const btn = document.getElementById("theme-toggle");
   btn?.addEventListener("click", () => {
     const html = document.documentElement;

@@ -1,0 +1,558 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const MCP_URL = "https://sap-api.seria.moe/mcp";
+
+const tools = [
+  {
+    name: "list_pets",
+    description: "List pets with optional filters. Returns summary fields only.",
+    params: [
+      { name: "tier", type: "int?", desc: "Filter by tier (1–6)" },
+      { name: "trigger", type: "string?", desc: "Filter by trigger name (substring match)" },
+      { name: "name_contains", type: "string?", desc: "Filter by pet name (substring match)" },
+      { name: "rollable", type: "bool?", desc: "Filter by rollable status" },
+      { name: "type", type: "string?", desc: "Filter by type tag e.g. 'Summon', 'Buffs', 'Guard', 'Hurt'. Case-insensitive substring match." },
+    ],
+  },
+  {
+    name: "get_pet",
+    description: "Get full details for a pet by slug or display name.",
+    params: [
+      { name: "slug_or_name", type: "string", desc: "Slug (e.g. 'ant') or display name (e.g. 'Ant')" },
+    ],
+  },
+  {
+    name: "list_foods",
+    description: "List foods with optional filters. Returns summary fields only.",
+    params: [
+      { name: "tier", type: "int?", desc: "Filter by tier" },
+      { name: "name_contains", type: "string?", desc: "Filter by food name (substring match)" },
+      { name: "rollable", type: "bool?", desc: "Filter by rollable status" },
+    ],
+  },
+  {
+    name: "get_food",
+    description: "Get full details for a food by slug or display name.",
+    params: [
+      { name: "slug_or_name", type: "string", desc: "Slug or display name" },
+    ],
+  },
+  {
+    name: "list_toys",
+    description: "List toys with optional filters. Returns summary fields only.",
+    params: [
+      { name: "tier", type: "int?", desc: "Filter by tier" },
+      { name: "name_contains", type: "string?", desc: "Filter by toy name (substring match)" },
+      { name: "rollable", type: "bool?", desc: "Filter by rollable status" },
+    ],
+  },
+  {
+    name: "get_toy",
+    description: "Get full details for a toy by slug or display name.",
+    params: [
+      { name: "slug_or_name", type: "string", desc: "Slug or display name" },
+    ],
+  },
+  {
+    name: "search",
+    description: "Full-text search across pets, foods, and toys. Results ranked: name matches first, then ability/trigger matches.",
+    params: [
+      { name: "query", type: "string", desc: "Search query" },
+      { name: "kinds", type: "string[]?", desc: "Filter by kind — 'pet', 'food', 'toy'. Omit to search all." },
+      { name: "limit", type: "int?", desc: "Max results (default 20, max 100)" },
+    ],
+  },
+  {
+    name: "get_stats",
+    description: "Return entity counts and server metadata.",
+    params: [],
+  },
+];
+
+const claudeDesktopConfig = JSON.stringify(
+  {
+    mcpServers: {
+      "sap-wiki": {
+        type: "streamable-http",
+        url: MCP_URL,
+      },
+    },
+  },
+  null,
+  2
+);
+
+const cursorConfig = JSON.stringify(
+  {
+    mcpServers: {
+      "sap-wiki": {
+        type: "streamable-http",
+        url: MCP_URL,
+      },
+    },
+  },
+  null,
+  2
+);
+---
+
+<Layout
+  title="MCP Server"
+  description="Use the SAP Wiki MCP server to query Super Auto Pets data from any MCP-compatible AI client."
+>
+  <div class="mcp-page">
+    <div class="hero">
+      <h1>MCP Server</h1>
+      <p class="subtitle">
+        Query Super Auto Pets data directly from any MCP-compatible AI client.
+      </p>
+      <div class="endpoint-box">
+        <span class="endpoint-label">Endpoint</span>
+        <code class="endpoint-url">{MCP_URL}</code>
+        <button class="copy-btn" data-copy={MCP_URL} aria-label="Copy URL">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+        </button>
+      </div>
+      <div class="meta-pills">
+        <span class="pill">Streamable HTTP</span>
+        <span class="pill">No auth required</span>
+        <span class="pill">Read-only</span>
+      </div>
+    </div>
+
+    <section class="section">
+      <h2>Setup</h2>
+      <p class="section-desc">Add the server to your MCP client of choice.</p>
+
+      <div class="tabs" id="setup-tabs">
+        <button class="tab active" data-tab="claude-desktop">Claude Desktop</button>
+        <button class="tab" data-tab="cursor">Cursor</button>
+        <button class="tab" data-tab="other">Other clients</button>
+      </div>
+
+      <div class="tab-content active" id="tab-claude-desktop">
+        <p class="step">Open <strong>Claude Desktop</strong> → Settings → Developer → Edit Config, then add to <code>claude_desktop_config.json</code>:</p>
+        <div class="code-block">
+          <pre><code>{claudeDesktopConfig}</code></pre>
+          <button class="copy-btn code-copy" data-copy={claudeDesktopConfig} aria-label="Copy config">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
+        </div>
+        <p class="step">Restart Claude Desktop. The server will appear in your tool list.</p>
+      </div>
+
+      <div class="tab-content" id="tab-cursor">
+        <p class="step">Open <strong>Cursor</strong> → Settings → MCP, then add to your MCP config:</p>
+        <div class="code-block">
+          <pre><code>{cursorConfig}</code></pre>
+          <button class="copy-btn code-copy" data-copy={cursorConfig} aria-label="Copy config">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-other">
+        <p class="step">Any client that supports <strong>Streamable HTTP MCP</strong> transport can connect using:</p>
+        <ul class="info-list">
+          <li><span class="label">URL</span> <code>{MCP_URL}</code></li>
+          <li><span class="label">Transport</span> <code>streamable-http</code></li>
+          <li><span class="label">Auth</span> None required</li>
+        </ul>
+        <p class="step">Refer to your client's documentation for how to add an MCP server by URL.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Available Tools</h2>
+      <p class="section-desc">8 tools covering pets, foods, toys, and full-text search.</p>
+      <div class="tools-grid">
+        {tools.map((tool) => (
+          <div class="tool-card">
+            <div class="tool-header">
+              <code class="tool-name">{tool.name}</code>
+            </div>
+            <p class="tool-desc">{tool.description}</p>
+            {tool.params.length > 0 && (
+              <table class="params-table">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {tool.params.map((p) => (
+                    <tr>
+                      <td><code>{p.name}</code></td>
+                      <td><span class="type-badge">{p.type}</span></td>
+                      <td>{p.desc}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Example prompts</h2>
+      <div class="examples-grid">
+        {[
+          "List all tier-1 rollable pets",
+          "Get full details for the Ant",
+          "Search for pets with 'summon' in their ability",
+          "List all Support-type pets in tier 3",
+          "Find foods that buff attack",
+          "How many pets are in the database?",
+        ].map((ex) => (
+          <div class="example-chip">{ex}</div>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .mcp-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-10);
+  }
+
+  /* Hero */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 520px;
+  }
+
+  .endpoint-box {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: var(--sp-3) var(--sp-4);
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .endpoint-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .endpoint-url {
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+    word-break: break-all;
+  }
+
+  .meta-pills {
+    display: flex;
+    gap: var(--sp-2);
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 99px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+  }
+
+  /* Section */
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+  }
+
+  .section h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+
+  .section-desc {
+    color: var(--text-secondary);
+    margin-top: -8px;
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: var(--sp-1);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0;
+  }
+
+  .tab {
+    padding: 6px 14px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-radius: var(--r) var(--r) 0 0;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 130ms, border-color 130ms;
+  }
+
+  .tab:hover {
+    color: var(--text);
+  }
+
+  .tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .tab-content {
+    display: none;
+    flex-direction: column;
+    gap: var(--sp-3);
+    padding-top: var(--sp-4);
+  }
+
+  .tab-content.active {
+    display: flex;
+  }
+
+  .step {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  .info-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .info-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+  }
+
+  .label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    min-width: 72px;
+  }
+
+  /* Code block */
+  .code-block {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+
+  .code-block pre {
+    padding: var(--sp-4);
+    overflow-x: auto;
+    font-size: 0.825rem;
+    line-height: 1.6;
+    font-family: 'Courier New', monospace;
+    color: var(--text);
+  }
+
+  .code-copy {
+    position: absolute;
+    top: var(--sp-2);
+    right: var(--sp-2);
+  }
+
+  /* Copy button */
+  .copy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--r-sm);
+    color: var(--text-muted);
+    flex-shrink: 0;
+    transition: background 130ms, color 130ms;
+  }
+
+  .copy-btn:hover {
+    background: var(--surface-muted);
+    color: var(--text);
+  }
+
+  .copy-btn.copied {
+    color: var(--accent);
+  }
+
+  /* Tools grid */
+  .tools-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+  }
+
+  .tool-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+    padding: var(--sp-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+  }
+
+  .tool-header {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+  }
+
+  .tool-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+  }
+
+  .tool-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  /* Params table */
+  .params-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.825rem;
+  }
+
+  .params-table th {
+    text-align: left;
+    padding: 6px 10px;
+    color: var(--text-muted);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .params-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    vertical-align: top;
+  }
+
+  .params-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .params-table code {
+    font-family: 'Courier New', monospace;
+    color: var(--text);
+    font-size: 0.8rem;
+  }
+
+  .type-badge {
+    font-family: 'Courier New', monospace;
+    font-size: 0.775rem;
+    color: var(--text-muted);
+    background: var(--surface-muted);
+    padding: 1px 6px;
+    border-radius: var(--r-sm);
+    white-space: nowrap;
+  }
+
+  /* Examples */
+  .examples-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+  }
+
+  .example-chip {
+    padding: 6px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+
+    .endpoint-box {
+      flex-wrap: wrap;
+    }
+
+    .params-table {
+      display: block;
+      overflow-x: auto;
+    }
+
+    .tabs {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+</style>
+
+<script>
+  // Tabs
+  const tabs = document.querySelectorAll<HTMLButtonElement>(".tab");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const id = tab.dataset.tab!;
+      tabs.forEach((t) => t.classList.remove("active"));
+      document.querySelectorAll(".tab-content").forEach((c) => c.classList.remove("active"));
+      tab.classList.add("active");
+      document.getElementById(`tab-${id}`)?.classList.add("active");
+    });
+  });
+
+  // Copy buttons
+  document.querySelectorAll<HTMLButtonElement>(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const text = btn.dataset.copy;
+      if (!text) return;
+      await navigator.clipboard.writeText(text);
+      btn.classList.add("copied");
+      setTimeout(() => btn.classList.remove("copied"), 1500);
+    });
+  });
+</script>

@@ -40,7 +40,7 @@ def list_pets(
 ) -> list[PetSummary]:
     """List pets with optional filters. Returns summary fields only.
 
-    type: filter by pet type tag, e.g. 'Attack', 'Tank', 'Summoner', 'Eater', 'Hurt', 'Damage', 'Support'. Case-insensitive substring match.
+    type: filter by pet type tag, e.g. 'Summon', 'Buffs', 'Guard', 'Hurt', 'Disruption', 'Ailment', 'Cycle', 'Transform'. Case-insensitive substring match.
     """
     results = loader.PETS
     if tier is not None:
