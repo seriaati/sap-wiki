@@ -2,6 +2,7 @@
 # Dokploy doesn't pass cloned repo as build context, so we clone it ourselves.
 
 FROM alpine/git:latest AS repo
+ARG CACHEBUST=1
 RUN git clone --depth=1 https://github.com/seriaati/sap-wiki.git /repo
 
 FROM ghcr.io/astral-sh/uv:python3.14-bookworm-slim AS build
