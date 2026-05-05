@@ -48,7 +48,7 @@ def list_pets(
     if rollable is not None:
         results = [p for p in results if p["rollable"] == rollable]
     return [
-        {"key": p["key"], "slug": p["slug"], "name": p["name"], "tier": p["tier"],
+        {"slug": p["slug"], "name": p["name"], "tier": p["tier"],
          "attack": p["attack"], "health": p["health"], "trigger": p["trigger"],
          "rollable": p["rollable"], "types": p["types"]}
         for p in results
@@ -82,7 +82,7 @@ def list_foods(
     if rollable is not None:
         results = [f for f in results if f["rollable"] == rollable]
     return [
-        {"key": f["key"], "slug": f["slug"], "name": f["name"], "tier": f["tier"], "rollable": f["rollable"]}
+        {"slug": f["slug"], "name": f["name"], "tier": f["tier"], "rollable": f["rollable"]}
         for f in results
     ]
 
@@ -117,7 +117,7 @@ def list_toys(
     if rollable is not None:
         results = [t for t in results if t["rollable"] == rollable]
     return [
-        {"key": t["key"], "slug": t["slug"], "name": t["name"], "tier": t["tier"],
+        {"slug": t["slug"], "name": t["name"], "tier": t["tier"],
          "trigger": t["trigger"], "rollable": t["rollable"]}
         for t in results
     ]

@@ -13,14 +13,12 @@ LOADED_AT = datetime.now(timezone.utc).isoformat()
 
 def _clean_pet(key: str, raw: dict) -> Pet:
     return {
-        "key": key,
         "slug": key.lower(),
         "name": clean(raw.get("name", "")),
         "tier": raw.get("tier", 0),
         "cost": raw.get("cost", 0),
         "attack": raw.get("attack", 0),
         "health": raw.get("health", 0),
-        "active": raw.get("active", False),
         "rollable": raw.get("rollable", False),
         "trigger": clean(raw.get("trigger", "")),
         "ability1": clean(raw.get("ability1", "")),
@@ -32,12 +30,10 @@ def _clean_pet(key: str, raw: dict) -> Pet:
 
 def _clean_food(key: str, raw: dict) -> Food:
     return {
-        "key": key,
         "slug": key.lower(),
         "name": clean(raw.get("name", "")),
         "tier": raw.get("tier", 0),
         "cost": raw.get("cost", 0),
-        "active": raw.get("active", False),
         "rollable": raw.get("rollable", False),
         "ability": clean(raw.get("ability", "")),
     }
@@ -45,14 +41,12 @@ def _clean_food(key: str, raw: dict) -> Food:
 
 def _clean_toy(key: str, raw: dict) -> Toy:
     return {
-        "key": key,
         "slug": key.lower(),
         "name": clean(raw.get("name", "")),
         "tier": raw.get("tier", 0),
         "cost": raw.get("cost", 0),
         "attack": raw.get("attack", 0),
         "health": raw.get("health", 0),
-        "active": raw.get("active", False),
         "rollable": raw.get("rollable", False),
         "trigger": clean(raw.get("trigger", "")),
         "ability1": clean(raw.get("ability1", "")),

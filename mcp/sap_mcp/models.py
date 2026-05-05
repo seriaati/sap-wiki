@@ -2,7 +2,6 @@ from typing import TypedDict
 
 
 class PetSummary(TypedDict):
-    key: str
     slug: str
     name: str
     tier: int
@@ -14,14 +13,12 @@ class PetSummary(TypedDict):
 
 
 class Pet(TypedDict):
-    key: str
     slug: str
     name: str
     tier: int
     cost: int
     attack: int
     health: int
-    active: bool
     rollable: bool
     trigger: str
     ability1: str
@@ -31,7 +28,6 @@ class Pet(TypedDict):
 
 
 class FoodSummary(TypedDict):
-    key: str
     slug: str
     name: str
     tier: int
@@ -39,18 +35,15 @@ class FoodSummary(TypedDict):
 
 
 class Food(TypedDict):
-    key: str
     slug: str
     name: str
     tier: int
     cost: int
-    active: bool
     rollable: bool
     ability: str
 
 
 class ToySummary(TypedDict):
-    key: str
     slug: str
     name: str
     tier: int
@@ -59,14 +52,12 @@ class ToySummary(TypedDict):
 
 
 class Toy(TypedDict):
-    key: str
     slug: str
     name: str
     tier: int
     cost: int
     attack: int
     health: int
-    active: bool
     rollable: bool
     trigger: str
     ability1: str
