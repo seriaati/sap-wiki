@@ -12,6 +12,7 @@
     "ability2": "Jump attack the second enemy for 6 {DamageIcon} damage.",
     "ability3": "Jump attack the second enemy for 9 {DamageIcon} damage.",
     "image": "AfricanWildDog_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Disruption"
@@ -30,6 +31,7 @@
     "ability2": "Give the nearest friend ahead +2 {ManaIcon} mana.",
     "ability3": "Give the nearest friend ahead +3 {ManaIcon} mana.",
     "image": "AlchemistBug_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -46,7 +48,8 @@
     "ability1": "Give one random friend +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give one random friend +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give one random friend +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Ant_2x.png",
+    "image": "Ant_2x_0.png",
+    "imageLegacy": "Ant_2x.png",
     "types": []
   },
   "BabyDuck": {
@@ -61,7 +64,8 @@
     "ability1": "Give left-most shop pet +2 {HealthIcon} health.",
     "ability2": "Give left-most shop pet +4 {HealthIcon} health.",
     "ability3": "Give left-most shop pet +6 {HealthIcon} health.",
-    "image": "BabyDuck_2x.png",
+    "image": "BabyDuck_2x_0.png",
+    "imageLegacy": "BabyDuck_2x.png",
     "types": [
       "Buffs"
     ]
@@ -79,6 +83,7 @@
     "ability2": "",
     "ability3": "",
     "image": "BabyPhoenix_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "BadAnt": {
@@ -94,6 +99,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "BadDolphin": {
@@ -109,6 +115,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "BadGorilla": {
@@ -124,6 +131,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "BadRat": {
@@ -139,6 +147,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "BadSeahorse": {
@@ -154,6 +163,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "BadSheep": {
@@ -169,6 +179,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "Baku": {
@@ -184,6 +195,7 @@
     "ability2": "Replace random ailments with +2 {HealthIcon} health on two friends.",
     "ability3": "Replace random ailments with +3 {HealthIcon} health on two friends.",
     "image": "Baku_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -201,6 +213,7 @@
     "ability2": "Make the two last perk-less enemies Spooked {ScaredIcon}.",
     "ability3": "Make the three last perk-less enemies Spooked {ScaredIcon}.",
     "image": "Barghest_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -217,7 +230,8 @@
     "ability1": "Give two random friends +1 {AttackIcon} attack.",
     "ability2": "Give two random friends +2 {AttackIcon} attack.",
     "ability3": "Give two random friends +3 {AttackIcon} attack.",
-    "image": "Beaver_2x.png",
+    "image": "Beaver_2x_0.png",
+    "imageLegacy": "Beaver_2x.png",
     "types": [
       "Cycle"
     ]
@@ -234,7 +248,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "Bee_2x.png",
+    "image": "Bee_2x_0.png",
+    "imageLegacy": "Bee_2x.png",
     "types": []
   },
   "Beetle": {
@@ -249,7 +264,8 @@
     "ability1": "Gain the [[Walnut|food:walnut]] {PerkIcon} perk.",
     "ability2": "Gain the [[Walnut|food:walnut]] {PerkIcon} perk with double effect.",
     "ability3": "Gain the [[Walnut|food:walnut]] {PerkIcon} perk with triple effect.",
-    "image": "Beetle_2x.png",
+    "image": "Beetle_2x_0.png",
+    "imageLegacy": "Beetle_2x.png",
     "types": [
       "Perks"
     ]
@@ -266,7 +282,8 @@
     "ability1": "Give one random friend +1 {AttackIcon} attack.",
     "ability2": "Give one random friend +2 {AttackIcon} attack.",
     "ability3": "Give one random friend +3 {AttackIcon} attack.",
-    "image": "BlueBird_2x.png",
+    "image": "BlueBird_2x_0.png",
+    "imageLegacy": "BlueBird_2x.png",
     "types": [
       "Buffs"
     ]
@@ -284,6 +301,7 @@
     "ability2": "Deal 2 {DamageIcon} damage to the first enemy.",
     "ability3": "Deal 3 {DamageIcon} damage to the first enemy.",
     "image": "BombusDahlbomii_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -301,6 +319,7 @@
     "ability2": "Gain the [[Popcorn|food:popcorn]] {PerkIcon} perk and +2 {HealthIcon} health.",
     "ability3": "Gain the [[Popcorn|food:popcorn]] {PerkIcon} perk and +3 {HealthIcon} health.",
     "image": "Budgie_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks",
       "Summon"
@@ -319,6 +338,7 @@
     "ability2": "Gain +4 {AttackIcon} attack.",
     "ability3": "Gain +6 {AttackIcon} attack.",
     "image": "Bulldog_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Bunyip": {
@@ -334,6 +354,7 @@
     "ability2": "Gain +2 {HealthIcon} health for each roll (max 2).",
     "ability3": "Gain +3 {HealthIcon} health for each roll (max 2).",
     "image": "Bunyip_2x.png",
+    "imageLegacy": "",
     "types": [
       "Rolling"
     ]
@@ -350,7 +371,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "Bus_2x.png",
+    "image": "Bus_2x_0.png",
+    "imageLegacy": "Bus_2x.png",
     "types": []
   },
   "Chick": {
@@ -365,7 +387,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "Chick_2x.png",
+    "image": "Chick_2x_0.png",
+    "imageLegacy": "Chick_2x.png",
     "types": []
   },
   "Chihuahua": {
@@ -381,6 +404,7 @@
     "ability2": "Push the most healthy enemy two spaces forward.",
     "ability3": "Push the most healthy enemy three spaces forward.",
     "image": "Chihuahua_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -398,6 +422,7 @@
     "ability2": "",
     "ability3": "",
     "image": "ChimeraGoat_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "ChimeraLion": {
@@ -413,6 +438,7 @@
     "ability2": "",
     "ability3": "",
     "image": "ChimeraLion_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "ChimeraSnake": {
@@ -428,6 +454,7 @@
     "ability2": "",
     "ability3": "",
     "image": "ChimeraSnake_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Chinchilla": {
@@ -442,7 +469,8 @@
     "ability1": "Summon one 2/2 level 1 [[Loyal Chinchilla|chinchilla]].",
     "ability2": "Summon one 4/4 level 2 [[Loyal Chinchilla|chinchilla]].",
     "ability3": "Summon one 6/6 level 3 [[Loyal Chinchilla|chinchilla]].",
-    "image": "Chinchilla_2x.png",
+    "image": "Chinchilla_2x_0.png",
+    "imageLegacy": "Chinchilla_2x.png",
     "types": [
       "Gold",
       "Cycle"
@@ -460,7 +488,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "ChinchillaToken_2x.png",
+    "image": "ChinchillaToken_2x_0.png",
+    "imageLegacy": "ChinchillaToken_2x.png",
     "types": []
   },
   "Chipmunk": {
@@ -476,6 +505,7 @@
     "ability2": "Stock two free copies of this pet's food perk.",
     "ability3": "Stock three free copies of this pet's food perk.",
     "image": "Chipmunk_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks",
       "Super"
@@ -493,7 +523,8 @@
     "ability1": "Summon one 1/1 Cockroach and give it +1 {ExpIcon} experience.",
     "ability2": "Summon one 1/1 Cockroach and give it +2 {ExpIcon} experience.",
     "ability3": "Summon one 1/1 Cockroach and give it +3 {ExpIcon} experience.",
-    "image": "Cockroach_2x.png",
+    "image": "Cockroach_2x_0.png",
+    "imageLegacy": "Cockroach_2x.png",
     "types": [
       "Level-Up",
       "Summon"
@@ -512,6 +543,7 @@
     "ability2": "Does not provide shop rewards on level-up.",
     "ability3": "Does not provide shop rewards on level-up.",
     "image": "CockroachToken_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "ConeSnail": {
@@ -527,6 +559,7 @@
     "ability2": "Give the nearest friend behind +4 {HealthIcon} health.",
     "ability3": "Give the nearest friend behind +6 {HealthIcon} health.",
     "image": "ConeSnail_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Cricket": {
@@ -541,7 +574,8 @@
     "ability1": "Summon one 1/1 [[Cricket|crickettoken]].",
     "ability2": "Summon one 2/2 [[Cricket|crickettoken]].",
     "ability3": "Summon one 3/3 [[Cricket|crickettoken]].",
-    "image": "Cricket_2x.png",
+    "image": "Cricket_2x_0.png",
+    "imageLegacy": "Cricket_2x.png",
     "types": [
       "Summon"
     ]
@@ -558,7 +592,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "CricketToken_2x.png",
+    "image": "CricketToken_2x_0.png",
+    "imageLegacy": "CricketToken_2x.png",
     "types": []
   },
   "Cthulu": {
@@ -574,6 +609,7 @@
     "ability2": "Deal 10 {DamageIcon} damage to ALL other pets.",
     "ability3": "Deal 15 {DamageIcon} damage to ALL other pets.",
     "image": "Cthulu_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "CuckooBaby": {
@@ -589,6 +625,7 @@
     "ability2": "Attack and health can't go over 1.",
     "ability3": "Attack and health can't go over 1.",
     "image": "CuckooBaby_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "CuddleToad": {
@@ -604,6 +641,7 @@
     "ability2": "Choose one witch toy that breaks after 4 turns.",
     "ability3": "Choose one witch toy that breaks after 6 turns.",
     "image": "CuddleToad_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -621,6 +659,7 @@
     "ability2": "",
     "ability3": "",
     "image": "Daycrawler_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Duck": {
@@ -635,7 +674,8 @@
     "ability1": "Give shop pets +1 {HealthIcon} health.",
     "ability2": "Give shop pets +2 {HealthIcon} health.",
     "ability3": "Give shop pets +3 {HealthIcon} health.",
-    "image": "Duck_2x.png",
+    "image": "Duck_2x_0.png",
+    "imageLegacy": "Duck_2x.png",
     "types": [
       "Buffs"
     ]
@@ -653,6 +693,7 @@
     "ability2": "Faint and summon one 8/4 Cracked Egg.",
     "ability3": "Faint and summon one 12/6 Cracked Egg.",
     "image": "EggLadCovered_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -670,6 +711,7 @@
     "ability2": "",
     "ability3": "",
     "image": "EggLadCracked_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "EthiopianWolf": {
@@ -685,6 +727,7 @@
     "ability2": "Remove 1 {AttackIcon} attack from the first two enemies.",
     "ability3": "Remove 1 {AttackIcon} attack from the first three enemies.",
     "image": "EthiopianWolf_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "FanMussel": {
@@ -700,6 +743,7 @@
     "ability2": "Takes 2 less damage.",
     "ability3": "Takes 3 less damage.",
     "image": "FanMussel_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "FarmerMouse": {
@@ -715,6 +759,7 @@
     "ability2": "Feed one [[Corncob|food:corn]] to the nearest two friends behind.",
     "ability3": "Feed one [[Corncob|food:corn]] to the nearest three friends behind.",
     "image": "FarmerMouse_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -732,6 +777,7 @@
     "ability2": "Choose one level 2 Ferret toy.",
     "ability3": "Choose one level 3 Ferret toy.",
     "image": "Ferret_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -749,6 +795,7 @@
     "ability2": "",
     "ability3": "",
     "image": "FirePup_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Firefly": {
@@ -764,6 +811,7 @@
     "ability2": "Deal 1 {DamageIcon} damage to ALL pets within two spaces.",
     "ability3": "Deal 1 {DamageIcon} damage to ALL pets within three spaces.",
     "image": "Firefly_2x.png",
+    "imageLegacy": "",
     "types": [
       "Hurt"
     ]
@@ -780,7 +828,8 @@
     "ability1": "Give two friends +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give two friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "No ability.",
-    "image": "Fish_2x.png",
+    "image": "Fish_2x_0.png",
+    "imageLegacy": "Fish_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -797,7 +846,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "FlyToken_2x.png",
+    "image": "FlyToken_2x_0.png",
+    "imageLegacy": "FlyToken_2x.png",
     "types": []
   },
   "FrilledDragon": {
@@ -812,7 +862,8 @@
     "ability1": "Gain +1 {AttackIcon} attack and +1 {HealthIcon} health per {0} friend.",
     "ability2": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health per {0} friend.",
     "ability3": "Gain +3 {AttackIcon} attack and +3 {HealthIcon} health per {0} friend.",
-    "image": "FrilledDragon_2x.png",
+    "image": "FrilledDragon_2x_0.png",
+    "imageLegacy": "FrilledDragon_2x.png",
     "types": []
   },
   "Frog": {
@@ -827,7 +878,8 @@
     "ability1": "If both adjacent friends are tier 2 or lower, swap their stats.",
     "ability2": "If both adjacent friends are tier 4 or lower, swap their stats.",
     "ability3": "If both adjacent friends are tier 6 or lower, swap their stats.",
-    "image": "Frog_2x.png",
+    "image": "Frog_2x_0.png",
+    "imageLegacy": "Frog_2x.png",
     "types": [
       "Super"
     ],
@@ -847,6 +899,7 @@
     "ability2": "Gain +4 {HealthIcon} health.",
     "ability3": "Gain +6 {HealthIcon} health.",
     "image": "Gecko_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -864,6 +917,7 @@
     "ability2": "",
     "ability3": "",
     "image": "GiantEyesDog_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Gibbon": {
@@ -879,6 +933,7 @@
     "ability2": "Give the two nearest pets behind +2 {HealthIcon} health.",
     "ability3": "Give the two nearest pets behind +3 {HealthIcon} health.",
     "image": "Gibbon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -895,7 +950,8 @@
     "ability1": "Always there for his friends!",
     "ability2": "Always there for his friends!",
     "ability3": "Always there for his friends!",
-    "image": "GoldenRetriever_2x.png",
+    "image": "GoldenRetriever_0.png",
+    "imageLegacy": "GoldenRetriever_2x.png",
     "types": []
   },
   "GoodDog": {
@@ -911,6 +967,7 @@
     "ability2": "Give friends lots of useful perks! {HealthIcon}",
     "ability3": "Give friends silly amounts of useful perks! {HealthIcon}",
     "image": "GoodDog_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Goose": {
@@ -926,6 +983,7 @@
     "ability2": "Remove 2 {AttackIcon} attack from the first enemy.",
     "ability3": "Remove 3 {AttackIcon} attack from the first enemy.",
     "image": "Goose_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Groundhog": {
@@ -941,6 +999,7 @@
     "ability2": "Gain +2 {TrumpetIcon} trumpets.",
     "ability3": "Gain +3 {TrumpetIcon} trumpets.",
     "image": "Groundhog_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -958,6 +1017,7 @@
     "ability2": "If current perk is tier 4 or lower, copy it to the Golden Retriever when summoned.",
     "ability3": "If current perk is tier 6 or lower, copy it to the Golden Retriever when summoned.",
     "image": "HermitCrab_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -974,7 +1034,8 @@
     "ability1": "Give it +1 {AttackIcon} attack until next turn.",
     "ability2": "Give it +2 {AttackIcon} attack until next turn.",
     "ability3": "Give it +3 {AttackIcon} attack until next turn.",
-    "image": "Horse_2x.png",
+    "image": "Horse_2x_0.png",
+    "imageLegacy": "Horse_2x.png",
     "types": [
       "Summon"
     ]
@@ -991,7 +1052,8 @@
     "ability1": "Give [[Strawberry|food:strawberry]] {PerkIcon} perk to the nearest friend behind.",
     "ability2": "Give [[Strawberry|food:strawberry]] {PerkIcon} perk to the two nearest friends behind.",
     "ability3": "Give [[Strawberry|food:strawberry]] {PerkIcon} perk to the three nearest friends behind.",
-    "image": "Hummingbird_2x.png",
+    "image": "Hummingbird_2x_0.png",
+    "imageLegacy": "Hummingbird_2x.png",
     "types": [
       "Strawberry",
       "Perks"
@@ -1010,6 +1072,7 @@
     "ability2": "",
     "ability3": "",
     "image": "HydraHead_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "IliPika": {
@@ -1025,6 +1088,7 @@
     "ability2": "Give it +2 to its highest stat until next turn.",
     "ability3": "Give it +3 to its highest stat until next turn.",
     "image": "IliPika_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -1042,6 +1106,7 @@
     "ability2": "Transform into ANY useful level 1 pet from tier 2.",
     "ability3": "Transform into ANY useful level 1 pet from tier 3.",
     "image": "IriomoteCat_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -1058,7 +1123,8 @@
     "ability1": "Give the back-most friendly [[Strawberry|food:strawberry]] pet +1 {AttackIcon} attack.",
     "ability2": "Give the back-most friendly [[Strawberry|food:strawberry]] pet +2 {AttackIcon} attack.",
     "ability3": "Give the back-most friendly [[Strawberry|food:strawberry]] pet +3 {AttackIcon} attack.",
-    "image": "Kiwi_2x.png",
+    "image": "Kiwi_2x_0.png",
+    "imageLegacy": "Kiwi_2x.png",
     "types": [
       "Strawberry"
     ]
@@ -1075,7 +1141,8 @@
     "ability1": "Gain +2 {AttackIcon} attack until next turn.",
     "ability2": "Gain +4 {AttackIcon} attack until next turn.",
     "ability3": "Gain +6 {AttackIcon} attack until next turn.",
-    "image": "LadyBug_2x.png",
+    "image": "LadyBug_2x_0.png",
+    "imageLegacy": "LadyBug_2x.png",
     "types": [
       "Perks"
     ]
@@ -1093,6 +1160,7 @@
     "ability2": "Give +2 {AttackIcon} attack and Spooked {ScaredIcon} until next turn to the nearest friend ahead.",
     "ability3": "Give +3 {AttackIcon} attack and Spooked {ScaredIcon} until next turn to the nearest friend ahead.",
     "image": "Leafling_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -1110,6 +1178,7 @@
     "ability2": "Gain +2 {GoldIcon} gold next turn.",
     "ability3": "Gain +3 {GoldIcon} gold next turn.",
     "image": "Lemming_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ]
@@ -1127,6 +1196,7 @@
     "ability2": "",
     "ability3": "",
     "image": "LizardToken_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "LongWattledUmbrellabird": {
@@ -1142,6 +1212,7 @@
     "ability2": "Make the two nearest friends ahead Dazed {DeafIcon}.",
     "ability3": "Make the three nearest friends ahead Dazed {DeafIcon}.",
     "image": "LongWattledUmbrellaBird_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -1159,6 +1230,7 @@
     "ability2": "Spend up to 2 {GoldIcon} gold and gain it back next turn.",
     "ability3": "Spend up to 3 {GoldIcon} gold and gain it back next turn.",
     "image": "Magpie_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ]
@@ -1176,6 +1248,7 @@
     "ability2": "Gain +2 {HealthIcon} health.",
     "ability3": "Gain +3 {HealthIcon} health.",
     "image": "MalayTapir_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -1192,7 +1265,8 @@
     "ability1": "Your next roll is free.",
     "ability2": "Your next two rolls are free.",
     "ability3": "Your next three rolls are free.",
-    "image": "Marmoset_2x.png",
+    "image": "Marmoset_2x_0.png",
+    "imageLegacy": "Marmoset_2x.png",
     "types": [
       "Cycle"
     ]
@@ -1210,6 +1284,7 @@
     "ability2": "Remove this.",
     "ability3": "Remove this.",
     "image": "MochaDick_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Mosquito": {
@@ -1224,7 +1299,8 @@
     "ability1": "Deal 1 {DamageIcon} damage to one random enemy.",
     "ability2": "Deal 1 {DamageIcon} damage to two random enemies.",
     "ability3": "Deal 1 {DamageIcon} damage to three random enemies.",
-    "image": "Mosquito_2x.png",
+    "image": "Mosquito_2x_0.png",
+    "imageLegacy": "Mosquito_2x.png",
     "types": [
       "Disruption"
     ]
@@ -1241,7 +1317,8 @@
     "ability1": "Give front-most friendly pet +2 {AttackIcon} attack.",
     "ability2": "Give front-most friendly pet +4 {AttackIcon} attack.",
     "ability3": "Give front-most friendly pet +6 {AttackIcon} attack.",
-    "image": "Moth_2x.png",
+    "image": "Moth_2x_0.png",
+    "imageLegacy": "Moth_2x.png",
     "types": []
   },
   "Mouse": {
@@ -1256,7 +1333,8 @@
     "ability1": "Replace shop food with one free [[Apple|food:apple]].",
     "ability2": "Replace shop food with one free Better [[Apple|food:apple]].",
     "ability3": "Replace shop food with one free Best [[Apple|food:apple]].",
-    "image": "Mouse_2x.png",
+    "image": "Mouse_2x_0.png",
+    "imageLegacy": "Mouse_2x.png",
     "types": [
       "Food"
     ]
@@ -1274,6 +1352,7 @@
     "ability2": "Gain +2 {AttackIcon} attack until next turn.",
     "ability3": "Gain +3 {AttackIcon} attack until next turn.",
     "image": "Murloc_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up"
     ]
@@ -1291,6 +1370,7 @@
     "ability2": "[[Egg|food:egg]] perk has double effect.",
     "ability3": "[[Egg|food:egg]] perk has triple effect.",
     "image": "Nest_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Nudibranchs": {
@@ -1306,6 +1386,7 @@
     "ability2": "If there are no friendly duplicates, gain +6 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "If there are no friendly duplicates, gain +9 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Nudibranchs_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Opossum": {
@@ -1321,6 +1402,7 @@
     "ability2": "Give one random {0} pet in the shop +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give one random {0} pet in the shop +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Opossum_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -1337,7 +1419,8 @@
     "ability1": "Give one random friend +1 {HealthIcon} health.",
     "ability2": "Give two random friends +1 {HealthIcon} health.",
     "ability3": "Give three random friends +1 {HealthIcon} health.",
-    "image": "Otter_2x.png",
+    "image": "Otter_2x_0.png",
+    "imageLegacy": "Otter_2x.png",
     "types": [
       "Cycle"
     ]
@@ -1355,6 +1438,7 @@
     "ability2": "Make adjacent perk-less pets Spooked {ScaredIcon} with double effect.",
     "ability3": "Make adjacent perk-less pets Spooked {ScaredIcon} with triple effect.",
     "image": "PeacockSpider_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -1372,6 +1456,7 @@
     "ability2": "Gain 4 bonus {ManaIcon} mana.",
     "ability3": "Gain 6 bonus {ManaIcon} mana.",
     "image": "Pengobble_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -1389,6 +1474,7 @@
     "ability2": "Give it the [[Strawberry|food:strawberry]] perk until next turn.",
     "ability3": "Give it the [[Strawberry|food:strawberry]] perk until next turn.",
     "image": "Pheasant_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry",
       "Perks"
@@ -1407,6 +1493,7 @@
     "ability2": "Spend 1 {TrumpetIcon} trumpet to deal 3 {DamageIcon} damage to two random enemies.",
     "ability3": "Spend 1 {TrumpetIcon} trumpet to deal 3 {DamageIcon} damage to three random enemies.",
     "image": "PiedTamarin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -1423,7 +1510,8 @@
     "ability1": "Gain +1 {GoldIcon} gold.",
     "ability2": "Gain +2 {GoldIcon} gold.",
     "ability3": "Gain +3 {GoldIcon} gold.",
-    "image": "Pig_2x.png",
+    "image": "Pig_2x_0.png",
+    "imageLegacy": "Pig_2x.png",
     "types": [
       "Gold",
       "Cycle"
@@ -1442,6 +1530,7 @@
     "ability2": "Stock two free [[Bread Crumbs|food:breadcrumbs]].",
     "ability3": "Stock three free [[Bread Crumbs|food:breadcrumbs]].",
     "image": "Pigeon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -1458,7 +1547,8 @@
     "ability1": "Stock one free [[Sleeping Pill|food:pill]].",
     "ability2": "Stock two free Sleeping Pills.",
     "ability3": "Stock three free Sleeping Pills.",
-    "image": "Pillbug_2x.png",
+    "image": "Pillbug_2x_0.png",
+    "imageLegacy": "Pillbug_2x.png",
     "types": []
   },
   "PinkRobin": {
@@ -1474,6 +1564,7 @@
     "ability2": "Activate <b>End Turn</b> on one random tier 4 or lower friend.",
     "ability3": "Activate <b>End Turn</b> on one random tier 6 or lower friend.",
     "image": "PinkRobin_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "PygmySeahorse": {
@@ -1489,6 +1580,7 @@
     "ability2": "Give three random friends +2 {AttackIcon} attack and +2 {HealthIcon} health and remove this.",
     "ability3": "Give three random friends +3 {AttackIcon} attack and +3 {HealthIcon} health and remove this.",
     "image": "PygmySeahorse_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -1506,6 +1598,7 @@
     "ability2": "Choose one tier 1 food to stock at 1 {GoldIcon} gold. Stock two copies.",
     "ability3": "Choose one tier 1 food to stock at 1 {GoldIcon} gold. Stock three copies.",
     "image": "Quoll_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food",
       "Perks"
@@ -1523,7 +1616,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "Ram_2x.png",
+    "image": "Ram_2x_0.png",
+    "imageLegacy": "Ram_2x.png",
     "types": []
   },
   "RatToken": {
@@ -1538,7 +1632,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "RatToken_2x.png",
+    "image": "RatToken_2x_0.png",
+    "imageLegacy": "RatToken_2x.png",
     "types": []
   },
   "Rock": {
@@ -1553,7 +1648,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "Rock_2x.png",
+    "image": "Rock_2x_0.png",
+    "imageLegacy": "Rock_2x.png",
     "types": []
   },
   "Silkmoth": {
@@ -1569,6 +1665,7 @@
     "ability2": "Give it +2 {HealthIcon} health.",
     "ability3": "Give it +3 {HealthIcon} health.",
     "image": "Silkmoth_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Sloth": {
@@ -1583,7 +1680,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "Sloth_2x.png",
+    "image": "Sloth_2x_0.png",
+    "imageLegacy": "Sloth_2x.png",
     "types": []
   },
   "SlugToken": {
@@ -1599,6 +1697,7 @@
     "ability2": "Summon one 2/2 Smallest Slug.",
     "ability3": "Summon one 3/3 Smallest Slug.",
     "image": "SlugToken_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "SlugToken2": {
@@ -1614,6 +1713,7 @@
     "ability2": "",
     "ability3": "",
     "image": "SlugToken2_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "SmallerSlime": {
@@ -1629,6 +1729,7 @@
     "ability2": "",
     "ability3": "",
     "image": "SmallerSlime_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Termite": {
@@ -1644,6 +1745,7 @@
     "ability2": "Set {AttackIcon} attack to the current shop tier + 2.",
     "ability3": "Set {AttackIcon} attack to the current shop tier + 3.",
     "image": "Termite_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "TestBeforeFaintConditionFirstDamage": {
@@ -1659,6 +1761,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator2A3H": {
@@ -1674,6 +1777,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator3A3H": {
@@ -1689,6 +1793,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestFaintSummonStartOfBattleAndActivateIt": {
@@ -1704,6 +1809,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestInfiniteRespawn": {
@@ -1719,6 +1825,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestStartOfBattleGiveHealthInfront": {
@@ -1734,6 +1841,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestStartOfBattleThrowSelf": {
@@ -1749,6 +1857,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TogianBabirusa": {
@@ -1764,6 +1873,7 @@
     "ability2": "Give one random enemy +1 {HealthIcon} health.",
     "ability3": "Give one random enemy +1 {HealthIcon} health.",
     "image": "TogianBabirusa_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "ToothBilledPigeon": {
@@ -1779,6 +1889,7 @@
     "ability2": "Stock two free [[Seed Pile|food:seedpile]].",
     "ability3": "Stock three free [[Seed Pile|food:seedpile]].",
     "image": "ToothBilledPigeon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -1796,6 +1907,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "Tsuchinoko": {
@@ -1811,6 +1923,7 @@
     "ability2": "Jump to the front space and gain +2 {ExpIcon} experience.",
     "ability3": "Jump to the front space and gain +3 {ExpIcon} experience.",
     "image": "Tsuchinoko_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up",
       "Guard"
@@ -1829,6 +1942,7 @@
     "ability2": "Make two random perk-less enemies Toasty {ToastyIcon}.",
     "ability3": "Make three random perk-less enemies Toasty {ToastyIcon}.",
     "image": "VolcanoSnail_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -1846,6 +1960,7 @@
     "ability2": "Give them +2 {AttackIcon} attack until next turn.",
     "ability3": "Give them +3 {AttackIcon} attack until next turn.",
     "image": "Weevil_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -1863,6 +1978,7 @@
     "ability2": "Attack for triple damage.",
     "ability3": "Attack for quadruple damage.",
     "image": "WhiteKillerRabbit_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "AfricanPenguin": {
@@ -1878,6 +1994,7 @@
     "ability2": "Give three random friends +2 {AttackIcon} attack.",
     "ability3": "Give three random friends +3 {AttackIcon} attack.",
     "image": "AfricanPenguin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -1895,6 +2012,7 @@
     "ability2": "Replace shop food with three random food and discount them by 2 {GoldIcon} gold.",
     "ability3": "Replace shop food with three random food and discount them by 3 {GoldIcon} gold.",
     "image": "AlbinoSquirrel_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -1912,6 +2030,7 @@
     "ability2": "Give the nearest friend ahead +2 {AttackIcon} attack on odd turns and +2 {HealthIcon} health on even.",
     "ability3": "Give the nearest friend ahead +3 {AttackIcon} attack on odd turns and +3 {HealthIcon} health on even.",
     "image": "Amphisbaena_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -1929,6 +2048,7 @@
     "ability2": "Really angry!",
     "ability3": "Really angry!",
     "image": "AngryPygmyHog_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "AraripeManakin": {
@@ -1944,6 +2064,7 @@
     "ability2": "Gain +6 {HealthIcon} health until next turn.",
     "ability3": "Gain +9 {HealthIcon} health until next turn.",
     "image": "AraripeManakin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform",
       "Guard"
@@ -1962,6 +2083,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "AtlanticPuffin": {
@@ -1976,7 +2098,8 @@
     "ability1": "Remove its [[Strawberry|food:strawberry]] perk to deal 2 {DamageIcon} damage to the last enemy.",
     "ability2": "Remove its [[Strawberry|food:strawberry]] perk to deal 4 {DamageIcon} damage to the last enemy.",
     "ability3": "Remove its [[Strawberry|food:strawberry]] perk to deal 6 {DamageIcon} damage to the last enemy.",
-    "image": "AtlanticPuffin_2x.png",
+    "image": "AtlanticPuffin_2x_0.png",
+    "imageLegacy": "AtlanticPuffin_2x.png",
     "types": [
       "Strawberry"
     ]
@@ -1994,6 +2117,7 @@
     "ability2": "Give one level 2 <b>Sell</b> friend +2 {ExpIcon} experience.",
     "ability3": "Give one level 2 <b>Sell</b> friend +3 {ExpIcon} experience.",
     "image": "Bass_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up"
     ]
@@ -2010,7 +2134,8 @@
     "ability1": "Make one random enemy Weak {WeakIcon}.",
     "ability2": "Make one random enemy Weak {WeakIcon}.",
     "ability3": "Make one random enemy Weak {WeakIcon}.",
-    "image": "Bat_2x.png",
+    "image": "Bat_2x_0.png",
+    "imageLegacy": "Bat_2x.png",
     "types": [
       "Ailment"
     ]
@@ -2028,6 +2153,7 @@
     "ability2": "Summon two 2/3 [[Dolphins|dolphin]] in the back and give them Rice {PerkIcon}.",
     "ability3": "Summon three 2/3 [[Dolphins|dolphin]] in the back and give them Rice {PerkIcon}.",
     "image": "BelugaSturgeon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -2045,6 +2171,7 @@
     "ability2": "Gain two free rolls next turn.",
     "ability3": "Gain three free rolls next turn.",
     "image": "Bigfoot_2x.png",
+    "imageLegacy": "",
     "types": [
       "Rolling"
     ]
@@ -2062,6 +2189,7 @@
     "ability2": "Give it [[Garlic|food:garlic]].",
     "ability3": "Give it [[Garlic|food:garlic]].",
     "image": "Bilby_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -2079,6 +2207,7 @@
     "ability2": "Gain +4 {TrumpetIcon} trumpets.",
     "ability3": "Gain +6 {TrumpetIcon} trumpets.",
     "image": "BlackNeckedStilt_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -2096,6 +2225,7 @@
     "ability2": "Give +1 {HealthIcon} health to one random friend.",
     "ability3": "Give +1 {HealthIcon} health to one random friend.",
     "image": "Chupacabra_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Crab": {
@@ -2110,7 +2240,8 @@
     "ability1": "Gain {HealthIcon} health equal to 25% of the most healthy friend.",
     "ability2": "Gain {HealthIcon} health equal to 50% of the most healthy friend.",
     "ability3": "Gain {HealthIcon} health equal to 75% of the most healthy friend.",
-    "image": "Crab_2x.png",
+    "image": "Crab_2x_0.png",
+    "imageLegacy": "Crab_2x.png",
     "types": []
   },
   "DarwinsFox": {
@@ -2126,6 +2257,7 @@
     "ability2": "Jump-attack it, or the first enemy.",
     "ability3": "Jump-attack it, or the first enemy.",
     "image": "DarwinsFox_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Disruption"
@@ -2144,6 +2276,7 @@
     "ability2": "Spend 1 {TrumpetIcon} trumpet to transform into a level 1 <b>Faint</b> pet from two tiers above.",
     "ability3": "Spend 1 {TrumpetIcon} trumpet to transform into a level 1 <b>Faint</b> pet from three tiers above.",
     "image": "DesertRainFrog_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -2161,6 +2294,7 @@
     "ability2": "Jump to the front and gain +8 {HealthIcon} health in battle.",
     "ability3": "Jump to the front and gain +12 {HealthIcon} health in battle.",
     "image": "DoorHeadAnt_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -2177,7 +2311,8 @@
     "ability1": "Activate three friendly [[Strawberries|food:strawberry]].",
     "ability2": "Activate three friendly [[Strawberries|food:strawberry]] with double effect.",
     "ability3": "Activate three friendly [[Strawberries|food:strawberry]] with triple effect.",
-    "image": "Dove_2x.png",
+    "image": "Dove_2x_0.png",
+    "imageLegacy": "Dove_2x.png",
     "types": [
       "Strawberry"
     ]
@@ -2195,6 +2330,7 @@
     "ability2": "Break friendly tier 4 or lower toy.",
     "ability3": "Break friendly tier 6 or lower toy.",
     "image": "Drill_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -2211,7 +2347,8 @@
     "ability1": "Give the two left-most shop pets +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give the two left-most shop pets +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give the two left-most shop pets +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Dromedary_2x.png",
+    "image": "Dromedary_2x_0.png",
+    "imageLegacy": "Dromedary_2x.png",
     "types": [
       "Buffs"
     ]
@@ -2229,6 +2366,7 @@
     "ability2": "Jump to the front and deal 6 {DamageIcon} damage to the last enemy in battle.",
     "ability3": "Jump to the front and deal 9 {DamageIcon} damage to the last enemy in battle.",
     "image": "DropBear_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Disruption"
@@ -2247,6 +2385,7 @@
     "ability2": "Stock ANY food from the 3 last unlocked tiers and discount it by 2 {GoldIcon} gold.",
     "ability3": "Stock ANY food from the 3 last unlocked tiers and discount it by 3 {GoldIcon} gold.",
     "image": "DumboOctopus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Rolling"
     ]
@@ -2264,6 +2403,7 @@
     "ability2": "Deal 6 {DamageIcon} damage to the least healthy enemy for each food eaten this turn, up to 3 food.",
     "ability3": "Deal 9 {DamageIcon} damage to the least healthy enemy for each food eaten this turn, up to 3 food.",
     "image": "DungBeetle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption",
       "Food"
@@ -2282,6 +2422,7 @@
     "ability2": "Gain +2 {GoldIcon} gold. Triple if attack is at least 10.",
     "ability3": "Gain +3 {GoldIcon} gold. Triple if attack is at least 10.",
     "image": "DwarvenBeetle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle",
       "Gold"
@@ -2300,6 +2441,7 @@
     "ability2": "Give adjacent friends +2 {AttackIcon} attack.",
     "ability3": "Give adjacent friends +3 {AttackIcon} attack.",
     "image": "EuropeanMink_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -2317,6 +2459,7 @@
     "ability2": "Feed one [[Corncob|food:corn]] to the nearest two friends ahead.",
     "ability3": "Feed one [[Corncob|food:corn]] to the nearest three friends ahead.",
     "image": "FarmerChicken_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -2333,7 +2476,8 @@
     "ability1": "Give the two nearest friends behind +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give the two nearest friends behind +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give the two nearest friends behind +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Flamingo_2x.png",
+    "image": "Flamingo_2x_0.png",
+    "imageLegacy": "Flamingo_2x.png",
     "types": []
   },
   "Frigatebird": {
@@ -2348,7 +2492,8 @@
     "ability1": "Give it Rice.",
     "ability2": "Give it Rice.",
     "ability3": "Give it Rice.",
-    "image": "Frigatebird_2x.png",
+    "image": "Frigatebird_2x_0.png",
+    "imageLegacy": "Frigatebird_2x.png",
     "types": [
       "Ailment"
     ]
@@ -2366,6 +2511,7 @@
     "ability2": "Make the first enemy Cold twice for double effect.",
     "ability3": "Make the first enemy Cold thrice for triple effect.",
     "image": "FrostWolf_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -2383,6 +2529,7 @@
     "ability2": "Give Blueberry perk to the opposite enemy and deal 4 {DamageIcon} damage to it.",
     "ability3": "Give Blueberry perk to the opposite enemy and deal 6 {DamageIcon} damage to it.",
     "image": "FruitFly_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -2400,6 +2547,7 @@
     "ability2": "Give the nearest friend behind +4 {HealthIcon} health. Spend mana to give 2 more per mana.",
     "ability3": "Give the nearest friend behind +6 {HealthIcon} health. Spend mana to give 3 more per mana.",
     "image": "Gargoyle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -2417,6 +2565,7 @@
     "ability2": "Takes 6 less damage from abilities.",
     "ability3": "Takes 9 less damage from abilities.",
     "image": "GhostKitten_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "GiantSquirrel": {
@@ -2432,6 +2581,7 @@
     "ability2": "Copy {PerkIcon} perk to the back-most pets from BOTH teams.",
     "ability3": "Copy {PerkIcon} perk to the back-most pets from BOTH teams.",
     "image": "GiantSquirrel_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "GoldFish": {
@@ -2446,7 +2596,8 @@
     "ability1": "Increase sell value by 1 {GoldIcon} gold.",
     "ability2": "Increase sell value by 2 {GoldIcon} gold.",
     "ability3": "Increase sell value by 3 {GoldIcon} gold.",
-    "image": "GoldFish_2x.png",
+    "image": "GoldFish_2x_0.png",
+    "imageLegacy": "GoldFish_2x.png",
     "types": [
       "Gold"
     ],
@@ -2466,7 +2617,8 @@
     "ability1": "Summon one 1/1 Guinea Pig.",
     "ability2": "Summon one 2/2 Guinea Pig.",
     "ability3": "Summon one 3/3 Guinea Pig.",
-    "image": "GuineaPig_2x.png",
+    "image": "GuineaPig_2x_0.png",
+    "imageLegacy": "GuineaPig_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -2483,7 +2635,8 @@
     "ability1": "Deal 2 {DamageIcon} damage to ALL pets.",
     "ability2": "Deal 4 {DamageIcon} damage to ALL pets.",
     "ability3": "Deal 6 {DamageIcon} damage to ALL pets.",
-    "image": "Hedgehog_2x.png",
+    "image": "Hedgehog_2x_0.png",
+    "imageLegacy": "Hedgehog_2x.png",
     "types": [
       "Hurt"
     ]
@@ -2501,6 +2654,7 @@
     "ability2": "Give friends +2 {AttackIcon} attack for each battle this has fought evenly spread.",
     "ability3": "Give friends +3 {AttackIcon} attack for each battle this has fought evenly spread.",
     "image": "HerculesBeetle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -2518,6 +2672,7 @@
     "ability2": "Gain +2 {TrumpetIcon} trumpets for one friend of each tier.",
     "ability3": "Gain +3 {TrumpetIcon} trumpets for one friend of each tier.",
     "image": "HonduranWhiteBat_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -2534,7 +2689,8 @@
     "ability1": "Deal 2 {DamageIcon} damage to it.",
     "ability2": "Deal 4 {DamageIcon} damage to it.",
     "ability3": "Deal 6 {DamageIcon} damage to it.",
-    "image": "Iguana_2x.png",
+    "image": "Iguana_2x_0.png",
+    "imageLegacy": "Iguana_2x.png",
     "types": [
       "Disruption"
     ]
@@ -2552,6 +2708,7 @@
     "ability2": "Give it +2 {AttackIcon} attack. Double if it jumped.",
     "ability3": "Give it +3 {AttackIcon} attack. Double if it jumped.",
     "image": "Jackalope_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -2568,7 +2725,8 @@
     "ability1": "Gain +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Gain +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "JellyFish_2x.png",
+    "image": "JellyFish_2x_0.png",
+    "imageLegacy": "JellyFish_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -2585,7 +2743,8 @@
     "ability1": "Gain +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Gain +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Kangaroo_2x.png",
+    "image": "Kangaroo_2x_0.png",
+    "imageLegacy": "Kangaroo_2x.png",
     "types": [
       "Guard"
     ]
@@ -2602,7 +2761,8 @@
     "ability1": "Give it the [[Eucalyptus|food:eucalyptus]] {PerkIcon} perk.",
     "ability2": "Give it the [[Eucalyptus|food:eucalyptus]] {PerkIcon} perk.",
     "ability3": "Give it the [[Eucalyptus|food:eucalyptus]] {PerkIcon} perk.",
-    "image": "Koala_2x.png",
+    "image": "Koala_2x_0.png",
+    "imageLegacy": "Koala_2x.png",
     "types": [
       "Perks"
     ]
@@ -2620,6 +2780,7 @@
     "ability2": "Choose one level 2 Lemur toy.",
     "ability3": "Choose one level 3 Lemur toy.",
     "image": "Lemur_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -2637,6 +2798,7 @@
     "ability2": "Summon one 6/2 Lizard Tail.",
     "ability3": "Summon one 9/3 Lizard Tail.",
     "image": "Lizard_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -2654,6 +2816,7 @@
     "ability2": "Replace own ailment with +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Replace own ailment with +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "image": "MandarinFish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -2670,7 +2833,8 @@
     "ability1": "Give adjacent friends +1 {AttackIcon} attack for every 4 {GoldIcon} gold spent this turn.",
     "ability2": "Give adjacent friends +2 {AttackIcon} attack for every 4 {GoldIcon} gold spent this turn.",
     "ability3": "Give adjacent friends +3 {AttackIcon} attack for every 4 {GoldIcon} gold spent this turn.",
-    "image": "Meerkat_2x.png",
+    "image": "Meerkat_2x_0.png",
+    "imageLegacy": "Meerkat_2x.png",
     "types": [
       "Gold"
     ]
@@ -2688,6 +2852,7 @@
     "ability2": "Gain ANY useful perk from the previous tier with double effect.",
     "ability3": "Gain ANY useful perk from the previous tier with triple effect.",
     "image": "Mink_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -2705,6 +2870,7 @@
     "ability2": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health until next turn.",
     "ability3": "Gain +3 {AttackIcon} attack and +3 {HealthIcon} health until next turn.",
     "image": "Mothman_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -2722,6 +2888,7 @@
     "ability2": "Summon one Crawler with 6 {AttackIcon} attack, and +2 {HealthIcon} health for each friend summoned this turn.",
     "ability3": "Summon one Crawler with 9 {AttackIcon} attack, and +3 {HealthIcon} health for each friend summoned this turn.",
     "image": "NightCrawler_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -2739,6 +2906,7 @@
     "ability2": "Give the two front-most friends +1 {ExpIcon} experience.",
     "ability3": "Give the three front-most friends +1 {ExpIcon} experience.",
     "image": "Ogopogo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up"
     ]
@@ -2756,6 +2924,7 @@
     "ability2": "Make one random enemy Spooked {ScaredIcon} and multiply the effect twice for each roll this turn.",
     "ability3": "Make one random enemy Spooked {ScaredIcon} and multiply the effect thrice for each roll this turn.",
     "image": "Olm_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment",
       "Rolling"
@@ -2773,7 +2942,8 @@
     "ability1": "Faint to give 50% {AttackIcon} attack and {HealthIcon} health to the nearest friend ahead.",
     "ability2": "Faint to give 100% {AttackIcon} attack and {HealthIcon} health to the nearest friend ahead.",
     "ability3": "Faint to give 150% {AttackIcon} attack and {HealthIcon} health to the nearest friend ahead.",
-    "image": "Panda_2x.png",
+    "image": "Panda_2x_0.png",
+    "imageLegacy": "Panda_2x.png",
     "types": []
   },
   "Peacock": {
@@ -2788,7 +2958,8 @@
     "ability1": "Gain +3 {AttackIcon} attack.",
     "ability2": "Gain +6 {AttackIcon} attack.",
     "ability3": "Gain +9 {AttackIcon} attack.",
-    "image": "Peacock_2x.png",
+    "image": "Peacock_2x_0.png",
+    "imageLegacy": "Peacock_2x.png",
     "types": [
       "Hurt"
     ]
@@ -2806,6 +2977,7 @@
     "ability2": "Transform the nearest two friends ahead into other pets from the same tier.",
     "ability3": "Transform the nearest three friends ahead into other pets from the same tier.",
     "image": "ProboscisMonkey_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -2823,6 +2995,7 @@
     "ability2": "Transform into an Angry Hog with [[Garlic|food:garlic]] and at least 10 {AttackIcon} attack and health.",
     "ability3": "Transform into an Angry Hog with [[Garlic|food:garlic]] and at least 15 {AttackIcon} attack and health.",
     "image": "PygmyHog_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform",
       "Summon"
@@ -2840,7 +3013,8 @@
     "ability1": "Summon one 1/1 [[Dirty Rat|rattoken]] up front for the opponent.",
     "ability2": "Summon two 1/1 [[Dirty Rats|rattoken]] up front for the opponent.",
     "ability3": "Summon three 1/1 [[Dirty Rats|rattoken]] up front for the opponent.",
-    "image": "Rat_2x.png",
+    "image": "Rat_2x_0.png",
+    "imageLegacy": "Rat_2x.png",
     "types": [
       "Hurt"
     ],
@@ -2861,6 +3035,7 @@
     "ability2": "Give [[Strawberry|food:strawberry]] {PerkIcon} perk and +2 {AttackIcon} attack to the two nearest friends ahead.",
     "ability3": "Give [[Strawberry|food:strawberry]] {PerkIcon} perk and +2 {AttackIcon} attack to the three nearest friends ahead.",
     "image": "Roadrunner_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry"
     ]
@@ -2878,6 +3053,7 @@
     "ability2": "Summon one 4/6 level 2 Nest and give it [[Egg|food:egg]] {PerkIcon} perk.",
     "ability3": "Summon one 6/9 level 3 Nest and give it [[Egg|food:egg]] {PerkIcon} perk.",
     "image": "Robin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -2895,6 +3071,7 @@
     "ability2": "If outnumbered, gain +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "If outnumbered, gain +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "image": "SakerFalcon_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Salamander": {
@@ -2909,7 +3086,8 @@
     "ability1": "Gain +1 {AttackIcon} attack and +1 {HealthIcon} health for each level of each {0} friend.",
     "ability2": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health for each level of each {0} friend.",
     "ability3": "Gain +3 {AttackIcon} attack and +3 {HealthIcon} health for each level of each {0} friend.",
-    "image": "Salamander_2x.png",
+    "image": "Salamander_2x_0.png",
+    "imageLegacy": "Salamander_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -2927,6 +3105,7 @@
     "ability2": "Give the two highest attack friends -1 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give the three highest attack friends -1 {AttackIcon} attack and +2 {HealthIcon} health.",
     "image": "Saola_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -2944,6 +3123,7 @@
     "ability2": "Give it +4 {HealthIcon} health until next turn.",
     "ability3": "Give it +6 {HealthIcon} health until next turn.",
     "image": "SeaTurtle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -2961,6 +3141,7 @@
     "ability2": "Remove 5 {HealthIcon} health from the first two enemies.",
     "ability3": "Remove 5 {HealthIcon} health from the first three enemies.",
     "image": "SeaUrchin_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Seahorse": {
@@ -2975,7 +3156,8 @@
     "ability1": "Push the last enemy one space forward.",
     "ability2": "Push the last enemy two spaces forward.",
     "ability3": "Push the last enemy three spaces forward.",
-    "image": "Seahorse_2x.png",
+    "image": "Seahorse_2x_0.png",
+    "imageLegacy": "Seahorse_2x.png",
     "types": [
       "Disruption"
     ]
@@ -2993,6 +3175,7 @@
     "ability2": "If it had a [[Strawberry|food:strawberry]], summon one 4/4 friend in its place.",
     "ability3": "If it had a [[Strawberry|food:strawberry]], summon one 6/6 friend in its place.",
     "image": "ShimaEnaga_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry"
     ]
@@ -3009,7 +3192,8 @@
     "ability1": "Give one random friend +1 {HealthIcon} health.",
     "ability2": "Give one random friend +2 {HealthIcon} health.",
     "ability3": "Give one random friend +3 {HealthIcon} health.",
-    "image": "Shrimp_2x.png",
+    "image": "Shrimp_2x_0.png",
+    "imageLegacy": "Shrimp_2x.png",
     "types": [
       "Cycle"
     ]
@@ -3027,6 +3211,7 @@
     "ability2": "Sells for +4 {GoldIcon} gold extra, but lose 2 next turn.",
     "ability3": "Sells for +6 {GoldIcon} gold extra, but lose 3 next turn.",
     "image": "Silverfish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ]
@@ -3043,7 +3228,8 @@
     "ability1": "Give the three nearest friends ahead +1 {AttackIcon} attack.",
     "ability2": "Give the three nearest friends ahead +2 {AttackIcon} attack.",
     "ability3": "Give the three nearest friends ahead +3 {AttackIcon} attack.",
-    "image": "Snail_2x.png",
+    "image": "Snail_2x_0.png",
+    "imageLegacy": "Snail_2x.png",
     "types": [
       "Buffs"
     ]
@@ -3061,6 +3247,7 @@
     "ability2": "Choose one level 2 adventurous toy.",
     "ability3": "Choose one level 3 adventurous toy.",
     "image": "Sphinx_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -3077,7 +3264,8 @@
     "ability1": "Summon one tier 3 pet as a 2/2 level 1.",
     "ability2": "Summon one tier 3 pet as a 4/4 level 2.",
     "ability3": "Summon one tier 3 pet as a 6/6 level 3.",
-    "image": "Spider_2x.png",
+    "image": "Spider_2x_0.png",
+    "imageLegacy": "Spider_2x.png",
     "types": [
       "Summon",
       "Super",
@@ -3097,6 +3285,7 @@
     "ability2": "Give it +4 {HealthIcon} health and move it far back. Works on two different friends per turn.",
     "ability3": "Give it +4 {HealthIcon} health and move it far back. Works on three different friends per turn.",
     "image": "SpiderCrab_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -3114,6 +3303,7 @@
     "ability2": "Stock two random canned ailments to choose from.",
     "ability3": "Stock three random canned ailments to choose from.",
     "image": "SpottedHandfish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -3131,6 +3321,7 @@
     "ability2": "Spend 1 {TrumpetIcon} trumpet to make the first enemy Inked {InkIcon} with double effect.",
     "ability3": "Spend 1 {TrumpetIcon} trumpet to make the first enemy Inked {InkIcon} with triple effect.",
     "image": "Squid_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -3147,7 +3338,8 @@
     "ability1": "Summon one level 1 pet from your current tier as a 1/1.",
     "ability2": "Summon one level 2 pet from your current tier as a 1/1.",
     "ability3": "Summon one level 3 pet from your current tier as a 1/1.",
-    "image": "Stoat_2x.png",
+    "image": "Stoat_2x_0.png",
+    "imageLegacy": "Stoat_2x.png",
     "types": [
       "Cycle",
       "Super"
@@ -3165,7 +3357,8 @@
     "ability1": "Summon ANY one level 1 pet from the previous shop tier as a 2/2.",
     "ability2": "Summon ANY one level 2 pet from the previous shop tier as a 4/4.",
     "ability3": "Summon ANY one level 3 pet from the previous shop tier as a 6/6.",
-    "image": "Stork_2x.png",
+    "image": "Stork_2x_0.png",
+    "imageLegacy": "Stork_2x.png",
     "types": [
       "Summon"
     ]
@@ -3182,7 +3375,8 @@
     "ability1": "Gain +1 {GoldIcon} gold.",
     "ability2": "Gain +2 {GoldIcon} gold.",
     "ability3": "Gain +3 {GoldIcon} gold.",
-    "image": "Swan_2x.png",
+    "image": "Swan_2x_0.png",
+    "imageLegacy": "Swan_2x.png",
     "types": [
       "Gold"
     ]
@@ -3199,7 +3393,8 @@
     "ability1": "Give two random friends +1 {HealthIcon} health until next turn.",
     "ability2": "Give two random friends +2 {HealthIcon} health until next turn.",
     "ability3": "Give two random friends +3 {HealthIcon} health until next turn.",
-    "image": "TabbyCat_2x.png",
+    "image": "TabbyCat_2x_0.png",
+    "imageLegacy": "TabbyCat_2x.png",
     "types": [
       "Perks"
     ]
@@ -3217,6 +3412,7 @@
     "ability2": "Transform into a level 1 Frog and gain +4 {ExpIcon} experience.",
     "ability3": "Transform into a level 1 Frog and gain +6 {ExpIcon} experience.",
     "image": "Tadpole_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform",
       "Level-Up"
@@ -3235,6 +3431,7 @@
     "ability2": "Transform into a level 2 Weasel.",
     "ability3": "Transform into a level 3 Weasel.",
     "image": "TaitaShrew_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform",
       "Gold"
@@ -3253,6 +3450,7 @@
     "ability2": "Summon one 6/4 African Wild Dog that jump-attacks the second enemy.",
     "ability3": "Summon one 9/6 African Wild Dog that jump-attacks the second enemy.",
     "image": "Takhi_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -3270,6 +3468,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator4A5H": {
@@ -3285,6 +3484,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "ThornyDragon": {
@@ -3300,6 +3500,7 @@
     "ability2": "Deal 6 {DamageIcon} damage to one random enemy and prioritize those with ailments.",
     "ability3": "Deal 9 {DamageIcon} damage to one random enemy and prioritize those with ailments.",
     "image": "ThornyDragon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -3317,6 +3518,7 @@
     "ability2": "Give the second nearest friend ahead +6 {ManaIcon} mana.",
     "ability3": "Give the second nearest friend ahead +9 {ManaIcon} mana.",
     "image": "Thunderbird_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -3334,6 +3536,7 @@
     "ability2": "Summon one level 2 Microwave Oven.",
     "ability3": "Summon one level 3 Microwave Oven.",
     "image": "Vervet_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys",
       "Summon"
@@ -3352,6 +3555,7 @@
     "ability2": "Deal 2 {DamageIcon} damage to one random enemy. Triple on the first trigger each battle.",
     "ability3": "Deal 3 {DamageIcon} damage to one random enemy. Triple on the first trigger each battle.",
     "image": "Warg_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -3369,6 +3573,7 @@
     "ability2": "Give [[Meat Bone|food:meatbone]] to the friend ahead with double effect.",
     "ability3": "Give [[Meat Bone|food:meatbone]] to the friend ahead with triple effect.",
     "image": "WhiteBelliedHeron_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -3385,7 +3590,8 @@
     "ability1": "Transform into the first <b>Faint</b> enemy at level 1.",
     "ability2": "Transform into the first <b>Faint</b> enemy at level 2.",
     "ability3": "Transform into the first <b>Faint</b> enemy at level 3.",
-    "image": "Wombat_2x.png",
+    "image": "Wombat_2x_0.png",
+    "imageLegacy": "Wombat_2x.png",
     "types": [
       "Transform"
     ]
@@ -3402,7 +3608,8 @@
     "ability1": "Stock one 2-gold [[Apple|food:apple]].",
     "ability2": "Stock one 2-gold Better [[Apple|food:apple]].",
     "ability3": "Stock one 2-gold Best [[Apple|food:apple]].",
-    "image": "Worm_2x.png",
+    "image": "Worm_2x_0.png",
+    "imageLegacy": "Worm_2x.png",
     "types": [
       "Food"
     ]
@@ -3420,6 +3627,7 @@
     "ability2": "Gain 2 extra shop reward.",
     "ability3": "Gain 3 extra shop reward.",
     "image": "Wyvern_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up"
     ]
@@ -3436,7 +3644,8 @@
     "ability1": "Take 1 {DamageIcon} damage and gain +2 {AttackIcon} attack.",
     "ability2": "Take 2 {DamageIcon} damage and gain +4 {AttackIcon} attack.",
     "ability3": "Take 3 {DamageIcon} damage and gain +6 {AttackIcon} attack.",
-    "image": "Yak_2x.png",
+    "image": "Yak_2x_0.png",
+    "imageLegacy": "Yak_2x.png",
     "types": [
       "Hurt"
     ]
@@ -3453,7 +3662,8 @@
     "ability1": "Gain +1 {AttackIcon} attack and +3 {HealthIcon} health.",
     "ability2": "Gain +2 {AttackIcon} attack and +6 {HealthIcon} health.",
     "ability3": "Gain +3 {AttackIcon} attack and +9 {HealthIcon} health.",
-    "image": "Aardvark_2x.png",
+    "image": "Aardvark_2x_0.png",
+    "imageLegacy": "Aardvark_2x.png",
     "types": []
   },
   "AmamiRabbit": {
@@ -3469,6 +3679,7 @@
     "ability2": "Gain +2 {AttackIcon} attack permanently and jump-attack the highest attack enemy.",
     "ability3": "Gain +3 {AttackIcon} attack permanently and jump-attack the highest attack enemy.",
     "image": "AmamiRabbit_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -3485,7 +3696,8 @@
     "ability1": "Summon one 1/1 level 3 Ant.",
     "ability2": "Summon two 1/1 level 3 Ants.",
     "ability3": "Summon three 1/1 level 3 Ants.",
-    "image": "Anteater_2x.png",
+    "image": "Anteater_2x_0.png",
+    "imageLegacy": "Anteater_2x.png",
     "types": [
       "Summon"
     ]
@@ -3503,6 +3715,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "AxehandleHound": {
@@ -3518,6 +3731,7 @@
     "ability2": "If opponent has duplicates, deal 4 {DamageIcon} damage to all enemies.",
     "ability3": "If opponent has duplicates, deal 6 {DamageIcon} damage to all enemies.",
     "image": "AxehandleHound_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -3535,6 +3749,7 @@
     "ability2": "Give one random friend from the current or higher shop tier +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give one random friend from the current or higher shop tier +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Baboon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -3552,6 +3767,7 @@
     "ability2": "Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "BabyMammoth_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "BabySeaUrchin": {
@@ -3567,6 +3783,7 @@
     "ability2": "Remove 4 {HealthIcon} health from the first two enemies.",
     "ability3": "Remove 4 {HealthIcon} health from the first three enemies.",
     "image": "BabySeaUrchin_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Badger": {
@@ -3581,7 +3798,8 @@
     "ability1": "Deal 50% attack {DamageIcon} damage to adjacent pets.",
     "ability2": "Deal 100% attack {DamageIcon} damage to adjacent pets.",
     "ability3": "Deal 150% attack {DamageIcon} damage to adjacent pets.",
-    "image": "Badger_2x.png",
+    "image": "Badger_2x_0.png",
+    "imageLegacy": "Badger_2x.png",
     "types": []
   },
   "Barnacle": {
@@ -3597,6 +3815,7 @@
     "ability2": "If you did not roll this turn, gain +2 {ExpIcon} experience.",
     "ability3": "If you did not roll this turn, gain +3 {ExpIcon} experience.",
     "image": "Barnacle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up"
     ]
@@ -3614,6 +3833,7 @@
     "ability2": "Transform the nearest pet ahead to Rock with +5 {HealthIcon} health. Double on friendly pets.",
     "ability3": "Transform the nearest pet ahead to Rock with +5 {HealthIcon} health. Triple on friendly pets.",
     "image": "Basilisk_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform",
       "Disruption"
@@ -3631,7 +3851,8 @@
     "ability1": "Give [[Honey|food:honey]] {PerkIcon} perk to all pets within one space.",
     "ability2": "Give [[Honey|food:honey]] {PerkIcon} perk to all pets within two spaces.",
     "ability3": "Give [[Honey|food:honey]] {PerkIcon} perk to all pets within three spaces.",
-    "image": "Bear_2x.png",
+    "image": "Bear_2x_0.png",
+    "imageLegacy": "Bear_2x.png",
     "types": [
       "Perks"
     ]
@@ -3649,6 +3870,7 @@
     "ability2": "Give it the [[Guava|food:guava]] {PerkIcon} perk. Works on two different friends per turn.",
     "ability3": "Give it the [[Guava|food:guava]] {PerkIcon} perk. Works on three different friends per turn.",
     "image": "BettaFish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -3666,6 +3888,7 @@
     "ability2": "If it is ahead, give it +6 {AttackIcon} attack until next turn. Otherwise give health.",
     "ability3": "If it is ahead, give it +9 {AttackIcon} attack until next turn. Otherwise give health.",
     "image": "BlueThroatedMacaw_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -3683,6 +3906,7 @@
     "ability2": "Randomly redistribute stats of the two highest health enemies.",
     "ability3": "Randomly redistribute stats of the three highest health enemies.",
     "image": "BrazillianTreehopper_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Caladrius": {
@@ -3698,6 +3922,7 @@
     "ability2": "Replace 3 {ManaIcon} mana on it with +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Replace 3 {ManaIcon} mana on it with +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "image": "Caladrius_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -3715,6 +3940,7 @@
     "ability2": "Spend {ManaIcon} mana to remove 2 {HealthIcon} health per mana from the two most healthy enemies.",
     "ability3": "Spend {ManaIcon} mana to remove 3 {HealthIcon} health per mana from the two most healthy enemies.",
     "image": "Calygreyhound_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -3731,7 +3957,8 @@
     "ability1": "Give the nearest friend behind +1 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Give the nearest friend behind +2 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give the nearest friend behind +3 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Camel_2x.png",
+    "image": "Camel_2x_0.png",
+    "imageLegacy": "Camel_2x.png",
     "types": [
       "Hurt"
     ]
@@ -3748,7 +3975,8 @@
     "ability1": "Give newly rolled shop pets +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give newly rolled shop pets +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give newly rolled shop pets +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Capybara_2x.png",
+    "image": "Capybara_2x_0.png",
+    "imageLegacy": "Capybara_2x.png",
     "types": [
       "Buffs"
     ]
@@ -3766,6 +3994,7 @@
     "ability2": "Copy and stock the nearest perk ahead and discount it by 2 {GoldIcon} gold.",
     "ability3": "Copy and stock the nearest perk ahead and discount it by 3 {GoldIcon} gold.",
     "image": "Cardinal_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ],
@@ -3785,7 +4014,8 @@
     "ability1": "Gain +1 {HealthIcon} health. Also gain +1 {AttackIcon} attack until next turn.",
     "ability2": "Gain +2 {HealthIcon} health. Also gain +2 {AttackIcon} attack until next turn.",
     "ability3": "Gain +3 {HealthIcon} health. Also gain +3 {AttackIcon} attack until next turn.",
-    "image": "Cassowary_2x.png",
+    "image": "Cassowary_2x_0.png",
+    "imageLegacy": "Cassowary_2x.png",
     "types": [
       "Strawberry"
     ]
@@ -3803,6 +4033,7 @@
     "ability2": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health times its tier until next turn.",
     "ability3": "Gain +3 {AttackIcon} attack and +3 {HealthIcon} health times its tier until next turn.",
     "image": "Centipede_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -3820,6 +4051,7 @@
     "ability2": "Summon one 10/10 friend if able. Otherwise give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Summon one 15/15 friend if able. Otherwise give friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Dimetrodon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -3836,7 +4068,8 @@
     "ability1": "Give 50% of {AttackIcon} attack to the nearest friend ahead.",
     "ability2": "Give 100% of {AttackIcon} attack to the nearest friend ahead.",
     "ability3": "Give 150% of {AttackIcon} attack to the nearest friend ahead.",
-    "image": "Dodo_2x.png",
+    "image": "Dodo_2x_0.png",
+    "imageLegacy": "Dodo_2x.png",
     "types": []
   },
   "Dog": {
@@ -3851,7 +4084,8 @@
     "ability1": "Gain +2 {AttackIcon} attack and +1 {HealthIcon} health until next turn.",
     "ability2": "Gain +4 {AttackIcon} attack and +2 {HealthIcon} health until next turn.",
     "ability3": "Gain +6 {AttackIcon} attack and +3 {HealthIcon} health until next turn.",
-    "image": "Dog_2x.png",
+    "image": "Dog_2x_0.png",
+    "imageLegacy": "Dog_2x.png",
     "types": [
       "Summon"
     ]
@@ -3868,7 +4102,8 @@
     "ability1": "Deal 4 {DamageIcon} damage to the lowest health enemy.",
     "ability2": "Deal 4 {DamageIcon} damage to the lowest health enemy.",
     "ability3": "Deal 4 {DamageIcon} damage to the lowest health enemy.",
-    "image": "Dolphin_2x.png",
+    "image": "Dolphin_2x_0.png",
+    "imageLegacy": "Dolphin_2x.png",
     "types": [
       "Disruption"
     ]
@@ -3886,6 +4121,7 @@
     "ability2": "Give friends that aren't from your pack +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give friends that aren't from your pack +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "image": "Dugong_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Eel": {
@@ -3900,7 +4136,8 @@
     "ability1": "Gain +50% {HealthIcon} health.",
     "ability2": "Gain +100% {HealthIcon} health.",
     "ability3": "Gain +150% {HealthIcon} health.",
-    "image": "Eel_2x.png",
+    "image": "Eel_2x_0.png",
+    "imageLegacy": "Eel_2x.png",
     "types": [
       "Buffs"
     ]
@@ -3917,7 +4154,8 @@
     "ability1": "Deal 1 {DamageIcon} damage to the nearest friend behind.",
     "ability2": "Deal 1 {DamageIcon} damage to the nearest friend behind.",
     "ability3": "Deal 1 {DamageIcon} damage to the nearest friend behind.",
-    "image": "Elephant_2x.png",
+    "image": "Elephant_2x_0.png",
+    "imageLegacy": "Elephant_2x.png",
     "types": [
       "Hurt"
     ]
@@ -3934,7 +4172,8 @@
     "ability1": "Give 33% {AttackIcon} attack and {HealthIcon} health to the leftmost shop pet.",
     "ability2": "Give 66% {AttackIcon} attack and {HealthIcon} health to the leftmost shop pet.",
     "ability3": "Give 100% {AttackIcon} attack and {HealthIcon} health to the leftmost shop pet.",
-    "image": "EmperorTamarin_2x.png",
+    "image": "EmperorTamarin_2x_0.png",
+    "imageLegacy": "EmperorTamarin_2x.png",
     "types": [
       "Buffs"
     ]
@@ -3952,6 +4191,7 @@
     "ability2": "Feed adjacent friends two [[Corncobs|food:corn]] with double effect.",
     "ability3": "Feed adjacent friends three [[Corncobs|food:corn]] with double effect.",
     "image": "FarmerPig_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -3968,7 +4208,8 @@
     "ability1": "Make the most healthy enemy Weak {WeakIcon}.",
     "ability2": "Make the most healthy enemy Weak {WeakIcon} with double effect.",
     "ability3": "Make the most healthy enemy Weak {WeakIcon} with triple effect.",
-    "image": "Flea_2x.png",
+    "image": "Flea_2x_0.png",
+    "imageLegacy": "Flea_2x.png",
     "types": [
       "Ailment"
     ]
@@ -3986,6 +4227,7 @@
     "ability2": "Give it +4 {ExpIcon} experience.",
     "ability3": "Give it +6 {ExpIcon} experience.",
     "image": "FlyingFish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon",
       "Super",
@@ -4005,6 +4247,7 @@
     "ability2": "Gain +4 {AttackIcon} attack and re-summon the toy at up to level 2.",
     "ability3": "Gain +6 {AttackIcon} attack and re-summon the toy at up to level 3.",
     "image": "FlyingSquirrel_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -4022,6 +4265,7 @@
     "ability2": "Gain +4 {TrumpetIcon} trumpets.",
     "ability3": "Gain +6 {TrumpetIcon} trumpets.",
     "image": "FowlBird_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets",
       "Hurt"
@@ -4040,6 +4284,7 @@
     "ability2": "Give future shop pets from the next tier permanent +4 {HealthIcon} health.",
     "ability3": "Give future shop pets from the next tier permanent +6 {HealthIcon} health.",
     "image": "FuLion_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -4057,6 +4302,7 @@
     "ability2": "Give [[Rambutan|food:rambutan]] {PerkIcon} perk to the two nearest friends behind.",
     "ability3": "Give [[Rambutan|food:rambutan]] {PerkIcon} perk to the three nearest friends behind.",
     "image": "FurBearingTrout_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana",
       "Perks"
@@ -4075,6 +4321,7 @@
     "ability2": "Gain +4 {AttackIcon} attack and +2 {HealthIcon} health until next turn for each gold over 10.",
     "ability3": "Gain +6 {AttackIcon} attack and +3 {HealthIcon} health until next turn for each gold over 10.",
     "image": "Gazelle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ]
@@ -4092,6 +4339,7 @@
     "ability2": "Remove the highest tier perks from two enemies.",
     "ability3": "Remove the highest tier perks from three enemies.",
     "image": "Gerenuk_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -4109,6 +4357,7 @@
     "ability2": "Choose one level 2 Gharial toy.",
     "ability3": "Choose one level 3 Gharial toy.",
     "image": "Gharial_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -4125,7 +4374,8 @@
     "ability1": "Give the nearest friend ahead +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give the nearest two friends ahead +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability3": "Give the nearest three friends ahead +1 {AttackIcon} attack and +1 {HealthIcon} health.",
-    "image": "Giraffe_2x.png",
+    "image": "Giraffe_2x_0.png",
+    "imageLegacy": "Giraffe_2x.png",
     "types": [
       "Buffs"
     ]
@@ -4143,6 +4393,7 @@
     "ability2": "Gain +2 {TrumpetIcon} trumpets for each friend behind and give friends ahead +2 {ManaIcon} mana.",
     "ability3": "Gain +3 {TrumpetIcon} trumpets for each friend behind and give friends ahead +3 {ManaIcon} mana.",
     "image": "GlaucusAtlanticus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana",
       "Trumpets"
@@ -4161,6 +4412,7 @@
     "ability2": "If nobody has attacked, gain +6 {HealthIcon} health until next turn.",
     "ability3": "If nobody has attacked, gain +9 {HealthIcon} health until next turn.",
     "image": "GreatPotoo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -4178,6 +4430,7 @@
     "ability2": "Remove its [[Strawberry|food:strawberry]] perk to gain +3 {GoldIcon} gold.",
     "ability3": "Remove its [[Strawberry|food:strawberry]] perk to gain +3 {GoldIcon} gold.",
     "image": "GreaterSageGrouse_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry"
     ]
@@ -4195,6 +4448,7 @@
     "ability2": "Choose one level 2 toy from Griffin's collection.",
     "ability3": "Choose one level 3 toy from Griffin's collection.",
     "image": "Griffin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -4212,6 +4466,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "Hare": {
@@ -4227,6 +4482,7 @@
     "ability2": "Copy a useful food perk from one random enemy.",
     "ability3": "Copy a useful food perk from one random enemy.",
     "image": "Hare_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -4243,7 +4499,8 @@
     "ability1": "Give the nearest friend ahead +3 {AttackIcon} attack and +3 {HealthIcon} health until next turn.",
     "ability2": "Give the nearest friend ahead +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give the nearest friend ahead +1 {ExpIcon} experience.",
-    "image": "HatchingChick_2x.png",
+    "image": "HatchingChick_2x_0.png",
+    "imageLegacy": "HatchingChick_2x.png",
     "types": [
       "Buffs",
       "Level-Up",
@@ -4265,6 +4522,7 @@
     "ability2": "Jump to the front and gain +4 {AttackIcon} attack and [[Melon|food:melon]] perk in battle.",
     "ability3": "Jump to the front and gain +6 {AttackIcon} attack and [[Melon|food:melon]] perk in battle.",
     "image": "Headcrab_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Perks"
@@ -4283,6 +4541,7 @@
     "ability2": "Summon two 4/3 Ethiopian Wolves.",
     "ability3": "Summon three 4/3 Ethiopian Wolves.",
     "image": "Hirola_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -4300,6 +4559,7 @@
     "ability2": "Deal 4 {DamageIcon} damage to the first and last enemy.",
     "ability3": "Deal 6 {DamageIcon} damage to the first and last enemy.",
     "image": "HoopoeBird_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -4317,6 +4577,7 @@
     "ability2": "Spend 2 {TrumpetIcon} trumpets to increase sell value of the two back-most friends permanently by 2 {GoldIcon} gold.",
     "ability3": "Spend 2 {TrumpetIcon} trumpets to increase sell value of the two back-most friends permanently by 3 {GoldIcon} gold.",
     "image": "JewelCaterpillar_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -4333,7 +4594,8 @@
     "ability1": "Deal 1 {DamageIcon} damage to the nearest friend ahead and gain damage as {HealthIcon} health.",
     "ability2": "Deal 2 {DamageIcon} damage to the nearest friend ahead and gain damage as {HealthIcon} health.",
     "ability3": "Deal 3 {DamageIcon} damage to the nearest friend ahead and gain damage as {HealthIcon} health.",
-    "image": "Leech_2x.png",
+    "image": "Leech_2x_0.png",
+    "imageLegacy": "Leech_2x.png",
     "types": [
       "Hurt",
       "Super"
@@ -4352,6 +4614,7 @@
     "ability2": "Gain +4 {AttackIcon} attack and +4 {HealthIcon} health now and +4 {GoldIcon} gold next turn.",
     "ability3": "No ability.",
     "image": "LuckyCat_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ]
@@ -4369,6 +4632,7 @@
     "ability2": "Give the nearest friend ahead +4 {ManaIcon} mana for each roll this turn, up to 3 rolls.",
     "ability3": "Give the nearest friend ahead +6 {ManaIcon} mana for each roll this turn, up to 3 rolls.",
     "image": "ManaHound_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana",
       "Rolling"
@@ -4387,6 +4651,7 @@
     "ability2": "Make one tier 4 or lower enemy Dazed {DeafIcon} and prioritize <b>Faint</b> pets.",
     "ability3": "Make one tier 6 or lower enemy Dazed {DeafIcon} and prioritize <b>Faint</b> pets.",
     "image": "Mandrake_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -4403,7 +4668,8 @@
     "ability1": "Remove the two nearest friendly perks to summon one 6/6 [[Mole]].",
     "ability2": "Remove the two nearest friendly perks to summon one 12/12 [[Mole]].",
     "ability3": "Remove the two nearest friendly perks to summon one 18/18 [[Mole]].",
-    "image": "Mole_2x.png",
+    "image": "Mole_2x_0.png",
+    "imageLegacy": "Mole_2x.png",
     "types": [
       "Perks"
     ]
@@ -4421,6 +4687,7 @@
     "ability2": "Give two random friendly pets +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give two random friendly pets +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "MonkeyFacedBat_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "MuskOx": {
@@ -4436,6 +4703,7 @@
     "ability2": "Gain +2 {AttackIcon} attack and +4 {HealthIcon} health until next turn.",
     "ability3": "Gain +3 {AttackIcon} attack and +6 {HealthIcon} health until next turn.",
     "image": "MuskOx_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -4452,7 +4720,8 @@
     "ability1": "Gain +1 {AttackIcon} attack and +1 {HealthIcon} health until next turn.",
     "ability2": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health until next turn.",
     "ability3": "Gain +3 {AttackIcon} attack and +3 {HealthIcon} health until next turn.",
-    "image": "Okapi_2x.png",
+    "image": "Okapi_2x_0.png",
+    "imageLegacy": "Okapi_2x.png",
     "types": [
       "Rolling"
     ]
@@ -4469,7 +4738,8 @@
     "ability1": "Give the lowest health friendly pet +3 {HealthIcon} health.",
     "ability2": "Give the lowest health friendly pet +6 {HealthIcon} health.",
     "ability3": "Give the lowest health friendly pet +9 {HealthIcon} health.",
-    "image": "Orangutan_2x.png",
+    "image": "Orangutan_2x_0.png",
+    "imageLegacy": "Orangutan_2x.png",
     "types": [
       "Buffs"
     ]
@@ -4487,6 +4757,7 @@
     "ability2": "Summon two 2/1 Groundhogs.",
     "ability3": "Summon three 2/1 Groundhogs.",
     "image": "Osprey_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -4504,6 +4775,7 @@
     "ability2": "Give new shop pets +2 {AttackIcon} attack and +2 {HealthIcon} health until next turn for each roll, up to 5 rolls.",
     "ability3": "Give new shop pets +3 {AttackIcon} attack and +3 {HealthIcon} health until next turn for each roll, up to 5 rolls.",
     "image": "Ouroboros_2x.png",
+    "imageLegacy": "",
     "types": [
       "Rolling"
     ],
@@ -4523,7 +4795,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "Owl_2x.png",
+    "image": "Owl_2x_0.png",
+    "imageLegacy": "Owl_2x.png",
     "types": [
       "Cycle",
       "Super"
@@ -4541,7 +4814,8 @@
     "ability1": "Gain [[Melon|food:melon]] {PerkIcon} perk and +1 {AttackIcon} attack.",
     "ability2": "Gain [[Melon|food:melon]] {PerkIcon} perk and +1 {AttackIcon} attack.",
     "ability3": "Gain [[Melon|food:melon]] {PerkIcon} perk and +1 {AttackIcon} attack.",
-    "image": "Ox_2x.png",
+    "image": "Ox_2x_0.png",
+    "imageLegacy": "Ox_2x.png",
     "types": [
       "Perks"
     ]
@@ -4559,6 +4833,7 @@
     "ability2": "Copy ailment (or Spooked {ScaredIcon}) to the first enemy with double effect.",
     "ability3": "Copy ailment (or Spooked {ScaredIcon}) to the first enemy with triple effect.",
     "image": "Pangasius_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -4575,7 +4850,8 @@
     "ability1": "Give the nearest friend behind +4 {HealthIcon} health.",
     "ability2": "Give the nearest friend behind +8 {HealthIcon} health.",
     "ability3": "Give the nearest friend behind +12 {HealthIcon} health.",
-    "image": "Pangolin_2x.png",
+    "image": "Pangolin_2x_0.png",
+    "imageLegacy": "Pangolin_2x.png",
     "types": [
       "Toys"
     ]
@@ -4593,6 +4869,7 @@
     "ability2": "Gain +8 {TrumpetIcon} trumpets and summon the Golden Retriever immediately.",
     "ability3": "Gain +12 {TrumpetIcon} trumpets and summon the Golden Retriever immediately.",
     "image": "PatagonianMara_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets",
       "Summon"
@@ -4611,6 +4888,7 @@
     "ability2": "Feed the nearest friend behind with two Better [[Apple|food:apple]].",
     "ability3": "Feed the nearest friend behind with three Better [[Apple|food:apple]].",
     "image": "Pony_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -4627,7 +4905,8 @@
     "ability1": "Deal 3 {DamageIcon} damage directly back.",
     "ability2": "Deal 6 {DamageIcon} damage directly back.",
     "ability3": "Deal 9 {DamageIcon} damage directly back.",
-    "image": "Porcupine_2x.png",
+    "image": "Porcupine_2x_0.png",
+    "imageLegacy": "Porcupine_2x.png",
     "types": []
   },
   "Pug": {
@@ -4642,7 +4921,8 @@
     "ability1": "Give the nearest friend ahead +1 {ExpIcon} experience.",
     "ability2": "Give the nearest friend ahead +2 {ExpIcon} experience.",
     "ability3": "Give the nearest friend ahead +3 {ExpIcon} experience.",
-    "image": "Pug_2x.png",
+    "image": "Pug_2x_0.png",
+    "imageLegacy": "Pug_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -4660,6 +4940,7 @@
     "ability2": "Activate and disable its <b>Start of turn</b> ability until next turn.",
     "ability3": "Activate and disable its <b>Start of turn</b> ability until next turn.",
     "image": "PurpleFrog_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "PygmyHippo": {
@@ -4675,6 +4956,7 @@
     "ability2": "Deal 33% of {HealthIcon} health as {DamageIcon} damage to the two least healthy enemies.",
     "ability3": "Deal 33% of {HealthIcon} health as {DamageIcon} damage to the three least healthy enemies.",
     "image": "PygmyHippo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -4692,6 +4974,7 @@
     "ability2": "Give front-most friend +4 {AttackIcon} attack and +4 {HealthIcon} health. Double in battle.",
     "ability3": "Give front-most friend +6 {AttackIcon} attack and +6 {HealthIcon} health. Double in battle.",
     "image": "Quail_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "QuailChick": {
@@ -4707,6 +4990,7 @@
     "ability2": "Transform and give front-most friend +4 {AttackIcon} attack and +4 {HealthIcon} health. Double in battle.",
     "ability3": "Transform and give front-most friend +6 {AttackIcon} attack and +6 {HealthIcon} health. Double in battle.",
     "image": "QuailChick_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform",
       "Food"
@@ -4725,6 +5009,7 @@
     "ability2": "Give it +6 {AttackIcon} attack and +6 {HealthIcon} health and remove ALL other Queen Bees.",
     "ability3": "Give it +9 {AttackIcon} attack and +9 {HealthIcon} health and remove ALL other Queen Bees.",
     "image": "QueenBee_2x.png",
+    "imageLegacy": "",
     "types": [],
     "finePrint1": "There can bee only one!",
     "finePrint2": "There can bee only one!",
@@ -4743,6 +5028,7 @@
     "ability2": "Give the pet that knocked this out and its friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give the pet that knocked this out and its friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Quetzalcoatlus_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Rabbit": {
@@ -4757,7 +5043,8 @@
     "ability1": "Give them +1 {HealthIcon} health.",
     "ability2": "Give them +2 {HealthIcon} health.",
     "ability3": "Give them +3 {HealthIcon} health.",
-    "image": "Rabbit_2x.png",
+    "image": "Rabbit_2x_0.png",
+    "imageLegacy": "Rabbit_2x.png",
     "types": [
       "Food"
     ]
@@ -4775,6 +5062,7 @@
     "ability2": "Transform the two friends ahead into level 2 <b>Faint</b> pets from tier 2 and 3.",
     "ability3": "Transform the two friends ahead into level 3 <b>Faint</b> pets from tier 2 and 3.",
     "image": "RolowayMonkey_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -4792,6 +5080,7 @@
     "ability2": "Deal 8 {DamageIcon} damage to one random enemy.",
     "ability3": "Deal 12 {DamageIcon} damage to one random enemy.",
     "image": "RoyalFlycatcher_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -4809,6 +5098,7 @@
     "ability2": "Swallow the left-most shop pet. Summon a 1/1 level 2 copy up front for the opponent on faint.",
     "ability3": "Swallow the left-most shop pet. Summon a 1/1 level 3 copy up front for the opponent on faint.",
     "image": "SarcasticFringehead_2x.png",
+    "imageLegacy": "",
     "types": [
       "Hurt"
     ]
@@ -4825,7 +5115,8 @@
     "ability1": "Summon two 2/2 [[Rams|ram]].",
     "ability2": "Summon two 4/4 [[Rams|ram]].",
     "ability3": "Summon two 6/6 [[Rams|ram]].",
-    "image": "Sheep_2x.png",
+    "image": "Sheep_2x_0.png",
+    "imageLegacy": "Sheep_2x.png",
     "types": [
       "Summon"
     ]
@@ -4843,6 +5134,7 @@
     "ability2": "Give it a random tier 2 perk.",
     "ability3": "Give it a random tier 3 perk.",
     "image": "SilkieChicken_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "SkeletonDog": {
@@ -4858,6 +5150,7 @@
     "ability2": "Give two random friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability3": "Give three random friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "image": "SkeletonDog_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -4875,6 +5168,7 @@
     "ability2": "Summon one 4/4 Slime for each two battles fought.",
     "ability3": "Summon one 6/6 Slime for each two battles fought.",
     "image": "Slime_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -4892,6 +5186,7 @@
     "ability2": "Give the nearest two friends behind +2 to their lowest stat.",
     "ability3": "Give the nearest three friends behind +2 to their lowest stat.",
     "image": "SpoonBilledSandpiper_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -4909,6 +5204,7 @@
     "ability2": "Stock one free Cupcake with double effect.",
     "ability3": "Stock one free Cupcake with triple effect.",
     "image": "SugarGlider_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -4926,6 +5222,7 @@
     "ability2": "Spend 2 {TrumpetIcon} trumpets to give the two nearest friends behind +8 {HealthIcon} health.",
     "ability3": "Spend 2 {TrumpetIcon} trumpets to give the two nearest friends behind +12 {HealthIcon} health.",
     "image": "SurgeonFish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -4943,6 +5240,7 @@
     "ability2": "Gain +2 {AttackIcon} attack and +4 {HealthIcon} health until next turn.",
     "ability3": "Gain +3 {AttackIcon} attack and +6 {HealthIcon} health until next turn.",
     "image": "Takin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Hurt"
@@ -4961,6 +5259,7 @@
     "ability2": "Deal 4 {DamageIcon} damage to the first enemy. Double if the friend was level 3.",
     "ability3": "Deal 6 {DamageIcon} damage to the first enemy. Double if the friend was level 3.",
     "image": "Tatzelwurm_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -4978,6 +5277,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator6A6H": {
@@ -4993,6 +5293,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "Toad": {
@@ -5007,7 +5308,8 @@
     "ability1": "Make it Weak {WeakIcon}.",
     "ability2": "Make it Weak {WeakIcon}.",
     "ability3": "Make it Weak {WeakIcon}.",
-    "image": "Toad_2x.png",
+    "image": "Toad_2x_0.png",
+    "imageLegacy": "Toad_2x.png",
     "types": [
       "Ailment"
     ]
@@ -5024,7 +5326,8 @@
     "ability1": "Copy tier 5 or lower perk (or [[Egg|food:egg]]) to the nearest friend behind.",
     "ability2": "Copy tier 5 or lower perk (or [[Egg|food:egg]]) to the two nearest friends behind.",
     "ability3": "Copy tier 5 or lower perk (or [[Egg|food:egg]]) to the three nearest friends behind.",
-    "image": "Toucan_2x.png",
+    "image": "Toucan_2x_0.png",
+    "imageLegacy": "Toucan_2x.png",
     "types": [
       "Perks"
     ],
@@ -5045,6 +5348,7 @@
     "ability2": "Gain [[Coconut|food:coconut]] perk.",
     "ability3": "Gain [[Coconut|food:coconut]] perk.",
     "image": "TreeEnt_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -5062,6 +5366,7 @@
     "ability2": "Make the last perk-less enemy Silly and activate it twice.",
     "ability3": "Make the last perk-less enemy Silly and activate it thrice.",
     "image": "TreeKangaroo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ],
@@ -5081,7 +5386,8 @@
     "ability1": "Give adjacent friends +1 {HealthIcon} health.",
     "ability2": "Give adjacent friends +2 {HealthIcon} health.",
     "ability3": "Give adjacent friends +3 {HealthIcon} health.",
-    "image": "TropicalFish_2x.png",
+    "image": "TropicalFish_2x_0.png",
+    "imageLegacy": "TropicalFish_2x.png",
     "types": [
       "Buffs"
     ]
@@ -5099,6 +5405,7 @@
     "ability2": "Push the back-most friend to the front and give it +6 {AttackIcon} attack and +6 {HealthIcon} health in battle.",
     "ability3": "Push the back-most friend to the front and give it +9 {AttackIcon} attack and +9 {HealthIcon} health in battle.",
     "image": "Tucuxi_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -5116,6 +5423,7 @@
     "ability2": "Give one random friend +2 {AttackIcon} attack and +2 {HealthIcon} health for each time this was hurt.",
     "ability3": "Give one random friend +3 {AttackIcon} attack and +3 {HealthIcon} health for each time this was hurt.",
     "image": "Tuna_2x.png",
+    "imageLegacy": "",
     "types": [
       "Hurt"
     ]
@@ -5133,6 +5441,7 @@
     "ability2": "Gain +2 {AttackIcon} attack and +4 {HealthIcon} health for each friendly pet with a different ailment.",
     "ability3": "Gain +3 {AttackIcon} attack and +6 {HealthIcon} health for each friendly pet with a different ailment.",
     "image": "VampireParrot_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -5149,7 +5458,8 @@
     "ability1": "Gain +50% {AttackIcon} attack.",
     "ability2": "Gain +100% {AttackIcon} attack.",
     "ability3": "Gain +150% {AttackIcon} attack.",
-    "image": "Wasp_2x.png",
+    "image": "Wasp_2x_0.png",
+    "imageLegacy": "Wasp_2x.png",
     "types": []
   },
   "Weasel": {
@@ -5165,6 +5475,7 @@
     "ability2": "Gain +2 {GoldIcon} gold on next turn.",
     "ability3": "Gain +3 {GoldIcon} gold on next turn.",
     "image": "Weasel_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ]
@@ -5182,6 +5493,7 @@
     "ability2": "Knock out the nearest friend ahead and stock two free Bacons.",
     "ability3": "Knock out the nearest friend ahead and stock three free Bacons.",
     "image": "Wendigo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Super"
     ]
@@ -5199,6 +5511,7 @@
     "ability2": "Summon one level 2 Ocarina.",
     "ability3": "Summon one level 3 Ocarina.",
     "image": "Ahuizotl_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -5216,6 +5529,7 @@
     "ability2": "Deal 6 {DamageIcon} damage to its target, or gain +6 {AttackIcon} attack.",
     "ability3": "Deal 9 {DamageIcon} damage to its target, or gain +9 {AttackIcon} attack.",
     "image": "AmazonRiverDolphin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -5233,6 +5547,7 @@
     "ability2": "Remove the most healthy unfrozen shop pet to gain 100% of its stats until next turn.",
     "ability3": "Remove the most healthy unfrozen shop pet to gain 150% of its stats until next turn.",
     "image": "Andrewsarchus_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Angelshark": {
@@ -5248,6 +5563,7 @@
     "ability2": "Give friends +2 to their highest stat.",
     "ability3": "Give friends +3 to their highest stat.",
     "image": "Angelshark_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -5265,6 +5581,7 @@
     "ability2": "Jump to the front and deal 6 {DamageIcon} damage to the two first enemies.",
     "ability3": "Jump to the front and deal 9 {DamageIcon} damage to the two first enemies.",
     "image": "Antlion_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Disruption"
@@ -5283,6 +5600,7 @@
     "ability2": "Activate two {0} friends from tier 4 or lower front-to-back.",
     "ability3": "Activate two {0} friends from tier 6 or lower front-to-back.",
     "image": "Anubis_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "ArabianTahr": {
@@ -5298,6 +5616,7 @@
     "ability2": "Give [[Mild Chili|food:mildchili]] {PerkIcon} perk to the two nearest friends behind.",
     "ability3": "Give [[Mild Chili|food:mildchili]] {PerkIcon} perk to the three nearest friends behind.",
     "image": "ArabianTahr_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -5314,7 +5633,8 @@
     "ability1": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health. Works for 1 Bison.",
     "ability2": "Gain +4 {AttackIcon} attack and +4 {HealthIcon} health. Works for 1 Bison.",
     "ability3": "Gain +6 {AttackIcon} attack and +6 {HealthIcon} health. Works for 1 Bison.",
-    "image": "Bison_2x.png",
+    "image": "Bison_2x_0.png",
+    "imageLegacy": "Bison_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -5332,6 +5652,7 @@
     "ability2": "Stock one copy of it.",
     "ability3": "Stock one copy of it.",
     "image": "Bloodhound_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -5348,7 +5669,8 @@
     "ability1": "Deal 3 {DamageIcon} damage to one random enemy.",
     "ability2": "Deal 6 {DamageIcon} damage to one random enemy.",
     "ability3": "Deal 9 {DamageIcon} damage to one random enemy.",
-    "image": "Blowfish_2x.png",
+    "image": "Blowfish_2x_0.png",
+    "imageLegacy": "Blowfish_2x.png",
     "types": [
       "Disruption",
       "Hurt"
@@ -5367,6 +5689,7 @@
     "ability2": "Spend 4 {TrumpetIcon} trumpets to give nearest friend behind permanent [[Melon Slice|food:melon]] that works twice.",
     "ability3": "Spend 4 {TrumpetIcon} trumpets to give nearest friend behind permanent [[Melon Slice|food:melon]] that works thrice.",
     "image": "BlueFootedBooby_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -5384,6 +5707,7 @@
     "ability2": "Transform into the front-most friend.",
     "ability3": "Transform into the front-most friend.",
     "image": "Bonobo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform",
       "Level-Up",
@@ -5402,7 +5726,8 @@
     "ability1": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health until next turn.",
     "ability2": "Gain +4 {AttackIcon} attack and +4 {HealthIcon} health until next turn.",
     "ability3": "Gain +6 {AttackIcon} attack and +6 {HealthIcon} health until next turn.",
-    "image": "Buffalo_2x.png",
+    "image": "Buffalo_2x_0.png",
+    "imageLegacy": "Buffalo_2x.png",
     "types": [
       "Cycle"
     ]
@@ -5419,7 +5744,8 @@
     "ability1": "Copy 33% {AttackIcon} attack and {HealthIcon} health from the strongest enemy.",
     "ability2": "Copy 66% {AttackIcon} attack and {HealthIcon} health from the strongest enemy.",
     "ability3": "Copy 100% {AttackIcon} attack and {HealthIcon} health from the strongest enemy.",
-    "image": "Butterfly_2x.png",
+    "image": "Butterfly_2x_0.png",
+    "imageLegacy": "Butterfly_2x.png",
     "types": []
   },
   "Caterpillar": {
@@ -5434,7 +5760,8 @@
     "ability1": "Gain +1 {ExpIcon} experience.",
     "ability2": "Gain +1 {ExpIcon} experience.",
     "ability3": "Transform into a 1/1 Butterfly and copy stats of the strongest enemy.",
-    "image": "Caterpillar_2x.png",
+    "image": "Caterpillar_2x_0.png",
+    "imageLegacy": "Caterpillar_2x.png",
     "types": [
       "Level-Up",
       "Transform"
@@ -5455,6 +5782,7 @@
     "ability2": "Copy friendly toy ability at up to level 2 until next turn.",
     "ability3": "Copy friendly toy ability at up to level 3 until next turn.",
     "image": "Chameleon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ],
@@ -5475,6 +5803,7 @@
     "ability2": "Summon two 3/3 pets. Spend mana to give them +1 {AttackIcon} attack and +2 {HealthIcon} health per 2 {ManaIcon} mana.",
     "ability3": "Summon three 3/3 pets. Spend mana to give them +1 {AttackIcon} attack and +2 {HealthIcon} health per 2 {ManaIcon} mana.",
     "image": "Chimera_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -5491,7 +5820,8 @@
     "ability1": "Give it +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Give it +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give it +6 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "ClownFish_2x.png",
+    "image": "ClownFish_2x_0.png",
+    "imageLegacy": "ClownFish_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -5509,6 +5839,7 @@
     "ability2": "Give the highest tier friend +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give the highest tier friend +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "image": "Cockatoo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -5525,7 +5856,8 @@
     "ability1": "Stock one [[Chocolate|food:chocolate]].",
     "ability2": "Stock one Better [[Chocolate|food:chocolate]].",
     "ability3": "Stock one Best [[Chocolate|food:chocolate]].",
-    "image": "Crow_2x.png",
+    "image": "Crow_2x_0.png",
+    "imageLegacy": "Crow_2x.png",
     "types": [
       "Level-Up",
       "Super"
@@ -5544,6 +5876,7 @@
     "ability2": "Summon 1/1 bad [[Chicks|chick]] up front for the enemy early. Can summon up to 4 per battle.",
     "ability3": "Summon 1/1 bad [[Chicks|chick]] up front for the enemy early. Can summon up to 6 per battle.",
     "image": "Cuckoo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Hurt"
     ]
@@ -5561,6 +5894,7 @@
     "ability2": "Remove 3 {HealthIcon} health from the last two enemies and make them Inked {InkIcon}.",
     "ability3": "Remove 3 {HealthIcon} health from the last three enemies and make them Inked {InkIcon}.",
     "image": "Cuddlefish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -5578,6 +5912,7 @@
     "ability2": "Give it +4 {ManaIcon} mana. Also give +1 {ExpIcon} experience on the first two triggers this turn.",
     "ability3": "Friend level-up: Give it +6 {ManaIcon} mana. Also give +1 {ExpIcon} experience on the first three triggers this turn.",
     "image": "Cyclops_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up",
       "Mana"
@@ -5598,7 +5933,8 @@
     "ability1": "Summon one 5/3 [[Bus]] with [[Chili|food:chili]].",
     "ability2": "Summon one 10/6 [[Bus]] with [[Chili|food:chili]].",
     "ability3": "Summon one 15/9 [[Bus]] with [[Chili|food:chili]].",
-    "image": "Deer_2x.png",
+    "image": "Deer_2x_0.png",
+    "imageLegacy": "Deer_2x.png",
     "types": [
       "Summon"
     ]
@@ -5616,6 +5952,7 @@
     "ability2": "Ailments on this work in reverse and are two times better.",
     "ability3": "Ailments on this work in reverse and are three times better.",
     "image": "Deinocheirus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -5633,6 +5970,7 @@
     "ability2": "Gain +16 {AttackIcon} attack. If all friends are higher tiers, also gain [[Coconut|food:coconut]] {PerkIcon} perk.",
     "ability3": "Gain +24 {AttackIcon} attack. If all friends are higher tiers, also gain [[Coconut|food:coconut]] {PerkIcon} perk.",
     "image": "Doberman_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -5649,7 +5987,8 @@
     "ability1": "Push the last enemy to the front and remove 3 {AttackIcon} attack.",
     "ability2": "Push the last enemy to the front and remove 3 {AttackIcon} attack.",
     "ability3": "Push the last enemy to the front and remove 3 {AttackIcon} attack.",
-    "image": "Donkey_2x.png",
+    "image": "Donkey_2x_0.png",
+    "imageLegacy": "Donkey_2x.png",
     "types": [
       "Disruption"
     ]
@@ -5667,6 +6006,7 @@
     "ability2": "Increase sell value of one random <b>Sell</b> friend by 4 {GoldIcon} gold.",
     "ability3": "Increase sell value of one random <b>Sell</b> friend by 6 {GoldIcon} gold.",
     "image": "Elk_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ],
@@ -5687,6 +6027,7 @@
     "ability2": "Choose one level 2 wondrous toy.",
     "ability3": "Choose one level 3 wondrous toy.",
     "image": "Fairy_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -5704,6 +6045,7 @@
     "ability2": "If still standing, gain permanent +4 {HealthIcon} health and transform into a protected ball.",
     "ability3": "If still standing, gain permanent +6 {HealthIcon} health and transform into a protected ball.",
     "image": "FairyArmadillo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform",
       "Hurt"
@@ -5722,6 +6064,7 @@
     "ability2": "Takes 4 less damage.",
     "ability3": "Takes 6 less damage.",
     "image": "FairyArmadilloBall_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Falcon": {
@@ -5737,6 +6080,7 @@
     "ability2": "Summon one 6/6 level 2 copy of it.",
     "ability3": "Summon one 9/9 level 3 copy of it.",
     "image": "Falcon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ],
@@ -5757,6 +6101,7 @@
     "ability2": "Feed friends two [[Corncobs|food:corn]].",
     "ability3": "Feed friends three [[Corncobs|food:corn]].",
     "image": "FarmerCat_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -5774,6 +6119,7 @@
     "ability2": "Remove 2 {HealthIcon} health from the two first enemies for each roll this turn.",
     "ability3": "Remove 3 {HealthIcon} health from the two first enemies for each roll this turn.",
     "image": "Fossa_2x.png",
+    "imageLegacy": "",
     "types": [
       "Rolling"
     ]
@@ -5791,6 +6137,7 @@
     "ability2": "Transform and feed two [[Pear|food:pear]] to each friend.",
     "ability3": "Transform and feed three [[Pear|food:pear]] to each friend.",
     "image": "Gelada_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food",
       "Transform"
@@ -5809,6 +6156,7 @@
     "ability2": "Feed two [[Pear|food:pear]] to each friend.",
     "ability3": "Feed three [[Pear|food:pear]] to each friend.",
     "image": "GeladaSleeping_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "GiantOtter": {
@@ -5824,6 +6172,7 @@
     "ability2": "Give friends +4 {AttackIcon} attack and +10 {HealthIcon} health until after the first non-jump attack.",
     "ability3": "Give friends +6 {AttackIcon} attack and +15 {HealthIcon} health until after the first non-jump attack.",
     "image": "GiantOtter_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "GiantTortoise": {
@@ -5839,6 +6188,7 @@
     "ability2": "Gain +4 {HealthIcon} health, and set {AttackIcon} attack to 8. Health can go to 100!",
     "ability3": "Gain +6 {HealthIcon} health, and set {AttackIcon} attack to 12. Health can go to 100!",
     "image": "GiantTortoise_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -5856,6 +6206,7 @@
     "ability2": "Swallow the first enemy with 12 {HealthIcon} health or less. Release it with 1 health on faint.",
     "ability3": "Swallow the first enemy with 18 {HealthIcon} health or less. Release it with 1 health on faint.",
     "image": "GoblinShark_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -5873,6 +6224,7 @@
     "ability2": "Transform into ANY useful level 2 <b>Start of Battle</b> pet from tier 5.",
     "ability3": "Transform into ANY useful level 3 <b>Start of Battle</b> pet from tier 5.",
     "image": "GoldenTamarin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -5889,7 +6241,8 @@
     "ability1": "Deal 7 {DamageIcon} damage to the opposite enemy.",
     "ability2": "Deal 14 {DamageIcon} damage to the opposite enemy.",
     "ability3": "Deal 21 {DamageIcon} damage to the opposite enemy.",
-    "image": "Hawk_2x.png",
+    "image": "Hawk_2x_0.png",
+    "imageLegacy": "Hawk_2x.png",
     "types": [
       "Disruption"
     ]
@@ -5907,6 +6260,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "Hippo": {
@@ -5921,7 +6275,8 @@
     "ability1": "Gain +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "ability2": "Gain +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "ability3": "Gain +9 {AttackIcon} attack and +9 {HealthIcon} health.",
-    "image": "Hippo_2x.png",
+    "image": "Hippo_2x_0.png",
+    "imageLegacy": "Hippo_2x.png",
     "types": []
   },
   "Hoatzin": {
@@ -5937,6 +6292,7 @@
     "ability2": "Remove friendly [[strawberries|food:strawberry]] to gain +6 {TrumpetIcon} trumpets for each.",
     "ability3": "Remove friendly [[strawberries|food:strawberry]] to gain +9 {TrumpetIcon} trumpets for each.",
     "image": "Hoatzin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry",
       "Trumpets"
@@ -5955,6 +6311,7 @@
     "ability2": "Remove 60% {AttackIcon} attack from the highest attack enemy.",
     "ability3": "Remove 90% {AttackIcon} attack from the highest attack enemy.",
     "image": "HumpheadWrasse_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -5971,7 +6328,8 @@
     "ability1": "Give friends +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Jerboa_2x.png",
+    "image": "Jerboa_2x_0.png",
+    "imageLegacy": "Jerboa_2x.png",
     "types": [
       "Buffs"
     ]
@@ -5989,6 +6347,7 @@
     "ability2": "Make the two highest attack enemies Spooked {ScaredIcon} and push them to the back.",
     "ability3": "Make the three highest attack enemies Spooked {ScaredIcon} and push them to the back.",
     "image": "Kakapo_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment",
       "Disruption"
@@ -6007,6 +6366,7 @@
     "ability2": "Remove 30% {HealthIcon} health from ALL other pets.",
     "ability3": "Remove 45% {HealthIcon} health from ALL other pets.",
     "image": "Kraken_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -6024,6 +6384,7 @@
     "ability2": "Remove this and give adjacent friends +2 {ExpIcon} experience and +8 {HealthIcon} health.",
     "ability3": "Remove this and give adjacent friends +3 {ExpIcon} experience and +12 {HealthIcon} health.",
     "image": "LeafySeaDragon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle",
       "Level-Up"
@@ -6041,7 +6402,8 @@
     "ability1": "Gain +1 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Gain +2 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Gain +3 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Llama_2x.png",
+    "image": "Llama_2x_0.png",
+    "imageLegacy": "Llama_2x.png",
     "types": [
       "Cycle"
     ]
@@ -6058,7 +6420,8 @@
     "ability1": "Give it +1 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Give it +2 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give it +3 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Lobster_2x.png",
+    "image": "Lobster_2x_0.png",
+    "imageLegacy": "Lobster_2x.png",
     "types": [
       "Buffs"
     ]
@@ -6076,6 +6439,7 @@
     "ability2": "Summon two friends and feed them with random food for every food eaten this turn.",
     "ability3": "Summon three friends and feed them with random food for every food eaten this turn.",
     "image": "Locust_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon",
       "Food"
@@ -6094,6 +6458,7 @@
     "ability2": "Gain +8 {HealthIcon} health and remove 8 {HealthIcon} health from all enemies.",
     "ability3": "Gain +12 {HealthIcon} health and remove 12 {HealthIcon} health from all enemies.",
     "image": "LongcombSawfish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -6110,7 +6475,8 @@
     "ability1": "Deal {DamageIcon} damage to one random enemy equal to the sum of all friendly levels.",
     "ability2": "Deal {DamageIcon} damage to two random enemies equal to the sum of all friendly levels.",
     "ability3": "Deal {DamageIcon} damage to three random enemies equal to the sum of all friendly levels.",
-    "image": "Lynx_2x.png",
+    "image": "Lynx_2x_0.png",
+    "imageLegacy": "Lynx_2x.png",
     "types": [
       "Level-Up",
       "Disruption"
@@ -6129,6 +6495,7 @@
     "ability2": "Take 5 {DamageIcon} damage and give the nearest friend ahead +4 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Take 5 {DamageIcon} damage and give the nearest friend ahead +6 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Manatee_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -6146,6 +6513,7 @@
     "ability2": "Gain +4 {GoldIcon} gold next turn.",
     "ability3": "Gain +6 {GoldIcon} gold next turn.",
     "image": "MantaRay_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold",
       "Cycle"
@@ -6163,7 +6531,8 @@
     "ability1": "Make ALL pets within 3 spaces Weak {WeakIcon}.",
     "ability2": "Make ALL pets within 6 spaces Weak {WeakIcon}.",
     "ability3": "Make ALL pets within 9 spaces Weak {WeakIcon}.",
-    "image": "Microbe_2x.png",
+    "image": "Microbe_2x_0.png",
+    "imageLegacy": "Microbe_2x.png",
     "types": [
       "Ailment"
     ]
@@ -6181,6 +6550,7 @@
     "ability2": "Gain +2 {GoldIcon} gold on next turn.",
     "ability3": "Gain +3 {GoldIcon} gold on next turn.",
     "image": "Mimic_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold",
       "Summon"
@@ -6199,6 +6569,7 @@
     "ability2": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health for each of the friend's level.",
     "ability3": "Gain +3 {AttackIcon} attack and +3 {HealthIcon} health for each of the friend's level.",
     "image": "Minotaur_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -6216,6 +6587,7 @@
     "ability2": "Choose one level 2 nostalgic toy.",
     "ability3": "Choose one level 3 nostalgic toy.",
     "image": "OldMouse_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -6232,7 +6604,8 @@
     "ability1": "Copy ability from the nearest pet ahead as level 1 until next turn.",
     "ability2": "Copy ability from the nearest pet ahead as level 2 until next turn.",
     "ability3": "Copy ability from the nearest pet ahead as level 3 until next turn.",
-    "image": "Parrot_2x.png",
+    "image": "Parrot_2x_0.png",
+    "imageLegacy": "Parrot_2x.png",
     "types": [
       "Disruption",
       "Super",
@@ -6252,6 +6625,7 @@
     "ability2": "Give three friends +2 {AttackIcon} attack until next turn.",
     "ability3": "Give three friends +3 {AttackIcon} attack until next turn.",
     "image": "Pegasus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -6268,7 +6642,8 @@
     "ability1": "Give two level 2 or higher friends +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give two level 2 or higher friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give two level 2 or higher friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Penguin_2x.png",
+    "image": "Penguin_2x_0.png",
+    "imageLegacy": "Penguin_2x.png",
     "types": [
       "Buffs"
     ]
@@ -6286,6 +6661,7 @@
     "ability2": "Gain +2 {TrumpetIcon} trumpets for each roll (max 8) this turn.",
     "ability3": "Gain +3 {TrumpetIcon} trumpets for each roll (max 8) this turn.",
     "image": "Platybelodon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets",
       "Rolling"
@@ -6303,7 +6679,8 @@
     "ability1": "Summon one 3/2 level 1 Duck and Beaver.",
     "ability2": "Summon one 6/4 level 2 Duck and Beaver.",
     "ability3": "Summon one 9/6 level 3 Duck and Beaver.",
-    "image": "Platypus_2x.png",
+    "image": "Platypus_2x_0.png",
+    "imageLegacy": "Platypus_2x.png",
     "types": [
       "Cycle",
       "Summon"
@@ -6322,6 +6699,7 @@
     "ability2": "Deal 8 {DamageIcon} damage to the highest health enemy.",
     "ability3": "Deal 12 {DamageIcon} damage to the highest health enemy.",
     "image": "PoisonDartFrog_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -6339,6 +6717,7 @@
     "ability2": "Give it +3 {ExpIcon} experience.",
     "ability3": "Give it +3 {ExpIcon} experience.",
     "image": "PoodleMoth_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up",
       "Transform"
@@ -6356,7 +6735,8 @@
     "ability1": "Deal 50 {DamageIcon} damage to adjacent friends and gain +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Deal 50 {DamageIcon} damage to adjacent friends and gain +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Deal 50 {DamageIcon} damage to adjacent friends and gain +6 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "PrayingMantis_2x.png",
+    "image": "PrayingMantis_2x_0.png",
+    "imageLegacy": "PrayingMantis_2x.png",
     "types": [
       "Buffs",
       "Super"
@@ -6374,7 +6754,8 @@
     "ability1": "Choose one level 1 Puppy toy.",
     "ability2": "Choose one level 2 Puppy toy.",
     "ability3": "Choose one level 3 Puppy toy.",
-    "image": "Puppy_2x.png",
+    "image": "Puppy_2x_0.png",
+    "imageLegacy": "Puppy_2x.png",
     "types": [
       "Toys"
     ]
@@ -6392,6 +6773,7 @@
     "ability2": "Transform the opposite enemy into ANY random <b>Faint</b> pet from two tiers below.",
     "ability3": "Transform the opposite enemy into ANY random <b>Faint</b> pet from three tiers below.",
     "image": "RedLippedBatfish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -6409,6 +6791,7 @@
     "ability2": "Give one friend ahead +2 {ManaIcon} mana. Repeat 6 times and spread evenly.",
     "ability3": "Give one friend ahead +2 {ManaIcon} mana. Repeat 9 times and spread evenly.",
     "image": "Roc_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -6426,6 +6809,7 @@
     "ability2": "Give two friends with less health than this +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give two friends with less health than this +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Rootler_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -6443,6 +6827,7 @@
     "ability2": "Replace its [[strawberry|food:strawberry]] with +10 {ManaIcon} mana.",
     "ability3": "Replace its [[strawberry|food:strawberry]] with +15 {ManaIcon} mana.",
     "image": "RuspolisTuraco_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry",
       "Mana"
@@ -6461,6 +6846,7 @@
     "ability2": "Gain +6 {TrumpetIcon} trumpets.",
     "ability3": "Gain +9 {TrumpetIcon} trumpets.",
     "image": "SaigaAntelope_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets",
       "Summon"
@@ -6479,6 +6865,7 @@
     "ability2": "Give adjacent friends +2 {AttackIcon} attack and +2 {HealthIcon} health for every 4 roll, up to 8 rolls.",
     "ability3": "Give adjacent friends +3 {AttackIcon} attack and +3 {HealthIcon} health for every 4 roll, up to 8 rolls.",
     "image": "Sandworm_2x.png",
+    "imageLegacy": "",
     "types": [
       "Rolling"
     ]
@@ -6496,6 +6883,7 @@
     "ability2": "Give random ailments to ANY six random pets. Double the effect on enemies.",
     "ability3": "Give random ailments to ANY nine random pets. Double the effect on enemies.",
     "image": "SatanicLeafTailedGecko_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -6513,6 +6901,7 @@
     "ability2": "If it was a {0} pet, give one random friend +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "If it was a {0} pet, give one random friend +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "SeaAnemone_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -6529,7 +6918,8 @@
     "ability1": "Copy this pet's {PerkIcon} food perk to it.",
     "ability2": "Copy this pet's {PerkIcon} food perk to it.",
     "ability3": "Copy this pet's {PerkIcon} food perk to it.",
-    "image": "Seagull_2x.png",
+    "image": "Seagull_2x_0.png",
+    "imageLegacy": "Seagull_2x.png",
     "types": [
       "Perks",
       "Summon"
@@ -6548,6 +6938,7 @@
     "ability2": "Give friends behind +2 {AttackIcon} attack and friends ahead +2 {HealthIcon} health.",
     "ability3": "Give friends behind +3 {AttackIcon} attack and friends ahead +3 {HealthIcon} health.",
     "image": "Sealion_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -6565,6 +6956,7 @@
     "ability2": "Swallow and copy the two left-most unfrozen and different shop pets until next turn.",
     "ability3": "Swallow and copy the three left-most unfrozen and different shop pets until next turn.",
     "image": "Shoggoth_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Siamese": {
@@ -6580,6 +6972,7 @@
     "ability2": "Give adjacent pets +2 {AttackIcon} attack. Also +2 {HealthIcon} health if the shop has discounted food.",
     "ability3": "Give adjacent pets +3 {AttackIcon} attack. Also +3 {HealthIcon} health if the shop has discounted food.",
     "image": "Siamese_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -6596,7 +6989,8 @@
     "ability1": "Remove 33% {HealthIcon} health from the highest health enemy.",
     "ability2": "Remove 66% {HealthIcon} health from the highest health enemy.",
     "ability3": "Remove 99% {HealthIcon} health from the highest health enemy.",
-    "image": "Skunk_2x.png",
+    "image": "Skunk_2x_0.png",
+    "imageLegacy": "Skunk_2x.png",
     "types": [
       "Disruption"
     ]
@@ -6614,6 +7008,7 @@
     "ability2": "Summon one 4/4 Smaller Slug that summons one 2/2 Smallest Slug.",
     "ability3": "Summon one 6/6 Smaller Slug that summons one 3/3 Smallest Slug.",
     "image": "Slug_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon",
       "Guard"
@@ -6632,6 +7027,7 @@
     "ability2": "Friendly [[Strawberries|food:strawberry]] block 10 damage twice, or ailments once.",
     "ability3": "Friendly [[Strawberries|food:strawberry]] block 15 damage twice, or ailments once.",
     "image": "Sparrow_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry"
     ]
@@ -6649,6 +7045,7 @@
     "ability2": "Deal 2 {DamageIcon} damage to two random enemies and multiply damage by the distance.",
     "ability3": "Deal 3 {DamageIcon} damage to two random enemies and multiply damage by the distance.",
     "image": "SpinyBushViper_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -6665,7 +7062,8 @@
     "ability1": "Discount all shop food by 1 {GoldIcon} gold.",
     "ability2": "Discount all shop food by 2 {GoldIcon} gold.",
     "ability3": "Discount all shop food by 3 {GoldIcon} gold.",
-    "image": "Squirrel_2x.png",
+    "image": "Squirrel_2x_0.png",
+    "imageLegacy": "Squirrel_2x.png",
     "types": [
       "Food"
     ]
@@ -6682,7 +7080,8 @@
     "ability1": "Summon one 3/3 level 1 Tardigrade and make it Dazed {DeafIcon}.",
     "ability2": "Summon one 6/6 level 2 Tardigrade and make it Dazed {DeafIcon}.",
     "ability3": "Summon one 9/9 level 3 Tardigrade and make it Dazed {DeafIcon}.",
-    "image": "Tardigrade_2x.png",
+    "image": "Tardigrade_0.png",
+    "imageLegacy": "Tardigrade_2x.png",
     "types": [
       "Summon",
       "Ailment"
@@ -6701,6 +7100,7 @@
     "ability2": "Make the lowest attack enemy 10x\\xa0Spooked {ScaredIcon} and jump-attack it.",
     "ability3": "Make the lowest attack enemy 15x\\xa0Spooked {ScaredIcon} and jump-attack it.",
     "image": "TasmanianDevil_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Ailment"
@@ -6719,6 +7119,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator7A7H": {
@@ -6734,6 +7135,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator8A8H": {
@@ -6749,6 +7151,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator9A10H": {
@@ -6764,6 +7167,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "ThorGoat1": {
@@ -6779,6 +7183,7 @@
     "ability2": "Give one random friendly Tandgrisner +6 {HealthIcon} health. Can also...",
     "ability3": "Give one random friendly Tandgrisner +9 {HealthIcon} health. Can also...",
     "image": "ThorGoat1_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "ThorGoat2": {
@@ -6794,6 +7199,7 @@
     "ability2": "Give one random friendly Tandgnost +6 {AttackIcon} attack. Can also...",
     "ability3": "Give one random friendly Tandgnost +9 {AttackIcon} attack. Can also...",
     "image": "ThorGoat2_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "ThorGoats": {
@@ -6809,6 +7215,7 @@
     "ability2": "Summon a level 2 Thunder Hammer.",
     "ability3": "Summon a level 3 Thunder Hammer.",
     "image": "ThorGoats_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Trout": {
@@ -6824,6 +7231,7 @@
     "ability2": "Gain double its sell value as {HealthIcon} health.",
     "ability3": "Gain triple its sell value as {HealthIcon} health.",
     "image": "Trout_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ]
@@ -6840,7 +7248,8 @@
     "ability1": "Give [[Melon|food:melon]] {PerkIcon} perk to the nearest friend behind.",
     "ability2": "Give [[Melon|food:melon]] {PerkIcon} perk to the two nearest friends behind.",
     "ability3": "Give [[Melon|food:melon]] {PerkIcon} perk to the three nearest friends behind.",
-    "image": "Turtle_2x.png",
+    "image": "Turtle_2x_0.png",
+    "imageLegacy": "Turtle_2x.png",
     "types": [
       "Perks"
     ]
@@ -6857,7 +7266,8 @@
     "ability1": "Replace it with permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Replace it with permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Replace it with permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
-    "image": "Unicorn_2x.png",
+    "image": "Unicorn_0.png",
+    "imageLegacy": "Unicorn_2x.png",
     "types": [
       "Ailment"
     ]
@@ -6875,6 +7285,7 @@
     "ability2": "Gain +100% {TrumpetIcon} trumpets, and minimum +8 {TrumpetIcon} trumpets.",
     "ability3": "Gain +150% {TrumpetIcon} trumpets, and minimum +12 {TrumpetIcon} trumpets.",
     "image": "Vaquita_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -6891,7 +7302,8 @@
     "ability1": "Swallow the nearest friend ahead and release it at level 1 on faint.",
     "ability2": "Swallow the nearest friend ahead and release it at level 2 on faint.",
     "ability3": "Swallow the nearest friend ahead and release it at level 3 on faint.",
-    "image": "Whale_2x.png",
+    "image": "Whale_2x_0.png",
+    "imageLegacy": "Whale_2x.png",
     "types": [
       "Summon"
     ]
@@ -6909,6 +7321,7 @@
     "ability2": "Remove it and gain +2 {AttackIcon} attack and +2 {HealthIcon} health. Triple in battle.",
     "ability3": "Remove it and gain +3 {AttackIcon} attack and +3 {HealthIcon} health. Triple in battle.",
     "image": "WhaleShark_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks",
       "Ailment"
@@ -6927,6 +7340,7 @@
     "ability2": "Give it the [[Strawberry|food:strawberry]] {PerkIcon} perk and +5 {AttackIcon} attack.",
     "ability3": "Give it the [[Strawberry|food:strawberry]] {PerkIcon} perk and +5 {AttackIcon} attack.",
     "image": "WhiteBootedRacketTail_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry"
     ]
@@ -6944,6 +7358,7 @@
     "ability2": "Make ALL pets within two spaces Icky {AcidIcon}.",
     "ability3": "Make ALL pets within three spaces Icky {AcidIcon}.",
     "image": "Xenomorph_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -6961,6 +7376,7 @@
     "ability2": "Give it [[Melon Slice|food:melon]] if friendly, or deal 6 {DamageIcon} damage if enemy. Works 2 times per battle.",
     "ability3": "Give it [[Melon Slice|food:melon]] if friendly, or deal 6 {DamageIcon} damage if enemy. Works 3 times per battle.",
     "image": "YetiCrab_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -6978,6 +7394,7 @@
     "ability2": "Give it +6 {AttackIcon} attack and +8 {ManaIcon} mana and Spooked {ScaredIcon}.",
     "ability3": "Give it +9 {AttackIcon} attack and +12 {ManaIcon} mana and Spooked {ScaredIcon}.",
     "image": "Amalgam_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana",
       "Ailment",
@@ -6996,7 +7413,8 @@
     "ability1": "Give ALL pets +8 {HealthIcon} health.",
     "ability2": "Give ALL pets +16 {HealthIcon} health.",
     "ability3": "Give ALL pets +24 {HealthIcon} health.",
-    "image": "Armadillo_2x.png",
+    "image": "Armadillo_2x_0.png",
+    "imageLegacy": "Armadillo_2x.png",
     "types": [
       "Hurt"
     ]
@@ -7014,6 +7432,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "Axolotl": {
@@ -7029,6 +7448,7 @@
     "ability2": "Give it permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give it permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Axolotl_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -7046,6 +7466,7 @@
     "ability2": "Summon two Lemurs and give all friends +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "ability3": "Summon two Lemurs and give all friends +9 {AttackIcon} attack and +9 {HealthIcon} health.",
     "image": "AyeAye_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -7063,6 +7484,7 @@
     "ability2": "Choose one level 2 toy that brings doom and chaos!",
     "ability3": "Choose one level 3 toy that brings doom and chaos!",
     "image": "BadDog_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys",
       "Disruption"
@@ -7081,6 +7503,7 @@
     "ability2": "Remove 12 {AttackIcon} attack from ALL other pets to a minimum of 4 {AttackIcon} attack.",
     "ability3": "Remove 18 {AttackIcon} attack from ALL other pets to a minimum of 4 {AttackIcon} attack.",
     "image": "BanggaiCardinalfish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -7097,7 +7520,8 @@
     "ability1": "Give the nearest friend behind +1 {ExpIcon} experience. Give to one more friend in battle.",
     "ability2": "Give the nearest friend behind +2 {ExpIcon} experience. Give to one more friend in battle.",
     "ability3": "Give the nearest friend behind +3 {ExpIcon} experience. Give to one more friend in battle.",
-    "image": "Blobfish_2x.png",
+    "image": "Blobfish_2x_0.png",
+    "imageLegacy": "Blobfish_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -7115,6 +7539,7 @@
     "ability2": "Give three random friends +2 {AttackIcon} attack and +2 {HealthIcon} health for each food this has eaten this turn.",
     "ability3": "Give three random friends +3 {AttackIcon} attack and +3 {HealthIcon} health for each food this has eaten this turn.",
     "image": "BlueJay_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -7132,6 +7557,7 @@
     "ability2": "Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "BlueRingedOctopus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -7149,6 +7575,7 @@
     "ability2": "Make the target Crisp {BurnIcon}.",
     "ability3": "Make the target Crisp {BurnIcon}.",
     "image": "Boitata_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -7166,6 +7593,7 @@
     "ability2": "Give three friends that dealt damage this battle permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give three friends that dealt damage this battle permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "BrahmaChicken_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Chicken": {
@@ -7180,7 +7608,8 @@
     "ability1": "Give future shop pets +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give future shop pets +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give future shop pets +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Chicken_2x.png",
+    "image": "Chicken_2x_0.png",
+    "imageLegacy": "Chicken_2x.png",
     "types": [
       "Buffs"
     ]
@@ -7197,7 +7626,8 @@
     "ability1": "Replace shop food with two free [[Milk|food:milk]].",
     "ability2": "Replace shop food with two free Better [[Milk|food:milk]].",
     "ability3": "Replace shop food with two free Best [[Milk|food:milk]].",
-    "image": "Cow_2x.png",
+    "image": "Cow_2x_0.png",
+    "imageLegacy": "Cow_2x.png",
     "types": [
       "Food",
       "Cycle"
@@ -7216,6 +7646,7 @@
     "ability2": "Give it [[Melon|food:melon]] {PerkIcon} perk and +5 {AttackIcon} attack.",
     "ability3": "Give it [[Melon|food:melon]] {PerkIcon} perk and +5 {AttackIcon} attack.",
     "image": "Crane_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -7232,7 +7663,8 @@
     "ability1": "Deal 8 {DamageIcon} damage to the last enemy.",
     "ability2": "Deal 8 {DamageIcon} damage to the last enemy.",
     "ability3": "Deal 8 {DamageIcon} damage to the last enemy.",
-    "image": "Crocodile_2x.png",
+    "image": "Crocodile_2x_0.png",
+    "imageLegacy": "Crocodile_2x.png",
     "types": [
       "Disruption"
     ]
@@ -7249,7 +7681,8 @@
     "ability1": "Give +1 {AttackIcon} attack and +1 {HealthIcon} health to one friend of each level.",
     "ability2": "Give +2 {AttackIcon} attack and +2 {HealthIcon} health to one friend of each level.",
     "ability3": "Give +3 {AttackIcon} attack and +3 {HealthIcon} health to one friend of each level.",
-    "image": "Dragonfly_2x.png",
+    "image": "Dragonfly_2x_0.png",
+    "imageLegacy": "Dragonfly_2x.png",
     "types": [
       "Buffs"
     ]
@@ -7266,7 +7699,8 @@
     "ability1": "Summon one 5/5 level 1 pet from the next shop tier.",
     "ability2": "Summon one 10/10 level 2 pet from the next shop tier.",
     "ability3": "Summon one 15/15 level 3 pet from the next shop tier.",
-    "image": "Eagle_2x.png",
+    "image": "Eagle_2x_0.png",
+    "imageLegacy": "Eagle_2x.png",
     "types": [
       "Summon",
       "Super",
@@ -7286,6 +7720,7 @@
     "ability2": "Activate ability on the nearest {0} friend behind.",
     "ability3": "Activate ability on the nearest {0} friend behind.",
     "image": "EgyptianVulture_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Emu": {
@@ -7301,6 +7736,7 @@
     "ability2": "Give nearest friend ahead +8 {HealthIcon} health and move it to the front in battle.",
     "ability3": "Give nearest friend ahead +12 {HealthIcon} health and move it to the front in battle.",
     "image": "Emu_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -7318,6 +7754,7 @@
     "ability2": "Summon two 3/3 friends with +1 {AttackIcon} attack and +1 {HealthIcon} health for each ailment gained.",
     "ability3": "Summon three 3/3 friends with +1 {AttackIcon} attack and +1 {HealthIcon} health for each ailment gained.",
     "image": "Estemmenosuchus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment",
       "Summon"
@@ -7336,6 +7773,7 @@
     "ability2": "",
     "ability3": "",
     "image": "FakeNessie_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "FarmerCrow": {
@@ -7351,6 +7789,7 @@
     "ability2": "Feed three [[Corncobs|food:corn]] with triple effect to the nearest two friends behind.",
     "ability3": "Feed three [[Corncobs|food:corn]] with triple effect to the nearest three friends behind.",
     "image": "FarmerCrow_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -7368,6 +7807,7 @@
     "ability2": "Give {AttackIcon} attack to the two highest tier friends.",
     "ability3": "Give {AttackIcon} attack to the three highest tier friends.",
     "image": "FireAnt_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "FlounderAdult": {
@@ -7383,6 +7823,7 @@
     "ability2": "Give two back-most friends 2 {ExpIcon} experience.",
     "ability3": "Give two back-most friends 3 {ExpIcon} experience.",
     "image": "FlounderAdult_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "FlounderYoung": {
@@ -7398,6 +7839,7 @@
     "ability2": "Transform and give the two back-most friends 2 {ExpIcon} experience.",
     "ability3": "Transform and give the two back-most friends 3 {ExpIcon} experience.",
     "image": "FlounderYoung_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up"
     ]
@@ -7414,7 +7856,8 @@
     "ability1": "Steal the right-most shop food.",
     "ability2": "Steal the right-most shop food and double its attack and health effects.",
     "ability3": "Steal the right-most shop food and triple its attack and health effects.",
-    "image": "Fox_2x.png",
+    "image": "Fox_2x_0.png",
+    "imageLegacy": "Fox_2x.png",
     "types": [
       "Food"
     ],
@@ -7433,6 +7876,7 @@
     "ability2": "Deal 66% of damage taken as {DamageIcon} damage to one random enemy.",
     "ability3": "Deal 100% of damage taken as {DamageIcon} damage to one random enemy.",
     "image": "GeometricTortoise_2x.png",
+    "imageLegacy": "",
     "types": [
       "Hurt"
     ]
@@ -7450,6 +7894,7 @@
     "ability2": "Give friends +4 {HealthIcon} health. Spend 2 {TrumpetIcon} trumpets to give 2 more health in the future.",
     "ability3": "Give friends +6 {HealthIcon} health. Spend 2 {TrumpetIcon} trumpets to give 3 more health in the future.",
     "image": "GiantIsopod_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -7467,6 +7912,7 @@
     "ability2": "Deal 8 {DamageIcon} damage to one random enemy for each friendly transformation this turn.",
     "ability3": "Deal 12 {DamageIcon} damage to one random enemy for each friendly transformation this turn.",
     "image": "GiantPangasius_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption",
       "Transform"
@@ -7484,7 +7930,8 @@
     "ability1": "Gain +1 {GoldIcon} gold.",
     "ability2": "Gain +2 {GoldIcon} gold.",
     "ability3": "Gain +3 {GoldIcon} gold.",
-    "image": "Goat_2x.png",
+    "image": "Goat_2x_0.png",
+    "imageLegacy": "Goat_2x.png",
     "types": [
       "Cycle",
       "Gold"
@@ -7502,7 +7949,8 @@
     "ability1": "Gain one free roll.",
     "ability2": "Gain one free roll.",
     "ability3": "Gain one free roll.",
-    "image": "Hamster_2x.png",
+    "image": "Hamster_2x_0.png",
+    "imageLegacy": "Hamster_2x.png",
     "types": [
       "Rolling"
     ]
@@ -7520,6 +7968,7 @@
     "ability2": "Give three random friends that fainted last battle +4 {HealthIcon} health.",
     "ability3": "Give three random friends that fainted last battle +6 {HealthIcon} health.",
     "image": "HawaiianMonkSeal_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -7537,6 +7986,7 @@
     "ability2": "Gain +2 {ManaIcon} mana for each roll this turn.",
     "ability3": "Gain +3 {ManaIcon} mana for each roll this turn.",
     "image": "Hippocampus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Rolling",
       "Guard",
@@ -7556,6 +8006,7 @@
     "ability2": "",
     "ability3": "",
     "image": "Hippogriff_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Hyena": {
@@ -7570,7 +8021,8 @@
     "ability1": "Swap attack and health of ALL pets.",
     "ability2": "Shuffle positions of ALL pets.",
     "ability3": "Swap attack and health and shuffle positions of ALL pets.",
-    "image": "Hyena_2x.png",
+    "image": "Hyena_2x_0.png",
+    "imageLegacy": "Hyena_2x.png",
     "types": [
       "Disruption"
     ],
@@ -7590,6 +8042,7 @@
     "ability2": "Remove 70% {HealthIcon} health from it. Works on two different enemies per battle.",
     "ability3": "Remove 70% {HealthIcon} health from it. Works on three different enemies per battle.",
     "image": "Ibex_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -7607,6 +8060,7 @@
     "ability2": "Set {AttackIcon} attack and {HealthIcon} health to 26.",
     "ability3": "Set {AttackIcon} attack and {HealthIcon} health to 39.",
     "image": "Jackal_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Kappa": {
@@ -7622,6 +8076,7 @@
     "ability2": "Summon two random 14/16 pets from tier 3 up front for you and the opponent.",
     "ability3": "Summon three random 14/16 pets from tier 3 up front for you and the opponent.",
     "image": "Kappa_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -7639,6 +8094,7 @@
     "ability2": "Transfer all friendly {ManaIcon} mana + 4 to nearest friend ahead.",
     "ability3": "Transfer all friendly {ManaIcon} mana + 6 to nearest friend ahead.",
     "image": "Kitsune_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -7656,6 +8112,7 @@
     "ability2": "Give it +2 {AttackIcon} attack and +4 {HealthIcon} health once. Permanent if it jumped.",
     "ability3": "Give it +3 {AttackIcon} attack and +6 {HealthIcon} health once. Permanent if it jumped.",
     "image": "LovelandFrogman_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -7673,6 +8130,7 @@
     "ability2": "Spend mana to remove 1 {AttackIcon} attack and health per mana from two random enemies.",
     "ability3": "Spend mana to remove 1 {AttackIcon} attack and health per mana from three random enemies.",
     "image": "Lusca_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -7690,6 +8148,7 @@
     "ability2": "Summon one 24/24 Orangutan with the same food perk as this.",
     "ability3": "Summon one 36/36 Orangutan with the same food perk as this.",
     "image": "Macaque_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -7707,6 +8166,7 @@
     "ability2": "Convert up to 24 {TrumpetIcon} trumpets into triple mana and spread it evenly to friends.",
     "ability3": "Convert up to 24 {TrumpetIcon} trumpets into quadruple mana and spread it evenly to friends.",
     "image": "Maltese_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets",
       "Mana"
@@ -7725,6 +8185,7 @@
     "ability2": "Give it [[Melon|food:melon]] {PerkIcon}. Works on two different friends per turn.",
     "ability3": "Give it [[Melon|food:melon]] {PerkIcon}. Works on three different friends per turn.",
     "image": "MarineIguana_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -7741,7 +8202,8 @@
     "ability1": "Give front-most friendly pet +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Give front-most friendly pet +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give front-most friendly pet +6 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Monkey_2x.png",
+    "image": "Monkey_2x_0.png",
+    "imageLegacy": "Monkey_2x.png",
     "types": [
       "Buffs"
     ]
@@ -7758,7 +8220,8 @@
     "ability1": "Unfreeze shop and give one random friend +3 {HealthIcon} health for each tier 1 shop pet.",
     "ability2": "Unfreeze shop and give one random friend +6 {HealthIcon} health for each tier 1 shop pet.",
     "ability3": "Unfreeze shop and give one random friend +9 {HealthIcon} health for each tier 1 shop pet.",
-    "image": "Moose_2x.png",
+    "image": "Moose_2x_0.png",
+    "imageLegacy": "Moose_2x.png",
     "types": [
       "Rolling"
     ]
@@ -7776,6 +8239,7 @@
     "ability2": "Give adjacent friends +4 {AttackIcon} attack and +6 {HealthIcon} health.",
     "ability3": "Give adjacent friends +6 {AttackIcon} attack and +9 {HealthIcon} health.",
     "image": "Mosasaurus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -7793,6 +8257,7 @@
     "ability2": "Spend {ManaIcon} mana to gain 2 {TrumpetIcon} trumpets for each mana.",
     "ability3": "Spend {ManaIcon} mana to gain 3 {TrumpetIcon} trumpets for each mana.",
     "image": "Namazu_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana",
       "Trumpets"
@@ -7811,6 +8276,7 @@
     "ability2": "Summon one 6/6 Boat. If it's your first Boat this battle, give it +2 and +2 for each roll.",
     "ability3": "Summon one 9/9 Boat. If it's your first Boat this battle, give it +3 and +3 for each roll.",
     "image": "Nessie_2x.png",
+    "imageLegacy": "",
     "types": [
       "Rolling"
     ]
@@ -7828,6 +8294,7 @@
     "ability2": "Takes 8 less damage.",
     "ability3": "Takes 12 less damage.",
     "image": "Nurikabe_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "NurseShark": {
@@ -7842,7 +8309,8 @@
     "ability1": "Spend up to 6 {TrumpetIcon} trumpets and deal triple as {DamageIcon} damage to one random enemy.",
     "ability2": "Spend up to 6 {TrumpetIcon} trumpets and deal triple as {DamageIcon} damage to two random enemies.",
     "ability3": "Spend up to 6 {TrumpetIcon} trumpets and deal triple as damage to three random enemies.",
-    "image": "NurseShark_2x.png",
+    "image": "NurseShark_2x_0.png",
+    "imageLegacy": "NurseShark_2x.png",
     "types": [
       "Trumpets"
     ]
@@ -7860,6 +8328,7 @@
     "ability2": "Gain +16 {TrumpetIcon} trumpets.",
     "ability3": "Gain +24 {TrumpetIcon} trumpets.",
     "image": "Nyala_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -7877,6 +8346,7 @@
     "ability2": "Summon one [[Mantis|orchidmantis]] with 80% {AttackIcon} attack and {HealthIcon} health of this.",
     "ability3": "Summon one [[Mantis|orchidmantis]] with 120% {AttackIcon} attack and {HealthIcon} health of this.",
     "image": "OrchidMantis_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -7894,6 +8364,7 @@
     "ability2": "Gain +8 {AttackIcon} attack and +8 {HealthIcon} health for each friend that sells for at least 3 {GoldIcon} gold.",
     "ability3": "Gain +12 {AttackIcon} attack and +12 {HealthIcon} health for each friend that sells for at least 3 {GoldIcon} gold.",
     "image": "PacificFanfish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ]
@@ -7911,6 +8382,7 @@
     "ability2": "Give [[White Okra|food:whiteokra]] {PerkIcon} perk to the two nearest friends behind.",
     "ability3": "Give [[White Okra|food:whiteokra]] {PerkIcon} perk to the three nearest friends behind.",
     "image": "PaintedTerrapin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -7928,6 +8400,7 @@
     "ability2": "Perks are three times stronger on this in battle.",
     "ability3": "Perks are four times stronger on this in battle.",
     "image": "Panther_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -7944,7 +8417,8 @@
     "ability1": "Swallow one [[Strawberry|food:strawberry]] friend ahead and turn it into a Salmon on faint.",
     "ability2": "Swallow two [[Strawberry|food:strawberry]] friends ahead and turn them into Salmons on faint.",
     "ability3": "Swallow three [[Strawberry|food:strawberry]] friends ahead and turn them into Salmons on faint.",
-    "image": "Pelican_2x.png",
+    "image": "Pelican_2x_0.png",
+    "imageLegacy": "Pelican_2x.png",
     "types": [
       "Strawberry",
       "Summon"
@@ -7963,6 +8437,7 @@
     "ability2": "Spend 4 {ManaIcon} mana to gain +6 {GoldIcon} gold next turn.",
     "ability3": "Spend 4 {ManaIcon} mana to gain +9 {GoldIcon} gold next turn.",
     "image": "Pixiu_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -7979,7 +8454,8 @@
     "ability1": "Give one random frozen shop pet +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability2": "Give one random frozen shop pet +8 {AttackIcon} attack and +8 {HealthIcon} health.",
     "ability3": "Give one random frozen shop pet +12 {AttackIcon} attack and +12 {HealthIcon} health.",
-    "image": "PolarBear_2x.png",
+    "image": "PolarBear_2x_0.png",
+    "imageLegacy": "PolarBear_2x.png",
     "types": [
       "Buffs"
     ]
@@ -7996,7 +8472,8 @@
     "ability1": "Steal food perk from target.",
     "ability2": "Steal food perk from target.",
     "ability3": "Steal food perk from target.",
-    "image": "Racoon_2x.png",
+    "image": "Racoon_2x_0.png",
+    "imageLegacy": "Racoon_2x.png",
     "types": [
       "Perks"
     ]
@@ -8014,6 +8491,7 @@
     "ability2": "Make the two last enemies Crisp {BurnIcon}.",
     "ability3": "Make the three last enemies Crisp {BurnIcon}.",
     "image": "RedDragon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -8031,6 +8509,7 @@
     "ability2": "Choose and transform into a pet from the next shop tier from ANY pack.",
     "ability3": "Choose and transform into a pet from the next shop tier from ANY pack.",
     "image": "RedPanda_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -8047,7 +8526,8 @@
     "ability1": "Deal 4 {DamageIcon} damage to the first enemy. Double against tier 1 pets.",
     "ability2": "Deal 8 {DamageIcon} damage to the first enemy. Double against tier 1 pets.",
     "ability3": "Deal 12 {DamageIcon} damage to the first enemy. Double against tier 1 pets.",
-    "image": "Rhino_2x.png",
+    "image": "Rhino_2x_0.png",
+    "imageLegacy": "Rhino_2x.png",
     "types": [
       "Disruption"
     ]
@@ -8064,7 +8544,8 @@
     "ability1": "Summon one [[Chick]] with 1 {HealthIcon} health and 50% {AttackIcon} attack of this.",
     "ability2": "Summon two [[Chicks|chick]] with 1 {HealthIcon} health and 50% {AttackIcon} attack of this.",
     "ability3": "Summon three [[Chicks|chick]] with 1 {HealthIcon} health and 50% {AttackIcon} attack of this.",
-    "image": "Rooster_2x.png",
+    "image": "Rooster_2x_0.png",
+    "imageLegacy": "Rooster_2x.png",
     "types": [
       "Summon"
     ]
@@ -8082,6 +8563,7 @@
     "ability2": "Deal 10 {DamageIcon} damage to one random enemy. Repeat for every 25 health this has.",
     "ability3": "Deal 15 {DamageIcon} damage to one random enemy. Repeat for every 25 health this has.",
     "image": "Salmon_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "SalmonofWisdom": {
@@ -8097,6 +8579,7 @@
     "ability2": "Give the two front-most friends AND enemies +4 {ExpIcon} experience.",
     "ability3": "Give the two front-most friends AND enemies +6 {ExpIcon} experience.",
     "image": "SalmonOfWisdom_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up"
     ]
@@ -8113,7 +8596,8 @@
     "ability1": "Gain [[Peanut|food:peanut]] {PerkIcon} perk.",
     "ability2": "Gain [[Peanut|food:peanut]] {PerkIcon} perk.",
     "ability3": "Gain [[Peanut|food:peanut]] {PerkIcon} perk.",
-    "image": "Scorpion_2x.png",
+    "image": "Scorpion_2x_0.png",
+    "imageLegacy": "Scorpion_2x.png",
     "types": [
       "Perks"
     ]
@@ -8131,6 +8615,7 @@
     "ability2": "Make two random enemies Tasty {TastyIcon}.",
     "ability3": "Make three random enemies Tasty {TastyIcon}.",
     "image": "SeaCucumber_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -8147,7 +8632,8 @@
     "ability1": "Give three random friends +1 {AttackIcon} attack.",
     "ability2": "Give three random friends +2 {AttackIcon} attack.",
     "ability3": "Give three random friends +3 {AttackIcon} attack.",
-    "image": "Seal_2x.png",
+    "image": "Seal_2x_0.png",
+    "imageLegacy": "Seal_2x.png",
     "types": [
       "Food"
     ]
@@ -8165,6 +8651,7 @@
     "ability2": "Give the nearest friend ahead +6 {AttackIcon} attack and +8 {HealthIcon} health.",
     "ability3": "Give the nearest friend ahead +9 {AttackIcon} attack and +12 {HealthIcon} health.",
     "image": "SecretaryBird_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -8181,7 +8668,8 @@
     "ability1": "Gain +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Gain +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Gain +6 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Shark_2x.png",
+    "image": "Shark_2x_0.png",
+    "imageLegacy": "Shark_2x.png",
     "types": [
       "Summon"
     ]
@@ -8198,7 +8686,8 @@
     "ability1": "Replace the nearest [[Strawberry|food:strawberry]] ahead with +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability2": "Replace the nearest [[Strawberry|food:strawberry]] ahead with +8 {AttackIcon} attack and +8 {HealthIcon} health.",
     "ability3": "Replace the nearest [[Strawberry|food:strawberry]] ahead with +12 {AttackIcon} attack and +12 {HealthIcon} health.",
-    "image": "Shoebill_2x.png",
+    "image": "Shoebill_2x_0.png",
+    "imageLegacy": "Shoebill_2x.png",
     "types": [
       "Strawberry"
     ]
@@ -8215,7 +8704,8 @@
     "ability1": "Give three random friends with no food perks +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give three random friends with no food perks +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give three random friends with no food perks +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "SiberianHusky_2x.png",
+    "image": "SiberianHusky_2x_0.png",
+    "imageLegacy": "SiberianHusky_2x.png",
     "types": [
       "Buffs"
     ]
@@ -8233,6 +8723,7 @@
     "ability2": "Gain +2 {GoldIcon} gold on next turn.",
     "ability3": "Gain +3 {GoldIcon} gold on next turn.",
     "image": "SilverFox_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold"
     ]
@@ -8250,6 +8741,7 @@
     "ability2": "Give [[Skewer|food:skewer]] {PerkIcon} perk to the two nearest friends behind.",
     "ability3": "Give [[Skewer|food:skewer]] {PerkIcon} perk to the three nearest friends behind.",
     "image": "SnappingJawTurtle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -8267,6 +8759,7 @@
     "ability2": "Gain +10 {AttackIcon} attack and +10 {HealthIcon} health and jump-attack one random enemy.",
     "ability3": "Gain +15 {AttackIcon} attack and +15 {HealthIcon} health and jump-attack one random enemy.",
     "image": "SnowLeopard_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Disruption"
@@ -8284,7 +8777,8 @@
     "ability1": "Level 3 friend sold: Give friends +1 {AttackIcon} attack and +1 {HealthIcon} health. Triple if sold pet had at least 10 {AttackIcon} attack.",
     "ability2": "Level 3 friend sold: Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health. Triple if sold pet had at least 10 {AttackIcon} attack.",
     "ability3": "Level 3 friend sold: Give friends +3 {AttackIcon} attack and +3 {HealthIcon} health. Triple if sold pet had at least 10 {AttackIcon} attack.",
-    "image": "Starfish_2x.png",
+    "image": "Starfish_2x_0.png",
+    "imageLegacy": "Starfish_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -8302,6 +8796,7 @@
     "ability2": "Choose one level 2 Sting Ray toy.",
     "ability3": "Choose one level 3 Sting Ray toy.",
     "image": "Stingray_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -8319,6 +8814,7 @@
     "ability2": "Deal double attack {DamageIcon} damage directly back to whoever knocked this out.",
     "ability3": "Deal triple attack {DamageIcon} damage directly back to whoever knocked this out.",
     "image": "Stonefish_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "SwordFish": {
@@ -8333,7 +8829,8 @@
     "ability1": "Deal 100% attack {DamageIcon} damage to the most healthy enemy and itself.",
     "ability2": "Deal 200% attack {DamageIcon} damage to the most healthy enemy and itself.",
     "ability3": "Deal 300% attack {DamageIcon} damage to the most healthy enemy and itself.",
-    "image": "SwordFish_2x.png",
+    "image": "SwordFish_2x_0.png",
+    "imageLegacy": "SwordFish_2x.png",
     "types": [
       "Disruption"
     ]
@@ -8351,6 +8848,7 @@
     "ability2": "Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "TaitaThrush_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -8368,6 +8866,7 @@
     "ability2": "Remove 2 {HealthIcon} health from all enemies. Repeat for every 10 attack this has.",
     "ability3": "Remove 3 {HealthIcon} health from all enemies. Repeat for every 10 attack this has.",
     "image": "TarantulaHawk_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -8385,6 +8884,7 @@
     "ability2": "Remove 50% of all stats and divide them out. Socialism!",
     "ability3": "Remove 75% of all stats and divide them out. Socialism!",
     "image": "Tarasque_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -8402,6 +8902,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator15A15H": {
@@ -8417,6 +8918,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator17A17H": {
@@ -8432,6 +8934,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "Triceratops": {
@@ -8446,7 +8949,8 @@
     "ability1": "Give one random friend +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "ability2": "Give one random friend +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "ability3": "Give one random friend +9 {AttackIcon} attack and +9 {HealthIcon} health.",
-    "image": "Triceratops_2x.png",
+    "image": "Triceratops_2x_0.png",
+    "imageLegacy": "Triceratops_2x.png",
     "types": [
       "Hurt"
     ]
@@ -8463,7 +8967,8 @@
     "ability1": "Give it +3 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give it +6 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give it +9 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Turkey_2x.png",
+    "image": "Turkey_2x_0.png",
+    "imageLegacy": "Turkey_2x.png",
     "types": [
       "Summon"
     ]
@@ -8481,6 +8986,7 @@
     "ability2": "Deal 8 {DamageIcon} damage to it and gain damage as {HealthIcon} health.",
     "ability3": "Deal 12 {DamageIcon} damage to it and gain damage as {HealthIcon} health.",
     "image": "VampireBat_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -8498,6 +9004,7 @@
     "ability2": "Choose one remaining pet from last battle to stock at 2 {GoldIcon} gold, twice.",
     "ability3": "Choose one remaining pet from last battle to stock at 2 {GoldIcon} gold, thrice.",
     "image": "VenusFlytrap_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle",
       "Level-Up"
@@ -8518,7 +9025,8 @@
     "ability1": "Deal 4 {DamageIcon} damage to one random enemy.",
     "ability2": "Deal 8 {DamageIcon} damage to one random enemy.",
     "ability3": "Deal 12 {DamageIcon} damage to one random enemy.",
-    "image": "Vulture_2x.png",
+    "image": "Vulture_2x_0.png",
+    "imageLegacy": "Vulture_2x.png",
     "types": [
       "Disruption",
       "Summon"
@@ -8537,6 +9045,7 @@
     "ability2": "If turn number is even, gain +100% {AttackIcon} attack and health. Otherwise gain 12 {ManaIcon} mana.",
     "ability3": "If turn number is even, gain +150% {AttackIcon} attack and health. Otherwise gain 18 {ManaIcon} mana.",
     "image": "Werewolf_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "WhiteWhale": {
@@ -8552,6 +9061,7 @@
     "ability2": "Swallow the left-most shop pet and summon it at level 2 with double stats on faint.",
     "ability3": "Swallow the left-most shop pet and summon it at level 3 with triple stats on faint.",
     "image": "WhiteWhale_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon",
       "Super"
@@ -8570,6 +9080,7 @@
     "ability2": "Summon three 6/4 Pigs.",
     "ability3": "Summon three 9/6 Pigs.",
     "image": "Wolf_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -8586,7 +9097,8 @@
     "ability1": "Deal 1 {DamageIcon} damage to nearest two pets ahead two times. Double against enemies.",
     "ability2": "Deal 1 {DamageIcon} damage to nearest two pets ahead four times. Double against enemies.",
     "ability3": "Deal 1 {DamageIcon} damage to nearest two pets ahead six times. Double against enemies.",
-    "image": "Woodpecker_2x.png",
+    "image": "Woodpecker_2x_0.png",
+    "imageLegacy": "Woodpecker_2x.png",
     "types": [
       "Hurt",
       "Disruption"
@@ -8605,6 +9117,7 @@
     "ability2": "",
     "ability3": "",
     "image": "WoollyRhino_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -8621,7 +9134,8 @@
     "ability1": "Give one random friend +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Give one random friend +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give one random friend +6 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Zebra_2x.png",
+    "image": "Zebra_2x_0.png",
+    "imageLegacy": "Zebra_2x.png",
     "types": [
       "Cycle"
     ]
@@ -8639,6 +9153,7 @@
     "ability2": "Spend 2 {ManaIcon} mana to give the nearest friend behind permanent +8 {AttackIcon} attack and +8 {HealthIcon} health.",
     "ability3": "Spend 2 {ManaIcon} mana to give the nearest friend behind permanent +12 {AttackIcon} attack and +12 {HealthIcon} health.",
     "image": "Akhlut_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -8656,6 +9171,7 @@
     "ability2": "Adjacent tier 4 or lower friends deals 6 {DamageIcon} ability damage extra.",
     "ability3": "Adjacent tier 4 or lower friends deals 9 {DamageIcon} ability damage extra.",
     "image": "Albatross_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -8672,7 +9188,8 @@
     "ability1": "Give it +1 {ExpIcon} experience. Triple in battle.",
     "ability2": "Give it +1 {ExpIcon} experience. Triple in battle.",
     "ability3": "Give it +1 {ExpIcon} experience. Triple in battle.",
-    "image": "Alpaca_2x.png",
+    "image": "Alpaca_2x_0.png",
+    "imageLegacy": "Alpaca_2x.png",
     "types": [
       "Level-Up",
       "Summon"
@@ -8694,6 +9211,7 @@
     "ability2": "Restore its health. Can restore up to 30 {HealthIcon} health per turn.",
     "ability3": "Restore its health. Can restore up to 45 {HealthIcon} health per turn.",
     "image": "Amargasaurus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Hurt"
     ]
@@ -8711,6 +9229,7 @@
     "ability2": "Transform friend behind into a level 1 Mimic Octopus. Give it +2 XP in battle for every 2 roll.",
     "ability3": "Transform friend behind into a level 1 Mimic Octopus. Give it +3 XP in battle for every 2 roll.",
     "image": "Ammonite_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform",
       "Level-Up",
@@ -8730,6 +9249,7 @@
     "ability2": "Give it permanent +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give it permanent +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "image": "AmsterdamAlbatross_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -8747,6 +9267,7 @@
     "ability2": "Choose one free pet from your last opponent to stock twice.",
     "ability3": "Choose one free pet from your last opponent to stock thrice.",
     "image": "Anglerfish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -8764,6 +9285,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "BabyCthulhu": {
@@ -8779,6 +9301,7 @@
     "ability2": "Deal 2 {DamageIcon} damage to ALL other pets. Double against enemies.",
     "ability3": "Deal 2 {DamageIcon} damage to ALL other pets. Double against enemies.",
     "image": "BabyCthulhu_2x.png",
+    "imageLegacy": "",
     "types": [
       "Hurt"
     ]
@@ -8796,6 +9319,7 @@
     "ability2": "Make the two highest attack enemies Sleepy {DrowsyIcon}.",
     "ability3": "Make the three highest attack enemies Sleepy {DrowsyIcon}.",
     "image": "Bakunawa_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -8813,6 +9337,7 @@
     "ability2": "Summon ANY two useful <b>Start of Battle</b> pets from tier 4 and activate their abilities.",
     "ability3": "Summon ANY three useful <b>Start of Battle</b> pets from tier 4 and activate their abilities.",
     "image": "BayCat_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -8830,6 +9355,7 @@
     "ability2": "Gain +4 {AttackIcon} attack and +4 {HealthIcon} health. Attack and health can go up to 100!",
     "ability3": "Gain +6 {AttackIcon} attack and +6 {HealthIcon} health. Attack and health can go up to 100!",
     "image": "Behemoth_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs",
       "Super"
@@ -8848,6 +9374,7 @@
     "ability2": "Remove 8 {HealthIcon} health from one random enemy for each food this has eaten this turn.",
     "ability3": "Remove 12 {HealthIcon} health from one random enemy for each food this has eaten this turn.",
     "image": "BlackBear_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption",
       "Food"
@@ -8866,6 +9393,7 @@
     "ability2": "Deal 30 {DamageIcon} damage to the two most healthy enemies.",
     "ability3": "Deal 30 {DamageIcon} damage to the three most healthy enemies.",
     "image": "BlackRhino_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -8882,7 +9410,8 @@
     "ability1": "Sell friends for +2 extra gold each and give future shop pets +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Sell friends for +2 extra gold each and give future shop pets +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Sell friends for +2 extra gold each and give future shop pets +6 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "BlueWhale_2x.png",
+    "image": "BlueWhale_0.png",
+    "imageLegacy": "BlueWhale_2x.png",
     "types": [
       "Buffs"
     ]
@@ -8899,7 +9428,8 @@
     "ability1": "Gain +4 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Gain +8 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Gain +12 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Boar_2x.png",
+    "image": "Boar_2x_0.png",
+    "imageLegacy": "Boar_2x.png",
     "types": []
   },
   "BullyChest": {
@@ -8915,6 +9445,7 @@
     "ability2": "",
     "ability3": "",
     "image": "BullyChest_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "CaliforniaCondor": {
@@ -8930,6 +9461,7 @@
     "ability2": "Gain its level 2 ability.",
     "ability3": "Gain its level 3 ability.",
     "image": "CaliforniaCondor_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ],
@@ -8949,7 +9481,8 @@
     "ability1": "Shop food gives two times {AttackIcon} attack and {HealthIcon} health.",
     "ability2": "Shop food gives three times {AttackIcon} attack and {HealthIcon} health.",
     "ability3": "Shop food gives four times {AttackIcon} attack and {HealthIcon} health.",
-    "image": "Cat_2x.png",
+    "image": "Cat_2x_0.png",
+    "imageLegacy": "Cat_2x.png",
     "types": [
       "Buffs",
       "Food",
@@ -8972,6 +9505,7 @@
     "ability2": "Activate {0} ability on the nearest friend ahead twice, or give it +8 {HealthIcon} health.",
     "ability3": "Activate {0} ability on the nearest friend ahead thrice, or give it +12 {HealthIcon} health.",
     "image": "Catfish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Cycle"
     ]
@@ -8989,6 +9523,7 @@
     "ability2": "Summon one 8/8 Fire Pup at level 3 up front.",
     "ability3": "Summon one 8/8 Fire Pup at level 3 up front.",
     "image": "Cerberus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Summon"
@@ -9007,6 +9542,7 @@
     "ability2": "Give them +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give them +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Chimpanzee_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -9024,6 +9560,7 @@
     "ability2": "Deal 40% {DamageIcon} attack damage to one random enemy.",
     "ability3": "Deal 60% {DamageIcon} attack damage to one random enemy.",
     "image": "Cobra_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption",
       "Guard"
@@ -9042,6 +9579,7 @@
     "ability2": "Transform the back-most level 2 or lower enemy to rock.",
     "ability3": "Transform the back-most level 3 or lower enemy to rock.",
     "image": "Cockatrice_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -9059,6 +9597,7 @@
     "ability2": "Gain [[Coconut|food:coconut]] {PerkIcon} perk that works twice until next turn.",
     "ability3": "Gain [[Coconut|food:coconut]] {PerkIcon} perk that works thrice until next turn.",
     "image": "CoconutCrab_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -9075,7 +9614,8 @@
     "ability1": "Give friends +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Dragon_2x.png",
+    "image": "Dragon_2x_0.png",
+    "imageLegacy": "Dragon_2x.png",
     "types": [
       "Buffs",
       "Cycle"
@@ -9094,6 +9634,7 @@
     "ability2": "Move ailment to the first two enemies with double effect.",
     "ability3": "Move ailment to the first two enemies with triple effect.",
     "image": "Dunkleosteus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -9111,6 +9652,7 @@
     "ability2": "Give three random friends +2 {AttackIcon} attack and +2 {HealthIcon} health for each battle this has fought.",
     "ability3": "Give three random friends +3 {AttackIcon} attack and +3 {HealthIcon} health for each battle this has fought.",
     "image": "EagleOwl_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -9128,6 +9670,7 @@
     "ability2": "Give three friends +8 {AttackIcon} attack and +8 {HealthIcon} health until next turn.",
     "ability3": "Give three friends +12 {AttackIcon} attack and +12 {HealthIcon} health until next turn.",
     "image": "ElephantSeal_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -9145,6 +9688,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "Eris": {
@@ -9160,6 +9704,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "FarmerDog": {
@@ -9175,6 +9720,7 @@
     "ability2": "Feed two [[Corncobs|food:corn]] to all friends.",
     "ability3": "Feed three [[Corncobs|food:corn]] to all friends.",
     "image": "FarmerDog_2x.png",
+    "imageLegacy": "",
     "types": [
       "Food"
     ]
@@ -9191,7 +9737,8 @@
     "ability1": "Summon one 4/4 [[fly|flytoken]] in its place.",
     "ability2": "Summon one 8/8 [[fly|flytoken]] in its place.",
     "ability3": "Summon one 12/12 fly in its place.",
-    "image": "Fly_2x.png",
+    "image": "Fly_2x_0.png",
+    "imageLegacy": "Fly_2x.png",
     "types": [
       "Summon"
     ]
@@ -9209,6 +9756,7 @@
     "ability2": "Give the nearest two friends ahead 10 {ManaIcon} mana.",
     "ability3": "Give the nearest two friends ahead 15 {ManaIcon} mana.",
     "image": "ForestSpirit_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -9226,6 +9774,7 @@
     "ability2": "Give 50% of {AttackIcon} attack to it until next turn.",
     "ability3": "Give 75% of {AttackIcon} attack to it until next turn.",
     "image": "GermanShepard_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -9242,7 +9791,8 @@
     "ability1": "Gain [[Coconut|food:coconut]] {PerkIcon} perk.",
     "ability2": "Gain [[Coconut|food:coconut]] {PerkIcon} perk.",
     "ability3": "Gain [[Coconut|food:coconut]] {PerkIcon} perk.",
-    "image": "Gorilla_2x.png",
+    "image": "Gorilla_2x_0.png",
+    "imageLegacy": "Gorilla_2x.png",
     "types": [
       "Hurt"
     ]
@@ -9260,6 +9810,7 @@
     "ability2": "Give all friendly pets [[Melon|food:melon]] that blocks 40 {DamageIcon} damage.",
     "ability3": "Give all friendly pets [[Melon|food:melon]] that blocks 60 {DamageIcon} damage.",
     "image": "GreenSeaTurtle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks",
       "Summon"
@@ -9278,6 +9829,7 @@
     "ability2": "Deal 12 {DamageIcon} damage to two random enemies.",
     "ability3": "Deal 18 {DamageIcon} damage to two random enemies.",
     "image": "GrizzlyBear_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption",
       "Summon"
@@ -9295,7 +9847,8 @@
     "ability1": "Gain +3 {GoldIcon} gold.",
     "ability2": "Gain +6 {GoldIcon} gold.",
     "ability3": "Gain +9 {GoldIcon} gold.",
-    "image": "Hammershark_2x.png",
+    "image": "Hammershark_2x_0.png",
+    "imageLegacy": "Hammershark_2x.png",
     "types": [
       "Gold",
       "Level-Up"
@@ -9314,6 +9867,7 @@
     "ability2": "Summon one random 10/10 pet from tier 1.",
     "ability3": "Summon one random 15/15 pet from tier 1.",
     "image": "HarpyEagle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -9331,6 +9885,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "HelmetedHornbill": {
@@ -9346,6 +9901,7 @@
     "ability2": "",
     "ability3": "",
     "image": "HelmetedHornbill_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs"
     ]
@@ -9363,6 +9919,7 @@
     "ability2": "Gain +8 {TrumpetIcon} trumpets and 2 more for each 3 health this has.",
     "ability3": "Gain +12 {TrumpetIcon} trumpets and 3 more for each 3 health this has.",
     "image": "HighlandCow_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -9380,6 +9937,7 @@
     "ability2": "Transform it back and down to level 2.",
     "ability3": "Transform it back and down to level 3.",
     "image": "HoodedSeal_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -9397,6 +9955,7 @@
     "ability2": "Summon one 10/10 Head for each 10 attack this has.",
     "ability3": "Summon one 15/15 Head for each 10 attack this has.",
     "image": "Hydra_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ]
@@ -9414,6 +9973,7 @@
     "ability2": "Give it +2 {AttackIcon} attack and +2 {HealthIcon} health until next turn for each level 3 pet sold this game (max 5).",
     "ability3": "Give it +3 {AttackIcon} attack and +3 {HealthIcon} health until next turn for each level 3 pet sold this game (max 5).",
     "image": "JerseyDevil_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up",
       "Summon"
@@ -9431,7 +9991,8 @@
     "ability1": "Give friends ahead +1 {AttackIcon} attack and +1 {HealthIcon} health and then shuffle their positions.",
     "ability2": "Give friends ahead +2 {AttackIcon} attack and +2 {HealthIcon} health and then shuffle their positions.",
     "ability3": "Give friends ahead +3 {AttackIcon} attack and +3 {HealthIcon} health and then shuffle their positions.",
-    "image": "Komodo_2x.png",
+    "image": "Komodo_2x_0.png",
+    "imageLegacy": "Komodo_2x.png",
     "types": [
       "Buffs"
     ]
@@ -9449,6 +10010,7 @@
     "ability2": "Deal 1 {DamageIcon} damage to the nearest two friends ahead.",
     "ability3": "Deal 1 {DamageIcon} damage to the nearest three friends ahead.",
     "image": "Lamprey_2x.png",
+    "imageLegacy": "",
     "types": [
       "Hurt"
     ]
@@ -9465,7 +10027,8 @@
     "ability1": "Deal 50% attack {DamageIcon} damage to one random enemy.",
     "ability2": "Deal 50% attack {DamageIcon} damage to two random enemies.",
     "ability3": "Deal 50% attack {DamageIcon} damage to three random enemies.",
-    "image": "Leopard_2x.png",
+    "image": "Leopard_2x_0.png",
+    "imageLegacy": "Leopard_2x.png",
     "types": [
       "Disruption"
     ]
@@ -9483,6 +10046,7 @@
     "ability2": "Summon one 12/12 Fish and give it +4 {ExpIcon} experience.",
     "ability3": "Summon one 18/18 Fish and give it +6 {ExpIcon} experience.",
     "image": "Leviathan_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up",
       "Cycle"
@@ -9500,7 +10064,8 @@
     "ability1": "Gain +50% {AttackIcon} attack and {HealthIcon} health.",
     "ability2": "Gain +100% {AttackIcon} attack and {HealthIcon} health.",
     "ability3": "Gain +150% {AttackIcon} attack and {HealthIcon} health.",
-    "image": "Lion_2x.png",
+    "image": "Lion_2x_0.png",
+    "imageLegacy": "Lion_2x.png",
     "types": []
   },
   "Lioness": {
@@ -9515,7 +10080,8 @@
     "ability1": "Give future shop pets of the same tier +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give future shop pets of the same tier +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give future shop pets of the same tier +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Lioness_2x.png",
+    "image": "Lioness_2x_0.png",
+    "imageLegacy": "Lioness_2x.png",
     "types": [
       "Buffs"
     ]
@@ -9532,7 +10098,8 @@
     "ability1": "Deal 3 {DamageIcon} damage to one random enemy. Repeat for each 10 attack this has.",
     "ability2": "Deal 6 {DamageIcon} damage to one random enemy. Repeat for each 10 attack this has.",
     "ability3": "Deal 9 {DamageIcon} damage to one random enemy. Repeat for each 10 attack this has.",
-    "image": "Lionfish_2x.png",
+    "image": "Lionfish_2x_0.png",
+    "imageLegacy": "Lionfish_2x.png",
     "types": [
       "Disruption"
     ]
@@ -9549,7 +10116,8 @@
     "ability1": "Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Give friends +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give friends +6 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Mammoth_2x.png",
+    "image": "Mammoth_2x_0.png",
+    "imageLegacy": "Mammoth_2x.png",
     "types": []
   },
   "Manticore": {
@@ -9565,6 +10133,7 @@
     "ability2": "Enemy ailments are three times worse.",
     "ability3": "Enemy ailments are four times worse.",
     "image": "Manticore_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -9582,6 +10151,7 @@
     "ability2": "Spend 4 {TrumpetIcon} trumpets to give friends permanent +8 {AttackIcon} attack and +8 {HealthIcon} health evenly spread.",
     "ability3": "Spend 4 {TrumpetIcon} trumpets to give friends permanent +12 {AttackIcon} attack and +12 {HealthIcon} health evenly spread.",
     "image": "Markhor_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -9599,6 +10169,7 @@
     "ability2": "Deal 4 {DamageIcon} damage to the two least healthy enemies.",
     "ability3": "Deal 4 {DamageIcon} damage to the three least healthy enemies.",
     "image": "MimicOctopus_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "Mongoose": {
@@ -9614,6 +10185,7 @@
     "ability2": "Choose one level 2 Mongoose toy.",
     "ability3": "Choose one level 3 Mongoose toy.",
     "image": "Mongoose_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -9630,7 +10202,8 @@
     "ability1": "Deal 6 {DamageIcon} damage to one random enemy.",
     "ability2": "Deal 6 {DamageIcon} damage to two random enemies.",
     "ability3": "Deal 6 {DamageIcon} damage to three random enemies.",
-    "image": "Octopus_2x.png",
+    "image": "Octopus_2x_0.png",
+    "imageLegacy": "Octopus_2x.png",
     "types": [
       "Disruption"
     ]
@@ -9647,7 +10220,8 @@
     "ability1": "Summon one random {0} pet from ANY pack as 6/6.",
     "ability2": "Summon two random {0} pets from ANY pack as 6/6.",
     "ability3": "Summon three random {0} pets from ANY pack as 6/6.",
-    "image": "Orca_2x.png",
+    "image": "Orca_2x_0.png",
+    "imageLegacy": "Orca_2x.png",
     "types": [
       "Summon"
     ]
@@ -9664,7 +10238,8 @@
     "ability1": "If 4 shop pets are the same tier, re-roll and give friends +2 {HealthIcon} health.",
     "ability2": "If 4 shop pets are the same tier, re-roll and give friends +4 {HealthIcon} health.",
     "ability3": "If 4 shop pets are the same tier, re-roll and give friends +6 {HealthIcon} health.",
-    "image": "Ostrich_2x.png",
+    "image": "Ostrich_2x_0.png",
+    "imageLegacy": "Ostrich_2x.png",
     "types": [
       "Rolling",
       "Buffs"
@@ -9683,6 +10258,7 @@
     "ability2": "Gain +6 {GoldIcon} gold.",
     "ability3": "Gain +9 {GoldIcon} gold.",
     "image": "Oyster_2x.png",
+    "imageLegacy": "",
     "types": [
       "Gold",
       "Cycle"
@@ -9701,6 +10277,7 @@
     "ability2": "Give three random friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give three random friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "ParadiseBird_2x.png",
+    "imageLegacy": "",
     "types": [
       "Buffs",
       "Gold"
@@ -9719,6 +10296,7 @@
     "ability2": "Give one random friendly pet +8 {AttackIcon} attack and +8 {HealthIcon} health.",
     "ability3": "Give one random friendly pet +12 {AttackIcon} attack and +12 {HealthIcon} health.",
     "image": "PhilippineEagle_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard"
     ]
@@ -9736,6 +10314,7 @@
     "ability2": "Make ANY six random pets Crisp {BurnIcon}, then summon one 8/8 Young Phoenix.",
     "ability3": "Make ANY nine random pets Crisp {BurnIcon}, then summon one 12/12 Young Phoenix.",
     "image": "Phoenix_2x.png",
+    "imageLegacy": "",
     "types": [
       "Ailment"
     ]
@@ -9752,7 +10331,8 @@
     "ability1": "Give friends +3 {AttackIcon} attack.",
     "ability2": "Give friends +6 {AttackIcon} attack.",
     "ability3": "Give friends +9 {AttackIcon} attack.",
-    "image": "Piranha_2x.png",
+    "image": "Piranha_2x_0.png",
+    "imageLegacy": "Piranha_2x.png",
     "types": [
       "Hurt"
     ]
@@ -9769,7 +10349,8 @@
     "ability1": "Give +1 {AttackIcon} attack and +1 {HealthIcon} health to one friend of each tier.",
     "ability2": "Give +2 {AttackIcon} attack and +2 {HealthIcon} health to one friend of each tier.",
     "ability3": "Give +3 {AttackIcon} attack and +3 {HealthIcon} health to one friend of each tier.",
-    "image": "Poodle_2x.png",
+    "image": "Poodle_2x_0.png",
+    "imageLegacy": "Poodle_2x.png",
     "types": [
       "Buffs"
     ]
@@ -9787,6 +10368,7 @@
     "ability2": "Re-summon it behind this as a 1/1.",
     "ability3": "Re-summon it behind this as a 1/1.",
     "image": "Pteranodon_2x.png",
+    "imageLegacy": "",
     "types": [
       "Summon"
     ],
@@ -9807,6 +10389,7 @@
     "ability2": "Friendly toy repeats its ability as level 2.",
     "ability3": "Friendly toy repeats its ability as level 3.",
     "image": "Puma_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -9824,6 +10407,7 @@
     "ability2": "Choose one level 2 king toy.",
     "ability3": "Choose one level 3 king toy.",
     "image": "QuestingBeast_2x.png",
+    "imageLegacy": "",
     "types": [
       "Toys"
     ]
@@ -9841,6 +10425,7 @@
     "ability2": "Give one random tier 3 or lower friend +2 {ExpIcon} experience.",
     "ability3": "Give one random tier 3 or lower friend +2 {ExpIcon} experience.",
     "image": "Quetzalcoatl_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up"
     ]
@@ -9858,6 +10443,7 @@
     "ability2": "Return its perk. Works on two different friends per turn.",
     "ability3": "Return its perk. Works on three different friends per turn.",
     "image": "RealVelociraptor_2x.png",
+    "imageLegacy": "",
     "types": [
       "Perks"
     ]
@@ -9874,7 +10460,8 @@
     "ability1": "Gain [[Melon|food:melon]] {PerkIcon} perk.",
     "ability2": "Gain [[Melon|food:melon]] {PerkIcon} perk.",
     "ability3": "Gain [[Melon|food:melon]] {PerkIcon} perk.",
-    "image": "Reindeer_2x.png",
+    "image": "Reindeer_2x_0.png",
+    "imageLegacy": "Reindeer_2x.png",
     "types": [
       "Perks"
     ]
@@ -9891,7 +10478,8 @@
     "ability1": "Summon one Mammoth with +2 {AttackIcon} attack and +3 {HealthIcon} health for each time this was hurt.",
     "ability2": "Summon two Mammoths with +2 {AttackIcon} attack and +3 {HealthIcon} health for each time this was hurt.",
     "ability3": "Summon three Mammoths with +2 {AttackIcon} attack and +3 {HealthIcon} health for each time this was hurt.",
-    "image": "SabertoothTiger_2x.png",
+    "image": "SabertoothTiger_2x_0.png",
+    "imageLegacy": "SabertoothTiger_2x.png",
     "types": [
       "Summon",
       "Hurt"
@@ -9909,7 +10497,8 @@
     "ability1": "Gain +1 {GoldIcon} gold next turn.",
     "ability2": "Gain +2 {GoldIcon} gold next turn.",
     "ability3": "Gain +3 {GoldIcon} gold next turn.",
-    "image": "Sauropod_2x.png",
+    "image": "Sauropod_2x_0.png",
+    "imageLegacy": "Sauropod_2x.png",
     "types": [
       "Gold",
       "Perks"
@@ -9928,6 +10517,7 @@
     "ability2": "",
     "ability3": "",
     "image": "SeaSerpent_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana",
       "Disruption"
@@ -9946,6 +10536,7 @@
     "ability2": "Deal 10 {DamageIcon} damage to the first enemy.",
     "ability3": "Deal 10 {DamageIcon} damage to the first enemy.",
     "image": "ShrimpMantis_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -9963,6 +10554,7 @@
     "ability2": "Transform two friends behind into ANY useful level 2 <b>Faint</b> pets from tier 6.",
     "ability3": "Transform two friends behind into ANY useful level 3 <b>Faint</b> pets from tier 6.",
     "image": "SilkySifaka_2x.png",
+    "imageLegacy": "",
     "types": [
       "Transform"
     ]
@@ -9980,6 +10572,7 @@
     "ability2": "Give the two front-most friends +1 {ManaIcon} mana for each 2 attack this has.",
     "ability3": "Give the three front-most friends +1 {ManaIcon} mana for each 2 attack this has.",
     "image": "Sleipnir_2x.png",
+    "imageLegacy": "",
     "types": [
       "Mana"
     ]
@@ -9996,7 +10589,8 @@
     "ability1": "Deal 5 {DamageIcon} damage to one random enemy.",
     "ability2": "Deal 10 {DamageIcon} damage to one random enemy.",
     "ability3": "Deal 15 {DamageIcon} damage to one random enemy.",
-    "image": "Snake_2x.png",
+    "image": "Snake_2x_0.png",
+    "imageLegacy": "Snake_2x.png",
     "types": [
       "Disruption",
       "Guard"
@@ -10015,6 +10609,7 @@
     "ability2": "Jump to the front and gain +24 {TrumpetIcon} trumpets.",
     "ability3": "Jump to the front and gain +36 {TrumpetIcon} trumpets.",
     "image": "SouthernRockhopperPenguin_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Trumpets"
@@ -10032,7 +10627,8 @@
     "ability1": "Give one random friend +2 {AttackIcon} attack and +3 {HealthIcon} health.",
     "ability2": "Give one random friend +4 {AttackIcon} attack and +6 {HealthIcon} health.",
     "ability3": "Give one random friend +6 {AttackIcon} attack and +9 {HealthIcon} health.",
-    "image": "Spinosaurus_2x.png",
+    "image": "Spinosaurus_2x_0.png",
+    "imageLegacy": "Spinosaurus_2x.png",
     "types": [
       "Summon",
       "Super"
@@ -10050,7 +10646,8 @@
     "ability1": "Give one perk-less friend +10 {AttackIcon} attack and +10 {HealthIcon} health.",
     "ability2": "Give one perk-less friend +20 {AttackIcon} attack and +20 {HealthIcon} health.",
     "ability3": "Give one perk-less friend +30 {AttackIcon} attack and +30 {HealthIcon} health.",
-    "image": "Stegosaurus_2x.png",
+    "image": "Stegosaurus_2x_0.png",
+    "imageLegacy": "Stegosaurus_2x.png",
     "types": [
       "Buffs"
     ]
@@ -10068,6 +10665,7 @@
     "ability2": "Jump-attack the opposite enemy and deal 6 damage to adjacent enemies.",
     "ability3": "Jump-attack the opposite enemy and deal 12 damage to adjacent enemies.",
     "image": "SumatranTiger_2x.png",
+    "imageLegacy": "",
     "types": [
       "Guard",
       "Disruption"
@@ -10085,7 +10683,8 @@
     "ability1": "Deal 4 {DamageIcon} damage to ALL pets ahead.",
     "ability2": "Deal 8 {DamageIcon} damage to ALL pets ahead.",
     "ability3": "Deal 12 {DamageIcon} damage to ALL pets ahead.",
-    "image": "Sunfish_2x.png",
+    "image": "Sunfish_0.png",
+    "imageLegacy": "Sunfish_2x.png",
     "types": [
       "Disruption"
     ]
@@ -10103,6 +10702,7 @@
     "ability2": "If pack has no pets/food from the tab, remove 2 XP from three random enemies.",
     "ability3": "If pack has no pets/food from the tab, remove 3 XP from three random enemies.",
     "image": "Tanystropheus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -10119,7 +10719,8 @@
     "ability1": "Summon one 10/10 level 1 copy of the back-most friend.",
     "ability2": "Summon one 20/20 level 2 copy of the back-most friend.",
     "ability3": "Summon one 30/30 level 3 copy of the back-most friend.",
-    "image": "Tapir_2x.png",
+    "image": "Tapir_2x_0.png",
+    "imageLegacy": "Tapir_2x.png",
     "types": [
       "Cycle"
     ],
@@ -10140,6 +10741,7 @@
     "ability2": "Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "TeamSpirit_2x.png",
+    "imageLegacy": "",
     "types": [
       "Level-Up"
     ]
@@ -10157,6 +10759,7 @@
     "ability2": "Give [[Peanut|food:peanut]] {PerkIcon} perk to the two front-most [[Strawberry|food:strawberry]] friends.",
     "ability3": "Give [[Peanut|food:peanut]] {PerkIcon} perk to the three front-most [[Strawberry|food:strawberry]] friends.",
     "image": "TerrorBird_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry"
     ]
@@ -10174,6 +10777,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator23A23H": {
@@ -10189,6 +10793,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator26A26H": {
@@ -10204,6 +10809,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator27A27H": {
@@ -10219,6 +10825,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator30A30H": {
@@ -10234,6 +10841,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator31A31H": {
@@ -10249,6 +10857,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "TestEvaluator34A34H": {
@@ -10264,6 +10873,7 @@
     "ability2": "",
     "ability3": "",
     "image": "",
+    "imageLegacy": "",
     "types": []
   },
   "Therizinosaurus": {
@@ -10279,6 +10889,7 @@
     "ability2": "Give [[Coconut|food:coconut]] {PerkIcon} perk to the two front-most [[Strawberry|food:strawberry]] friends.",
     "ability3": "Give [[Coconut|food:coconut]] {PerkIcon} perk to the three front-most [[Strawberry|food:strawberry]] friends.",
     "image": "Therizinosaurus_2x.png",
+    "imageLegacy": "",
     "types": [
       "Strawberry"
     ]
@@ -10295,7 +10906,8 @@
     "ability1": "The friend ahead repeats their ability in battle as if they were level 1.",
     "ability2": "The friend ahead repeats their ability in battle as if they were level 2.",
     "ability3": "The friend ahead repeats their ability in battle as if they were level 3.",
-    "image": "Tiger_2x.png",
+    "image": "Tiger_2x_0.png",
+    "imageLegacy": "Tiger_2x.png",
     "types": [
       "Disruption",
       "Super",
@@ -10314,7 +10926,8 @@
     "ability1": "Give two tier 5 friends or higher +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Give two tier 5 friends or higher +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give two tier 5 friends or higher +6 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Tyrannosaurus_2x.png",
+    "image": "Tyrannosaurus_2x_0.png",
+    "imageLegacy": "Tyrannosaurus_2x.png",
     "types": [
       "Buffs"
     ]
@@ -10331,7 +10944,8 @@
     "ability1": "Give +1 {AttackIcon} attack and +2 {HealthIcon} health to each friend with a different ailment.",
     "ability2": "Give +2 {AttackIcon} attack and +4 {HealthIcon} health to each friend with a different ailment.",
     "ability3": "Give +3 {AttackIcon} attack and +6 {HealthIcon} health to each friend with a different ailment.",
-    "image": "VampireSquid_2x.png",
+    "image": "VampireSquid_0.png",
+    "imageLegacy": "VampireSquid_2x.png",
     "types": [
       "Ailment"
     ]
@@ -10348,7 +10962,8 @@
     "ability1": "Steal friendly [[Strawberry|food:strawberry]] ahead to give friends +2 {AttackIcon} attack and +3 {HealthIcon} health.",
     "ability2": "Steal friendly [[Strawberry|food:strawberry]] ahead to give friends +4 {AttackIcon} attack and +6 {HealthIcon} health.",
     "ability3": "Steal friendly [[Strawberry|food:strawberry]] ahead to give friends +6 {AttackIcon} attack and +9 {HealthIcon} health.",
-    "image": "Velociraptor_2x.png",
+    "image": "Velociraptor_2x_0.png",
+    "imageLegacy": "Velociraptor_2x.png",
     "types": [
       "Strawberry"
     ]
@@ -10365,7 +10980,8 @@
     "ability1": "Give [[Peanut Butter|food:peanutbutter]] {PerkIcon} perk to one random friend.",
     "ability2": "Give [[Peanut Butter|food:peanutbutter]] {PerkIcon} perk to two random friends.",
     "ability3": "Give [[Peanut Butter|food:peanutbutter]] {PerkIcon} perk to three random friends.",
-    "image": "Walrus_2x.png",
+    "image": "Walrus_2x_0.png",
+    "imageLegacy": "Walrus_2x.png",
     "types": [
       "Perks"
     ]
@@ -10383,6 +10999,7 @@
     "ability2": "Give random friends +2 {AttackIcon} attack and +2 {HealthIcon} health for every 3 attack this has.",
     "ability3": "Give random friends +3 {AttackIcon} attack and +3 {HealthIcon} health for every 3 attack this has.",
     "image": "Warthog_2x.png",
+    "imageLegacy": "",
     "types": []
   },
   "WhiteTiger": {
@@ -10397,7 +11014,8 @@
     "ability1": "Give the nearest friend behind +3 {ExpIcon} experience.",
     "ability2": "Give the two nearest friends behind +3 {ExpIcon} experience.",
     "ability3": "Give the three nearest friends behind +3 {ExpIcon} experience.",
-    "image": "WhiteTiger_2x.png",
+    "image": "WhiteTiger_2x_0.png",
+    "imageLegacy": "WhiteTiger_2x.png",
     "types": [
       "Level-Up"
     ]
@@ -10415,6 +11033,7 @@
     "ability2": "Spend 2 {TrumpetIcon} trumpets to gain [[Coconut|food:coconut]] {PerkIcon} perk.",
     "ability3": "Spend 2 {TrumpetIcon} trumpets to gain [[Coconut|food:coconut]] {PerkIcon} perk.",
     "image": "Wildebeest_2x.png",
+    "imageLegacy": "",
     "types": [
       "Trumpets"
     ]
@@ -10431,7 +11050,8 @@
     "ability1": "Remove 3 {HealthIcon} health from all enemies.",
     "ability2": "Remove 6 {HealthIcon} health from all enemies.",
     "ability3": "Remove 9 {HealthIcon} health from all enemies.",
-    "image": "Wolverine_2x.png",
+    "image": "Wolverine_2x_0.png",
+    "imageLegacy": "Wolverine_2x.png",
     "types": [
       "Hurt"
     ],
@@ -10452,6 +11072,7 @@
     "ability2": "Set {AttackIcon} attack and {HealthIcon} health of the two most healthy pets from ANY team to 20.",
     "ability3": "Set attack and health of the three most healthy pets from ANY team to 20.",
     "image": "YellowBoxFish_2x.png",
+    "imageLegacy": "",
     "types": [
       "Disruption"
     ]
@@ -10469,6 +11090,7 @@
     "ability2": "Roll eight times while freezing pet copies and tier 6 food.",
     "ability3": "Roll twelve times while freezing pet copies and tier 6 food.",
     "image": "Yeti_2x.png",
+    "imageLegacy": "",
     "types": [
       "Rolling"
     ]

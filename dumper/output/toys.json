@@ -11,7 +11,8 @@
     "ability1": "Give [[Coconut|food:coconut]] {PerkIcon} perk to two first enemies.",
     "ability2": "Give [[Coconut|food:coconut]] {PerkIcon} to enemies front-to-back for every second shop tier.",
     "ability3": "Give [[Coconut|food:coconut]] {PerkIcon} to enemies front-to-back for every second shop tier.",
-    "image": "ActionFigure_2x.png"
+    "image": "ActionFigure_2x.png",
+    "imageLegacy": ""
   },
   "RelicBalloon": {
     "name": "Balloon",
@@ -25,7 +26,8 @@
     "ability1": "Give the front-most friend +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give the two front-most friends +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability3": "Give the three front-most friends +1 {AttackIcon} attack and +1 {HealthIcon} health.",
-    "image": "Balloon_2x.png"
+    "image": "Balloon_2x.png",
+    "imageLegacy": ""
   },
   "RelicBoot": {
     "name": "Boot",
@@ -39,7 +41,8 @@
     "ability1": "Deal 50 {DamageIcon} damage to the front-most friend.",
     "ability2": "Deal 8 {DamageIcon} damage to the back-most friend.",
     "ability3": "Deal 8 {DamageIcon} damage to the back-most friend.",
-    "image": "Boot_2x.png"
+    "image": "Boot_2x.png",
+    "imageLegacy": ""
   },
   "RelicBowlingBall": {
     "name": "Bowling Ball",
@@ -53,7 +56,8 @@
     "ability1": "If you rolled less than 6 times this turn, deal the turn number as {DamageIcon} damage to friends.",
     "ability2": "Deal 3 {DamageIcon} damage to the friend behind.",
     "ability3": "Deal 3 {DamageIcon} damage to the friend behind.",
-    "image": "BowlingBall_2x.png"
+    "image": "BowlingBall_2x.png",
+    "imageLegacy": ""
   },
   "RelicCardDeck": {
     "name": "Deck of Cards",
@@ -67,7 +71,8 @@
     "ability1": "Transform it into ANY random pet from the same tier with new base stats.",
     "ability2": "",
     "ability3": "",
-    "image": "CardDeck_2x.png"
+    "image": "CardDeck_2x.png",
+    "imageLegacy": ""
   },
   "RelicCardboardBox": {
     "name": "Cardboard Box",
@@ -81,7 +86,8 @@
     "ability1": "Sell the two front-most friends.",
     "ability2": "Summon two 1/1 enemy Scorpions.",
     "ability3": "Summon two 1/1 enemy Scorpions.",
-    "image": "CardboardBox_2x.png"
+    "image": "CardboardBox_2x.png",
+    "imageLegacy": ""
   },
   "RelicChocolateBox": {
     "name": "Chocolate Box",
@@ -95,7 +101,8 @@
     "ability1": "Give +1 {ExpIcon} experience to friends and +2 {ExpIcon} experience to enemies.",
     "ability2": "",
     "ability3": "",
-    "image": "ChocolateBox_2x.png"
+    "image": "ChocolateBox_2x.png",
+    "imageLegacy": ""
   },
   "RelicCrumpledPaper": {
     "name": "Crumpled Paper",
@@ -109,7 +116,8 @@
     "ability1": "Replace this with another random toy.",
     "ability2": "",
     "ability3": "",
-    "image": "CrumpledPaper_2x.png"
+    "image": "CrumpledPaper_2x.png",
+    "imageLegacy": ""
   },
   "RelicCrystalBall": {
     "name": "Crystal Ball",
@@ -123,7 +131,8 @@
     "ability1": "Give the front-most friend +2 {ManaIcon} mana.",
     "ability2": "Give the front-most friend +4 {ManaIcon} mana.",
     "ability3": "Give the front-most friend +6 {ManaIcon} mana.",
-    "image": "CrystalBall_2x.png"
+    "image": "CrystalBall_2x.png",
+    "imageLegacy": ""
   },
   "RelicDice": {
     "name": "Dice",
@@ -137,7 +146,8 @@
     "ability1": "Lose 1 {GoldIcon} gold.",
     "ability2": "Lose 1 {GoldIcon} gold.",
     "ability3": "Lose 1 {GoldIcon} gold.",
-    "image": "Dice_2x.png"
+    "image": "Dice_0.png",
+    "imageLegacy": "Dice_2x.png"
   },
   "RelicDiceCup": {
     "name": "Dice Cup",
@@ -151,7 +161,8 @@
     "ability1": "Shuffle positions of all friends.",
     "ability2": "Shuffle positions of all friends.",
     "ability3": "Shuffle positions of all friends.",
-    "image": "DiceCup_2x.png"
+    "image": "DiceCup_2x.png",
+    "imageLegacy": ""
   },
   "RelicFlute": {
     "name": "Flute",
@@ -165,7 +176,8 @@
     "ability1": "If you did not buy any tier 1 food this turn, make friends Dazed {DeafIcon} until next turn.",
     "ability2": "",
     "ability3": "",
-    "image": "Flute_2x.png"
+    "image": "Flute_2x.png",
+    "imageLegacy": ""
   },
   "RelicFootball": {
     "name": "Soccer Ball",
@@ -179,7 +191,8 @@
     "ability1": "Knock out friends from the current tier.",
     "ability2": "",
     "ability3": "",
-    "image": "Football_2x.png"
+    "image": "Football_2x.png",
+    "imageLegacy": ""
   },
   "RelicHandheldVacuumCleaner": {
     "name": "Vacuum Cleaner",
@@ -193,7 +206,8 @@
     "ability1": "Remove the lowest tier perks from two friends.",
     "ability2": "",
     "ability3": "",
-    "image": "HandheldVacuumCleaner_2x.png"
+    "image": "HandheldVacuumCleaner_2x.png",
+    "imageLegacy": ""
   },
   "RelicHandkerchief": {
     "name": "Handkerchief",
@@ -207,7 +221,8 @@
     "ability1": "Make the two front-most friends Weak {WeakIcon}.",
     "ability2": "Make friends front-to-back Weak {WeakIcon} for each shop tier.",
     "ability3": "Make friends front-to-back Weak {WeakIcon} for each shop tier.",
-    "image": "Handkerchief_2x.png"
+    "image": "Handkerchief_2x.png",
+    "imageLegacy": ""
   },
   "RelicKite": {
     "name": "Kite",
@@ -221,7 +236,8 @@
     "ability1": "Remove 20% {AttackIcon} attack from the back-most friend and move it to the front.",
     "ability2": "Summon one 6/6 Squirrel.",
     "ability3": "Summon one 9/9 Squirrel.",
-    "image": "Kite_2x.png"
+    "image": "Kite_2x.png",
+    "imageLegacy": ""
   },
   "RelicLamp": {
     "name": "Lamp",
@@ -235,7 +251,8 @@
     "ability1": "Remove 20% {AttackIcon} attack and 20% {HealthIcon} health from friends.",
     "ability2": "Give the highest tier friend +8 {AttackIcon} attack and +8 {HealthIcon} health.",
     "ability3": "Give the highest tier friend +12 {AttackIcon} attack and +12 {HealthIcon} health.",
-    "image": "Lamp_2x.png"
+    "image": "Lamp_2x.png",
+    "imageLegacy": ""
   },
   "RelicLunchbox": {
     "name": "Lunchbox",
@@ -249,7 +266,8 @@
     "ability1": "Feed [[Apple|food:apple]] to random pets for each turn number. Double their power on enemies.",
     "ability2": "Summon two 4/2 enemy Ants.",
     "ability3": "Summon two 4/2 enemy Ants.",
-    "image": "Lunchbox_2x.png"
+    "image": "Lunchbox_2x.png",
+    "imageLegacy": ""
   },
   "RelicMagicWand": {
     "name": "Magic Wand",
@@ -263,7 +281,8 @@
     "ability1": "Give the back-most tier 2 or lower friend +1 {ExpIcon} experience.",
     "ability2": "Give the back-most tier 2 or lower friend +2 {ExpIcon} experience.",
     "ability3": "Give the back-most tier 2 or lower friend +3 {ExpIcon} experience.",
-    "image": "MagicWand_2x.png"
+    "image": "MagicWand_2x.png",
+    "imageLegacy": ""
   },
   "RelicOnesie": {
     "name": "Onesie",
@@ -277,7 +296,8 @@
     "ability1": "Make two random friends Cold {FrozenIcon}.",
     "ability2": "",
     "ability3": "",
-    "image": "Onesie_2x.png"
+    "image": "Onesie_2x.png",
+    "imageLegacy": ""
   },
   "RelicOpenPiggyBank": {
     "name": "Broken Piggy Bank",
@@ -291,7 +311,8 @@
     "ability1": "Lose 3 {GoldIcon} gold.",
     "ability2": "Lose 1 {GoldIcon} gold.",
     "ability3": "Lose 1 {GoldIcon} gold.",
-    "image": "OpenPiggyBank_2x.png"
+    "image": "OpenPiggyBank_2x.png",
+    "imageLegacy": ""
   },
   "RelicPaperShredder": {
     "name": "Paper Shredder",
@@ -305,7 +326,8 @@
     "ability1": "Knock it out.",
     "ability2": "Make it faint.",
     "ability3": "Make it faint.",
-    "image": "PaperShredder_2x.png"
+    "image": "PaperShredder_2x.png",
+    "imageLegacy": ""
   },
   "RelicPen": {
     "name": "Pen",
@@ -319,7 +341,8 @@
     "ability1": "Make the two front-most friends Inked {InkIcon}.",
     "ability2": "Make friends front-to-back Inked {InkIcon} for each shop tier.",
     "ability3": "Make friends front-to-back Inked {InkIcon} for each shop tier.",
-    "image": "Pen_2x.png"
+    "image": "Pen_2x.png",
+    "imageLegacy": ""
   },
   "RelicPillBottle": {
     "name": "Pill Bottle",
@@ -333,7 +356,8 @@
     "ability1": "Knock out the two front-most friends and the front-most enemy.",
     "ability2": "Knock out the front-most friend.",
     "ability3": "Knock out the front-most friend.",
-    "image": "PillBottle_2x.png"
+    "image": "PillBottle_2x.png",
+    "imageLegacy": ""
   },
   "RelicPogoStick": {
     "name": "Pogo Stick",
@@ -347,7 +371,8 @@
     "ability1": "Push the last enemy up front and give it +100% {AttackIcon} attack and +100% {HealthIcon} health.",
     "ability2": "Multiply attack {AttackIcon} and health {HealthIcon} of the lowest health enemy by 4.",
     "ability3": "Multiply attack {AttackIcon} and health {HealthIcon} of the lowest health enemy by 4.",
-    "image": "PogoStick_2x.png"
+    "image": "PogoStick_2x.png",
+    "imageLegacy": ""
   },
   "RelicRemoteCar": {
     "name": "Remote Car",
@@ -361,7 +386,8 @@
     "ability1": "Give enemies +20% {AttackIcon} attack and +20% {HealthIcon} health.",
     "ability2": "",
     "ability3": "",
-    "image": "RemoteCar_2x.png"
+    "image": "RemoteCar_2x.png",
+    "imageLegacy": ""
   },
   "RelicRingPyramid": {
     "name": "Ring Pyramid",
@@ -375,7 +401,8 @@
     "ability1": "Knock out friends from the previous tier.",
     "ability2": "Deal 2 {DamageIcon} damage to all friends.",
     "ability3": "Deal 2 {DamageIcon} damage to all friends.",
-    "image": "RingPyramid_2x.png"
+    "image": "RingPyramid_2x.png",
+    "imageLegacy": ""
   },
   "RelicRockBag": {
     "name": "Rock Bag",
@@ -389,7 +416,8 @@
     "ability1": "Deal 1 {DamageIcon} damage to the three front-most friends. Multiply damage with their tiers.",
     "ability2": "Deal 2 {DamageIcon} damage to a random friend for each turn.",
     "ability3": "Deal 2 {DamageIcon} damage to a random friend for each turn.",
-    "image": "RockBag_2x.png"
+    "image": "RockBag_2x.png",
+    "imageLegacy": ""
   },
   "RelicRubberDuck": {
     "name": "Rubber Duck",
@@ -403,7 +431,8 @@
     "ability1": "Summon one 50/1 enemy Duck.",
     "ability2": "Summon one 3/3 enemy Duck.",
     "ability3": "Summon one 3/3 enemy Duck.",
-    "image": "RubberDuck_2x.png"
+    "image": "RubberDuck_2x.png",
+    "imageLegacy": ""
   },
   "RelicScale": {
     "name": "Scale",
@@ -417,7 +446,8 @@
     "ability1": "Set {AttackIcon} attack and {HealthIcon} health of all friends to the turn number.",
     "ability2": "",
     "ability3": "",
-    "image": "Scale_2x.png"
+    "image": "Scale_2x.png",
+    "imageLegacy": ""
   },
   "RelicStickyHand": {
     "name": "Sticky Hand",
@@ -431,7 +461,8 @@
     "ability1": "Make the two back-most friends Icky {AcidIcon}.",
     "ability2": "",
     "ability3": "",
-    "image": "StickyHand_2x.png"
+    "image": "StickyHand_2x.png",
+    "imageLegacy": ""
   },
   "RelicTeddyBear": {
     "name": "Stuffed Bear",
@@ -445,7 +476,8 @@
     "ability1": "Summon one exact enemy copy of the back-most friend.",
     "ability2": "Summon one 25/25 enemy Grizzly Bear.",
     "ability3": "Summon one 25/25 enemy Grizzly Bear.",
-    "image": "TeddyBear_2x.png"
+    "image": "TeddyBear_2x.png",
+    "imageLegacy": ""
   },
   "RelicTheOneRing": {
     "name": "Ring",
@@ -459,7 +491,8 @@
     "ability1": "If you spent less than 13 gold this turn, remove 20% {HealthIcon} health from friends.",
     "ability2": "",
     "ability3": "",
-    "image": "TheOneRing_2x.png"
+    "image": "TheOneRing_2x.png",
+    "imageLegacy": ""
   },
   "RelicWitchBroom": {
     "name": "Witch Broom",
@@ -473,7 +506,8 @@
     "ability1": "Make one random perk-less enemy Weak {WeakIcon}.",
     "ability2": "Make two random perk-less enemies Weak {WeakIcon}.",
     "ability3": "Make three random perk-less enemies Weak {WeakIcon}.",
-    "image": "WitchBroom_2x.png"
+    "image": "WitchBroom_2x.png",
+    "imageLegacy": ""
   },
   "RelicWoodenStick": {
     "name": "Stick",
@@ -487,7 +521,8 @@
     "ability1": "Give [[Walnut|food:walnut]] {PerkIcon} perk to the friend on the middle space.",
     "ability2": "Give [[Walnut|food:walnut]] {PerkIcon} perk with double effect to the friend on the middle space.",
     "ability3": "Give [[Walnut|food:walnut]] {PerkIcon} perk with triple effect to the friend on the middle space.",
-    "image": "WoodenStick_2x.png"
+    "image": "WoodenStick_2x.png",
+    "imageLegacy": ""
   },
   "RelicGarlicPress": {
     "name": "Garlic Press",
@@ -501,7 +536,8 @@
     "ability1": "Give the front-most friend [[Garlic|food:garlic]] {PerkIcon} perk.",
     "ability2": "Give the two front-most friends [[Garlic|food:garlic]] {PerkIcon} perk.",
     "ability3": "Give the three front-most friends [[Garlic|food:garlic]] {PerkIcon} perk.",
-    "image": "GarlicPress_2x.png"
+    "image": "GarlicPress_2x.png",
+    "imageLegacy": ""
   },
   "RelicMagicCarpet": {
     "name": "Magic Carpet",
@@ -515,7 +551,8 @@
     "ability1": "Give it +1 {AttackIcon} attack.",
     "ability2": "Give it +2 {AttackIcon} attack.",
     "ability3": "Give it +3 {AttackIcon} attack.",
-    "image": "MagicCarpet_2x.png"
+    "image": "MagicCarpet_2x.png",
+    "imageLegacy": ""
   },
   "RelicMagicLamp": {
     "name": "Magic Lamp",
@@ -529,7 +566,8 @@
     "ability1": "Give it +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give it +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give it +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "MagicLamp_2x.png"
+    "image": "MagicLamp_2x.png",
+    "imageLegacy": ""
   },
   "RelicMicrowaver": {
     "name": "Microwave Oven",
@@ -543,7 +581,8 @@
     "ability1": "Give [[Popcorn|food:popcorn]] {PerkIcon} perk to the front-most perkless friend.",
     "ability2": "Give [[Popcorn|food:popcorn]] {PerkIcon} perk to the two front-most perkless friends.",
     "ability3": "Give [[Popcorn|food:popcorn]] {PerkIcon} perk to the three front-most perkless friends.",
-    "image": "Microwaver_2x.png"
+    "image": "Microwaver_2x.png",
+    "imageLegacy": ""
   },
   "RelicRadio": {
     "name": "Radio",
@@ -557,7 +596,8 @@
     "ability1": "Give friends +1 {HealthIcon} health.",
     "ability2": "Give friends +2 {HealthIcon} health.",
     "ability3": "Give friends +3 {HealthIcon} health.",
-    "image": "Radio_2x.png"
+    "image": "Radio_2x.png",
+    "imageLegacy": ""
   },
   "RelicTennisBall": {
     "name": "Tennis Ball",
@@ -571,7 +611,8 @@
     "ability1": "Deal 3 {DamageIcon} damage to one random enemy.",
     "ability2": "Deal 3 {DamageIcon} damage to two random enemies.",
     "ability3": "Deal 3 {DamageIcon} damage to three random enemies.",
-    "image": "TennisBall_2x.png"
+    "image": "TennisBall_2x.png",
+    "imageLegacy": ""
   },
   "RelicToySaw": {
     "name": "Plastic Saw",
@@ -585,7 +626,8 @@
     "ability1": "",
     "ability2": "",
     "ability3": "",
-    "image": "ToySaw_2x.png"
+    "image": "ToySaw_2x.png",
+    "imageLegacy": ""
   },
   "RelicCandelabra": {
     "name": "Candelabra",
@@ -599,7 +641,8 @@
     "ability1": "Break and give all friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Break and give all friends permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Break and give all friends permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Candelabra_2x.png"
+    "image": "Candelabra_2x.png",
+    "imageLegacy": ""
   },
   "RelicFoamSword": {
     "name": "Foam Sword",
@@ -613,7 +656,8 @@
     "ability1": "Deal 5 {DamageIcon} damage to the lowest health enemy.",
     "ability2": "Deal 5 {DamageIcon} damage to the lowest health enemy.",
     "ability3": "Deal 5 {DamageIcon} damage to the lowest health enemy.",
-    "image": "FoamSword_2x.png"
+    "image": "FoamSword_2x.png",
+    "imageLegacy": ""
   },
   "RelicGlassShoes": {
     "name": "Glass Shoes",
@@ -627,7 +671,8 @@
     "ability1": "Break and give all friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Break and give all friends permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Break and give all friends permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "GlassShoes_2x.png"
+    "image": "GlassShoes_2x.png",
+    "imageLegacy": ""
   },
   "RelicGoldenHarp": {
     "name": "Golden Harp",
@@ -641,7 +686,8 @@
     "ability1": "Break and give all friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Break and give all friends permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Break and give all friends permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "GoldenHarp_2x.png"
+    "image": "GoldenHarp_2x.png",
+    "imageLegacy": ""
   },
   "RelicLockofHair": {
     "name": "Lock of Hair",
@@ -655,7 +701,8 @@
     "ability1": "Break and give all friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Break and give all friends permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Break and give all friends permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "LockofHair_2x.png"
+    "image": "LockofHair_2x.png",
+    "imageLegacy": ""
   },
   "RelicMagicMirror": {
     "name": "Magic Mirror",
@@ -669,7 +716,8 @@
     "ability1": "Break and give all friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Break and give all friends permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Break and give all friends permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "MagicMirror_2x.png"
+    "image": "MagicMirror_2x.png",
+    "imageLegacy": ""
   },
   "RelicMelonHelmet": {
     "name": "Melon Helmet",
@@ -683,7 +731,8 @@
     "ability1": "Give the front-most friend [[Melon|food:melon]] {PerkIcon} perk.",
     "ability2": "Give the two front-most friends [[Melon|food:melon]] {PerkIcon} perk.",
     "ability3": "Give the three front-most friends [[Melon|food:melon]] {PerkIcon} perk.",
-    "image": "MelonHelmet_2x.png"
+    "image": "MelonHelmet_2x.png",
+    "imageLegacy": ""
   },
   "RelicPickaxe": {
     "name": "Pickaxe",
@@ -697,7 +746,8 @@
     "ability1": "Break and give all friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Break and give all friends permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Break and give all friends permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Pickaxe_2x.png"
+    "image": "Pickaxe_2x.png",
+    "imageLegacy": ""
   },
   "RelicRedCape": {
     "name": "Red Cape",
@@ -711,7 +761,8 @@
     "ability1": "Break and give all friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Break and give all friends permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Break and give all friends permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "RedCape_2x.png"
+    "image": "RedCape_2x.png",
+    "imageLegacy": ""
   },
   "RelicRosebud": {
     "name": "Rosebud",
@@ -725,7 +776,8 @@
     "ability1": "Break and give all friends permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Break and give all friends permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Break and give all friends permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Rosebud_2x.png"
+    "image": "Rosebud_2x.png",
+    "imageLegacy": ""
   },
   "RelicScissors": {
     "name": "Scissors",
@@ -739,7 +791,8 @@
     "ability1": "Transform front-most friend into another random pet from 2 tiers below.",
     "ability2": "Set {HealthIcon} health of the two most healthy friends to 1.",
     "ability3": "Set {HealthIcon} health of the two most healthy friends to 1.",
-    "image": "Scissors_2x.png"
+    "image": "Scissors_2x.png",
+    "imageLegacy": ""
   },
   "RelicToyGun": {
     "name": "Toy Gun",
@@ -753,7 +806,8 @@
     "ability1": "Deal 5 {DamageIcon} damage to the last enemy.",
     "ability2": "Deal 5 {DamageIcon} damage to the last enemy.",
     "ability3": "Deal 5 {DamageIcon} damage to the last enemy.",
-    "image": "ToyGun_2x.png"
+    "image": "ToyGun_2x.png",
+    "imageLegacy": ""
   },
   "RelicToyMouse": {
     "name": "Toy Mouse",
@@ -767,7 +821,8 @@
     "ability1": "Transform all friends to level 1.",
     "ability2": "Summon five random 5/5 enemy Felines.",
     "ability3": "Summon five random 5/5 enemy Felines.",
-    "image": "ToyMouse_2x.png"
+    "image": "ToyMouse_2x.png",
+    "imageLegacy": ""
   },
   "RelicTreasureChest": {
     "name": "Treasure Chest",
@@ -781,7 +836,8 @@
     "ability1": "Stock one free pet from tier 2 as a 4/4 level 3.",
     "ability2": "Stock one free pet from tier 4 as a 8/8 level 3.",
     "ability3": "Stock one free pet from tier 6 as a 12/12 level 3.",
-    "image": "TreasureChest_2x.png"
+    "image": "TreasureChest_2x.png",
+    "imageLegacy": ""
   },
   "RelicTreasureMap": {
     "name": "Treasure Map",
@@ -795,7 +851,8 @@
     "ability1": "Summon a level 1 Treasure Chest.",
     "ability2": "Summon a level 2 Treasure Chest.",
     "ability3": "Summon a level 3 Treasure Chest.",
-    "image": "TreasureMap_2x.png"
+    "image": "TreasureMap_2x.png",
+    "imageLegacy": ""
   },
   "RelicWingedSandals": {
     "name": "Winged Sandals",
@@ -809,7 +866,8 @@
     "ability1": "Gain one free roll next turn.",
     "ability2": "Gain two free rolls next turn.",
     "ability3": "Gain three free rolls next turn.",
-    "image": "WingedSandals_2x.png"
+    "image": "WingedSandals_2x.png",
+    "imageLegacy": ""
   },
   "RelicNutcracker": {
     "name": "Nutcracker",
@@ -823,7 +881,8 @@
     "ability1": "Summon one 6/6 Salmon of Knowledge in battle once.",
     "ability2": "Summon one 12/12 Salmon of Knowledge in battle once.",
     "ability3": "Summon one 18/18 Salmon of Knowledge in battle once.",
-    "image": "Nutcracker_2x.png"
+    "image": "Nutcracker_2x.png",
+    "imageLegacy": ""
   },
   "RelicOcarina": {
     "name": "Ocarina",
@@ -837,7 +896,8 @@
     "ability1": "Give the middle friendly pet +6 {ManaIcon} mana.",
     "ability2": "Give the middle friendly pet +12 {ManaIcon} mana.",
     "ability3": "Give the middle friendly pet +18 {ManaIcon} mana.",
-    "image": "Ocarina_2x.png"
+    "image": "Ocarina_2x.png",
+    "imageLegacy": ""
   },
   "RelicOvenMitts": {
     "name": "Oven Mitts",
@@ -851,7 +911,8 @@
     "ability1": "Stock one free [[Chicken Leg|food:chickenleg]].",
     "ability2": "Stock two free [[Chicken Leg|food:chickenleg]].",
     "ability3": "Stock three free [[Chicken Leg|food:chickenleg]].",
-    "image": "OvenMitts_2x.png"
+    "image": "OvenMitts_2x.png",
+    "imageLegacy": ""
   },
   "RelicThunderHammer": {
     "name": "Thunder Hammer",
@@ -865,7 +926,8 @@
     "ability1": "Give one random Tand & Tand +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "ability2": "Give one random Tand & Tand +12 {AttackIcon} attack and +12 {HealthIcon} health.",
     "ability3": "Give one random Tand & Tand +18 {AttackIcon} attack and +18 {HealthIcon} health.",
-    "image": "ThunderHammer_2x.png"
+    "image": "ThunderHammer_2x.png",
+    "imageLegacy": ""
   },
   "RelicTinderBox": {
     "name": "Tinder Box",
@@ -879,7 +941,8 @@
     "ability1": "Summon one 6/6 Giant Eyes Dog up front in battle once.",
     "ability2": "Summon one 12/12 Giant Eyes Dog up front in battle once.",
     "ability3": "Summon one 18/18 Giant Eyes Dog up front in battle once.",
-    "image": "TinderBox_2x.png"
+    "image": "TinderBox_2x.png",
+    "imageLegacy": ""
   },
   "RelicToiletPaper": {
     "name": "Toilet Paper",
@@ -893,7 +956,8 @@
     "ability1": "Make the first enemy Weak {WeakIcon}.",
     "ability2": "Make the first two enemies Weak {WeakIcon}.",
     "ability3": "Make the first three enemies Weak {WeakIcon}.",
-    "image": "ToiletPaper_2x.png"
+    "image": "ToiletPaper_2x.png",
+    "imageLegacy": ""
   },
   "RelicToyCashRegister": {
     "name": "Cash Register",
@@ -907,7 +971,8 @@
     "ability1": "Summon one 7/7 Gold Fish that sells for 4 {GoldIcon} gold.",
     "ability2": "Summon one 14/14 Gold Fish that sells for 8 {GoldIcon} gold.",
     "ability3": "Summon one 21/21 Gold Fish that sells for 12 {GoldIcon} gold.",
-    "image": "ToyCashRegister_2x.png"
+    "image": "ToyCashRegister_2x.png",
+    "imageLegacy": ""
   },
   "RelicCamera": {
     "name": "Camera",
@@ -921,7 +986,8 @@
     "ability1": "Remove 30% {AttackIcon} attack from the highest attack enemy.",
     "ability2": "Remove 30% {AttackIcon} attack from the two highest attack enemies.",
     "ability3": "Remove 30% {AttackIcon} attack from the three highest attack enemies.",
-    "image": "Camera_2x.png"
+    "image": "Camera_2x.png",
+    "imageLegacy": ""
   },
   "RelicEvilBook": {
     "name": "Evil Book",
@@ -935,7 +1001,8 @@
     "ability1": "Summon one 6/6 Great One in battle that deals 5 {DamageIcon} damage to ALL other pets.",
     "ability2": "Summon one 12/12 Great One in battle that deals 10 {DamageIcon} damage to ALL other pets.",
     "ability3": "Summon one 18/18 Great One in battle that deals 15 {DamageIcon} damage to ALL other pets.",
-    "image": "EvilBook_2x.png"
+    "image": "EvilBook_2x.png",
+    "imageLegacy": ""
   },
   "RelicFlashlight": {
     "name": "Flashlight",
@@ -949,7 +1016,8 @@
     "ability1": "Give front-most friend +5 {AttackIcon} attack and +5 {HealthIcon} health.",
     "ability2": "Give front-most friend +10 {AttackIcon} attack and +10 {HealthIcon} health.",
     "ability3": "Give front-most friend +15 {AttackIcon} attack and +15 {HealthIcon} health.",
-    "image": "Flashlight_2x.png"
+    "image": "Flashlight_2x.png",
+    "imageLegacy": ""
   },
   "RelicPandorasBox": {
     "name": "Pandoras Box",
@@ -963,7 +1031,8 @@
     "ability1": "Give ALL pets random perks and ailments.",
     "ability2": "Give ALL pets random perks and ailments with double effects.",
     "ability3": "Give ALL pets random perks and ailments with triple effects.",
-    "image": "PandorasBox_2x.png"
+    "image": "PandorasBox_2x.png",
+    "imageLegacy": ""
   },
   "RelicStinkySock": {
     "name": "Stinky Sock",
@@ -977,7 +1046,8 @@
     "ability1": "Remove 40% {HealthIcon} health from the highest health enemy.",
     "ability2": "Remove 40% {HealthIcon} health from the two highest health enemies.",
     "ability3": "Remove 40% {HealthIcon} health from the three highest health enemies.",
-    "image": "StinkySock_2x.png"
+    "image": "StinkySock_2x.png",
+    "imageLegacy": ""
   },
   "RelicExcalibur": {
     "name": "Excalibur",
@@ -991,7 +1061,8 @@
     "ability1": "Give the back-most friend +1 {AttackIcon} attack and +1 {HealthIcon} health.",
     "ability2": "Give the back-most friend +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability3": "Give the back-most friend +3 {AttackIcon} attack and +3 {HealthIcon} health.",
-    "image": "Excalibur_2x.png"
+    "image": "Excalibur_2x.png",
+    "imageLegacy": ""
   },
   "RelicHolyGrail": {
     "name": "Holy Grail",
@@ -1005,7 +1076,8 @@
     "ability1": "Stock one free [[Holy Water|food:holywater]].",
     "ability2": "Stock two free Holy Waters.",
     "ability3": "Stock three free Holy Waters.",
-    "image": "HolyGrail_2x.png"
+    "image": "HolyGrail_2x.png",
+    "imageLegacy": ""
   },
   "RelicPalmTree": {
     "name": "Air Palm Tree",
@@ -1019,7 +1091,8 @@
     "ability1": "Give [[Coconut|food:coconut]] {PerkIcon} perk to the highest attack friend.",
     "ability2": "Give [[Coconut|food:coconut]] {PerkIcon} perk to the two highest attack friends.",
     "ability3": "Give [[Coconut|food:coconut]] {PerkIcon} perk to the three highest attack friends.",
-    "image": "PalmTree_2x.png"
+    "image": "PalmTree_2x.png",
+    "imageLegacy": ""
   },
   "RelicPeanutJar": {
     "name": "Peanut Jar",
@@ -1033,7 +1106,8 @@
     "ability1": "Give [[Peanut Butter|food:peanutbutter]] {PerkIcon} perk to the lowest attack friend.",
     "ability2": "Give [[Peanut Butter|food:peanutbutter]] {PerkIcon} perk to the two lowest attack friends.",
     "ability3": "Give [[Peanut Butter|food:peanutbutter]] {PerkIcon} perk to the three lowest attack friends.",
-    "image": "PeanutJar_2x.png"
+    "image": "PeanutJar_2x.png",
+    "imageLegacy": ""
   },
   "RelicTelevision": {
     "name": "Television",
@@ -1047,7 +1121,8 @@
     "ability1": "Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
     "ability2": "Give friends +4 {AttackIcon} attack and +4 {HealthIcon} health.",
     "ability3": "Give friends +6 {AttackIcon} attack and +6 {HealthIcon} health.",
-    "image": "Television_2x.png"
+    "image": "Television_2x.png",
+    "imageLegacy": ""
   },
   "RelicBackPack": {
     "name": "Backpack",
@@ -1061,7 +1136,8 @@
     "ability1": "Remove back-most friend.",
     "ability2": "",
     "ability3": "",
-    "image": "BackPack_2x.png"
+    "image": "BackPack_2x.png",
+    "imageLegacy": ""
   },
   "RelicBoardGame": {
     "name": "Board Game",
@@ -1075,7 +1151,8 @@
     "ability1": "Set {AttackIcon} attack and {HealthIcon} health of friendly pets to 1.",
     "ability2": "",
     "ability3": "",
-    "image": "Boardgame_2x.png"
+    "image": "Boardgame_2x.png",
+    "imageLegacy": ""
   },
   "RelicBroom": {
     "name": "Broom",
@@ -1089,7 +1166,8 @@
     "ability1": "Remove all friends and gain 20 {GoldIcon} gold.",
     "ability2": "",
     "ability3": "",
-    "image": "Broom_2x.png"
+    "image": "Broom_2x.png",
+    "imageLegacy": ""
   },
   "RelicComicBook": {
     "name": "Comic Book",
@@ -1103,7 +1181,8 @@
     "ability1": "Transform front-most friend into another random pet from the same tier.",
     "ability2": "",
     "ability3": "",
-    "image": "ComicBook_2x.png"
+    "image": "ComicBook_2x.png",
+    "imageLegacy": ""
   },
   "RelicDuctTape": {
     "name": "Duct Tape",
@@ -1117,7 +1196,8 @@
     "ability1": "Sell all friends that remained after battle.",
     "ability2": "",
     "ability3": "",
-    "image": "DuctTape_2x.png"
+    "image": "DuctTape_2x.png",
+    "imageLegacy": ""
   },
   "RelicHandPuppet": {
     "name": "Hand Puppet",
@@ -1131,7 +1211,8 @@
     "ability1": "Make it Silly {SillyIcon}.",
     "ability2": "",
     "ability3": "",
-    "image": "HandPuppet_2x.png"
+    "image": "HandPuppet_2x.png",
+    "imageLegacy": ""
   },
   "RelicMirror": {
     "name": "Mirror",
@@ -1145,7 +1226,8 @@
     "ability1": "Choose one free pet from your last opponent's remaining pets to stock.",
     "ability2": "",
     "ability3": "",
-    "image": "Mirror_2x.png"
+    "image": "Mirror_2x.png",
+    "imageLegacy": ""
   },
   "RelicPillow": {
     "name": "Pillow",
@@ -1159,7 +1241,8 @@
     "ability1": "Sell all friends that got knocked out last battle for double gold.",
     "ability2": "",
     "ability3": "",
-    "image": "Pillow_2x.png"
+    "image": "Pillow_2x.png",
+    "imageLegacy": ""
   },
   "RelicSkateboard": {
     "name": "Skateboard",
@@ -1173,7 +1256,8 @@
     "ability1": "Unfreeze shop and roll.",
     "ability2": "",
     "ability3": "",
-    "image": "Skateboard_2x.png"
+    "image": "Skateboard_2x.png",
+    "imageLegacy": ""
   },
   "RelicSlinky": {
     "name": "Spring",
@@ -1187,7 +1271,8 @@
     "ability1": "Remove excess pets so there is one pet per tier.",
     "ability2": "Summon one 4/4 enemy Dog.",
     "ability3": "Summon one 4/4 enemy Dog.",
-    "image": "Slinky_2x.png"
+    "image": "Slinky_2x.png",
+    "imageLegacy": ""
   },
   "RelicSmartphone": {
     "name": "Smartphone",
@@ -1201,7 +1286,8 @@
     "ability1": "On turn 3, stock two chained pets from tier 6.",
     "ability2": "",
     "ability3": "",
-    "image": "Smartphone_2x.png"
+    "image": "Smartphone_2x.png",
+    "imageLegacy": ""
   },
   "RelicTinyHouse": {
     "name": "Tiny House",
@@ -1215,7 +1301,8 @@
     "ability1": "Gain remaining gold next turn.",
     "ability2": "",
     "ability3": "",
-    "image": "TinyHouse_2x.png"
+    "image": "TinyHouse_2x.png",
+    "imageLegacy": ""
   },
   "RelicToyBoat": {
     "name": "Toy Boat",
@@ -1229,7 +1316,8 @@
     "ability1": "Only pets and food from the current tier can be rolled, but from ANY pack.",
     "ability2": "",
     "ability3": "",
-    "image": "ToyBoat_2x.png"
+    "image": "ToyBoat_2x.png",
+    "imageLegacy": ""
   },
   "RelicTricycle": {
     "name": "Tricycle",
@@ -1243,7 +1331,8 @@
     "ability1": "Remove it if there are more than 3 friendly pets.",
     "ability2": "Give +2 {AttackIcon} attack and +2 {HealthIcon} health to friends for each turn, front to back",
     "ability3": "Give +3 {AttackIcon} attack and +3 {HealthIcon} health to friends for each turn, front to back",
-    "image": "Tricycle_2x.png"
+    "image": "Tricycle_2x.png",
+    "imageLegacy": ""
   },
   "RelicYoYo": {
     "name": "Yo-Yo",
@@ -1257,6 +1346,7 @@
     "ability1": "Remove all illegal pets.",
     "ability2": "Make all friends faint.",
     "ability3": "Make all friends faint.",
-    "image": "Yoyo_2x.png"
+    "image": "Yoyo_2x.png",
+    "imageLegacy": ""
   }
 }
