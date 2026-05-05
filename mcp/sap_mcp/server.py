@@ -36,8 +36,12 @@ def list_pets(
     trigger: str | None = None,
     name_contains: str | None = None,
     rollable: bool | None = None,
+    type: str | None = None,
 ) -> list[PetSummary]:
-    """List pets with optional filters. Returns summary fields only."""
+    """List pets with optional filters. Returns summary fields only.
+
+    type: filter by pet type tag, e.g. 'Attack', 'Tank', 'Summoner', 'Eater', 'Hurt', 'Damage', 'Support'. Case-insensitive substring match.
+    """
     results = loader.PETS
     if tier is not None:
         results = [p for p in results if p["tier"] == tier]
@@ -47,6 +51,9 @@ def list_pets(
         results = [p for p in results if name_contains.lower() in p["name"].lower()]
     if rollable is not None:
         results = [p for p in results if p["rollable"] == rollable]
+    if type is not None:
+        tl = type.lower()
+        results = [p for p in results if any(tl in t.lower() for t in p["types"])]
     return [
         {"slug": p["slug"], "name": p["name"], "tier": p["tier"],
          "attack": p["attack"], "health": p["health"], "trigger": p["trigger"],
