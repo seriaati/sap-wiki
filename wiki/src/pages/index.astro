@@ -382,6 +382,13 @@ const allTypes = [...new Set(sorted.flatMap(p => p.types ?? []))].sort();
     position: relative;
     display: inline-flex;
     align-items: center;
+    cursor: pointer;
+    border-radius: var(--r-sm);
+    transition: background 120ms;
+  }
+
+  .type-icon:hover {
+    background: var(--border);
   }
 
   .type-icon::after {
@@ -663,4 +670,14 @@ const allTypes = [...new Set(sorted.flatMap(p => p.types ?? []))].sort();
       gallery.classList.toggle('show-legacy', legacyToggle.checked)
     })
   }
+
+  document.querySelectorAll<HTMLElement>('.type-icon').forEach(icon => {
+    icon.addEventListener('click', e => {
+      e.stopPropagation()
+      e.preventDefault()
+      const type = icon.dataset.label!
+      const pill = document.querySelector<HTMLButtonElement>(`#type-filter [data-type="${CSS.escape(type)}"]`)
+      pill?.click()
+    })
+  })
 </script>

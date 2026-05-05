@@ -29,7 +29,7 @@ const ogDescription = [
   image={pet.image}
 >
   <nav class="breadcrumb">
-    <a href="/pets">← Pets</a>
+    <a href="/">← Pets</a>
   </nav>
 
   <div class="hero">
@@ -46,7 +46,7 @@ const ogDescription = [
     <div class="hero-meta">
       <h1>{pet.name}</h1>
       <div class="badges">
-        <TierBadge tier={pet.tier} href={`/pets?tier=${pet.tier}`} />
+        <TierBadge tier={pet.tier} href={`/?tier=${pet.tier}`} />
         {!pet.active && <span class="badge badge--muted">Inactive</span>}
         {isToken && <span class="badge badge--accent">Token</span>}
         {
@@ -54,6 +54,18 @@ const ogDescription = [
             <span class="badge badge--muted">Not in shop</span>
           )
         }
+        {(pet.types ?? []).map(t => (
+          <a class="badge badge--type" href={`/?types=${encodeURIComponent(t)}`} title={t}>
+            <StatIcon name={({
+              'Ailment':'Debuff','Buffs':'Buff','Cycle':'Cycle','Disruption':'Disruption',
+              'Food':'Food','Gold':'Gold','Guard':'Guard','Hurt':'Hurt','Level-Up':'Exp',
+              'Mana':'Mana','Perks':'Perk','Rolling':'Roll','Strawberry':'Strawberry',
+              'Summon':'Summon','Super':'Sparkle','Toys':'Toys','Transform':'Transform',
+              'Trumpets':'Backup',
+            } as Record<string,string>)[t] ?? t} size={16} />
+            {t}
+          </a>
+        ))}
       </div>
     </div>
     <div class="stat-block">
@@ -263,6 +275,22 @@ const ogDescription = [
   .badge--accent {
     background: var(--accent-dim);
     color: var(--accent);
+  }
+
+  .badge--type {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--surface-muted);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: background 120ms, border-color 120ms;
+  }
+
+  .badge--type:hover {
+    background: var(--border);
+    border-color: var(--accent-border);
   }
 
   .stat-block {
