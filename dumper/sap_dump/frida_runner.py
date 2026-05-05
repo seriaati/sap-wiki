@@ -23,7 +23,7 @@ def run_frida_session() -> dict:
 
     frida_js = _load_hooks_js()
 
-    results = {"pets_raw": {}, "foods_raw": {}, "triggers_raw": []}
+    results = {"pets_raw": {}, "foods_raw": {}, "triggers_raw": [], "ability_texts": {}}
     done_event = threading.Event()
     script_ref_holder = [None]
 
@@ -44,6 +44,9 @@ def run_frida_session() -> dict:
             elif t == "triggers":
                 results["triggers_raw"] = p.get("data", [])
                 print(f"  [*] triggers received: {len(results['triggers_raw'])} entries", flush=True)
+            elif t == "ability_texts":
+                results["ability_texts"] = p.get("data", {})
+                print(f"  [*] ability_texts received: {len(results['ability_texts'])} abilities", flush=True)
             elif t == "ready":
                 print(
                     "  [*] All hooks installed — click 'Pets' then open pack edit screen",
@@ -75,11 +78,10 @@ def run_frida_session() -> dict:
     script_ref_holder[0] = scr
     frida.resume(pid)
 
-    print("[2] Game launched — navigate: Pets → pack edit screen → scroll ALL tiers")
-    print("[2] Extraction fires 5s after templates load; trigger dump fires 20s later")
-    print("[2] Scroll through all tiers during that 20s window to capture ability texts")
-    print("[2] Waiting up to 180s for 'done' signal...")
-    done_event.wait(timeout=180)
+    print("[2] Game launched — navigate: Pets → pack edit screen")
+    print("[2] Stats fire ~5s after templates load; triggers + ability texts immediately after")
+    print("[2] Waiting up to 240s for 'done' signal...")
+    done_event.wait(timeout=240)
     if not done_event.is_set():
         print("[2] WARNING: timed out waiting for done signal")
 

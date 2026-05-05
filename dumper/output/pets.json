@@ -1351,9 +1351,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Make adjacent perk-less pets Spooked {ScaredIcon}.",
+    "ability2": "Make adjacent perk-less pets Spooked {ScaredIcon} with double effect.",
+    "ability3": "Make adjacent perk-less pets Spooked {ScaredIcon} with triple effect.",
     "image": "PeacockSpider_2x.png",
     "types": [
       "Ailment"
@@ -1502,9 +1502,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Sell",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Choose one tier 1 food to stock at 1 {GoldIcon} gold.",
+    "ability2": "Choose one tier 1 food to stock at 1 {GoldIcon} gold. Stock two copies.",
+    "ability3": "Choose one tier 1 food to stock at 1 {GoldIcon} gold. Stock three copies.",
     "image": "Quoll_2x.png",
     "types": [
       "Food",
@@ -1908,9 +1908,9 @@
     "active": true,
     "rollable": true,
     "trigger": "End turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give the nearest friend ahead +1 {AttackIcon} attack on odd turns and +1 {HealthIcon} health on even.",
+    "ability2": "Give the nearest friend ahead +2 {AttackIcon} attack on odd turns and +2 {HealthIcon} health on even.",
+    "ability3": "Give the nearest friend ahead +3 {AttackIcon} attack on odd turns and +3 {HealthIcon} health on even.",
     "image": "Amphisbaena_2x.png",
     "types": [
       "Buffs"
@@ -2396,9 +2396,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give the nearest friend behind +2 {HealthIcon} health. Spend mana to give 1 more per mana.",
+    "ability2": "Give the nearest friend behind +4 {HealthIcon} health. Spend mana to give 2 more per mana.",
+    "ability3": "Give the nearest friend behind +6 {HealthIcon} health. Spend mana to give 3 more per mana.",
     "image": "Gargoyle_2x.png",
     "types": [
       "Mana"
@@ -2650,9 +2650,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before attack",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Replace own ailment with +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "ability2": "Replace own ailment with +4 {AttackIcon} attack and +4 {HealthIcon} health.",
+    "ability3": "Replace own ailment with +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "image": "MandarinFish_2x.png",
     "types": [
       "Ailment"
@@ -2718,9 +2718,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Summon one Crawler with 3 {AttackIcon} attack, and +1 {HealthIcon} health for each friend summoned this turn.",
+    "ability2": "Summon one Crawler with 6 {AttackIcon} attack, and +2 {HealthIcon} health for each friend summoned this turn.",
+    "ability3": "Summon one Crawler with 9 {AttackIcon} attack, and +3 {HealthIcon} health for each friend summoned this turn.",
     "image": "NightCrawler_2x.png",
     "types": [
       "Summon"
@@ -2819,9 +2819,9 @@
     "active": true,
     "rollable": true,
     "trigger": "",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Transform into an Angry Hog with [[Garlic|food:garlic]] and at least 5 {AttackIcon} attack and health.",
+    "ability2": "Transform into an Angry Hog with [[Garlic|food:garlic]] and at least 10 {AttackIcon} attack and health.",
+    "ability3": "Transform into an Angry Hog with [[Garlic|food:garlic]] and at least 15 {AttackIcon} attack and health.",
     "image": "PygmyHog_2x.png",
     "types": [
       "Transform",
@@ -3110,9 +3110,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Start of turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Stock one random canned ailment.",
+    "ability2": "Stock two random canned ailments to choose from.",
+    "ability3": "Stock three random canned ailments to choose from.",
     "image": "SpottedHandfish_2x.png",
     "types": [
       "Ailment"
@@ -3296,9 +3296,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Deal 3 {DamageIcon} damage to one random enemy and prioritize those with ailments.",
+    "ability2": "Deal 6 {DamageIcon} damage to one random enemy and prioritize those with ailments.",
+    "ability3": "Deal 9 {DamageIcon} damage to one random enemy and prioritize those with ailments.",
     "image": "ThornyDragon_2x.png",
     "types": [
       "Ailment"
@@ -3531,9 +3531,9 @@
     "active": true,
     "rollable": true,
     "trigger": "End turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give one random friend from the current or higher shop tier +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "ability2": "Give one random friend from the current or higher shop tier +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "ability3": "Give one random friend from the current or higher shop tier +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Baboon_2x.png",
     "types": [
       "Buffs"
@@ -3662,9 +3662,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Transformed",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "If it is ahead, give it +3 {AttackIcon} attack until next turn. Otherwise give health.",
+    "ability2": "If it is ahead, give it +6 {AttackIcon} attack until next turn. Otherwise give health.",
+    "ability3": "If it is ahead, give it +9 {AttackIcon} attack until next turn. Otherwise give health.",
     "image": "BlueThroatedMacaw_2x.png",
     "types": [
       "Transform"
@@ -3816,9 +3816,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Start of battle",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Summon one 5/5 friend if able. Otherwise give friends +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "ability2": "Summon one 10/10 friend if able. Otherwise give friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "ability3": "Summon one 15/15 friend if able. Otherwise give friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Dimetrodon_2x.png",
     "types": [
       "Cycle"
@@ -4313,9 +4313,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Spend 2 {TrumpetIcon} trumpets to increase sell value of the two back-most friends permanently by 1 {GoldIcon} gold.",
+    "ability2": "Spend 2 {TrumpetIcon} trumpets to increase sell value of the two back-most friends permanently by 2 {GoldIcon} gold.",
+    "ability3": "Spend 2 {TrumpetIcon} trumpets to increase sell value of the two back-most friends permanently by 3 {GoldIcon} gold.",
     "image": "JewelCaterpillar_2x.png",
     "types": [
       "Trumpets"
@@ -4500,9 +4500,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Roll",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give new shop pets +1 {AttackIcon} attack and +1 {HealthIcon} health until next turn for each roll, up to 5 rolls.",
+    "ability2": "Give new shop pets +2 {AttackIcon} attack and +2 {HealthIcon} health until next turn for each roll, up to 5 rolls.",
+    "ability3": "Give new shop pets +3 {AttackIcon} attack and +3 {HealthIcon} health until next turn for each roll, up to 5 rolls.",
     "image": "Ouroboros_2x.png",
     "types": [
       "Rolling"
@@ -4555,9 +4555,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Start of battle",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Copy ailment (or Spooked {ScaredIcon}) to the first enemy.",
+    "ability2": "Copy ailment (or Spooked {ScaredIcon}) to the first enemy with double effect.",
+    "ability3": "Copy ailment (or Spooked {ScaredIcon}) to the first enemy with triple effect.",
     "image": "Pangasius_2x.png",
     "types": [
       "Ailment"
@@ -4703,9 +4703,9 @@
     "active": true,
     "rollable": true,
     "trigger": "PlayedSpellOn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Transform and give front-most friend +2 {AttackIcon} attack and +2 {HealthIcon} health. Double in battle.",
+    "ability2": "Transform and give front-most friend +4 {AttackIcon} attack and +4 {HealthIcon} health. Double in battle.",
+    "ability3": "Transform and give front-most friend +6 {AttackIcon} attack and +6 {HealthIcon} health. Double in battle.",
     "image": "QuailChick_2x.png",
     "types": [
       "Transform",
@@ -4739,9 +4739,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give the pet that knocked this out and its friends +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "ability2": "Give the pet that knocked this out and its friends +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "ability3": "Give the pet that knocked this out and its friends +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Quetzalcoatlus_2x.png",
     "types": []
   },
@@ -5095,9 +5095,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Push the back-most friend to the front and give it +3 {AttackIcon} attack and +3 {HealthIcon} health in battle.",
+    "ability2": "Push the back-most friend to the front and give it +6 {AttackIcon} attack and +6 {HealthIcon} health in battle.",
+    "ability3": "Push the back-most friend to the front and give it +9 {AttackIcon} attack and +9 {HealthIcon} health in battle.",
     "image": "Tucuxi_2x.png",
     "types": [
       "Guard"
@@ -5112,9 +5112,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give one random friend +1 {AttackIcon} attack and +1 {HealthIcon} health for each time this was hurt.",
+    "ability2": "Give one random friend +2 {AttackIcon} attack and +2 {HealthIcon} health for each time this was hurt.",
+    "ability3": "Give one random friend +3 {AttackIcon} attack and +3 {HealthIcon} health for each time this was hurt.",
     "image": "Tuna_2x.png",
     "types": [
       "Hurt"
@@ -5129,9 +5129,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Start of battle",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Gain +1 {AttackIcon} attack and +2 {HealthIcon} health for each friendly pet with a different ailment.",
+    "ability2": "Gain +2 {AttackIcon} attack and +4 {HealthIcon} health for each friendly pet with a different ailment.",
+    "ability3": "Gain +3 {AttackIcon} attack and +6 {HealthIcon} health for each friendly pet with a different ailment.",
     "image": "VampireParrot_2x.png",
     "types": [
       "Ailment"
@@ -5364,8 +5364,8 @@
     "rollable": true,
     "trigger": "Before faint",
     "ability1": "Spend 4 {TrumpetIcon} trumpets to give nearest friend behind permanent [[Melon Slice|food:melon]] {PerkIcon}.",
-    "ability2": "",
-    "ability3": "",
+    "ability2": "Spend 4 {TrumpetIcon} trumpets to give nearest friend behind permanent [[Melon Slice|food:melon]] that works twice.",
+    "ability3": "Spend 4 {TrumpetIcon} trumpets to give nearest friend behind permanent [[Melon Slice|food:melon]] that works thrice.",
     "image": "BlueFootedBooby_2x.png",
     "types": [
       "Trumpets"
@@ -5471,9 +5471,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Summon one 3/3 pet. Spend mana to give it +1 {AttackIcon} attack and +2 {HealthIcon} health per 2 {ManaIcon} mana.",
+    "ability2": "Summon two 3/3 pets. Spend mana to give them +1 {AttackIcon} attack and +2 {HealthIcon} health per 2 {ManaIcon} mana.",
+    "ability3": "Summon three 3/3 pets. Spend mana to give them +1 {AttackIcon} attack and +2 {HealthIcon} health per 2 {ManaIcon} mana.",
     "image": "Chimera_2x.png",
     "types": [
       "Mana"
@@ -5576,7 +5576,7 @@
     "trigger": "Level-up",
     "ability1": "Give it +2 {ManaIcon} mana. Also give +1 {ExpIcon} experience on the first trigger this turn.",
     "ability2": "Give it +4 {ManaIcon} mana. Also give +1 {ExpIcon} experience on the first two triggers this turn.",
-    "ability3": "",
+    "ability3": "Friend level-up: Give it +6 {ManaIcon} mana. Also give +1 {ExpIcon} experience on the first three triggers this turn.",
     "image": "Cyclops_2x.png",
     "types": [
       "Level-Up",
@@ -5612,9 +5612,9 @@
     "active": true,
     "rollable": true,
     "trigger": "?",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Ailments on this work in reverse.",
+    "ability2": "Ailments on this work in reverse and are two times better.",
+    "ability3": "Ailments on this work in reverse and are three times better.",
     "image": "Deinocheirus_2x.png",
     "types": [
       "Ailment"
@@ -5820,9 +5820,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before battle",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give friends +2 {AttackIcon} attack and +5 {HealthIcon} health until after the first non-jump attack.",
+    "ability2": "Give friends +4 {AttackIcon} attack and +10 {HealthIcon} health until after the first non-jump attack.",
+    "ability3": "Give friends +6 {AttackIcon} attack and +15 {HealthIcon} health until after the first non-jump attack.",
     "image": "GiantOtter_2x.png",
     "types": []
   },
@@ -6125,9 +6125,9 @@
     "active": true,
     "rollable": true,
     "trigger": "End turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Take 5 {DamageIcon} damage and give the nearest friend ahead +2 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "ability2": "Take 5 {DamageIcon} damage and give the nearest friend ahead +4 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "ability3": "Take 5 {DamageIcon} damage and give the nearest friend ahead +6 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "Manatee_2x.png",
     "types": [
       "Buffs"
@@ -6353,9 +6353,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Start of turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Deal 50 {DamageIcon} damage to adjacent friends and gain +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "ability2": "Deal 50 {DamageIcon} damage to adjacent friends and gain +4 {AttackIcon} attack and +4 {HealthIcon} health.",
+    "ability3": "Deal 50 {DamageIcon} damage to adjacent friends and gain +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "image": "PrayingMantis_2x.png",
     "types": [
       "Buffs",
@@ -6475,9 +6475,9 @@
     "active": true,
     "rollable": true,
     "trigger": "End turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give adjacent friends +1 {AttackIcon} attack and +1 {HealthIcon} health for every 4 roll, up to 8 rolls.",
+    "ability2": "Give adjacent friends +2 {AttackIcon} attack and +2 {HealthIcon} health for every 4 roll, up to 8 rolls.",
+    "ability3": "Give adjacent friends +3 {AttackIcon} attack and +3 {HealthIcon} health for every 4 roll, up to 8 rolls.",
     "image": "Sandworm_2x.png",
     "types": [
       "Rolling"
@@ -6492,9 +6492,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give random ailments to ANY three random pets. Double the effect on enemies.",
+    "ability2": "Give random ailments to ANY six random pets. Double the effect on enemies.",
+    "ability3": "Give random ailments to ANY nine random pets. Double the effect on enemies.",
     "image": "SatanicLeafTailedGecko_2x.png",
     "types": [
       "Ailment"
@@ -6576,9 +6576,9 @@
     "active": true,
     "rollable": true,
     "trigger": "End turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give adjacent pets +1 {AttackIcon} attack. Also +1 {HealthIcon} health if the shop has discounted food.",
+    "ability2": "Give adjacent pets +2 {AttackIcon} attack. Also +2 {HealthIcon} health if the shop has discounted food.",
+    "ability3": "Give adjacent pets +3 {AttackIcon} attack. Also +3 {HealthIcon} health if the shop has discounted food.",
     "image": "Siamese_2x.png",
     "types": [
       "Buffs"
@@ -6957,9 +6957,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Lose perk",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give it [[Melon Slice|food:melon]] if friendly, or deal 6 {DamageIcon} damage if enemy. Works 1 time per battle.",
+    "ability2": "Give it [[Melon Slice|food:melon]] if friendly, or deal 6 {DamageIcon} damage if enemy. Works 2 times per battle.",
+    "ability3": "Give it [[Melon Slice|food:melon]] if friendly, or deal 6 {DamageIcon} damage if enemy. Works 3 times per battle.",
     "image": "YetiCrab_2x.png",
     "types": [
       "Perks"
@@ -7111,9 +7111,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give three random friends +1 {AttackIcon} attack and +1 {HealthIcon} health for each food this has eaten this turn.",
+    "ability2": "Give three random friends +2 {AttackIcon} attack and +2 {HealthIcon} health for each food this has eaten this turn.",
+    "ability3": "Give three random friends +3 {AttackIcon} attack and +3 {HealthIcon} health for each food this has eaten this turn.",
     "image": "BlueJay_2x.png",
     "types": [
       "Food"
@@ -7162,9 +7162,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give three friends that dealt damage this battle permanent +1 {AttackIcon} attack and +1 {HealthIcon} health.",
+    "ability2": "Give three friends that dealt damage this battle permanent +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "ability3": "Give three friends that dealt damage this battle permanent +3 {AttackIcon} attack and +3 {HealthIcon} health.",
     "image": "BrahmaChicken_2x.png",
     "types": []
   },
@@ -7314,9 +7314,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Summon one 3/3 friend with +1 {AttackIcon} attack and +1 {HealthIcon} health for each ailment gained.",
+    "ability2": "Summon two 3/3 friends with +1 {AttackIcon} attack and +1 {HealthIcon} health for each ailment gained.",
+    "ability3": "Summon three 3/3 friends with +1 {AttackIcon} attack and +1 {HealthIcon} health for each ailment gained.",
     "image": "Estemmenosuchus_2x.png",
     "types": [
       "Ailment",
@@ -7446,9 +7446,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give friends +2 {HealthIcon} health. Spend 2 {TrumpetIcon} trumpets to give 1 more health in the future.",
+    "ability2": "Give friends +4 {HealthIcon} health. Spend 2 {TrumpetIcon} trumpets to give 2 more health in the future.",
+    "ability3": "Give friends +6 {HealthIcon} health. Spend 2 {TrumpetIcon} trumpets to give 3 more health in the future.",
     "image": "GiantIsopod_2x.png",
     "types": [
       "Trumpets"
@@ -7669,9 +7669,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Spend mana to remove 1 {AttackIcon} attack and health per mana from one random enemy.",
+    "ability2": "Spend mana to remove 1 {AttackIcon} attack and health per mana from two random enemies.",
+    "ability3": "Spend mana to remove 1 {AttackIcon} attack and health per mana from three random enemies.",
     "image": "Lusca_2x.png",
     "types": [
       "Mana"
@@ -7703,9 +7703,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Convert up to 24 {TrumpetIcon} trumpets into double mana and spread it evenly to friends.",
+    "ability2": "Convert up to 24 {TrumpetIcon} trumpets into triple mana and spread it evenly to friends.",
+    "ability3": "Convert up to 24 {TrumpetIcon} trumpets into quadruple mana and spread it evenly to friends.",
     "image": "Maltese_2x.png",
     "types": [
       "Trumpets",
@@ -7807,9 +7807,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Summon one 3/3 Boat. If it's your first Boat this battle, give it +1 and +1 for each roll.",
+    "ability2": "Summon one 6/6 Boat. If it's your first Boat this battle, give it +2 and +2 for each roll.",
+    "ability3": "Summon one 9/9 Boat. If it's your first Boat this battle, give it +3 and +3 for each roll.",
     "image": "Nessie_2x.png",
     "types": [
       "Rolling"
@@ -7841,7 +7841,7 @@
     "trigger": "Before faint",
     "ability1": "Spend up to 6 {TrumpetIcon} trumpets and deal triple as {DamageIcon} damage to one random enemy.",
     "ability2": "Spend up to 6 {TrumpetIcon} trumpets and deal triple as {DamageIcon} damage to two random enemies.",
-    "ability3": "",
+    "ability3": "Spend up to 6 {TrumpetIcon} trumpets and deal triple as damage to three random enemies.",
     "image": "NurseShark_2x.png",
     "types": [
       "Trumpets"
@@ -7890,9 +7890,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Start of battle",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Gain +4 {AttackIcon} attack and +4 {HealthIcon} health for each friend that sells for at least 3 {GoldIcon} gold.",
+    "ability2": "Gain +8 {AttackIcon} attack and +8 {HealthIcon} health for each friend that sells for at least 3 {GoldIcon} gold.",
+    "ability3": "Gain +12 {AttackIcon} attack and +12 {HealthIcon} health for each friend that sells for at least 3 {GoldIcon} gold.",
     "image": "PacificFanfish_2x.png",
     "types": [
       "Gold"
@@ -8281,9 +8281,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Sell",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Level 3 friend sold: Give friends +1 {AttackIcon} attack and +1 {HealthIcon} health. Triple if sold pet had at least 10 {AttackIcon} attack.",
+    "ability2": "Level 3 friend sold: Give friends +2 {AttackIcon} attack and +2 {HealthIcon} health. Triple if sold pet had at least 10 {AttackIcon} attack.",
+    "ability3": "Level 3 friend sold: Give friends +3 {AttackIcon} attack and +3 {HealthIcon} health. Triple if sold pet had at least 10 {AttackIcon} attack.",
     "image": "Starfish_2x.png",
     "types": [
       "Level-Up"
@@ -8533,9 +8533,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Start of battle",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "If turn number is even, gain +50% {AttackIcon} attack and health. Otherwise gain 6 {ManaIcon} mana.",
+    "ability2": "If turn number is even, gain +100% {AttackIcon} attack and health. Otherwise gain 12 {ManaIcon} mana.",
+    "ability3": "If turn number is even, gain +150% {AttackIcon} attack and health. Otherwise gain 18 {ManaIcon} mana.",
     "image": "Werewolf_2x.png",
     "types": []
   },
@@ -8635,9 +8635,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Spend 2 {ManaIcon} mana to give the nearest friend behind permanent +4 {AttackIcon} attack and +4 {HealthIcon} health.",
+    "ability2": "Spend 2 {ManaIcon} mana to give the nearest friend behind permanent +8 {AttackIcon} attack and +8 {HealthIcon} health.",
+    "ability3": "Spend 2 {ManaIcon} mana to give the nearest friend behind permanent +12 {AttackIcon} attack and +12 {HealthIcon} health.",
     "image": "Akhlut_2x.png",
     "types": [
       "Mana"
@@ -8707,9 +8707,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Transform friend behind into a level 1 Mimic Octopus. Give it +1 XP in battle for every 2 roll.",
+    "ability2": "Transform friend behind into a level 1 Mimic Octopus. Give it +2 XP in battle for every 2 roll.",
+    "ability3": "Transform friend behind into a level 1 Mimic Octopus. Give it +3 XP in battle for every 2 roll.",
     "image": "Ammonite_2x.png",
     "types": [
       "Transform",
@@ -8879,9 +8879,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Start of turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Sell friends for +2 extra gold each and give future shop pets +2 {AttackIcon} attack and +2 {HealthIcon} health.",
+    "ability2": "Sell friends for +2 extra gold each and give future shop pets +4 {AttackIcon} attack and +4 {HealthIcon} health.",
+    "ability3": "Sell friends for +2 extra gold each and give future shop pets +6 {AttackIcon} attack and +6 {HealthIcon} health.",
     "image": "BlueWhale_2x.png",
     "types": [
       "Buffs"
@@ -9090,9 +9090,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before attack",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Move ailment to the first two enemies.",
+    "ability2": "Move ailment to the first two enemies with double effect.",
+    "ability3": "Move ailment to the first two enemies with triple effect.",
     "image": "Dunkleosteus_2x.png",
     "types": [
       "Ailment"
@@ -9107,9 +9107,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give three random friends +1 {AttackIcon} attack and +1 {HealthIcon} health for each battle this has fought.",
+    "ability2": "Give three random friends +2 {AttackIcon} attack and +2 {HealthIcon} health for each battle this has fought.",
+    "ability3": "Give three random friends +3 {AttackIcon} attack and +3 {HealthIcon} health for each battle this has fought.",
     "image": "EagleOwl_2x.png",
     "types": [
       "Buffs"
@@ -9410,9 +9410,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Summoned",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give it +1 {AttackIcon} attack and +1 {HealthIcon} health until next turn for each level 3 pet sold this game (max 5).",
+    "ability2": "Give it +2 {AttackIcon} attack and +2 {HealthIcon} health until next turn for each level 3 pet sold this game (max 5).",
+    "ability3": "Give it +3 {AttackIcon} attack and +3 {HealthIcon} health until next turn for each level 3 pet sold this game (max 5).",
     "image": "JerseyDevil_2x.png",
     "types": [
       "Level-Up",
@@ -9428,9 +9428,9 @@
     "active": true,
     "rollable": true,
     "trigger": "End turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give friends ahead +1 {AttackIcon} attack and +1 {HealthIcon} health and then shuffle their positions.",
+    "ability2": "Give friends ahead +2 {AttackIcon} attack and +2 {HealthIcon} health and then shuffle their positions.",
+    "ability3": "Give friends ahead +3 {AttackIcon} attack and +3 {HealthIcon} health and then shuffle their positions.",
     "image": "Komodo_2x.png",
     "types": [
       "Buffs"
@@ -9578,9 +9578,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Spend 4 {TrumpetIcon} trumpets to give friends permanent +4 {AttackIcon} attack and +4 {HealthIcon} health evenly spread.",
+    "ability2": "Spend 4 {TrumpetIcon} trumpets to give friends permanent +8 {AttackIcon} attack and +8 {HealthIcon} health evenly spread.",
+    "ability3": "Spend 4 {TrumpetIcon} trumpets to give friends permanent +12 {AttackIcon} attack and +12 {HealthIcon} health evenly spread.",
     "image": "Markhor_2x.png",
     "types": [
       "Trumpets"
@@ -9888,9 +9888,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Faint",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Summon one Mammoth with +2 {AttackIcon} attack and +3 {HealthIcon} health for each time this was hurt.",
+    "ability2": "Summon two Mammoths with +2 {AttackIcon} attack and +3 {HealthIcon} health for each time this was hurt.",
+    "ability3": "Summon three Mammoths with +2 {AttackIcon} attack and +3 {HealthIcon} health for each time this was hurt.",
     "image": "SabertoothTiger_2x.png",
     "types": [
       "Summon",
@@ -10099,9 +10099,9 @@
     "active": true,
     "rollable": true,
     "trigger": "Before battle",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "If pack has no pets/food from the tab, remove 1 XP from three random enemies.",
+    "ability2": "If pack has no pets/food from the tab, remove 2 XP from three random enemies.",
+    "ability3": "If pack has no pets/food from the tab, remove 3 XP from three random enemies.",
     "image": "Tanystropheus_2x.png",
     "types": [
       "Disruption"
@@ -10328,9 +10328,9 @@
     "active": true,
     "rollable": true,
     "trigger": "End turn",
-    "ability1": "",
-    "ability2": "",
-    "ability3": "",
+    "ability1": "Give +1 {AttackIcon} attack and +2 {HealthIcon} health to each friend with a different ailment.",
+    "ability2": "Give +2 {AttackIcon} attack and +4 {HealthIcon} health to each friend with a different ailment.",
+    "ability3": "Give +3 {AttackIcon} attack and +6 {HealthIcon} health to each friend with a different ailment.",
     "image": "VampireSquid_2x.png",
     "types": [
       "Ailment"
@@ -10450,7 +10450,7 @@
     "trigger": "Before faint",
     "ability1": "Set {AttackIcon} attack and {HealthIcon} health of the most healthy pet from ANY team to 20.",
     "ability2": "Set {AttackIcon} attack and {HealthIcon} health of the two most healthy pets from ANY team to 20.",
-    "ability3": "",
+    "ability3": "Set attack and health of the three most healthy pets from ANY team to 20.",
     "image": "YellowBoxFish_2x.png",
     "types": [
       "Disruption"

@@ -10,6 +10,52 @@ def camel_to_words(s: str) -> str:
 
 _TRIGGER_LIMIT_TYPE = {0: "per turn", 1: "per battle", 2: "outside battle"}
 
+# Procedural ability text from AbilityAsset.GetAbout starts with a trigger label
+# (e.g. "Faint: ...", "Sell: ...") — strip it so the format matches loco-keyed
+# pets where the trigger is shown separately in the `trigger` field.
+_PROC_TRIGGER_PREFIX = re.compile(r"^[A-Z][a-zA-Z ]{0,30}:\s+")
+
+# Procedural text from GetAbout(rich=false) lacks the {IconName} placeholders
+# that loco strings carry. Re-inject in the loco style so AbilityText.astro
+# renders icons consistently. Only applied on the procedural-fallback path.
+_NUM = r"([+-]?\d+%?)"
+_ICON_PATTERNS: list[tuple[re.Pattern, str]] = [
+    # Stats / resources after a number
+    (re.compile(rf"{_NUM}\s+attack\b"),       r"\1 {AttackIcon} attack"),
+    (re.compile(rf"{_NUM}\s+health\b"),       r"\1 {HealthIcon} health"),
+    (re.compile(rf"{_NUM}\s+mana\b"),         r"\1 {ManaIcon} mana"),
+    (re.compile(rf"{_NUM}\s+trumpets?\b"),    r"\1 {TrumpetIcon} trumpets"),
+    (re.compile(rf"{_NUM}\s+damage\b"),       r"\1 {DamageIcon} damage"),
+    (re.compile(rf"{_NUM}\s+gold\b"),         r"\1 {GoldIcon} gold"),
+    (re.compile(rf"{_NUM}\s+experience\b"),   r"\1 {ExpIcon} experience"),
+    # Ailment / status keywords (capitalized word → space + icon token)
+    # Word → icon token name (frontend strips "Icon" suffix before sprite lookup)
+    *[(re.compile(rf"\b{kw}\b(?!\s*\{{)"), rf"{kw} {{{tok}}}")
+      for kw, tok in [
+        ("Spooked",  "ScaredIcon"),
+        ("Toasty",   "ToastyIcon"),
+        ("Weak",     "WeakIcon"),
+        ("Silly",    "SillyIcon"),
+        ("Confused", "ConfusedIcon"),
+        ("Sleepy",   "DrowsyIcon"),
+        ("Crisp",    "BurnIcon"),
+        ("Cursed",   "CurseIcon"),
+        ("Dazed",    "DeafIcon"),
+        ("Inked",    "InkIcon"),
+        ("Bloated",  "BloatedIcon"),
+        ("Tasty",    "TastyIcon"),
+        ("Webbed",   "WebIcon"),
+        ("Icky",     "AcidIcon"),
+        ("Cold",     "FrozenIcon"),
+      ]],
+]
+
+
+def inject_icon_placeholders(text: str) -> str:
+    for pat, rep in _ICON_PATTERNS:
+        text = pat.sub(rep, text)
+    return text
+
 
 def collapse_triggers(triggers_raw: list) -> dict:
     """
@@ -69,6 +115,7 @@ def _build_minion_entry(
     triggers_loco: dict,
     pet_names: dict,
     ability_trigger_map: dict,
+    ability_texts: dict,
     images: dict | None,
     display_name: str | None = None,
 ) -> dict:
@@ -83,10 +130,21 @@ def _build_minion_entry(
 
     # Fall back to hardcoded custom note when no localization entry exists
     custom_note = trig_info.get("customNote", "") if isinstance(trig_info, dict) else ""
+    procedural_levels = ability_texts.get(ability_name, {}) if isinstance(ability_texts, dict) else {}
+
     def _ability_text(loco_key: str) -> str:
         text = ab_loco.get(loco_key, "")
         if not text and custom_note:
             return apply_linkbacks(custom_note)
+        if not text:
+            lvl = loco_key.split(".", 1)[0]
+            proc = procedural_levels.get(lvl)
+            if not proc and lvl.isdigit():
+                proc = procedural_levels.get(int(lvl))
+            if proc:
+                proc = _PROC_TRIGGER_PREFIX.sub("", proc, count=1)
+                proc = inject_icon_placeholders(proc)
+                return apply_linkbacks(proc)
         return apply_linkbacks(text)
 
     entry = {
@@ -126,6 +184,7 @@ def build_final(
     pets_raw = frida_data["pets_raw"]
     foods_raw = frida_data["foods_raw"]
     triggers_raw = frida_data["triggers_raw"]
+    ability_texts = frida_data.get("ability_texts", {})
 
     ability_trigger_map = collapse_triggers(triggers_raw)
 
@@ -139,7 +198,8 @@ def build_final(
         if not stats.get("active", False):
             continue
         pets[minion_name] = _build_minion_entry(
-            minion_name, stats, abilities_db, triggers_loco, pet_names, ability_trigger_map, pet_images
+            minion_name, stats, abilities_db, triggers_loco, pet_names, ability_trigger_map,
+            ability_texts, pet_images
         )
 
     pets = dict(sorted(pets.items(), key=lambda kv: (kv[1]["tier"], kv[0])))
@@ -163,10 +223,12 @@ def build_final(
             continue
         stripped = relic_name[len("Relic"):]
         display_name = pet_names.get(relic_name, camel_to_words(stripped))
-        toys[relic_name] = _build_minion_entry(
+        entry = _build_minion_entry(
             relic_name, stats, abilities_db, triggers_loco, pet_names, ability_trigger_map,
-            toy_images, display_name=display_name,
+            ability_texts, toy_images, display_name=display_name,
         )
+        entry.pop("types", None)
+        toys[relic_name] = entry
 
     toys = dict(sorted(toys.items(), key=lambda kv: (kv[1]["tier"], kv[0])))
 

@@ -20,11 +20,16 @@ const savedAbilities  = new Map();   // ptr_str → {self, limit?, limitKind?}
 const hookNames       = new Map();   // ptr_str → abilityName (from SetAbout)
 
 let g = {};   // bound IL2CPP functions and classes
+let abilityLibraryInstance = null;
 
-let statsFoodSent  = false;
-let triggersSent   = false;
-let gameReady      = false;
-let lastTemplateMs = 0;
+// Captured ability text from passive GetAbout hook: assetPtrStr → {level: text}
+const getAboutTexts = new Map();
+
+let statsFoodSent      = false;
+let triggersSent       = false;
+let abilityTextsSent   = false;
+let gameReady          = false;
+let lastTemplateMs     = 0;
 
 // ─── Pet stats + food prices extraction (called on game thread) ───────────────
 function extractStatsFoods() {
@@ -357,6 +362,181 @@ function dumpTriggers() {
     return results;
 }
 
+// ─── Resolve ability text by capturing AbilityAsset.GetAbout returns ──────────
+// PeacockSpider et al. have no static loco entries — text is procedurally built
+// by the game at runtime. We hook GetAbout onLeave and collect strings as the
+// pack-edit UI organically calls it (user scrolls tiers during 20s window).
+// Final dump walks the AbilityLibrary dict to map asset ptr → AbilityEnum name.
+function dumpAbilityTexts() {
+    const {classGetFields, fieldGetName, fieldGetOffset, fieldStaticGetValue,
+           abilityAssetClass, abilityLibraryClass, abilityEnumClass} = g;
+
+    const out = {};
+    send({t:"log", m:`AbilityTexts: captured ${getAboutTexts.size} (asset,level) pairs from UI`});
+
+    if (!abilityLibraryInstance || !abilityAssetClass || !abilityLibraryClass) {
+        send({t:"log", m:"AbilityTexts: missing requirements (instance/classes)"});
+        return out;
+    }
+
+    function findFieldOffset(klass, name) {
+        const it = Memory.alloc(Process.pointerSize); it.writePointer(ptr(0));
+        let f;
+        while (!(f = classGetFields(klass, it)).isNull()) {
+            if (cstr(fieldGetName(f)) === name) return fieldGetOffset(f);
+        }
+        return -1;
+    }
+    const assetsOffset = findFieldOffset(abilityLibraryClass, "Assets");
+    if (assetsOffset < 0) {
+        send({t:"log", m:"AbilityTexts: Assets field not found"});
+        return out;
+    }
+
+    // AbilityEnum int → name
+    const abilityEnumNames = {};
+    if (abilityEnumClass) {
+        const it = Memory.alloc(Process.pointerSize); it.writePointer(ptr(0));
+        let fld;
+        while (!(fld = classGetFields(abilityEnumClass, it)).isNull()) {
+            const fn_ = cstr(fieldGetName(fld));
+            if (!fn_ || fn_ === "value__") continue;
+            try {
+                const buf = Memory.alloc(4);
+                fieldStaticGetValue(fld, buf);
+                abilityEnumNames[buf.readS32()] = fn_;
+            } catch(e) {}
+        }
+    }
+
+    // Walk AbilityAssetDictionary (BestDictionary): asset ptr → enum name
+    // Layout: header(16) + List<BestDictionaryItem> Items @ +16
+    // List<T>: items array @ +16, size @ +24, data @ items+32
+    // BestDictionaryItem: header(16) + Key(int) @ +16, Value(ptr) @ +24
+    const assetToName = new Map();
+    const dictPtr = abilityLibraryInstance.add(assetsOffset).readPointer();
+    if (dictPtr && !dictPtr.isNull()) {
+        const itemsList = dictPtr.add(16).readPointer();
+        if (itemsList && !itemsList.isNull()) {
+            const itemsArr = itemsList.add(16).readPointer();
+            const count    = itemsList.add(24).readS32();
+            send({t:"log", m:`AbilityTexts: BestDictionary count=${count}`});
+            if (count > 0 && count < 5000 && itemsArr && !itemsArr.isNull()) {
+                for (let i = 0; i < count; i++) {
+                    try {
+                        const itemPtr = itemsArr.add(32 + i * 8).readPointer();
+                        if (!itemPtr || itemPtr.isNull()) continue;
+                        const eInt  = itemPtr.add(16).readS32();
+                        const asset = itemPtr.add(24).readPointer();
+                        if (!asset || asset.isNull()) continue;
+                        const name = abilityEnumNames[eInt] || `Enum_${eInt}`;
+                        assetToName.set(asset.toString(), name);
+                    } catch(e) {}
+                }
+            }
+        }
+    }
+    send({t:"log", m:`AbilityTexts: dict→name map size=${assetToName.size}`});
+
+    // Merge captured GetAbout results, keyed by ability name.
+    // Prefer plain text (has {IconName} placeholders) over rich (sprite-rendered).
+    let resolved = 0;
+    let plainHits = 0, richOnly = 0;
+    for (const [assetKey, levels] of getAboutTexts) {
+        const name = assetToName.get(assetKey);
+        if (!name) continue;
+        const lv = {};
+        for (const [k, slot] of Object.entries(levels)) {
+            if (slot.plain) { lv[k] = slot.plain; plainHits++; }
+            else if (slot.rich) { lv[k] = slot.rich; richOnly++; }
+        }
+        if (Object.keys(lv).length > 0) {
+            out[name] = lv;
+            resolved++;
+        }
+    }
+    send({t:"log", m:`AbilityTexts: ${resolved} abilities resolved (plain=${plainHits} richOnly=${richOnly})`});
+    return out;
+}
+
+// ─── Hook AbilityAsset.GetAbout — capture (this, level) → returned Il2CppString
+function hookGetAbout(mod, klass) {
+    const cgm = new NativeFunction(mod.findExportByName("il2cpp_class_get_methods"), "pointer", ["pointer","pointer"]);
+    const mgn = new NativeFunction(mod.findExportByName("il2cpp_method_get_name"), "pointer", ["pointer"]);
+    const it = Memory.alloc(Process.pointerSize); it.writePointer(ptr(0));
+    let mth;
+    let hooked = 0;
+    while (!(mth = cgm(klass, it)).isNull()) {
+        if (cstr(mgn(mth)) !== "GetAbout") continue;
+        let fnPtr = null;
+        try { fnPtr = mth.readPointer(); } catch(e) { continue; }
+        if (!fnPtr || fnPtr.isNull()) continue;
+        try {
+            Interceptor.attach(fnPtr, {
+                onEnter(args) {
+                    this.self  = args[0];
+                    try { this.level = args[1].toInt32(); } catch(e) { this.level = 0; }
+                    try { this.rich  = args[2].toInt32() !== 0; } catch(e) { this.rich = true; }
+                },
+                onLeave(retval) {
+                    if (!this.self || this.self.isNull()) return;
+                    if (!retval || retval.isNull()) return;
+                    if (this.level < 1 || this.level > 3) return;
+                    try {
+                        const slen = retval.add(16).readU32();
+                        if (slen <= 0 || slen >= 4096) return;
+                        const text = retval.add(20).readUtf16String(slen);
+                        if (!text) return;
+                        const key = this.self.toString();
+                        let entry = getAboutTexts.get(key);
+                        if (!entry) { entry = {}; getAboutTexts.set(key, entry); }
+                        // Prefer plain (rich=false) — keeps {AttackIcon}/{ScaredIcon} placeholders.
+                        // Rich-rendered version drops/converts placeholders to TMP sprite tags.
+                        const lvlKey  = String(this.level);
+                        const richKey = this.rich ? "rich" : "plain";
+                        if (!entry[lvlKey]) entry[lvlKey] = {};
+                        const slot = entry[lvlKey];
+                        if (!slot[richKey] || text.length > slot[richKey].length) {
+                            slot[richKey] = text;
+                        }
+                    } catch(e) {}
+                }
+            });
+            hooked++;
+        } catch(e) {}
+    }
+    send({t:"log", m:`AbilityAsset.GetAbout: hooked ${hooked} methods`});
+}
+
+// ─── Hook AbilityLibrary methods to capture singleton instance pointer ────────
+function hookAbilityLibrary(mod, klass) {
+    const cgm = new NativeFunction(mod.findExportByName("il2cpp_class_get_methods"), "pointer", ["pointer","pointer"]);
+    const mgn = new NativeFunction(mod.findExportByName("il2cpp_method_get_name"), "pointer", ["pointer"]);
+    const TARGETS = new Set(["Get", "Awake", "OnEnable", "Clear"]);
+    const it = Memory.alloc(Process.pointerSize); it.writePointer(ptr(0));
+    let mth;
+    let hooked = 0;
+    while (!(mth = cgm(klass, it)).isNull()) {
+        const mn = cstr(mgn(mth));
+        if (!mn || !TARGETS.has(mn)) continue;
+        let fnPtr = null;
+        try { fnPtr = mth.readPointer(); } catch(e) { continue; }
+        if (!fnPtr || fnPtr.isNull()) continue;
+        try {
+            Interceptor.attach(fnPtr, {
+                onEnter(args) {
+                    if (!abilityLibraryInstance && args[0] && !args[0].isNull()) {
+                        abilityLibraryInstance = args[0];
+                        send({t:"log", m:`AbilityLibrary instance @ ${args[0]} via ${mn}`});
+                    }
+                }
+            });
+            hooked++;
+        } catch(e) {}
+    }
+    send({t:"log", m:`AbilityLibrary: hooked ${hooked} methods`});
+}
+
 // ─── Hook MinionTemplate methods to capture all template pointers ─────────────
 function hookMinionTemplate(mod, minionTemplClass) {
     const classGetMethods = new NativeFunction(
@@ -575,6 +755,7 @@ function setupAfterInit(mod) {
     const classGetFields      = nfn("il2cpp_class_get_fields",      "pointer", ["pointer","pointer"]);
     const fieldGetName        = nfn("il2cpp_field_get_name",        "pointer", ["pointer"]);
     const fieldStaticGetValue = nfn("il2cpp_field_static_get_value","void",    ["pointer","pointer"]);
+    const fieldGetOffset      = nfn("il2cpp_field_get_offset",      "int32",   ["pointer"]);
     const classGetMethods     = nfn("il2cpp_class_get_methods",     "pointer", ["pointer","pointer"]);
     const methodGetName       = nfn("il2cpp_method_get_name",       "pointer", ["pointer"]);
     const runtimeInvoke       = nfn("il2cpp_runtime_invoke",        "pointer", ["pointer","pointer","pointer","pointer"]);
@@ -597,6 +778,8 @@ function setupAfterInit(mod) {
     let abilityClass        = null;
     let abilityEnumClass    = null;
     let archetypeConstClass = null;
+    let abilityAssetClass   = null;
+    let abilityLibraryClass = null;
 
     const WANT_CORE = new Set([
         "MinionConstants","MinionTemplate","MinionEnum",
@@ -604,6 +787,7 @@ function setupAfterInit(mod) {
         "Ability","AbilityEnum",
         "ArchetypeConstants",
     ]);
+    const WANT_CSHARP = new Set(["AbilityAsset", "AbilityLibrary"]);
 
     for (let ai = 0; ai < asmCount; ai++) {
         const asm   = asmArray.add(ai * Process.pointerSize).readPointer();
@@ -630,6 +814,10 @@ function setupAfterInit(mod) {
                 else if (cname === "Ability")          abilityClass     = klass;
                 else if (cname === "AbilityEnum")      abilityEnumClass = klass;
             }
+            if (isCSharp && WANT_CSHARP.has(cname)) {
+                if      (cname === "AbilityAsset")   abilityAssetClass   = klass;
+                else if (cname === "AbilityLibrary") abilityLibraryClass = klass;
+            }
         }
     }
 
@@ -642,6 +830,8 @@ function setupAfterInit(mod) {
         `ability=${!!abilityClass}`,
         `abilityEnum=${!!abilityEnumClass}`,
         `archetypeConst=${!!archetypeConstClass}`,
+        `abilityAsset=${!!abilityAssetClass}`,
+        `abilityLibrary=${!!abilityLibraryClass}`,
     ].join(" ")});
 
     // Find SpellConstants fields/methods
@@ -682,7 +872,8 @@ function setupAfterInit(mod) {
     }
 
     g = {
-        classGetFields, fieldGetName, fieldStaticGetValue,
+        classGetFields, fieldGetName, fieldGetOffset, fieldStaticGetValue,
+        classGetMethods, methodGetName,
         minionEnumClass,
         spellEnumClass, spellConstClass,
         createSpellsMth, runtimeInvoke,
@@ -690,6 +881,8 @@ function setupAfterInit(mod) {
         objectGetClass, classGetName,
         abilityEnumClass,
         archetypeConstClass,
+        abilityAssetClass,
+        abilityLibraryClass,
         minionDictFields,
     };
 
@@ -697,6 +890,10 @@ function setupAfterInit(mod) {
     if (minionTemplClass) hookMinionTemplate(mod, minionTemplClass);
 
     if (abilityClass) hookAbilityMethods(mod, abilityClass);
+
+    if (abilityLibraryClass) hookAbilityLibrary(mod, abilityLibraryClass);
+
+    if (abilityAssetClass) hookGetAbout(mod, abilityAssetClass);
 
     // Hook MinionConstants.EnsureMinions — fires on game thread
     if (minionConstClass) {
@@ -741,8 +938,10 @@ function setupAfterInit(mod) {
         }
         send({t:"stats_food", pets: sfResult.pets, foods: sfResult.foods});
 
-        setTimeout(function() {
-            if (triggersSent) return;
+        // Trigger dump fires immediately (data already captured during init).
+        // Ability text capture is passive: hooks fire as user scrolls pack
+        // edit screen, so we wait longer before reading the accumulated map.
+        if (!triggersSent) {
             triggersSent = true;
             let trigData = [];
             try { trigData = dumpTriggers(); } catch(e) {
@@ -750,8 +949,17 @@ function setupAfterInit(mod) {
             }
             send({t:"log", m:`Triggers: ${trigData.length} entries`});
             send({t:"triggers", data: trigData});
+        }
+
+        if (!abilityTextsSent) {
+            abilityTextsSent = true;
+            let abTexts = {};
+            try { abTexts = dumpAbilityTexts(); } catch(e) {
+                send({t:"log", m:"dumpAbilityTexts error: " + e});
+            }
+            send({t:"ability_texts", data: abTexts});
             send({t:"done"});
-        }, 5000);
+        }
     }, 500);
 
     send({t:"ready"});
