@@ -26,7 +26,6 @@ def _clean_pet(key: str, raw: dict) -> Pet:
         "ability1": clean(raw.get("ability1", "")),
         "ability2": clean(raw.get("ability2", "")),
         "ability3": clean(raw.get("ability3", "")),
-        "image": raw.get("image", ""),
         "types": raw.get("types", []),
     }
 
@@ -41,7 +40,6 @@ def _clean_food(key: str, raw: dict) -> Food:
         "active": raw.get("active", False),
         "rollable": raw.get("rollable", False),
         "ability": clean(raw.get("ability", "")),
-        "image": raw.get("image", ""),
     }
 
 
@@ -60,7 +58,6 @@ def _clean_toy(key: str, raw: dict) -> Toy:
         "ability1": clean(raw.get("ability1", "")),
         "ability2": clean(raw.get("ability2", "")),
         "ability3": clean(raw.get("ability3", "")),
-        "image": raw.get("image", ""),
     }
 
 

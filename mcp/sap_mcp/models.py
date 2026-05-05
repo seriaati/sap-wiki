@@ -27,7 +27,6 @@ class Pet(TypedDict):
     ability1: str
     ability2: str
     ability3: str
-    image: str
     types: list[str]
 
 
@@ -48,7 +47,6 @@ class Food(TypedDict):
     active: bool
     rollable: bool
     ability: str
-    image: str
 
 
 class ToySummary(TypedDict):
@@ -74,7 +72,6 @@ class Toy(TypedDict):
     ability1: str
     ability2: str
     ability3: str
-    image: str
 
 
 class SearchResult(TypedDict):
