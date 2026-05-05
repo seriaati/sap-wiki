@@ -128,7 +128,6 @@ def _build_minion_entry(
     trig_cls = trig_info.get("trig_cls", "") if isinstance(trig_info, dict) else trig_info
     trigger_display = resolve_trigger_display(trig_cls, triggers_loco) if trig_cls else ""
 
-    # Fall back to hardcoded custom note when no localization entry exists
     custom_note = trig_info.get("customNote", "") if isinstance(trig_info, dict) else ""
     procedural_levels = ability_texts.get(ability_name, {}) if isinstance(ability_texts, dict) else {}
 
@@ -147,6 +146,7 @@ def _build_minion_entry(
                 return apply_linkbacks(proc)
         return apply_linkbacks(text)
 
+    img_entry = images.get(minion_name, {}) if images else {}
     entry = {
         "name": display_name,
         "tier": stats.get("tier", 0),
@@ -159,7 +159,8 @@ def _build_minion_entry(
         "ability1": _ability_text("1.About"),
         "ability2": _ability_text("2.About"),
         "ability3": _ability_text("3.About"),
-        "image": images.get(minion_name, "") if images else "",
+        "image": img_entry.get("image", ""),
+        "imageLegacy": img_entry.get("imageLegacy", ""),
         "types": stats.get("types", []),
     }
     for lvl in ("1", "2", "3"):
@@ -245,6 +246,7 @@ def build_final(
 
         ability_text = ab_loco.get("1.About", "") or spell_loco.get("About", "")
 
+        food_img = food_images.get(spell_name, {}) if food_images else {}
         foods[spell_name] = {
             "name": display_name,
             "tier": stats.get("tier", 0),
@@ -252,7 +254,8 @@ def build_final(
             "active": stats.get("active", False),
             "rollable": stats.get("rollable", False),
             "ability": ability_text,
-            "image": food_images.get(spell_name, "") if food_images else "",
+            "image": food_img.get("image", ""),
+            "imageLegacy": food_img.get("imageLegacy", ""),
         }
 
     foods = dict(sorted(foods.items(), key=lambda kv: (kv[1]["tier"], kv[0])))
