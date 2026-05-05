@@ -1,8 +1,18 @@
+import os
+
 from mcp.server.fastmcp import FastMCP
+from mcp.server.transport_security import TransportSecuritySettings
 
 from . import loader
 from .models import Food, FoodSummary, Pet, PetSummary, SearchResult, Toy, ToySummary
 from .search import search as _search
+
+_host = os.getenv("HOST", "0.0.0.0")
+_transport_security = (
+    None  # use FastMCP default (localhost-only protection) for local dev
+    if _host in ("127.0.0.1", "localhost", "::1")
+    else TransportSecuritySettings(enable_dns_rebinding_protection=False)
+)
 
 mcp = FastMCP(
     "sap-wiki",
@@ -13,6 +23,8 @@ mcp = FastMCP(
     ),
     stateless_http=True,
     json_response=True,
+    host=_host,
+    transport_security=_transport_security,
 )
 
 
