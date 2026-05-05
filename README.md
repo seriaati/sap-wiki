@@ -84,5 +84,4 @@ npm run build    # static build to dist/
 
 - Fix not showing "Works X times per turn" text for some abilities.
 - Add more detail about ability triggers (e.g. Dragon's "When level 1 summoned.")
-- Add switching between skin packs.
 - Add different languages.

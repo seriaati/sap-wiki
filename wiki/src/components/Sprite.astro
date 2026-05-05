@@ -2,11 +2,12 @@
 interface Props {
   name: string
   image: string
+  imageLegacy?: string
   tier: number
   size?: number
 }
 
-const { name, image, tier, size = 48 } = Astro.props
+const { name, image, imageLegacy = '', tier, size = 48 } = Astro.props
 const tierColors: Record<number, string> = {
   1: 'oklch(60% 0.14 145)',
   2: 'oklch(58% 0.16 210)',
@@ -16,17 +17,31 @@ const tierColors: Record<number, string> = {
   6: 'oklch(56% 0.20 310)',
 }
 const tc = tierColors[tier] ?? tierColors[1]
+const hasLegacy = imageLegacy.length > 0
 ---
 {image
-  ? <img
-      src={`/assets/${image}`}
-      alt={name}
-      width={size}
-      height={size}
-      loading="lazy"
-      class="sprite"
-      style={`width:${size}px;height:${size}px`}
-    />
+  ? <>
+      <img
+        src={`/assets/${image}`}
+        alt={name}
+        width={size}
+        height={size}
+        loading="lazy"
+        class:list={["sprite", hasLegacy && "sprite--new"]}
+        style={`width:${size}px;height:${size}px`}
+      />
+      {hasLegacy && (
+        <img
+          src={`/assets/${imageLegacy}`}
+          alt={`${name} (legacy)`}
+          width={size}
+          height={size}
+          loading="lazy"
+          class="sprite sprite--legacy"
+          style={`width:${size}px;height:${size}px`}
+        />
+      )}
+    </>
   : <div
       class="sprite-ph"
       style={`width:${size}px;height:${size}px;background:${tc};font-size:${Math.round(size * 0.42)}px`}
@@ -53,5 +68,18 @@ const tc = tierColors[tier] ?? tierColors[1]
     font-weight: 800;
     flex-shrink: 0;
     user-select: none;
+  }
+
+  /* legacy hidden by default; shown when html[data-skin="legacy"] */
+  .sprite--legacy {
+    display: none;
+  }
+
+  html[data-skin="legacy"] .sprite--new {
+    display: none;
+  }
+
+  html[data-skin="legacy"] .sprite--legacy {
+    display: block;
   }
 </style>

@@ -33,7 +33,16 @@ const ogDescription = [
   </nav>
 
   <div class="hero">
-    <Sprite name={pet.name} image={pet.image} tier={pet.tier} size={88} />
+    <div class="hero-sprite">
+      <Sprite name={pet.name} image={pet.image} imageLegacy={pet.imageLegacy} tier={pet.tier} size={88} />
+      {pet.imageLegacy && (
+        <label class="skin-switch" title="Show legacy skin">
+          <input id="local-skin-toggle" type="checkbox" />
+          <span class="skin-switch__track"><span class="skin-switch__thumb" /></span>
+          <span class="skin-switch__label">Legacy skin</span>
+        </label>
+      )}
+    </div>
     <div class="hero-meta">
       <h1>{pet.name}</h1>
       <div class="badges">
@@ -156,6 +165,65 @@ const ogDescription = [
     box-shadow: var(--shadow-sm);
     margin-bottom: var(--sp-4);
     flex-wrap: wrap;
+  }
+
+  .hero-sprite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-2);
+  }
+
+  .skin-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .skin-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .skin-switch__track {
+    position: relative;
+    width: 30px;
+    height: 17px;
+    border-radius: 999px;
+    background: var(--border);
+    transition: background 160ms;
+    flex-shrink: 0;
+  }
+
+  .skin-switch__thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--surface);
+    transition: transform 160ms;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  }
+
+  .skin-switch input:checked + .skin-switch__track {
+    background: var(--accent);
+  }
+
+  .skin-switch input:checked + .skin-switch__track .skin-switch__thumb {
+    transform: translateX(13px);
+  }
+
+  .skin-switch__label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    white-space: nowrap;
   }
 
   .hero-meta {
@@ -339,6 +407,13 @@ const ogDescription = [
     text-align: center;
   }
 
+  .hero-sprite[data-local-legacy] :global(.sprite--new) {
+    display: none !important;
+  }
+  .hero-sprite[data-local-legacy] :global(.sprite--legacy) {
+    display: block !important;
+  }
+
   @media (max-width: 600px) {
     .hero {
       padding: var(--sp-4);
@@ -357,3 +432,13 @@ const ogDescription = [
     }
   }
 </style>
+
+<script>
+  const checkbox = document.getElementById('local-skin-toggle') as HTMLInputElement | null;
+  if (checkbox) {
+    const container = checkbox.closest('.hero-sprite') as HTMLElement | null;
+    checkbox.addEventListener('change', () => {
+      container?.toggleAttribute('data-local-legacy', checkbox.checked);
+    });
+  }
+</script>

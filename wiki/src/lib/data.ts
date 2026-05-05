@@ -17,6 +17,7 @@ export interface Pet {
   ability2: string
   ability3: string
   image: string
+  imageLegacy: string
 }
 
 export interface Food {
@@ -29,6 +30,7 @@ export interface Food {
   rollable: boolean
   ability: string
   image: string
+  imageLegacy: string
 }
 
 export const pets: Pet[] = Object.entries(
@@ -62,6 +64,7 @@ export interface Toy {
   ability2: string
   ability3: string
   image: string
+  imageLegacy: string
 }
 
 export const toys: Toy[] = Object.entries(
