@@ -969,6 +969,15 @@ function setupAfterInit(mod) {
 const pollTimer = setInterval(function() {
     const mod = Process.findModuleByName("GameAssembly.so");
     if (!mod) return;
+
+    // Module mapped ≠ IL2CPP initialized. Probe domain before committing.
+    const domainGetAddr = mod.findExportByName("il2cpp_domain_get");
+    if (!domainGetAddr) return;
+    const domainGetFn = new NativeFunction(domainGetAddr, "pointer", []);
+    let domain;
+    try { domain = domainGetFn(); } catch(_) { return; }
+    if (!domain || domain.isNull()) return;
+
     clearInterval(pollTimer);
     send({t:"log", m:`GameAssembly.so @ ${mod.base}`});
     try { setupAfterInit(mod); }
